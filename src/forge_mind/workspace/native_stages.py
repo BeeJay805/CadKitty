@@ -139,7 +139,15 @@ def deduplicate_context(context: dict[str, Any]) -> dict[str, Any]:
         if isinstance(value, dict):
             if row and (
                 any(
-                    name in {"part", "read_part", "read_design", "tool_error", "failed_submission"}
+                    name
+                    in {
+                        "part",
+                        "read_part",
+                        "read_design",
+                        "inspection",
+                        "tool_error",
+                        "failed_submission",
+                    }
                     or name.startswith("source")
                     for name in value
                 )
@@ -253,7 +261,14 @@ def deduplicate_context(context: dict[str, Any]) -> dict[str, Any]:
                     and row.get("explicit_guidance_read") is not True
                     and not any(
                         name
-                        in {"part", "read_part", "read_design", "tool_error", "failed_submission"}
+                        in {
+                            "part",
+                            "read_part",
+                            "read_design",
+                            "inspection",
+                            "tool_error",
+                            "failed_submission",
+                        }
                         or name.startswith("source")
                         for name in row
                     )

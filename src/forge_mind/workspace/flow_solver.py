@@ -271,11 +271,11 @@ def _run_owned(
     import psutil
 
     with (directory / log).open("wb") as stream:
-        options: dict[str, Any] = (
-            {"creationflags": subprocess.CREATE_NO_WINDOW}
-            if os.name == "nt"
-            else {"start_new_session": True}
-        )
+        options: dict[str, Any]
+        if sys.platform == "win32":
+            options = {"creationflags": subprocess.CREATE_NO_WINDOW}
+        else:
+            options = {"start_new_session": True}
         env = {**os.environ, "OMP_NUM_THREADS": str(settings.resources.threads)}
         with subprocess.Popen(
             command, cwd=directory, stdout=stream, stderr=subprocess.STDOUT, env=env, **options

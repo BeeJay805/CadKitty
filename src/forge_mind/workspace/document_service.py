@@ -26,6 +26,31 @@ if TYPE_CHECKING:
     from forge_mind.workspace.store import Store
 
 
+def read_saved_record(service: WorkspaceService, sid: str, rid: str, name: str) -> dict[str, Any]:
+    """Read one literal saved record, preserving the HTTP artifact integrity boundary.
+
+    Callers establish owner authority. This reader checks only this requested file;
+    an agent may separately require all revision artifacts through _load_revision.
+    """
+    if name not in {"evidence.json", "contract.json"}:
+        raise ValueError("Only saved evidence and contract records can be read here")
+    revision = service.store.revision(sid, rid)
+    directory = service.store.directory(sid, rid)
+    path = directory / name
+    if path.is_symlink() or not path.is_file() or path.resolve().parent != directory.resolve():
+        raise FileNotFoundError("Saved record is unavailable")
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (UnicodeError, json.JSONDecodeError) as exc:
+        raise ValueError("Saved record is not valid JSON") from exc
+    expected = revision["measurement" if name == "evidence.json" else "contract"]
+    if not isinstance(value, dict) or json.dumps(
+        value, sort_keys=True, separators=(",", ":"), allow_nan=False
+    ) != json.dumps(expected, sort_keys=True, separators=(",", ":"), allow_nan=False):
+        raise ValueError("Artifact no longer matches its revision record")
+    return value
+
+
 def read_topology(service: WorkspaceService, sid: str, rid: str) -> dict[str, Any]:
     revision = service._load_revision(sid, rid)
     directory = service.store.directory(sid, rid)

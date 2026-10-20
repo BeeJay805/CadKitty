@@ -39,6 +39,8 @@ jobs:
       - name: Format
         run: uv run --locked --all-extras ruff format --check .
       - name: Types
-        run: uv run --locked --all-extras mypy src/forge_mind
+        run: |
+          uv run --locked --all-extras mypy --platform linux src/forge_mind
+          uv run --locked --all-extras mypy --platform win32 src/forge_mind
       - name: Offline suite
         run: uv run --locked --all-extras pytest -n 2 --dist loadfile --tb=short

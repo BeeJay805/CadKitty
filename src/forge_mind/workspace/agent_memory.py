@@ -58,6 +58,100 @@ def cache_schema(cache: dict[str, Any], name: str, schema: Any) -> dict[str, Any
     return updated
 
 
+def _transaction_measurement(row: dict[str, Any]) -> dict[str, Any]:
+    """Project only successful automatic transaction inventories; keep receipts exact."""
+    if set(row) != {"construction_transaction"}:
+        return row
+    receipt = row["construction_transaction"]
+    if not isinstance(receipt, dict) or receipt.get("action") != "construction":
+        return row
+    if any(receipt.get(key) is not True for key in ("applied", "plan_applied", "cad_applied")):
+        return row
+    if (
+        "status" in receipt
+        and receipt["status"] not in ("pass", "passed", "valid", "ok", "success", "applied")
+    ) or any(
+        receipt.get(key) for key in ("errors", "error", "caveats", "unresolved", "validation_error")
+    ):
+        return row
+    measurement = receipt.get("measurement")
+    revision_id = receipt.get("revision_id")
+    if (
+        not isinstance(measurement, dict)
+        or measurement.get("geometry_valid") is not True
+        or not isinstance(revision_id, str)
+        or len(revision_id) != 32
+        or any(c not in "0123456789abcdef" for c in revision_id)
+        or receipt.get("candidate_revision_id") != revision_id
+        or measurement.get("revision_id") != revision_id
+    ):
+        return row
+    facts = measurement.get("facts")
+    if not isinstance(facts, dict):
+        return row
+    # Reuse the established inventory projection only for the exact successful
+    # assembly-history and cylinder shapes emitted by the existing producers.
+    # Unknown extensions may contain diagnostics, so leave the entire receipt full.
+    if any(key in facts for key in ("bodies", "faces", "edges", "surfaces", "topology")):
+        return row
+    history = facts.get("feature_history", [])
+    if not isinstance(history, list) or any(
+        not isinstance(item, dict)
+        or set(item) != {"id", "state", "key"}
+        or not isinstance(item["id"], str)
+        or item["state"] not in ("built", "reused")
+        or not isinstance(item["key"], str)
+        or len(item["key"]) != 64
+        or any(c not in "0123456789abcdef" for c in item["key"])
+        for item in history
+    ):
+        return row
+    assembly = facts.get("assembly")
+    if assembly is not None:
+        if not isinstance(assembly, dict):
+            return row
+        occurrences = assembly.get("occurrences", [])
+        if not isinstance(occurrences, list) or any(
+            not isinstance(item, dict) for item in occurrences
+        ):
+            return row
+        from forge_mind.workspace.occurrence_facts import _surface
+
+        fields = {
+            "surface_id",
+            "radius_mm",
+            "diameter_mm",
+            "axis_point_mm",
+            "axis_direction",
+            "concave",
+            "axial_extent_mm",
+        }
+        for occurrence in occurrences:
+            surfaces = occurrence.get("cylindrical_surfaces", [])
+            if not isinstance(surfaces, list):
+                return row
+            for surface in surfaces:
+                if (
+                    not isinstance(surface, dict)
+                    or set(surface) != fields
+                    or type(surface["concave"]) is not bool
+                    or surface["axial_extent_mm"] is None
+                ):
+                    return row
+                try:
+                    _surface(surface)
+                except ValueError:
+                    return row
+    from forge_mind.workspace.native_review_context import _measurement
+
+    return {
+        "construction_transaction": {
+            **receipt,
+            "measurement": _measurement(measurement, revision_id),
+        }
+    }
+
+
 def recent_context(history: list[dict[str, Any]], schemas: dict[str, Any]) -> list[dict[str, Any]]:
     """Send recent observations once, retaining failed construction diagnostics.
 
@@ -86,7 +180,7 @@ def recent_context(history: list[dict[str, Any]], schemas: dict[str, Any]) -> li
                 if key in measurement
             }
             row["measurement"]["full_measurement_in_revision"] = True
-        rows.append(row)
+        rows.append(_transaction_measurement(row))
     return rows
 
 

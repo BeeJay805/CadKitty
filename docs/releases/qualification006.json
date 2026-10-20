@@ -1,0 +1,86 @@
+{
+  "checks": {
+    "git_byte_roundtrip": true,
+    "mcp_smoke": true,
+    "public_content_review": true,
+    "quickstart": true,
+    "standalone_full_gate": true
+  },
+  "created_utc": "2026-10-20T20:06:20.722905+00:00",
+  "external_receipt_sha256": {
+    "cli_mcp_smoke": "4066c0a90434c090af2673b0861824e6f67e67c28aeb753dc57258f54cf93d24",
+    "file_review": "ab78ccd979cd15f3f1fadeb25b0174455791764f63ff474eacc07638ac916464",
+    "git_byte_roundtrip": "172915e2d0760445ae513e92f918446096289cf72b047941845512097425d4c6",
+    "mcp_report": "8959de9892fd480f8b246be3311774c2489c540b366ef1aa32fb0f60407a991a",
+    "public_content_review": "7d8ff4821eb94cf77b794188425dd510941476dac5f923ae5491aa140a5a7a04",
+    "pytest_log": "06a130d5f3bd8abccb67e6709912c19f840247ee42a4e718e240548a02de19aa",
+    "raw_content_scan": "6926f884b643dec3ad1e3ac58146c28c374e5c7d77d4fc9c06a5ea010b871ed3",
+    "read_only_preflight_helper": "fcee445cdac292490ffa0b59d311c6678cce485b4cff8d3b717c254c3f220779",
+    "source_freeze": "f91331388386ab749f6a69d08d844e029e5729d2eab294244f3c246bc21127d8",
+    "standalone_gate": "a26386d4332fb5f693bbafec200c7aae983c680bc8f21fa8cb9f299f491400eb"
+  },
+  "git": {
+    "byte_exact_local_clone": true,
+    "clone_used_hardlinks": false,
+    "scope": "The parentless source commit and independent local clone match SNAPSHOT bytes.",
+    "source_commit": "c5c5e55823f0f8325ccfcd429810097a2cd1697a",
+    "source_history_commits": 1,
+    "source_remote_count": 0
+  },
+  "linux_ci": "pending_actual_run",
+  "mcp_smoke": {
+    "acceptance_requested": false,
+    "export_formats": [
+      "STEP",
+      "STL",
+      "GLB"
+    ],
+    "model_calls": 0,
+    "owned_workers_quiescent": true,
+    "scope": "Actual local MCP transport with a scripted fixture, saved edits, scoped checks and downloads.",
+    "tools_exercised": [
+      "create_project",
+      "edit_assembly",
+      "edit_variables",
+      "export_artifact",
+      "get_design_relationships",
+      "get_evidence",
+      "get_motion_check",
+      "get_product_check",
+      "get_project",
+      "read_assembly_structure",
+      "read_part",
+      "run_motion_check",
+      "run_product_check",
+      "submit_document"
+    ]
+  },
+  "model_generation_quality": "not_assessed_by_these_checks",
+  "physical_qualification": "unverified",
+  "platform": {
+    "installed_package": "forge-mind",
+    "installed_source": "this_snapshot/src/forge_mind",
+    "isolated_identity_before_and_after": true,
+    "os": "Windows",
+    "python_version": "3.11.9"
+  },
+  "quickstart": {
+    "model_calls_requested": 0,
+    "scope": "Installed CLI version and handwritten NEMA17 validation with STEP/STL exports."
+  },
+  "schema_version": 1,
+  "scope": "Local Windows reproducibility and scripted CLI/MCP mechanics only; no autonomous-generation success, complete engineering acceptance or physical approval claim.",
+  "snapshot_sha256": "e55d72995be163cd7d7f0e62e24dedd4103161317b8e2615c3191bafb6f53c74",
+  "source_freeze_sha256": "f91331388386ab749f6a69d08d844e029e5729d2eab294244f3c246bc21127d8",
+  "standalone_gate": {
+    "pytest_counts": {
+      "passed": 11248,
+      "skipped": 48
+    },
+    "static_checks": {
+      "format": "passed",
+      "mypy": "passed",
+      "ruff": "passed"
+    }
+  }
+}

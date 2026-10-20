@@ -40,6 +40,7 @@ def inspection_case(tmp_path, monkeypatch, *, topology=True, code_only=False):
         revision["measurement"]["artifact_hashes"]["topology.json"] = hashlib.sha256(
             data
         ).hexdigest()
+    (directory / "evidence.json").write_text(json.dumps(revision["measurement"]), encoding="utf-8")
     with case.service.store.connect() as con:
         con.execute(
             "UPDATE revisions SET document=? WHERE session=? AND id=?",

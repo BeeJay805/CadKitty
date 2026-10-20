@@ -9,6 +9,7 @@ import re
 import shutil
 import sqlite3
 import subprocess
+import sys
 from collections.abc import Mapping
 from dataclasses import dataclass
 from pathlib import Path
@@ -33,7 +34,7 @@ class HostLock:
             raise HostingError("Host lock must not be a symbolic link")
         handle = self.path.open("a+b")
         try:
-            if os.name == "nt":
+            if sys.platform == "win32":
                 import msvcrt
 
                 handle.seek(0)
@@ -53,7 +54,7 @@ class HostLock:
 
     def __exit__(self, *args: Any) -> None:
         if self.handle is not None:
-            if os.name == "nt":
+            if sys.platform == "win32":
                 import msvcrt
 
                 self.handle.seek(0)

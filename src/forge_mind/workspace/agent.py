@@ -3410,6 +3410,17 @@ class WorkspaceService:
                                     raise WorkspaceError("This revision has no saved source diff")
                                 observation["source_diff"] = revision["diff"]
                             history.append(observation)
+                        elif action.kind == "inspect" and action.query == "evidence":
+                            from forge_mind.workspace.document_service import read_saved_record
+
+                            history.append(
+                                {
+                                    "inspection": read_saved_record(
+                                        self, sid, target, "evidence.json"
+                                    ),
+                                    "revision_id": target,
+                                }
+                            )
                         elif action.kind == "section":
                             target_dir = self.store.root / "sections" / sid
                             target_dir.mkdir(parents=True, exist_ok=True)

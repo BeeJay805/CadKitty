@@ -37,7 +37,7 @@ def _inventory(value: Any, revision_id: Any) -> dict[str, Any]:
         "revision_id": revision_id,
         "retained_diagnostics": diagnostics,
         "retrieve": (
-            "Use inspect with this revision_id for saved evidence; use read_design or "
+            "Use inspect query=evidence with this revision_id for saved evidence; use read_design or "
             "read_part for full definitions. This summary is not a replacement document."
         ),
     }

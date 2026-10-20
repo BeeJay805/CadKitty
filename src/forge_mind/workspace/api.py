@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import re
 from collections.abc import Callable
 from typing import Any, Literal
@@ -664,9 +663,14 @@ def router(
         if path.is_symlink() or not path.is_file() or path.resolve().parent != directory.resolve():
             raise HTTPException(404, "artifact not found")
         if name in {"evidence.json", "contract.json"}:
-            expected = revision["measurement" if name == "evidence.json" else "contract"]
-            if json.loads(path.read_text(encoding="utf-8")) != expected:
-                raise HTTPException(409, "Artifact no longer matches its revision record")
+            from forge_mind.workspace.document_service import read_saved_record
+
+            try:
+                read_saved_record(service, sid, rid, name)
+            except (WorkspaceError, FileNotFoundError) as exc:
+                raise HTTPException(404, "artifact not found") from exc
+            except ValueError as exc:
+                raise HTTPException(409, str(exc)) from exc
         elif file_sha256(path) != revision["measurement"]["artifact_hashes"].get(name):
             raise HTTPException(409, "Artifact content changed; evidence is stale")
         return FileResponse(

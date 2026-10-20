@@ -24,6 +24,8 @@ def path_observation(path: Path) -> dict[str, str]:
 
 
 def main(request: Path) -> None:
+    if sys.platform != "linux":
+        raise RuntimeError("Isolation qualification probe requires Linux")
     payload = json.loads(request.read_text(encoding="utf-8"))
     if payload.get("sleep"):
         time.sleep(float(payload["sleep"]))
@@ -35,8 +37,8 @@ def main(request: Path) -> None:
     routes = Path("/proc/net/route").read_text().splitlines()[1:]
     observations = {value: path_observation(Path(value)) for value in HOST_PATHS}
     result = {
-        "unprivileged": os.getuid() == 65534 and os.getgid() == 65534,  # type: ignore[attr-defined]
-        "readonly_root": bool(os.statvfs("/").f_flag & os.ST_RDONLY),  # type: ignore[attr-defined]
+        "unprivileged": os.getuid() == 65534 and os.getgid() == 65534,
+        "readonly_root": bool(os.statvfs("/").f_flag & os.ST_RDONLY),
         "no_capabilities": int(status["CapEff"].strip(), 16) == 0,
         "no_new_privileges": status["NoNewPrivs"].strip() == "1",
         "no_network_route": not routes,

@@ -14,6 +14,7 @@ import numpy as np
 from forge_mind.validation_provenance import file_sha256
 from forge_mind.workspace.capacity import enforce_limit, optional_limit
 from forge_mind.workspace.document import digest
+from forge_mind.workspace.engineering_service import validate_engineering_worker
 from forge_mind.workspace.measure import engine_fingerprint
 from forge_mind.workspace.processing import process_revision, regular_file
 from forge_mind.workspace.product_sources import read_sources
@@ -239,11 +240,17 @@ def field_path(service: WorkspaceService, sid: str, owner: str, study_id: str) -
     return study_path(service, sid, study_id) / "field.json"
 
 
+def validate_structural_worker(service: WorkspaceService) -> None:
+    """Reuse the private solver boundary at admission and execution."""
+    validate_engineering_worker(
+        service, "Structural worker is private-local until container verification"
+    )
+
+
 def run_structural_job(
     service: WorkspaceService, job: dict[str, Any], cancelled: Callable[[], bool]
 ) -> None:
-    if service.executor.mode != "trusted_local":
-        raise WorkspaceError("Structural worker is private-local until container verification")
+    validate_structural_worker(service)
     sid, owner, rid = job["session"], job["owner"], job["revision_id"]
     session = service.store.session_record(sid, owner)
     session["engineering"] = service.store.engineering(sid)

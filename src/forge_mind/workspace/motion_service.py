@@ -11,6 +11,7 @@ from typing import TYPE_CHECKING, Any
 
 from forge_mind.validation_provenance import file_sha256
 from forge_mind.workspace.document import digest
+from forge_mind.workspace.engineering_service import validate_engineering_worker
 from forge_mind.workspace.measure import engine_fingerprint
 from forge_mind.workspace.motion_check import MotionCheckSettings
 from forge_mind.workspace.processing import process_revision, regular_file
@@ -31,6 +32,17 @@ def check_path(service: WorkspaceService, sid: str, owner: str, check_id: str) -
     return path
 
 
+def validate_motion_check_source(service: WorkspaceService, revision: dict[str, Any]) -> None:
+    """Refuse known-ineligible saved sources before admission or worker allocation."""
+    measurement = revision["measurement"]
+    if not measurement["geometry_valid"]:
+        raise WorkspaceError("Motion checking requires valid exported geometry")
+    reason = "Motion checking requires a private-local revision with a motion rig"
+    validate_engineering_worker(service, reason)
+    if not measurement["facts"].get("motion_rig"):
+        raise WorkspaceError(reason)
+
+
 def run_motion_job(
     service: WorkspaceService, job: dict[str, Any], cancelled: Callable[[], bool]
 ) -> str:
@@ -41,10 +53,7 @@ def run_motion_job(
     session = service.store.get(sid, owner)
     revision = service._load_revision(sid, job["revision_id"])
     motion = revision["measurement"]["facts"].get("motion_rig")
-    if not revision["measurement"]["geometry_valid"]:
-        raise WorkspaceError("Motion checking requires valid exported geometry")
-    if service.executor.mode != "trusted_local" or not motion:
-        raise WorkspaceError("Motion checking requires a private-local revision with a motion rig")
+    validate_motion_check_source(service, revision)
     if motion["engine_fingerprint"] != engine_fingerprint():
         raise WorkspaceError("Motion instruments changed; rebuild this revision")
     settings = MotionCheckSettings.model_validate(job["settings"]).model_dump()

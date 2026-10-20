@@ -17,7 +17,11 @@ from forge_mind.workspace.authoring_policy import AuthoringMode
 from forge_mind.workspace.document import DesignDocument, Feature, GeometryRef, Sketch
 from forge_mind.workspace.document_service import read_topology
 from forge_mind.workspace.engineering_models import EngineeringInputs
-from forge_mind.workspace.engineering_service import release_package, report_path
+from forge_mind.workspace.engineering_service import (
+    release_package,
+    report_path,
+    validate_engineering_worker,
+)
 from forge_mind.workspace.measure import engine_fingerprint
 from forge_mind.workspace.mechanism_models import MechanismTemplate
 from forge_mind.workspace.models import Contract, DesignPlan, Record
@@ -196,7 +200,10 @@ def engineering_router(
         sid: str, body: MotionRequest, owner: str = Depends(owner_dependency)
     ) -> dict[str, Any]:
         owned(sid, owner)
-        service._load_revision(sid, body.revision_id)
+        revision = service._load_revision(sid, body.revision_id)
+        from forge_mind.workspace.motion_service import validate_motion_check_source
+
+        validate_motion_check_source(service, revision)
         return enqueue(
             sid,
             owner,
@@ -469,6 +476,7 @@ def engineering_router(
     ) -> dict[str, Any]:
         owned(sid, owner)
         service._load_revision(sid, body.revision_id)
+        validate_engineering_worker(service)
         return enqueue(
             sid,
             owner,

@@ -17,7 +17,12 @@ from forge_mind.workspace.structural_models import (
     StructuralRequest,
     StructuralStudy,
 )
-from forge_mind.workspace.structural_service import field_path, list_studies, read_study
+from forge_mind.workspace.structural_service import (
+    field_path,
+    list_studies,
+    read_study,
+    validate_structural_worker,
+)
 
 
 def structural_router(
@@ -37,6 +42,7 @@ def structural_router(
         revision = service._load_revision(sid, body.revision_id)
         if not revision["measurement"]["geometry_valid"]:
             raise WorkspaceError("Structural study requires valid exported geometry")
+        validate_structural_worker(service)
         study_id = uuid.uuid4().hex
         job_id = store.enqueue(
             sid,

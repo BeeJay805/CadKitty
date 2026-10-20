@@ -2,15 +2,15 @@
   "schema_version": 1,
   "origin_commit": null,
   "origin_has_reviewed_uncommitted_changes": true,
-  "source_freeze_sha256": "a562e633a5a1b5650cce3f12c6020cb851afa3d37af61d8ef01f199aba4f5735",
+  "source_freeze_sha256": "021c3bbfbab9612bdafa4365f844bf66a4b66fc65ff144045bc5e7124d896207",
   "source_qualification": {
     "status": "pending_final_standalone_gate",
-    "required_gate": "public-gate007/receipt.json",
-    "previous_release_qualification": "docs/releases/qualification006.json",
-    "scope": "Historical006 qualification does not qualify these changed bytes."
+    "required_gate": "public-gate009/receipt.json",
+    "previous_release_qualification": "docs/releases/qualification007.json",
+    "scope": "Historical007 qualification does not qualify these changed bytes."
   },
   "frozen_runtime_files": 655,
-  "frozen_test_files": 812,
+  "frozen_test_files": 814,
   "scope": "Core source snapshot; not a deployment, physical qualification or reliability rate.",
   "excluded": {
     "scripts/compose_from_description.py": "Optional historical paid batch utility with an author-machine output default; no consumers.",
@@ -529,6 +529,10 @@
     "docs/releases/qualification006.json": {
       "sha256": "ebc7baacb518abb1cd868f3cf5152655cde1105861ab11ffec7bf8aa6e3d1f01",
       "bytes": 3250
+    },
+    "docs/releases/qualification007.json": {
+      "sha256": "dbba37d892e57bd7e1592bab07547645124eea633eefb9824ddf5ca6dfd9f801",
+      "bytes": 3369
     },
     "examples/generated/inline-four-study/IMAGE_PROVENANCE.json": {
       "sha256": "49d4f3cdf9023e38f8285f0d1995372b5930d5b6b935b595dcdb355cc741888f",
@@ -3099,8 +3103,8 @@
       "bytes": 26333
     },
     "src/forge_mind/workspace/engineering_api.py": {
-      "sha256": "0136aaafbb15cfd24161d1de6da9e887801306fd9b47d6d323a66e9165a29405",
-      "bytes": 21402
+      "sha256": "6b01f6dd4f5e5862e1c331dccdff28b8ca09384266c288ba06af512816c10f07",
+      "bytes": 21654
     },
     "src/forge_mind/workspace/engineering_models.py": {
       "sha256": "e2b242f85c5ce1f579c23c6775cc34ba54fa2c58e753c80fee431e563890cf24",
@@ -3111,8 +3115,8 @@
       "bytes": 10261
     },
     "src/forge_mind/workspace/engineering_service.py": {
-      "sha256": "fcfffd8e7ab777749dc76fe3f4e26246d8512e5b36e74e1864990a0ec88cafdd",
-      "bytes": 16257
+      "sha256": "cf19e97d36e20d0060b25a4e11bb70822f2e1e0dfa19310977c928509a5d2379",
+      "bytes": 16476
     },
     "src/forge_mind/workspace/evidence_view.py": {
       "sha256": "f6705e261e42c3cfdfff0d30081420adfe456cf4595d8d522d7cc131c816dc2a",
@@ -3347,8 +3351,8 @@
       "bytes": 12648
     },
     "src/forge_mind/workspace/mcp_server.py": {
-      "sha256": "1432d644469f21736246ea4b91fe80cf65d86779fb23b87b7b10fbe3f81241bc",
-      "bytes": 107617
+      "sha256": "c7ec5b6e5f5751740b69eb053f03ed94c3d5a33d3fcc19929667732c6c3ef703",
+      "bytes": 107724
     },
     "src/forge_mind/workspace/measure.py": {
       "sha256": "0bbc826643a427ddac3cf4854005d8d6a6ee1fde9084fbff3bde963556baf5d8",
@@ -3395,8 +3399,8 @@
       "bytes": 8174
     },
     "src/forge_mind/workspace/motion_service.py": {
-      "sha256": "6852f17bc49cdeb719148bf4dc486dc10beab24fe6f04777c66e6d15bb08f0b2",
-      "bytes": 5917
+      "sha256": "606a4263972f021d917798ace8962423114b4bf6adc7f8c7bafb3576b85407a9",
+      "bytes": 6330
     },
     "src/forge_mind/workspace/native_authoring.py": {
       "sha256": "0b744ce72d6efe1572ba1fc298b6c2a2ab2b1d15206849dd842b40e6a58cc4af",
@@ -3751,16 +3755,16 @@
       "bytes": 14208
     },
     "src/forge_mind/workspace/structural_api.py": {
-      "sha256": "82a4fdea84f52b8145484e5ef0262c1835765f41e78862f9643addd28f819d7b",
-      "bytes": 3490
+      "sha256": "ae2411cc8a4d20af7fc8ebf71dc8c885e78ca1e3037183e6167dc3e6b40c86b6",
+      "bytes": 3589
     },
     "src/forge_mind/workspace/structural_models.py": {
       "sha256": "329bc13ff3392059c5c2d7dc09e3ee507a43773e3b976bc4f1c474a26301f1a5",
       "bytes": 2735
     },
     "src/forge_mind/workspace/structural_service.py": {
-      "sha256": "6959192e8ccaf3db619835a5847d24b89ea41a3b8689435a6ddb3fe00f4b2430",
-      "bytes": 17473
+      "sha256": "9a0ec613beae1c02a2a1485a395e1ae5481599a5123ae16b7463bd5e9407cade",
+      "bytes": 17719
     },
     "src/forge_mind/workspace/synthesis.py": {
       "sha256": "f75c7b2dec167b24dcd510dbc8f9d820709e83f95cc3b382b380315fe27c8481",
@@ -6018,6 +6022,10 @@
       "sha256": "f570234fc202c71ff7f8a8277ac1f9fcd8703068c484017995f9987e7056d487",
       "bytes": 8625
     },
+    "tests/unit/workspace/test_engineering_worker_admission.py": {
+      "sha256": "4632d66952bc84b40781890e29df8aa6d3ff6ab03cfd62b8029ae3ee93f99b7f",
+      "bytes": 6880
+    },
     "tests/unit/workspace/test_engineering_workspace.py": {
       "sha256": "6de5627cd78a3b69f99defdbeea879e1e56c2b2beb8bcc16d60780b6d2fec8cd",
       "bytes": 34544
@@ -6361,6 +6369,10 @@
     "tests/unit/workspace/test_model_call_diagnostics.py": {
       "sha256": "ed26ec52524479b91cdd3bb96f3216f202c0b2c27797ce5c99bd4d953447dc72",
       "bytes": 5593
+    },
+    "tests/unit/workspace/test_motion_check_admission.py": {
+      "sha256": "520b16eded987a1335c3fd2551e2a2f86d4f27851e2217c96987c5cbe92a006c",
+      "bytes": 8941
     },
     "tests/unit/workspace/test_motion_rig.py": {
       "sha256": "e4e15100ea4eec642a79cfc196bf1633c4939561b425c3ad67f7252114d740f8",
@@ -7061,11 +7073,15 @@
   },
   "qualification": "Source inventory only. Consult RELEASE_QUALIFICATION.json for the standalone checks and exact tested bytes.",
   "provenance": {
-    "previous_public_commit": "887533677128723a0efcf3327eff83cf792227ba",
-    "previous_snapshot_sha256": "e55d72995be163cd7d7f0e62e24dedd4103161317b8e2615c3191bafb6f53c74",
-    "previous_qualification_sha256": "ebc7baacb518abb1cd868f3cf5152655cde1105861ab11ffec7bf8aa6e3d1f01",
-    "previous_source_freeze_sha256": "f91331388386ab749f6a69d08d844e029e5729d2eab294244f3c246bc21127d8",
-    "reviewed_changes_sha256": "fcb3873f5eb5a9924e54c5ccf3a7ef344c450e58638f44273c9434ae35685937",
-    "context_candidate_manifest_sha256": "1989f510ccdac16025b51d9b3d764a8d6c0633c83847da37f4ecf640491744f3"
+    "previous_public_commit": "ea03efc654587f20454cdaef68f9958d4ee97fec",
+    "previous_snapshot_sha256": "c3a3dbe6d6e2a8cc97e3acb28c43651f35faf2bc97c9387f6d49349ed868c3b8",
+    "previous_qualification_sha256": "dbba37d892e57bd7e1592bab07547645124eea633eefb9824ddf5ca6dfd9f801",
+    "previous_source_freeze_sha256": "a562e633a5a1b5650cce3f12c6020cb851afa3d37af61d8ef01f199aba4f5735",
+    "reviewed_changes_sha256": "9a30683d7c757491957474c35d94811905dce0a6c492332183d24d4f8453c55f",
+    "motion_candidate_manifest_sha256": "e815b4b69bf8ee34d3ee29da18c47b245d9061a42b8cabde2a87afdd3a2c3d71",
+    "motion_integration_receipt_sha256": "285d426dae359acf59be5cd9301ddf0fe531600cf6ddde7fd2cc7257faea231d",
+    "engineering_candidate_manifest_sha256": "e914391358f5358bbec120e8c85ca353dbc2ae0eef8d147ad1d785313ff3dfcd",
+    "engineering_integration_receipt_sha256": "bfa17fa9e6d42074589650a2999c9471e47f94f53bc4cdb82cce773c8afcbaca",
+    "combined_public007_delta_sha256": "3b0871f11c9fe57e7e21472b0574b1e855ed5acb92d008b9966278c3fe47b14e"
   }
 }

@@ -22,16 +22,22 @@ if TYPE_CHECKING:
 REPORT_FILES = {"report.json", "drawing.svg", "inspection.csv", "assembly.step", "section.png"}
 
 
+def validate_engineering_worker(
+    service: WorkspaceService,
+    reason: str = "Engineering parser/solver worker is private-local only until container verification",
+) -> None:
+    """Apply the existing private-engineering execution boundary without starting work."""
+    if service.executor.mode != "trusted_local":
+        raise WorkspaceError(reason)
+
+
 def run_report_job(
     service: WorkspaceService, job: dict[str, Any], cancelled: Callable[[], bool]
 ) -> None:
     from forge_mind.workspace.operation_recovery import guard_job, publish, worker_arguments
 
     guard_job(service, job)
-    if service.executor.mode != "trusted_local":
-        raise WorkspaceError(
-            "Engineering parser/solver worker is private-local only until container verification"
-        )
+    validate_engineering_worker(service)
     sid, owner = job["session"], job["owner"]
     session = service.store.get(sid, owner)
     revision = service._load_revision(sid, job["revision_id"])

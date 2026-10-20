@@ -1652,7 +1652,7 @@ def create_server(adapter: WorkspaceAdapter | None = None) -> MCPServer[Any]:
     async def run_engineering_review(
         project_id: Identifier, revision_id: Identifier
     ) -> dict[str, Any]:
-        """Queue deterministic engineering review. Missing inputs stay unverified."""
+        """Queue private-local deterministic engineering review. Missing inputs stay unverified."""
         return dict(
             await adapter.json(
                 "POST",
@@ -1748,7 +1748,7 @@ def create_server(adapter: WorkspaceAdapter | None = None) -> MCPServer[Any]:
         input_version: Annotated[int, Field(ge=0)],
         study: StructuralStudy,
     ) -> dict[str, Any]:
-        """Queue a declared single-body load study without a model call. Poll project then get_structural_study; no assembly force or physical qualification claim."""
+        """Queue a private-local single-body load study without a model call. Poll project then get_structural_study; no assembly force or physical qualification claim."""
         return dict(
             await adapter.json(
                 "POST",
@@ -2046,7 +2046,10 @@ def create_server(adapter: WorkspaceAdapter | None = None) -> MCPServer[Any]:
     async def run_motion_check(
         project_id: Identifier, revision_id: Identifier, settings: MotionCheckSettings | None = None
     ) -> dict[str, Any]:
-        """Queue sampled exact B-rep collision review. Playback itself costs no CAD-kernel work."""
+        """Queue sampled B-rep collision review for a trusted-local saved motion_rig.
+
+        A solved mechanism alone is not a prescribed rig. Playback costs no kernel work.
+        """
         return dict(
             await adapter.json(
                 "POST",

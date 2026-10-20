@@ -1,0 +1,84 @@
+{
+  "checks": {
+    "git_archive_roundtrip": true,
+    "mcp_smoke": true,
+    "public_content_review": true,
+    "quickstart": true,
+    "standalone_full_gate": true
+  },
+  "created_utc": "2026-10-20T20:50:48.530243+00:00",
+  "external_receipt_sha256": {
+    "cli_mcp_smoke": "be5d8b7140d847a03878998ee8d7093fb73c3c3b6764979befd8f5111a73fe5f",
+    "format_log": "34cee198d0706626ed9dc98d0479d7159bb331806592b07768f016b11cc3ccf0",
+    "mcp_report": "5d28333d3cd3e69244a58861217f1f1cab9ed60a0d79abe3fbc3aed9821602ba",
+    "mypy-linux_log": "6dc090cda02ca0f473b088d1fa4eedef2671dbcd17256fee6075651dc8bd8843",
+    "mypy-win32_log": "6dc090cda02ca0f473b088d1fa4eedef2671dbcd17256fee6075651dc8bd8843",
+    "public_content_review": "b33cefc82113d49af326dcb9e5af8f1c407b6953d7acc057e564c72c081f04b9",
+    "pytest_log": "5d03f68e5c033906627d5cedc88b0b081ee3406b6207369c335027139ab349ee",
+    "read_only_file_helper": "fcee445cdac292490ffa0b59d311c6678cce485b4cff8d3b717c254c3f220779",
+    "ruff_log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "source_freeze": "a562e633a5a1b5650cce3f12c6020cb851afa3d37af61d8ef01f199aba4f5735",
+    "standalone_gate": "98fc830ac6e5f5495a46eb605434d3ac605c96eb2f63d9ec37060b6031b80dce"
+  },
+  "git": {
+    "history_reset": false,
+    "previous_public_commit": "887533677128723a0efcf3327eff83cf792227ba",
+    "scope": "Every source-commit Git archive member matches reviewed disk bytes; no independent clone was performed by this writer",
+    "source_archive_roundtrip": true,
+    "source_commit": "59bc2094e170177520f4ef68f202887e091a51a6"
+  },
+  "linux_ci": "pending_actual_run",
+  "mcp_smoke": {
+    "acceptance_requested": false,
+    "model_calls": 0,
+    "owned_workers_quiescent": true,
+    "scope": "Scripted actual stdio MCP tool fixture and saved downloads",
+    "tools_exercised": [
+      "create_project",
+      "edit_assembly",
+      "edit_variables",
+      "export_artifact",
+      "get_design_relationships",
+      "get_evidence",
+      "get_motion_check",
+      "get_product_check",
+      "get_project",
+      "read_assembly_structure",
+      "read_part",
+      "run_motion_check",
+      "run_product_check",
+      "submit_document"
+    ]
+  },
+  "model_generation_quality": "not_assessed_by_these_checks",
+  "physical_qualification": "unverified",
+  "platform": {
+    "isolated_identity_before_and_after": true,
+    "os": "Windows",
+    "python_version": "3.11.9"
+  },
+  "public_content_review": "Exact source-commit content delta reviewed; final qualification replacement requires root review",
+  "quickstart": {
+    "model_calls_requested": 0,
+    "scope": "Installed CLI and handwritten NEMA17 STEP/STL export"
+  },
+  "schema_version": 1,
+  "scope": "Local Windows gate and scripted CLI/MCP mechanics; Linux typing target is not Linux runtime qualification. No complete engineering or physical approval claim.",
+  "snapshot_sha256": "c3a3dbe6d6e2a8cc97e3acb28c43651f35faf2bc97c9387f6d49349ed868c3b8",
+  "source_freeze_sha256": "a562e633a5a1b5650cce3f12c6020cb851afa3d37af61d8ef01f199aba4f5735",
+  "standalone_gate": {
+    "pytest_counts": {
+      "passed": 11337,
+      "skipped": 50
+    },
+    "static_checks": {
+      "format": "passed",
+      "mypy_targets": {
+        "linux": "passed",
+        "win32": "passed"
+      },
+      "ruff": "passed"
+    }
+  },
+  "status": "qualified_local_checks"
+}

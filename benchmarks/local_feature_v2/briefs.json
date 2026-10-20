@@ -1,0 +1,246 @@
+[
+ {
+  "label": "fan_shroud",
+  "prompt": "a 60 mm fan shroud that bolts to a 2020 aluminum extrusion with M5 hardware",
+  "brief": {
+   "object_name": "M5 Bolt-On Fan Shroud for 2020 Aluminum Extrusion",
+   "summary": "A thin, curved fan shroud with M5 mounting holes that fits around a 2020 aluminum extrusion.",
+   "visual_description": "A curved, hollow cylindrical shroud with a diameter of 60 mm and a length of 30 mm. The outer surface is smooth and slightly tapered toward the ends. Four evenly spaced mounting holes are visible along the circumference, each with a circular boss around it. The inner surface is flat and smooth, forming a cylindrical cavity that matches the fan's footprint. The shroud has a thin wall thickness of approximately 2 mm.",
+   "overall_envelope_mm": "60 x 30 x 30",
+   "features": [
+    {
+     "name": "mounting_holes",
+     "purpose": "To secure the shroud to a 2020 aluminum extrusion using M5 bolts",
+     "approx_dims_mm": "5.0 mm diameter",
+     "method": "pocket",
+     "count": 4,
+     "standard": "M5",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "mounting_bosses",
+     "purpose": "To provide structural reinforcement around the mounting holes",
+     "approx_dims_mm": "8.0 mm diameter x 2.0 mm height",
+     "method": "revolve",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "outer_curve",
+     "purpose": "To define the curved outer profile of the shroud",
+     "approx_dims_mm": "60 mm diameter",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "inner_cavity",
+     "purpose": "To accommodate a fan with a 40 mm diameter",
+     "approx_dims_mm": "40 mm diameter x 30 mm depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat inner surface should face down to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "wall_hook",
+  "prompt": "a wall hook that clips over a 12 mm rail with two M3 screw holes in the back plate",
+  "brief": {
+   "object_name": "Rail-Mounted Wall Hook with M3 Screw Back Plate",
+   "summary": "A wall-mounted hook designed to clip onto a 12 mm rail system with a back plate featuring two M3 screw holes for secure attachment.",
+   "visual_description": "A curved, L-shaped hook with a rounded tip that clips over a 12 mm rail. The back plate is flat and rectangular with two countersunk M3 screw holes positioned symmetrically near the top edges. The hook has a smooth, slightly tapered curve from base to tip, with a thin, sharp hook point. The overall profile is clean and minimalistic with no decorative elements.",
+   "overall_envelope_mm": "120 x 40 x 25",
+   "features": [
+    {
+     "name": "rail_clip",
+     "purpose": "Clips over a 12 mm rail system to mount the hook on a wall",
+     "approx_dims_mm": "12 x 8 x 15",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard 12mm rail width"
+    },
+    {
+     "name": "hook_curve",
+     "purpose": "Provides the gripping surface to hold items",
+     "approx_dims_mm": "40 x 15 x 8",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "typical wall hook proportions"
+    },
+    {
+     "name": "back_plate",
+     "purpose": "Mounts the hook to a wall via screws",
+     "approx_dims_mm": "30 x 12 x 2",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M3 screw spacing requirements"
+    },
+    {
+     "name": "m3_screw_hole_1",
+     "purpose": "Mounts the back plate to wall via M3 screw",
+     "approx_dims_mm": "3.4 x 20",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": null
+    },
+    {
+     "name": "m3_screw_hole_2",
+     "purpose": "Mounts the back plate to wall via M3 screw",
+     "approx_dims_mm": "3.4 x 20",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the back plate face down to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "bottle_cap",
+  "prompt": "a threaded bottle cap, 30 mm diameter, M28x2 thread, knurled grip",
+  "brief": {
+   "object_name": "Threaded Bottle Cap",
+   "summary": "A threaded bottle cap with a knurled grip surface, designed to seal containers with an M28x2 thread.",
+   "visual_description": "A circular cap with a 30 mm diameter body, featuring a knurled texture pattern on its outer surface. The cap has a smooth, slightly domed top that tapers down to a threaded rim. The knurling creates a series of small, angled ridges forming a diamond pattern across the outer surface. The thread is visible as a continuous helical groove around the inner rim. The overall shape is a flat disk with a raised center and a smooth transition to the threaded edge.",
+   "overall_envelope_mm": "30 x 30 x 8",
+   "features": [
+    {
+     "name": "outer_diameter",
+     "purpose": "Provides the sealing surface and defines the cap's size for fitting into containers",
+     "approx_dims_mm": "30",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard bottle cap reference"
+    },
+    {
+     "name": "knurled_surface",
+     "purpose": "Provides grip for hand tightening and prevents slippage during opening/closing",
+     "approx_dims_mm": "30 x 8",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "hand grip ergonomics"
+    },
+    {
+     "name": "threaded_rim",
+     "purpose": "Creates a secure seal with the container's neck thread",
+     "approx_dims_mm": "28",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M28x2 thread specification"
+    },
+    {
+     "name": "thread_profile",
+     "purpose": "Defines the thread geometry for proper mating with container threads",
+     "approx_dims_mm": "28 x 2",
+     "method": "sweep",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M28x2 thread standard"
+    },
+    {
+     "name": "center_domed_top",
+     "purpose": "Provides structural integrity and a smooth sealing surface",
+     "approx_dims_mm": "28 x 4",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "standard cap design proportions"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat bottom face should be printed down to minimize supports and ensure good adhesion. The knurled surface should face up for optimal print quality.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "tslot_nut",
+  "prompt": "a drop-in T-slot nut for 2020 aluminium extrusion, M5 thread",
+  "brief": {
+   "object_name": "T-Slot Nut for 2020 Extrusion with M5 Thread",
+   "summary": "A precision-machined T-slot nut designed to fit into the T-slots of 2020 aluminium extrusion profiles, featuring an M5 threaded hole and a secure locking mechanism.",
+   "visual_description": "A flat, rectangular body with a distinctive T-shaped slot cut into one face, allowing it to slide into the T-slot of aluminium extrusion. The body has a rounded corner profile, with a central threaded hole (M5) that is slightly offset from the centerline. The slot is wide enough to accommodate the 2020 profile's width (~10mm) and deep enough to grip the extrusion securely. The nut has a thin, flat profile with a slight taper on the sides for easy insertion into the T-slot.",
+   "overall_envelope_mm": "35 x 15 x 8",
+   "features": [
+    {
+     "name": "T-slot opening",
+     "purpose": "Allows the nut to slide into and lock within the T-slot of 2020 aluminium extrusion profiles",
+     "approx_dims_mm": "10 x 6 x 8",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "2020 extrusion T-slot dimensions"
+    },
+    {
+     "name": "M5 threaded hole",
+     "purpose": "Provides secure attachment to hardware such as bolts or screws",
+     "approx_dims_mm": "5.0 x 8.0",
+     "method": "threaded pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M5 thread standard"
+    },
+    {
+     "name": "Outer profile fillets",
+     "purpose": "Reduce stress concentration and provide smooth edges for easier handling",
+     "approx_dims_mm": "1.0",
+     "method": "fillet",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "standard mechanical design practice"
+    },
+    {
+     "name": "Insertion taper",
+     "purpose": "Facilitates easy insertion into the T-slot by reducing the width at the top edge",
+     "approx_dims_mm": "3.0 x 8.0",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "T-slot nut insertion requirements"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat face with the T-slot should be oriented downward to minimize support structures needed during printing.",
+   "target": "functional"
+  }
+ }
+]

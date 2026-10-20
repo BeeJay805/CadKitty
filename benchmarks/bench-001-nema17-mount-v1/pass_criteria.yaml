@@ -1,0 +1,25 @@
+# Pass criteria for bench-001. A trial passes when validation passes, all
+# required checks are present-and-passing, and it stays within budget. The
+# benchmark passes when >= min_passing_trials of `trials` trials pass.
+
+trials: 10
+min_passing_trials: 9
+max_iterations_per_trial: 3
+max_wall_seconds: 60
+max_cost_usd_per_trial: 0.30
+
+# The validator check ids that MUST pass for a trial to count as a success.
+required_checks:
+  - mesh.watertight
+  - mesh.single_body
+  - mesh.bbox_within_max
+  - features.min_wall_thickness
+  - printability.overhang_max_angle
+  - interfaces.motor_face.bolt_holes_present
+  - interfaces.motor_face.bolt_pattern_31mm_square
+  - interfaces.motor_face.shaft_bore_present
+  - interfaces.extrusion_face.two_m5_holes
+  - interfaces.extrusion_face.m5_spacing
+
+# Known-good reference DSL for the --use-handwritten bypass (repo-relative).
+reference_dsl: tests/fixtures/handwritten/nema17_mount_good.partdsl.json

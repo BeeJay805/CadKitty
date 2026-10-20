@@ -1,0 +1,79 @@
+{
+  "_about": "Offline demo reference for the invention lab (trimmed for readability). MOCKED concept (the front-door stub, no model call) + REAL deterministic engine geometry. NOT a live result and NOT physically validated. Regenerate the full artifacts with `uv run python scripts/capture_lab_demo.py`.",
+  "problem_id": "cable_clip",
+  "invention_package": {
+    "part_name": "bench-part",
+    "problem_statement": "Cables keep falling off my desk edge. I need a 3D-printable way to route two USB-C cables along the front edge of my desk without screwing anything into the desk or leaving adhesive residue.",
+    "disposition": "shipped",
+    "artifacts": {},
+    "kit": "<omitted; full kit in benchmarks/results/lab_demo/invention_package.json>",
+    "bom_summary": "no registry-backed hardware",
+    "confidence": {
+      "overall": "high",
+      "basis": "validated",
+      "manufacturability": "prints_as_is",
+      "process_note": null,
+      "dimension_tiers": {
+        "verified": 1,
+        "sourced": 0,
+        "stated": 0,
+        "estimated": 0
+      },
+      "verify_dimensions": [],
+      "not_fit_for": [],
+      "part_class": "none",
+      "summary": "high confidence - validated - dimensions: 1 verified / 0 sourced / 0 stated / 0 estimated"
+    },
+    "concept": {
+      "concept_id": "c1",
+      "name": "compliant clip",
+      "primary_mechanism": "snap_fit",
+      "secondary_mechanisms": [],
+      "approach": "a flexure that snaps over the edge",
+      "obvious_baseline": "a screwed bracket",
+      "difference_from_obvious": "no fasteners",
+      "key_risks": []
+    },
+    "feasibility": {
+      "verdict": "likely_feasible",
+      "note": "a routine FDM build for a typical maker",
+      "disclaimer": "Feasibility is an engineering ASSESSMENT, not a guarantee \u2014 no deterministic check stands behind it. Treat it as a hypothesis to verify, never as a passed validation gate."
+    },
+    "physical_validation": {
+      "status": "not_physically_validated",
+      "banner": "NOT PHYSICALLY VALIDATED \u2014 conceptual model only. This package was produced and checked DIGITALLY; the part has not been printed, assembled, or tested. CAD-valid is not mission success \u2014 verify with a real build before relying on it."
+    }
+  },
+  "mission_dashboard": {
+    "mission_id": "demo-cable-clip-offline",
+    "problem": "Cables keep falling off my desk edge. I need a 3D-printable way to route two USB-C cables along the front edge of my desk without screwing anything into the desk or leaving adhesive residue.",
+    "current_stage": "package",
+    "maturity": "digitally_validated",
+    "evidence_tier": "deterministic_check",
+    "banner": "NOT PHYSICALLY VALIDATED \u2014 conceptual model only. This package was produced and checked DIGITALLY; the part has not been printed, assembled, or tested. CAD-valid is not mission success \u2014 verify with a real build before relying on it.",
+    "latest_finding": {
+      "stage": "package",
+      "event_type": "package_assembled",
+      "summary": "invention package assembled (REPORTED -- not physically validated)"
+    },
+    "validation_state": {
+      "passed": 1,
+      "failed": 0,
+      "latest_passed": true
+    },
+    "artifact_previews": [],
+    "unresolved_risks": [
+      "Not physically validated -- CAD-valid is not physical proof.",
+      "Reopen c2 if: if the recommended concept fails its gates"
+    ],
+    "revision_timeline": [
+      {
+        "seq": 3,
+        "event_type": "validation_passed",
+        "summary": "engine disposition: shipped",
+        "stage": "validation"
+      }
+    ],
+    "support_kb_ready": true
+  }
+}

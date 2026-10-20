@@ -1,0 +1,31 @@
+# Pass criteria for bench-006 (60mm fan -> 2020 adapter plate, ADR-0011).
+#
+# The fan mount reuses the adapter_plate pattern; the +Z interface is the new
+# fan_face checker (the only new validator code, parameterised from nema17_face).
+# The -Z extrusion checker is bench-001/003's, reused verbatim.
+#
+# Scope note: this bench targets the 60 mm fan. A flat 40 mm fan mount is
+# infeasible at a 4 mm wall (the airflow bore eats the bolt land, ~2.03 mm) --
+# a documented known limitation (ADR-0011 / Stage 1), not a benchmark target.
+
+trials: 10
+min_passing_trials: 9
+max_iterations_per_trial: 3
+max_wall_seconds: 60
+max_cost_usd_per_trial: 0.30
+
+# Validator check ids that MUST pass for a trial to count as a success.
+required_checks:
+  - mesh.watertight
+  - mesh.single_body
+  - mesh.bbox_within_max
+  - features.min_wall_thickness
+  - printability.overhang_max_angle
+  - interfaces.fan_face.bolt_holes_present
+  - interfaces.fan_face.bolt_pattern_square
+  - interfaces.fan_face.airflow_bore_present
+  - interfaces.extrusion_face.two_m5_holes
+  - interfaces.extrusion_face.m5_spacing
+
+# Hand-authored reference PartProgram for the --use-handwritten bypass.
+reference_dsl: tests/fixtures/handwritten/fan_60mm_2020_adapter_good.partdsl.json

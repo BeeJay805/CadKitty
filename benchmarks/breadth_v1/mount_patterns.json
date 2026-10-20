@@ -1,0 +1,49 @@
+{
+  "mg996r": {
+    "source": "TowerPro MG996R datasheet (towerpro.com.tw), standard-size 40x20 RC servo: 4 mounting-tab holes, nominal 4.5 mm, on a 10.0 x 49.5 mm rectangle",
+    "hole_diameter_mm": [4.0, 4.8],
+    "holes": 4,
+    "pairwise_mm": [10.0, 10.0, 49.5, 49.5, 50.5, 50.5],
+    "tol_mm": 0.8
+  },
+  "nema17": {
+    "source": "NEMA ICS 16-2001 size 17 frame (e.g. StepperOnline 17HS4401 datasheet): 42.3 mm faceplate, 4x M3 clearance holes on a 31.0 mm square",
+    "hole_diameter_mm": [2.9, 3.6],
+    "holes": 4,
+    "pairwise_mm": [31.0, 31.0, 31.0, 31.0, 43.84, 43.84],
+    "tol_mm": 0.8
+  },
+  "nema23": {
+    "source": "NEMA ICS 16-2001 size 23 frame (e.g. StepperOnline 23HS22-2804S datasheet): 56.4 mm faceplate, 4x M5 clearance holes on a 47.14 mm square",
+    "hole_diameter_mm": [4.9, 5.8],
+    "holes": 4,
+    "pairwise_mm": [47.14, 47.14, 47.14, 47.14, 66.67, 66.67],
+    "tol_mm": 0.8
+  },
+  "608": {
+    "source": "ISO 15 / DIN 625-1 deep-groove ball bearing 608 (SKF 608 datasheet): 8 mm bore x 22 mm OD x 7 mm width; mount is a 22.0 mm diameter seat bore",
+    "hole_diameter_mm": [21.9, 22.3],
+    "holes": 1,
+    "min_depth_mm": 5
+  },
+  "fan_60mm": {
+    "source": "60 mm frame axial fan (e.g. Noctua NF-A6x25, Sunon EE60 series datasheets): 4x M4 clearance holes on a 50.0 mm square mounting pitch",
+    "hole_diameter_mm": [4.0, 4.8],
+    "holes": 4,
+    "pairwise_mm": [50.0, 50.0, 50.0, 50.0, 70.71, 70.71],
+    "tol_mm": 0.8
+  },
+  "ext_2020": {
+    "source": "20x20 T-slot aluminium extrusion (e.g. Misumi HFS5-2020, 80/20 20-series catalogs): M5 fastening via slot T-nut or tapped center bore; bracket requires one M5 clearance hole per attachment point",
+    "hole_diameter_mm": [4.9, 5.8],
+    "holes": 1,
+    "min_depth_mm": 0
+  },
+  "raspberry_pi_4": {
+    "source": "Raspberry Pi 4 Model B official mechanical drawing (raspberrypi.com): 4x 2.7 mm holes on a 58.0 x 49.0 mm rectangle, M2.5 fasteners",
+    "hole_diameter_mm": [2.4, 2.9],
+    "holes": 4,
+    "pairwise_mm": [49.0, 49.0, 58.0, 58.0, 75.93, 75.93],
+    "tol_mm": 0.8
+  }
+}

@@ -1,0 +1,6 @@
+# FROZEN content: checkout must reproduce the exact blob bytes the MANIFEST pins.
+# Without this, core.autocrlf on a fresh Windows worktree CRLF-rewrites the JSON and
+# every shard refuses with FROZEN-CONTENT MISMATCH (fail-closed working as designed;
+# bit the 2026-06-11 Ralph shards and again the 2026-07-03 fm-bench launch).
+arbitrary_v1.json -text
+MANIFEST.sha256 -text

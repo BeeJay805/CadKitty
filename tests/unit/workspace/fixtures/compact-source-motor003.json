@@ -1,0 +1,613 @@
+{
+  "provenance": "Retained motor003 initial SourceContractDraft, private generation-latency pilot; wrong initial family remains unchanged.",
+  "source": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole. I need nominal CAD and digital files only. Give me editable native CAD, STEP, STL and a prepared print package.",
+  "raw_draft": {
+    "contract": {
+      "requirements": [
+        {
+          "id": "r_inventory",
+          "text": "Provide one designed part with the exact saved PartDefinition.name motor_plate.",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate.",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "nominal_subject_inventory",
+            "scope": "nominal_cad",
+            "coverage": "all_made",
+            "items": [
+              {
+                "subject_id": "motor_plate",
+                "subject_role": "designed",
+                "required_name": "motor_plate",
+                "quantity": 1
+              }
+            ],
+            "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate."
+          }
+        },
+        {
+          "id": "r_geometry",
+          "text": "Provide a nominal rectangular CAD body of local XYZ size 80 × 60 × 6 mm, with its outer-body center at the local origin. Include exactly five uniform cylindrical through-holes parallel to local Z: diameter 22 mm at local XY (0, 0), and diameter 5.2 mm at each of (-30, -20), (-30, 20), (30, -20), and (30, 20) mm. Each hole permits symmetric diameter tolerance 0.05 mm and radial position tolerance 0.05 mm.",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "nominal_subject_inventory",
+            "scope": "nominal_cad",
+            "coverage": "all_made",
+            "items": [
+              {
+                "subject_id": "motor_plate",
+                "subject_role": "designed",
+                "required_name": "motor_plate",
+                "quantity": 1
+              }
+            ],
+            "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate."
+          }
+        },
+        {
+          "id": "r_perforated_body",
+          "text": "Verify the rectangular nominal CAD outer prism and its complete five-hole pattern in the definition-local frame, with no additional material additions or removals.",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "scope": "nominal_cad",
+            "subject_id": "motor_plate",
+            "subject_role": "designed",
+            "frame": "definition_local",
+            "axis": "z",
+            "count_policy": "exact",
+            "holes": [
+              {
+                "center_mm": [
+                  0.0,
+                  0.0
+                ],
+                "diameter_mm": 22.0,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              },
+              {
+                "center_mm": [
+                  -30.0,
+                  -20.0
+                ],
+                "diameter_mm": 5.2,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              },
+              {
+                "center_mm": [
+                  -30.0,
+                  20.0
+                ],
+                "diameter_mm": 5.2,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              },
+              {
+                "center_mm": [
+                  30.0,
+                  -20.0
+                ],
+                "diameter_mm": 5.2,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              },
+              {
+                "center_mm": [
+                  30.0,
+                  20.0
+                ],
+                "diameter_mm": 5.2,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              }
+            ],
+            "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+            "kind": "nominal_perforated_box",
+            "size_mm": [
+              80.0,
+              60.0,
+              6.0
+            ],
+            "center_mm": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "id": "r_solid",
+          "text": "The plate must be one solid.",
+          "source_quote": "It must be one solid.",
+          "source": "request",
+          "metric": "solid_count",
+          "comparator": "eq",
+          "value": 1.0,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true
+        },
+        {
+          "id": "r_scope",
+          "text": "Limit delivery to nominal CAD and digital files.",
+          "source_quote": "I need nominal CAD and digital files only.",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "nominal_delivery_scope",
+            "scope": "software_policy",
+            "policy": "nominal_cad_and_digital_only",
+            "source_quote": "I need nominal CAD and digital files only."
+          }
+        },
+        {
+          "id": "r_native",
+          "source_quote": "editable native CAD",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "digital_delivery",
+            "scope": "digital_artifacts",
+            "deliverable": "editable_native",
+            "coverage": "all_made",
+            "source_quote": "editable native CAD"
+          }
+        },
+        {
+          "id": "r_step",
+          "source_quote": "STEP",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "digital_delivery",
+            "scope": "digital_artifacts",
+            "deliverable": "project_step",
+            "coverage": "all_made",
+            "source_quote": "STEP"
+          }
+        },
+        {
+          "id": "r_stl",
+          "source_quote": "STL",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "digital_delivery",
+            "scope": "digital_artifacts",
+            "deliverable": "project_stl",
+            "coverage": "all_made",
+            "source_quote": "STL"
+          }
+        },
+        {
+          "id": "r_print_package",
+          "source_quote": "a prepared print package",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "digital_delivery",
+            "scope": "digital_artifacts",
+            "deliverable": "prepared_print_package",
+            "coverage": "all_made",
+            "source_quote": "a prepared print package"
+          }
+        }
+      ],
+      "coverage_notes": [
+        "The designed subject is the nominal CAD rectangular motor adapter plate named motor_plate. Motor adapter plate is its source-backed designation; the request adds no motor interface, physical fit, load capacity, or operating test.",
+        "Dimensions, outer-body origin, hole axes, and hole centers are explicitly definition-local. No world orientation is specified, so world-axis extent measurements are not substituted.",
+        "The nominal perforated-box predicate preserves the complete rectangular body and uniform cylindrical through-hole pattern. Its center is the outer-prism center. No outer-body tolerance is requested.",
+        "motor_plate is explicitly a saved part name, not an explicit part ID. All part_id selectors remain null.",
+        "The four digital criteria partition the complete file-list sentence: Give me editable native CAD, STEP, STL and a prepared print package.",
+        "No printer, material, slicer, sliced toolpaths, G-code, physical approval, or instruction plan is requested. The prepared print package requires no additional customer inputs.",
+        "No material source ambiguity or essential missing input was identified. Non-applicable scalar selection fields do not impose additional geometric constraints."
+      ]
+    },
+    "attribution": {
+      "subjects": [
+        {
+          "id": "motor_plate",
+          "label": "Nominal CAD rectangular motor adapter plate named motor_plate",
+          "role": "designed",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate."
+        }
+      ],
+      "facts": [
+        {
+          "id": "f_quantity",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "requested occurrence quantity",
+          "value": 1.0,
+          "unit": "plate",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate.",
+          "requirement_ids": [
+            "r_inventory"
+          ]
+        },
+        {
+          "id": "f_size_x",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "overall size in local X",
+          "value": 80.0,
+          "unit": "mm",
+          "source_quote": "80 mm in local X",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_size_y",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "overall size in local Y",
+          "value": 60.0,
+          "unit": "mm",
+          "source_quote": "60 mm in local Y",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_size_z",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "overall size in local Z",
+          "value": 6.0,
+          "unit": "mm",
+          "source_quote": "6 mm in local Z",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_solid",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "solid count",
+          "value": 1.0,
+          "unit": "solid",
+          "source_quote": "It must be one solid.",
+          "requirement_ids": [
+            "r_solid"
+          ]
+        },
+        {
+          "id": "f_hole_count",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "total cylindrical through-hole count",
+          "value": 5.0,
+          "unit": "through-holes",
+          "source_quote": "exactly five uniform cylindrical through-holes parallel to local Z",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_center_hole_count",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "22 mm hole count",
+          "value": 1.0,
+          "unit": "hole",
+          "source_quote": "one 22 mm diameter hole at local XY (0, 0)",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_center_diameter",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "central hole diameter",
+          "value": 22.0,
+          "unit": "mm",
+          "source_quote": "one 22 mm diameter hole at local XY (0, 0)",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_center_x",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "central hole local X coordinate",
+          "value": 0.0,
+          "unit": "mm",
+          "source_quote": "one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm.",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_center_y",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "central hole local Y coordinate",
+          "value": 0.0,
+          "unit": "mm",
+          "source_quote": "one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm.",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_outer_hole_count",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "5.2 mm hole count",
+          "value": 4.0,
+          "unit": "holes",
+          "source_quote": "four 5.2 mm diameter holes",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_outer_diameter",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "diameter of each of the four outer holes",
+          "value": 5.2,
+          "unit": "mm",
+          "source_quote": "four 5.2 mm diameter holes",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_hole_2_x",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "hole at (-30, -20): local X coordinate",
+          "value": -30.0,
+          "unit": "mm",
+          "source_quote": "(-30, -20), (-30, 20), (30, -20) and (30, 20) mm",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_hole_2_y",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "hole at (-30, -20): local Y coordinate",
+          "value": -20.0,
+          "unit": "mm",
+          "source_quote": "(-30, -20), (-30, 20), (30, -20) and (30, 20) mm",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_hole_3_x",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "hole at (-30, 20): local X coordinate",
+          "value": -30.0,
+          "unit": "mm",
+          "source_quote": "(-30, -20), (-30, 20), (30, -20) and (30, 20) mm",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_hole_3_y",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "hole at (-30, 20): local Y coordinate",
+          "value": 20.0,
+          "unit": "mm",
+          "source_quote": "(-30, -20), (-30, 20), (30, -20) and (30, 20) mm",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_hole_4_x",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "hole at (30, -20): local X coordinate",
+          "value": 30.0,
+          "unit": "mm",
+          "source_quote": "(-30, -20), (-30, 20), (30, -20) and (30, 20) mm",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_hole_4_y",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "hole at (30, -20): local Y coordinate",
+          "value": -20.0,
+          "unit": "mm",
+          "source_quote": "(-30, -20), (-30, 20), (30, -20) and (30, 20) mm",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_hole_5_x",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "hole at (30, 20): local X coordinate",
+          "value": 30.0,
+          "unit": "mm",
+          "source_quote": "(-30, -20), (-30, 20), (30, -20) and (30, 20) mm",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_hole_5_y",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "hole at (30, 20): local Y coordinate",
+          "value": 20.0,
+          "unit": "mm",
+          "source_quote": "(-30, -20), (-30, 20), (30, -20) and (30, 20) mm",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_diameter_tolerance",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "symmetric diameter tolerance for each hole",
+          "value": 0.05,
+          "unit": "mm",
+          "source_quote": "Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        },
+        {
+          "id": "f_position_tolerance",
+          "subject_id": "motor_plate",
+          "candidate_subject_ids": [],
+          "property": "radial position tolerance for each hole",
+          "value": 0.05,
+          "unit": "mm",
+          "source_quote": "Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r_geometry",
+            "r_perforated_body"
+          ]
+        }
+      ],
+      "requirement_subjects": {
+        "r_inventory": [
+          "motor_plate"
+        ],
+        "r_geometry": [
+          "motor_plate"
+        ],
+        "r_perforated_body": [
+          "motor_plate"
+        ],
+        "r_solid": [
+          "motor_plate"
+        ],
+        "r_scope": [
+          "motor_plate"
+        ],
+        "r_native": [
+          "motor_plate"
+        ],
+        "r_step": [
+          "motor_plate"
+        ],
+        "r_stl": [
+          "motor_plate"
+        ],
+        "r_print_package": [
+          "motor_plate"
+        ]
+      },
+      "issues": []
+    }
+  }
+}

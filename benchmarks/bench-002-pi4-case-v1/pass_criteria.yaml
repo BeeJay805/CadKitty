@@ -1,0 +1,32 @@
+# Pass criteria for bench-002 (Raspberry Pi 4 case). PLANNED — the pi4_case
+# interpreter and the pi4_mount / pi4_ports interface checkers are not built yet
+# (ADR-0005). These thresholds are the target the implementation must hit.
+#
+# This is a GENERALISATION test, run UNTUNED first: the bar is deliberately lower
+# than bench-001's 9/10. Whatever the first untuned number is, it is the finding.
+
+trials: 10
+min_passing_trials: 6
+max_iterations_per_trial: 3
+max_wall_seconds: 60
+max_cost_usd_per_trial: 0.30
+
+# The validator check ids that MUST pass for a trial to count as a success.
+# Mesh / wall / overhang / bbox checks already exist; the interfaces.pi4_* checks
+# are the new validator work ADR-0005 calls out.
+required_checks:
+  - mesh.watertight
+  - mesh.single_body
+  - mesh.bbox_within_max
+  - features.min_wall_thickness
+  - printability.overhang_max_angle
+  - interfaces.pi4_mount.mount_holes_present
+  - interfaces.pi4_mount.hole_rectangle_58x49
+  - interfaces.pi4_ports.long_edge_opening
+  - interfaces.pi4_ports.short_edge_opening
+
+# Hand-authored reference PartProgram (open tray) that passes the new validator
+# checks, for the --use-handwritten bypass. The LayoutSpec design target is also
+# kept for when the interpreter exists.
+reference_dsl: tests/fixtures/handwritten/pi4_case_good.partdsl.json
+reference_layoutspec: tests/fixtures/layout/bench002_pi4_case.layoutspec.json

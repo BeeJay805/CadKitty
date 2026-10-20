@@ -1,0 +1,30 @@
+{
+  "version": "invention_normal_v1",
+  "description": "Normal-tier lifecycle problems (ADR-0048). A frozen set that EXTENDS benchmarks/invention_v1 (which holds the easy tier plus the first normal problem, vibration_isolator) with additional, distinct normal problems. Each is a physical PROBLEM (load-bearing, a moving/locking element, or a real standard-hardware interface) a notch harder than the easy clip/stand/hook -- not a part request. Scored by forge_mind.invention.rubric.score_lifecycle (problem in -> honestly-labelled InventionPackage out); producing the outputs needs the live front door (Fable), the scoring is deterministic. min_concepts=2 matches the easy/normal convention in invention_v1. FROZEN: an edit is a new version (invention_normal_v2), never an in-place change.",
+  "problems": [
+    {
+      "id": "adjustable_laptop_stand",
+      "tier": "normal",
+      "problem": "I work on a laptop at my desk and need it raised toward eye level at an angle I can change through the day. I want a 3D-printable stand that locks at a few viewing angles, holds a 2 kg laptop without slipping or collapsing, and folds flat to travel -- all with no screws or other hardware.",
+      "min_concepts": 2
+    },
+    {
+      "id": "extrusion_spool_holder",
+      "tier": "normal",
+      "problem": "My 3D printer is built on 2020 aluminium extrusion and the filament spool drags as it feeds, which spoils my prints. I need a printable spool holder that clamps onto a length of 2020 extrusion and lets a full 1 kg spool turn freely with very little friction, using as little extra hardware as possible.",
+      "min_concepts": 2
+    },
+    {
+      "id": "under_desk_drawer",
+      "tier": "normal",
+      "problem": "My desk has no drawers and pens and small tools clutter the top. I want a small printable drawer that mounts under the desktop without screws or adhesive residue, slides out smoothly, holds about 1 kg of pens and tools, and stays shut on its own when I push it closed.",
+      "min_concepts": 2
+    },
+    {
+      "id": "monitor_riser_shelf",
+      "tier": "normal",
+      "problem": "I want to raise my monitor about 10 cm and store my keyboard and a notebook in the gap underneath. I need a printable riser that supports a 6 kg monitor without sagging or wobbling over time and that I can print in pieces which join together without any hardware.",
+      "min_concepts": 2
+    }
+  ]
+}

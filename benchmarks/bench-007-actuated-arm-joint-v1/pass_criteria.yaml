@@ -1,0 +1,28 @@
+# bench-007: the LLM drives the actuated NEMA 17 arm joint (tier 1, static).
+# A trial passes when generate -> solve -> compile -> validate_assembly all pass
+# UNDER THE TIER-1 SCORING: required_checks must PASS and the deferred motor-sweep
+# WARN (range_of_motion -- the revolute is hardware-anchored, no motor mesh to sweep)
+# is accepted as a known-deferral. Any OTHER warn or fail still fails the trial.
+
+trials_per_prompt: 30       # single prompt
+gate_wilson_lb: 0.80        # overall Wilson 95% lower bound must clear this (project standard)
+max_cost_usd: 1.50          # hard ceiling; the harness stops cleanly if reached
+
+prompts:
+  - arm_joint
+
+# Tier-1 honest scoring (passes_criteria) -- new keys the assembly harness reads:
+# Required checks are by KIND (dotted suffix), not pinned to part ids -- the LLM names
+# parts freely, so passes_criteria matches `bore_grips_shaft` against
+# `interfaces.<any-arm-id>.bore_grips_shaft`. The coupling checks only ever attach to an
+# output_arm and hardware_coaxial proves the revolute is on the real shaft, so a passing
+# trial IS a valid actuated joint regardless of the LLM's chosen ids.
+required_checks:
+  - assembly.hardware_coaxial
+  - bore_grips_shaft
+  - set_screw_present
+accepted_warns:
+  - assembly.range_of_motion   # powered sweep vs the motor body deferred (ADR-0012 Q5)
+
+# Hand-authored reference (the deterministic ground truth, validated directly).
+reference_assembly: benchmarks/bench-007-actuated-arm-joint-v1/reference.assembly.json

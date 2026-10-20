@@ -1,0 +1,20 @@
+{
+  "pattern": "pi4_case",
+  "name": "generic_pcb_tray",
+  "envelope_mm": { "x": 85.0, "y": 65.0, "z": 25.0 },
+  "material": "PLA",
+  "min_wall_mm": 2.0,
+  "clearance_mm": 2.0,
+  "board": { "length_mm": 70.0, "width_mm": 50.0, "thickness_mm": 1.6 },
+  "standoffs": {
+    "hole_dx_mm": 60.0,
+    "hole_dy_mm": 40.0,
+    "edge_inset_mm": 3.5,
+    "height_mm": 4.0,
+    "outer_diameter_mm": 8.0,
+    "screw_clearance_mm": 3.2
+  },
+  "ports": "none",
+  "ventilation": "none",
+  "lid": "none"
+}

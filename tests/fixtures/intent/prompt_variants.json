@@ -1,0 +1,21 @@
+{
+  "description": "10 phrasings of the same NEMA 17 mount request. All must extract to the same facts: nema17_face + extrusion_2020_slot interfaces, 4mm walls, PLA, 60x60x40 envelope.",
+  "expected": {
+    "required_interface_types": ["nema17_face", "extrusion_2020_slot"],
+    "min_wall_mm": 4.0,
+    "envelope_mm": [60.0, 60.0, 40.0],
+    "material": "PLA"
+  },
+  "variants": [
+    "Design a 3D-printable mounting bracket for a NEMA 17 stepper motor. The bracket mounts the motor to a 2020 aluminum extrusion using two M5 T-nuts. Wall thickness 4mm. Motor shaft faces away from the extrusion. The finished part must fit within a 60 x 60 x 40 mm bounding box. Material: PLA.",
+    "I need a PLA bracket that holds a NEMA 17 stepper and bolts onto a 2020 extrusion with M5 T-nuts. Keep the walls 4mm and the whole thing under 60x60x40mm.",
+    "Make me a motor mount: NEMA 17 on one side, attaches to a 20x20 aluminium rail via two M5 t-nuts on the other. 4 mm walls, printed in PLA, max size 60 x 60 x 40 mm.",
+    "Part: NEMA17 stepper bracket. Mounts motor and fastens to a 2020 v-slot extrusion (M5 T-nuts). Min wall 4mm. PLA. Envelope 60x60x40.",
+    "Bracket to attach a NEMA 17 stepper motor to a 2020 extrusion. Use M5 T-nuts for the rail. 4mm minimum wall thickness, PLA material, must stay within a 60mm x 60mm x 40mm box.",
+    "I'm building a CoreXY printer and need a NEMA 17 motor mount that clamps to 2020 extrusion with M5 t-nuts. Print in PLA, 4mm walls, keep it inside 60x60x40 mm.",
+    "Stepper motor mount for a NEMA 17, bolting to 2020 aluminum profile with two M5 T-nuts. Walls at least 4mm thick. PLA. Bounding box no larger than 60 x 60 x 40 mm.",
+    "Could you design a bracket? It needs to carry a NEMA 17 stepper and screw onto a 2020 extrusion using M5 T-nuts. 4mm wall thickness, PLA, fits in 60x60x40.",
+    "NEMA 17 to 2020-extrusion adapter bracket, M5 T-nut mounting, four millimetre walls, PLA plastic, within a sixty by sixty by forty millimetre envelope.",
+    "Design an L-bracket holding a NEMA 17 motor that mounts to a 2020 rail with M5 T-nuts. Material PLA, 4mm walls, overall size capped at 60x60x40 mm."
+  ]
+}

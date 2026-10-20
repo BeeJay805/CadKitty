@@ -1,0 +1,70 @@
+[
+ {
+  "_meta": "R4 FLAGSHIP CANDIDATE (NOT FROZEN): the tendon-driven finger -- ADR-0124's atom of the hand. THREE printed phalanges on pin joints, ONE tendon channel routed through all three, a horn spool on a single MG996R, elastic return. Servo BOUGHT/registry-mapped (horn BC 14.0 PHYSICALLY VERIFIED 2026-07-22). Gate: the tendon-routability audit (channel continuity, min bend radius >= 3 mm for 0.5 mm Spectra braid, total path length) -- deterministic from the STEP. PHYSICAL EXIT (founder-committed): the printed finger curls under one servo pull; fingertip force measured by fish scale, reported vs stall math as INFO never PASS. Teacher roster authors (cloud-first law); local inherits via the repair flywheel."
+ },
+ {
+  "label": "tendon_finger",
+  "rung": "R4",
+  "prompt": "A tendon-driven robot finger: three printed phalanges connected by pin joints, curled by ONE tendon (0.5 mm braided line) running through a continuous channel along the palm side of all three phalanges, pulled by a spool on an MG996R servo horn; an elastic band along the back side returns the finger straight. The servo is a bought part -- model only the printed parts around its cited interfaces.",
+  "assembly": {
+   "servos": [
+    {
+     "id": "drive_servo",
+     "kind": "mg996r_servo",
+     "pose_note": "Lying flat behind the finger base: shaft axis +Y, shaft exit plane at y=-30, shaft axis at z=+15 -- the spool winds the tendon roughly in line with the base phalanx channel entry."
+    }
+   ],
+   "plan": {
+    "object_name": "tendon-driven finger (one MG996R, one tendon)",
+    "assembly_note": "mount_base bolts the servo flange and carries the base pivot; proximal, middle, and tip phalanges chain on d3.2 pin bores (idler-bushing class); the tendon channel (d1.2) runs palm-side through all three with >=3 mm bend radius at each joint crossing; tendon_spool screws onto the servo horn (center d8.1, 4x d2.2 on BC 14.0) and anchors the tendon at a d20 winding drum; an elastic groove runs dorsal-side.",
+    "parts": [
+     {
+      "name": "mount_base",
+      "prompt": "The finger's base mount as ONE solid in the shared origin frame: a plate carrying the servo tab pattern (4x d4.5 on the cited 49.5 x 10.0 rectangle) for the drive servo lying at y=-30, an upright knuckle clevis at the origin with a d3.2 pin bore at z=+15 (axis +X), and a tendon guide hole d1.2 leading from the spool side through to the palm-side channel line. Walls >= 3.0 mm.",
+      "ports": [
+       {"name": "servo_mount", "note": "the tab-pattern face for the drive servo flange"},
+       {"name": "knuckle_pin", "note": "the d3.2 clevis pin bore at the origin, axis +X"}
+      ]
+     },
+     {
+      "name": "proximal_phalanx",
+      "prompt": "The proximal phalanx as ONE solid: a rounded-box link 32 mm long, 14 mm wide, 12 mm tall, with a d3.2 pin bore at each end (axes +X, 26 mm apart), a palm-side tendon channel d1.2 running its full length with flared ends (>= 3 mm bend radius), and a dorsal elastic groove 3 x 1.5 mm. Walls >= 2.5 mm around the channel.",
+      "ports": [
+       {"name": "base_pin", "note": "proximal pin bore, mates the mount clevis"},
+       {"name": "mid_pin", "note": "distal pin bore, mates the middle phalanx"}
+      ]
+     },
+     {
+      "name": "middle_phalanx",
+      "prompt": "The middle phalanx as ONE solid: same construction as the proximal but 26 mm long with pin bores 20 mm apart, palm-side d1.2 through-channel with flared ends, dorsal elastic groove. Walls >= 2.5 mm.",
+      "ports": [
+       {"name": "prox_pin", "note": "proximal pin bore"},
+       {"name": "tip_pin", "note": "distal pin bore"}
+      ]
+     },
+     {
+      "name": "tip_phalanx",
+      "prompt": "The fingertip as ONE solid: a rounded tapering tip 22 mm long with one d3.2 pin bore at its base, the tendon channel d1.2 ending at an internal anchor pocket 4 x 3 x 3 mm (the tendon knot seats here), a dorsal elastic anchor slot, and a flat 8 x 6 mm pad at the tip face for the pull-test scale hook. Walls >= 2.5 mm.",
+      "ports": [
+       {"name": "base_pin", "note": "the tip's pin bore"}
+      ]
+     },
+     {
+      "name": "tendon_spool",
+      "prompt": "The tendon spool as ONE solid: a winding drum d20 x 8 mm with a 1.5 mm deep helical groove, on a horn hub base -- center bore d8.1 and four horn screw holes d2.2 on the cited 14.0 mm bolt circle -- plus a d1.2 tendon anchor hole through the drum wall. Walls >= 2.0 mm.",
+      "ports": [
+       {"name": "hub", "note": "the horn hub face, axis +Y"}
+      ]
+     }
+    ],
+    "joints": [
+     {"type": "fixed", "a": "mount_base.servo_mount", "b": "drive_servo.mount"},
+     {"type": "revolute", "a": "drive_servo.horn", "b": "tendon_spool.hub", "range_deg": [-90, 90]},
+     {"type": "revolute", "a": "mount_base.knuckle_pin", "b": "proximal_phalanx.base_pin", "range_deg": [0, 80]},
+     {"type": "revolute", "a": "proximal_phalanx.mid_pin", "b": "middle_phalanx.prox_pin", "range_deg": [0, 95]},
+     {"type": "revolute", "a": "middle_phalanx.tip_pin", "b": "tip_phalanx.base_pin", "range_deg": [0, 80]}
+    ]
+   }
+  }
+ }
+]

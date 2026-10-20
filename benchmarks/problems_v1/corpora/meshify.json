@@ -1,0 +1,13 @@
+{
+  "note": "CANNED bench fixture, not real product data. The entity has no model-number token, so queries carry no entity string; the key matches the playbook's clearance query text.",
+  "by_query": {
+    "fan clearance": [
+      {
+        "url": "bench://meshify-c/airflow",
+        "title": "Fractal Design Meshify C airflow (bench fixture)",
+        "text": "Meshify C airflow fixture (canned bench corpus; verify against your physical hardware). The free clearance between the front fan frame and the GPU face is 160 mm.",
+        "fetched_at": "2026-07-06"
+      }
+    ]
+  }
+}

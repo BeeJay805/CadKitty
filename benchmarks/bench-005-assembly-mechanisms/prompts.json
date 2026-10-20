@@ -1,0 +1,8 @@
+{
+  "hinge_butt": "Design a 2-leaf butt hinge that folds flat at 0 degrees and opens flat at 180 degrees: two rectangular leaves joined by interleaved knuckles around a single removable pin. It must rotate freely about the pin without binding.",
+  "hinge_door": "Make a small door hinge: two flat leaves that pivot about a shared pin running through interlocking knuckles, swinging from closed to fully open without jamming.",
+  "slide_piston": "Design a simple linear slide: a round piston that slides back and forth along the axis of a hollow tube, staying captured inside the tube. It must slide freely without binding.",
+  "slide_telescope": "Make a telescoping rod-and-sleeve: a cylindrical shaft that extends and retracts along the axis of a round tube it sits inside, without falling out or jamming.",
+  "linkage_arm": "Design a 2-bar folding arm: a fixed base, a first bar that pivots on the base, and a second bar that pivots on the far end of the first bar. Each pivot is a pinned revolute joint so the arm folds.",
+  "linkage_chain": "Make a simple 2-link mechanism: a grounded link, a middle link pinned to it that swings, and an end link pinned to the middle link that swings on it. Pinned revolute pivots throughout."
+}

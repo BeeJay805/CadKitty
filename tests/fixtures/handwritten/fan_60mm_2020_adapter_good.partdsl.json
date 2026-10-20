@@ -1,0 +1,196 @@
+{
+  "version": "0.1",
+  "metadata": {
+    "name": "fan_60mm_2020_adapter_reference",
+    "units": "mm",
+    "print_orientation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 1.0
+    },
+    "description": "bench-006 deterministic reference: flat 60mm fan-mount -> 2020 adapter plate (ADR-0011). Fan face on +Z, 2020 M5 T-nut pair through to -Z; reuses the adapter_plate shape, one new fan_face interface."
+  },
+  "operations": [
+    {
+      "op_id": "plate",
+      "mode": "add",
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "box",
+      "width": 104.0,
+      "depth": 64.0,
+      "height": 4.0
+    },
+    {
+      "op_id": "fan_bolt_nw",
+      "mode": "subtract",
+      "position": {
+        "x": -5.0,
+        "y": 25.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "fan_bolt_ne",
+      "mode": "subtract",
+      "position": {
+        "x": 45.0,
+        "y": 25.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "fan_bolt_sw",
+      "mode": "subtract",
+      "position": {
+        "x": -5.0,
+        "y": -25.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "fan_bolt_se",
+      "mode": "subtract",
+      "position": {
+        "x": 45.0,
+        "y": -25.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "airflow_bore",
+      "mode": "subtract",
+      "position": {
+        "x": 20.0,
+        "y": 0.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 28.0,
+      "height": 4.0
+    },
+    {
+      "op_id": "ext_bolt_back",
+      "mode": "subtract",
+      "position": {
+        "x": -30.0,
+        "y": -10.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 2.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "ext_bolt_front",
+      "mode": "subtract",
+      "position": {
+        "x": -30.0,
+        "y": 10.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 2.6,
+      "height": 4.0
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "fan_face",
+      "interface_type": "fan_face",
+      "location": {
+        "x": 20.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "normal": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "params": {
+        "bolt_square": 50.0,
+        "airflow_bore_radius": 28.0
+      }
+    },
+    {
+      "name": "extrusion_face",
+      "interface_type": "extrusion_2020_slot",
+      "location": {
+        "x": -30.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "normal": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": -1.0
+      },
+      "params": {}
+    }
+  ],
+  "constraints": {
+    "min_wall_thickness": 4.0,
+    "max_overhang_deg": 45.0,
+    "max_bbox": {
+      "x": 108.0,
+      "y": 68.0,
+      "z": 8.0
+    }
+  }
+}

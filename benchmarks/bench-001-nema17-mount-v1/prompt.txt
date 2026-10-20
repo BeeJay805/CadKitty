@@ -1,0 +1,1 @@
+Design a 3D-printable mounting bracket for a NEMA 17 stepper motor. The bracket mounts the motor to a 2020 aluminum extrusion using two M5 T-nuts. Wall thickness 4mm. Motor shaft faces away from the extrusion. The finished part must fit within a 60 x 60 x 40 mm bounding box. Material: PLA.

@@ -1,0 +1,4 @@
+# arbitrary_v1.1 FROZEN 2026-07-04. Errata-corrected successor to arbitrary_v1 (which
+# stays frozen alongside): 5 verified rubric defects fixed, prompts byte-identical to v1.
+# See errata_from_v1 in the JSON + ADR-0085. Any content change is a NEW benchmark version.
+7dced56159351cef333adbb0a4949d41b55b9aebb088f6540952b895b4f55d6a arbitrary_v1_1.json

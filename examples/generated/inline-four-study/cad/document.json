@@ -1,0 +1,5534 @@
+{
+  "assembly": {
+    "mates": [
+      {
+        "a": "block.main_left_housing",
+        "axial_tolerance": 0.001,
+        "b": "main_bush_left.housing",
+        "id": "main_left_housing_fit",
+        "max_clearance": 0.021,
+        "min_clearance": 0.019
+      },
+      {
+        "a": "block.main_right_housing",
+        "axial_tolerance": 0.001,
+        "b": "main_bush_right.housing",
+        "id": "main_right_housing_fit",
+        "max_clearance": 0.021,
+        "min_clearance": 0.019
+      },
+      {
+        "a": "main_bush_left.journal",
+        "axial_tolerance": 0.001,
+        "b": "crank.main_left",
+        "id": "main_left_running_fit",
+        "max_clearance": 0.041,
+        "min_clearance": 0.039
+      },
+      {
+        "a": "main_bush_right.journal",
+        "axial_tolerance": 0.001,
+        "b": "crank.main_right",
+        "id": "main_right_running_fit",
+        "max_clearance": 0.041,
+        "min_clearance": 0.039
+      },
+      {
+        "a": "block.cam_left_housing",
+        "axial_tolerance": 0.001,
+        "b": "cam_bush_left.housing",
+        "id": "cam_left_housing_fit",
+        "max_clearance": 0.021,
+        "min_clearance": 0.019
+      },
+      {
+        "a": "block.cam_right_housing",
+        "axial_tolerance": 0.001,
+        "b": "cam_bush_right.housing",
+        "id": "cam_right_housing_fit",
+        "max_clearance": 0.021,
+        "min_clearance": 0.019
+      },
+      {
+        "a": "cam_bush_left.journal",
+        "axial_tolerance": 0.001,
+        "b": "cam.cam_left",
+        "id": "cam_left_running_fit",
+        "max_clearance": 0.041,
+        "min_clearance": 0.039
+      },
+      {
+        "a": "cam_bush_right.journal",
+        "axial_tolerance": 0.001,
+        "b": "cam.cam_right",
+        "id": "cam_right_running_fit",
+        "max_clearance": 0.041,
+        "min_clearance": 0.039
+      },
+      {
+        "a": "piston_1.wrist_bore",
+        "axial_tolerance": 0.001,
+        "b": "wrist_pin_1.piston_journal",
+        "id": "piston_1_wrist_fit",
+        "max_clearance": 0.05,
+        "min_clearance": 0.03
+      },
+      {
+        "a": "piston_2.wrist_bore",
+        "axial_tolerance": 0.001,
+        "b": "wrist_pin_2.piston_journal",
+        "id": "piston_2_wrist_fit",
+        "max_clearance": 0.05,
+        "min_clearance": 0.03
+      },
+      {
+        "a": "piston_3.wrist_bore",
+        "axial_tolerance": 0.001,
+        "b": "wrist_pin_3.piston_journal",
+        "id": "piston_3_wrist_fit",
+        "max_clearance": 0.05,
+        "min_clearance": 0.03
+      },
+      {
+        "a": "piston_4.wrist_bore",
+        "axial_tolerance": 0.001,
+        "b": "wrist_pin_4.piston_journal",
+        "id": "piston_4_wrist_fit",
+        "max_clearance": 0.05,
+        "min_clearance": 0.03
+      },
+      {
+        "a": "rod_1.crankpin_saddle",
+        "axial_tolerance": 0.01,
+        "b": "crank.pin_1",
+        "id": "rod_1_crankpin_fit",
+        "max_clearance": 0.05,
+        "min_clearance": 0.03
+      },
+      {
+        "a": "rod_2.crankpin_saddle",
+        "axial_tolerance": 0.01,
+        "b": "crank.pin_2",
+        "id": "rod_2_crankpin_fit",
+        "max_clearance": 0.05,
+        "min_clearance": 0.03
+      },
+      {
+        "a": "rod_3.crankpin_saddle",
+        "axial_tolerance": 0.01,
+        "b": "crank.pin_3",
+        "id": "rod_3_crankpin_fit",
+        "max_clearance": 0.05,
+        "min_clearance": 0.03
+      },
+      {
+        "a": "rod_4.crankpin_saddle",
+        "axial_tolerance": 0.01,
+        "b": "crank.pin_4",
+        "id": "rod_4_crankpin_fit",
+        "max_clearance": 0.05,
+        "min_clearance": 0.03
+      }
+    ],
+    "parts": [
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "block_length",
+              "y": "block_width",
+              "z": "block_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "block_stock",
+            "inputs": [],
+            "kind": "box",
+            "name": "Rectangular aluminum billet",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "block_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "block_stock_positioned",
+            "inputs": [
+              "block_stock"
+            ],
+            "kind": "transform",
+            "name": "Set bottom datum at Z zero",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crankcase_length",
+              "y": "crankcase_width",
+              "z": "crankcase_cut_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crankcase_tool",
+            "inputs": [],
+            "kind": "box",
+            "name": "Bottom-access crankcase milling volume",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "crankcase_cut_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crankcase_tool_positioned",
+            "inputs": [
+              "crankcase_tool"
+            ],
+            "kind": "transform",
+            "name": "Crankcase opening through bottom",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_crankcase",
+            "inputs": [
+              "block_stock_positioned",
+              "crankcase_tool_positioned"
+            ],
+            "kind": "cut",
+            "name": "Mill open crankcase",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "cylinder_cut_height",
+              "radius": "cylinder_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cylinder_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Cylinder boring tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_first_x",
+              "z": "block_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cylinder_tool_positioned",
+            "inputs": [
+              "cylinder_tool"
+            ],
+            "kind": "transform",
+            "name": "First cylinder on shared row datum",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "cylinder_count",
+              "x": "cylinder_pitch"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cylinder_tools",
+            "inputs": [
+              "cylinder_tool_positioned"
+            ],
+            "kind": "pattern",
+            "name": "Four equally spaced cylinder bores",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_cylinders",
+            "inputs": [
+              "block_crankcase",
+              "cylinder_tools"
+            ],
+            "kind": "cut",
+            "name": "Bore four vertical cylinders into crankcase",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crankcase_length",
+              "y": "cam_chamber_cut_depth",
+              "z": "cam_chamber_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_chamber_tool",
+            "inputs": [],
+            "kind": "box",
+            "name": "Side-access camshaft chamber milling volume",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "y": "cam_chamber_center_y",
+              "z": "cam_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_chamber_tool_positioned",
+            "inputs": [
+              "cam_chamber_tool"
+            ],
+            "kind": "transform",
+            "name": "Camshaft chamber opening toward positive Y",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_cam_chamber",
+            "inputs": [
+              "block_cylinders",
+              "cam_chamber_tool_positioned"
+            ],
+            "kind": "cut",
+            "name": "Mill removable-cover camshaft chamber",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "shaft_bore_cut_length",
+              "radius": "crank_bushing_seat_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_seat_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Crankshaft bronze-bushing housing tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "crank_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_seat_tool_positioned",
+            "inputs": [
+              "main_seat_tool"
+            ],
+            "kind": "transform",
+            "name": "Align main bearing seats along X",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_main_seats",
+            "inputs": [
+              "block_cam_chamber",
+              "main_seat_tool_positioned"
+            ],
+            "kind": "cut",
+            "name": "Bore coaxial crankshaft end supports",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "shaft_bore_cut_length",
+              "y": "crank_bushing_seat_d",
+              "z": "crank_entry_cut_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_entry_tool",
+            "inputs": [],
+            "kind": "box",
+            "name": "Downward crankshaft assembly opening tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "crank_entry_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_entry_tool_positioned",
+            "inputs": [
+              "main_entry_tool"
+            ],
+            "kind": "transform",
+            "name": "Open main saddles to crankcase-cover datum",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_main_saddles",
+            "inputs": [
+              "block_main_seats",
+              "main_entry_tool_positioned"
+            ],
+            "kind": "cut",
+            "name": "Mill downward-open main bearing saddles",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "shaft_bore_cut_length",
+              "radius": "cam_bushing_seat_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_seat_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Camshaft bronze-bushing housing tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "y": "cam_axis_y",
+              "z": "cam_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_seat_tool_positioned",
+            "inputs": [
+              "cam_seat_tool"
+            ],
+            "kind": "transform",
+            "name": "Align cam bearing seats along X",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_cam_seats",
+            "inputs": [
+              "block_main_saddles",
+              "cam_seat_tool_positioned"
+            ],
+            "kind": "cut",
+            "name": "Bore coaxial camshaft end supports",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "shaft_bore_cut_length",
+              "y": "cam_entry_cut_depth",
+              "z": "cam_bushing_seat_d"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_entry_tool",
+            "inputs": [],
+            "kind": "box",
+            "name": "Sideward camshaft assembly opening tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "y": "cam_entry_center_y",
+              "z": "cam_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_entry_tool_positioned",
+            "inputs": [
+              "cam_entry_tool"
+            ],
+            "kind": "transform",
+            "name": "Open cam saddles toward service cover",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_cam_saddles",
+            "inputs": [
+              "block_cam_seats",
+              "cam_entry_tool_positioned"
+            ],
+            "kind": "cut",
+            "name": "Mill side-open cam bearing saddles",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "main_oil_cut_length",
+              "radius": "oil_feed_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_oil_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Drilled crank-bearing oil-feed tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "bearing_station_negative_x",
+              "y": "main_oil_center_y",
+              "z": "crank_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_oil_tool_positioned",
+            "inputs": [
+              "main_oil_tool"
+            ],
+            "kind": "transform",
+            "name": "Oil feed from negative Y face to first bearing",
+            "params": {
+              "rx": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "bearing_station_span"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_oil_tools",
+            "inputs": [
+              "main_oil_tool_positioned"
+            ],
+            "kind": "pattern",
+            "name": "Oil feeds at both main-bearing stations",
+            "params": {
+              "count": 2.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_oil_feeds",
+            "inputs": [
+              "block_cam_saddles",
+              "main_oil_tools"
+            ],
+            "kind": "cut",
+            "name": "Drill main-bearing lubrication paths",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "bottom_thread_cut_height",
+              "radius": "cover_thread_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "bottom_thread_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Bottom-cover nominal threaded-hole envelope",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cover_hole_negative_x",
+              "y": "bottom_cover_hole_negative_y",
+              "z": "bottom_thread_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "bottom_thread_tool_positioned",
+            "inputs": [
+              "bottom_thread_tool"
+            ],
+            "kind": "transform",
+            "name": "First bottom-cover fastening point",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "bottom_cover_columns",
+              "x": "bottom_cover_hole_pitch_x"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "bottom_thread_row",
+            "inputs": [
+              "bottom_thread_tool_positioned"
+            ],
+            "kind": "pattern",
+            "name": "Three bottom-cover holes along X",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "cover_rows",
+              "y": "bottom_cover_hole_span_y"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "bottom_thread_tools",
+            "inputs": [
+              "bottom_thread_row"
+            ],
+            "kind": "pattern",
+            "name": "Two rows of bottom-cover holes",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_bottom_threads",
+            "inputs": [
+              "block_oil_feeds",
+              "bottom_thread_tools"
+            ],
+            "kind": "cut",
+            "name": "Six blind bottom-cover thread envelopes",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "side_thread_cut_length",
+              "radius": "cover_thread_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "side_thread_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Cam-cover nominal threaded-hole envelope",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cover_hole_negative_x",
+              "y": "side_thread_center_y",
+              "z": "side_cover_hole_lower_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "side_thread_tool_positioned",
+            "inputs": [
+              "side_thread_tool"
+            ],
+            "kind": "transform",
+            "name": "First side-cover fastening point",
+            "params": {
+              "rx": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "side_cover_columns",
+              "x": "cover_hole_span_x"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "side_thread_row",
+            "inputs": [
+              "side_thread_tool_positioned"
+            ],
+            "kind": "pattern",
+            "name": "Two side-cover holes along X",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "cover_rows",
+              "z": "side_cover_hole_pitch_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "side_thread_tools",
+            "inputs": [
+              "side_thread_row"
+            ],
+            "kind": "pattern",
+            "name": "Upper and lower side-cover hole rows",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "block_output",
+            "inputs": [
+              "block_bottom_threads",
+              "side_thread_tools"
+            ],
+            "kind": "cut",
+            "name": "Block with cylinder bores, service openings and oil feeds",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "engine_block",
+        "name": "Aluminum inline-four block with open bearing saddles",
+        "output": "block_output",
+        "ports": [
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crank_bushing_seat_d",
+            "kind": "bore",
+            "name": "main_left_housing",
+            "origin": [
+              "bearing_station_negative_x",
+              0.0,
+              "crank_axis_z"
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crank_bushing_seat_d",
+            "kind": "bore",
+            "name": "main_right_housing",
+            "origin": [
+              "bearing_station_x",
+              0.0,
+              "crank_axis_z"
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "cam_bushing_seat_d",
+            "kind": "bore",
+            "name": "cam_left_housing",
+            "origin": [
+              "bearing_station_negative_x",
+              "cam_axis_y",
+              "cam_axis_z"
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "cam_bushing_seat_d",
+            "kind": "bore",
+            "name": "cam_right_housing",
+            "origin": [
+              "bearing_station_x",
+              "cam_axis_y",
+              "cam_axis_z"
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#AEB6BE"
+          },
+          "deliver_stl": false,
+          "finish": "Conventional milling, boring and drilling; bearing fits and surface finish require manufacturing review.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "6061-T6, proposed design choice",
+            "name": "Aluminum",
+            "source_claim_ids": []
+          },
+          "process": "manual",
+          "procurement": null,
+          "role": "make",
+          "source_claim_ids": []
+        },
+        "source": "Owner specifies aluminum, four cylinders along X with Z axes, and conventional machining. Other dimensions are design choices. Crank bearing saddles open downward; cam bearing saddles open toward +Y. Matching removable support covers and bronze bushings remain to be constructed. Cover holes represent nominal M3 thread envelopes, not modeled threads or tap-drill geometry. Oil feeds are drilled from the -Y face to crank bushing seats; aligned bushing oil holes and cam-cover oil feeds remain to be constructed. Material, machining access, fit and hand-turnability are not physically qualified."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "crankshaft_length",
+              "radius": "crankshaft_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_journal_stock",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Turned main journal stock",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_journal_axis",
+            "inputs": [
+              "crank_journal_stock"
+            ],
+            "kind": "transform",
+            "name": "Main journal stock along X",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crankpin_width",
+              "y": "journal_gap_tool_span",
+              "z": "journal_gap_tool_span"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_gap_tool",
+            "inputs": [],
+            "kind": "box",
+            "name": "Remove main-axis material at each crankpin",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_first_x"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_gap_first",
+            "inputs": [
+              "crank_gap_tool"
+            ],
+            "kind": "transform",
+            "name": "First crankpin gap",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "cylinder_count",
+              "x": "cylinder_pitch"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_gap_pattern",
+            "inputs": [
+              "crank_gap_first"
+            ],
+            "kind": "pattern",
+            "name": "Four crankpin gaps at cylinder pitch",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_main_journals",
+            "inputs": [
+              "crank_journal_axis",
+              "crank_gap_pattern"
+            ],
+            "kind": "cut",
+            "name": "Five main-axis journal segments",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crank_web_thickness",
+              "y": "crank_web_width",
+              "z": "crank_web_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_web_blank",
+            "inputs": [],
+            "kind": "box",
+            "name": "Milled crank web blank",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crank_web_1_left_x",
+              "z": "crank_web_center_up"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_web_1_left",
+            "inputs": [
+              "crank_web_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 1 left web",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crank_web_1_right_x",
+              "z": "crank_web_center_up"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_web_1_right",
+            "inputs": [
+              "crank_web_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 1 right web",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crank_web_2_left_x",
+              "z": "crank_web_center_down"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_web_2_left",
+            "inputs": [
+              "crank_web_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 2 left web",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crank_web_2_right_x",
+              "z": "crank_web_center_down"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_web_2_right",
+            "inputs": [
+              "crank_web_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 2 right web",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crank_web_3_left_x",
+              "z": "crank_web_center_down"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_web_3_left",
+            "inputs": [
+              "crank_web_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 3 left web",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crank_web_3_right_x",
+              "z": "crank_web_center_down"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_web_3_right",
+            "inputs": [
+              "crank_web_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 3 right web",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crank_web_4_left_x",
+              "z": "crank_web_center_up"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_web_4_left",
+            "inputs": [
+              "crank_web_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 4 left web",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crank_web_4_right_x",
+              "z": "crank_web_center_up"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_web_4_right",
+            "inputs": [
+              "crank_web_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 4 right web",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "crankpin_fuse_length",
+              "radius": "crankpin_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_pin_blank",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Offset crankpin cylinder",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_first_x",
+              "z": "crank_throw"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_pin_1",
+            "inputs": [
+              "crank_pin_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 1 crankpin",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_second_x",
+              "z": "crank_throw_down"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_pin_2",
+            "inputs": [
+              "crank_pin_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 2 crankpin",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_third_x",
+              "z": "crank_throw_down"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_pin_3",
+            "inputs": [
+              "crank_pin_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 3 crankpin",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_fourth_x",
+              "z": "crank_throw"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_pin_4",
+            "inputs": [
+              "crank_pin_blank"
+            ],
+            "kind": "transform",
+            "name": "Cylinder 4 crankpin",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "handwheel_thickness",
+              "radius": "handwheel_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_handwheel_blank",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Integral handwheel disk",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "handwheel_center_x"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "crank_handwheel_positioned",
+            "inputs": [
+              "crank_handwheel_blank"
+            ],
+            "kind": "transform",
+            "name": "Handwheel at positive X end",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "crankshaft_output",
+            "inputs": [
+              "crank_main_journals",
+              "crank_web_1_left",
+              "crank_web_1_right",
+              "crank_web_2_left",
+              "crank_web_2_right",
+              "crank_web_3_left",
+              "crank_web_3_right",
+              "crank_web_4_left",
+              "crank_web_4_right",
+              "crank_pin_1",
+              "crank_pin_2",
+              "crank_pin_3",
+              "crank_pin_4",
+              "crank_handwheel_positioned"
+            ],
+            "kind": "union",
+            "name": "Complete single-piece crankshaft",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "crankshaft",
+        "name": "Steel four-throw crankshaft with integral handwheel",
+        "output": "crankshaft_output",
+        "ports": [
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crankshaft_journal_d",
+            "kind": "shaft",
+            "name": "main_left",
+            "origin": [
+              "bearing_station_negative_x",
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crankshaft_journal_d",
+            "kind": "shaft",
+            "name": "main_right",
+            "origin": [
+              "bearing_station_x",
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crankpin_diameter",
+            "kind": "shaft",
+            "name": "pin_1",
+            "origin": [
+              "cylinder_first_x",
+              0.0,
+              "crank_throw"
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crankpin_diameter",
+            "kind": "shaft",
+            "name": "pin_2",
+            "origin": [
+              "cylinder_second_x",
+              0.0,
+              "crank_throw_down"
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crankpin_diameter",
+            "kind": "shaft",
+            "name": "pin_3",
+            "origin": [
+              "cylinder_third_x",
+              0.0,
+              "crank_throw_down"
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crankpin_diameter",
+            "kind": "shaft",
+            "name": "pin_4",
+            "origin": [
+              "cylinder_fourth_x",
+              0.0,
+              "crank_throw"
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#697580"
+          },
+          "deliver_stl": false,
+          "finish": "Turn journals using offset fixtures; mill webs and handwheel. Finish journal surfaces after rough machining. Process access and tolerances require review.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "Low-carbon machining steel, proposed",
+            "name": "Steel",
+            "source_claim_ids": []
+          },
+          "process": "manual",
+          "procurement": null,
+          "role": "make",
+          "source_claim_ids": []
+        },
+        "source": "Owner requests a hand-turnable steel crankshaft. One-piece crankshaft is a design choice, with four 8 mm crankpins, 10 mm throw and an integral handwheel. Cylinders 1 and 4 oppose 2 and 3. Rods must have removable big-end caps for installation. The native union represents one machined part, not welded separate components. Hand torque, fatigue, journal finish, axial retention and machining fixtures remain unverified."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "camshaft_length",
+              "radius": "camshaft_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_journal_stock",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Camshaft journal stock",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_journal_axis",
+            "inputs": [
+              "cam_journal_stock"
+            ],
+            "kind": "transform",
+            "name": "Camshaft along X",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "cam_lobe_width",
+              "radius": "cam_lobe_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_lobe_blank",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Eccentric circular cam lobe with shaft containment",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_first_x",
+              "z": "cam_lobe_eccentricity"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_lobe_1",
+            "inputs": [
+              "cam_lobe_blank"
+            ],
+            "kind": "transform",
+            "name": "First lobe positive Z eccentricity",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_second_x",
+              "y": "cam_lobe_eccentricity"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_lobe_2",
+            "inputs": [
+              "cam_lobe_blank"
+            ],
+            "kind": "transform",
+            "name": "Second lobe positive Y eccentricity",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_third_x",
+              "z": "cam_lobe_negative_eccentricity"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_lobe_3",
+            "inputs": [
+              "cam_lobe_blank"
+            ],
+            "kind": "transform",
+            "name": "Third lobe negative Z eccentricity",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cylinder_fourth_x",
+              "y": "cam_lobe_negative_eccentricity"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_lobe_4",
+            "inputs": [
+              "cam_lobe_blank"
+            ],
+            "kind": "transform",
+            "name": "Fourth lobe negative Y eccentricity",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "camshaft_output",
+            "inputs": [
+              "cam_journal_axis",
+              "cam_lobe_1",
+              "cam_lobe_2",
+              "cam_lobe_3",
+              "cam_lobe_4"
+            ],
+            "kind": "union",
+            "name": "Single-piece eccentric camshaft",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "camshaft",
+        "name": "Steel camshaft with four eccentric demonstration lobes",
+        "output": "camshaft_output",
+        "ports": [
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "camshaft_journal_d",
+            "kind": "shaft",
+            "name": "cam_left",
+            "origin": [
+              "bearing_station_negative_x",
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "camshaft_journal_d",
+            "kind": "shaft",
+            "name": "cam_right",
+            "origin": [
+              "bearing_station_x",
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#697580"
+          },
+          "deliver_stl": false,
+          "finish": "Turn journals and eccentric circular lobes with offset fixtures. Deburr and finish bearing surfaces.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "Low-carbon machining steel, proposed",
+            "name": "Steel",
+            "source_claim_ids": []
+          },
+          "process": "manual",
+          "procurement": null,
+          "role": "make",
+          "source_claim_ids": []
+        },
+        "source": "Owner requests a steel camshaft. Four eccentric circular lobes at the cylinder stations are a design choice. The rejected candidate used 2 mm eccentricity with internally tangent lobe and journal surfaces. This repair uses 1.5 mm eccentricity and derives lobe radius from the unchanged 8 mm swept radius, giving a nominal 1 mm shaft-containment margin. This arithmetic is not measured topology evidence. Lobes retain quarter-turn phase increments. No valve timing, follower motion or synchronized drive is established. Shaft retention and service-cover support remain to be constructed."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "bore": "crank_bushing_id",
+              "diameter": "crank_bushing_od",
+              "width": "end_wall_thickness"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_bush_barrel",
+            "inputs": [],
+            "kind": "bearing",
+            "name": "Main bushing barrel and running bore",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "bore": "crank_bushing_id",
+              "diameter": "main_bushing_flange_diameter",
+              "width": "bushing_flange_thickness"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_bush_flange_blank",
+            "inputs": [],
+            "kind": "bearing",
+            "name": "Main bushing flange ring",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "bushing_flange_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_bush_flange",
+            "inputs": [
+              "main_bush_flange_blank"
+            ],
+            "kind": "transform",
+            "name": "Flange at outer axial face",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "main_bush_body",
+            "inputs": [
+              "main_bush_barrel",
+              "main_bush_flange"
+            ],
+            "kind": "union",
+            "name": "Turned flanged main bushing",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "main_bushing_oil_tool_length",
+              "radius": "oil_feed_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "main_bush_oil_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Main bushing cross-drill",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "main_bush_oil_axis",
+            "inputs": [
+              "main_bush_oil_tool"
+            ],
+            "kind": "transform",
+            "name": "Oil feed along local Y",
+            "params": {
+              "rx": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "main_bush_output",
+            "inputs": [
+              "main_bush_body",
+              "main_bush_oil_axis"
+            ],
+            "kind": "cut",
+            "name": "Main bushing with connected oil passage",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "crankshaft_bushing",
+        "name": "Flanged bronze crankshaft bushing with cross-drilled oil feed",
+        "output": "main_bush_output",
+        "ports": [
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "diameter": "crank_bushing_od",
+            "kind": "shaft",
+            "name": "housing",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "diameter": "crank_bushing_id",
+            "kind": "bore",
+            "name": "journal",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#B28A45"
+          },
+          "deliver_stl": false,
+          "finish": "Turn outside, flange and bore in one setup; cross-drill oil feed and deburr bore.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "Bearing bronze; grade requires selection",
+            "name": "Bronze",
+            "source_claim_ids": []
+          },
+          "process": "manual",
+          "procurement": null,
+          "role": "make",
+          "source_claim_ids": []
+        },
+        "source": "Owner requests replaceable bronze bushings. Nominal running and housing clearances derive from shared shaft and block dimensions. The external flange locates the bushing axially against an end face. Cover-supported radial retention and positive anti-rotation features remain to be constructed. Cross-drilled holes must align with the block feeds. Fit, lubrication flow and bearing capacity remain unverified."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "bore": "cam_bushing_id",
+              "diameter": "cam_bushing_od",
+              "width": "end_wall_thickness"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_bush_barrel",
+            "inputs": [],
+            "kind": "bearing",
+            "name": "Cam bushing barrel and running bore",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "bore": "cam_bushing_id",
+              "diameter": "cam_bushing_flange_diameter",
+              "width": "bushing_flange_thickness"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_bush_flange_blank",
+            "inputs": [],
+            "kind": "bearing",
+            "name": "Cam bushing flange ring",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "bushing_flange_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_bush_flange",
+            "inputs": [
+              "cam_bush_flange_blank"
+            ],
+            "kind": "transform",
+            "name": "Cam flange at outer axial face",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_bush_body",
+            "inputs": [
+              "cam_bush_barrel",
+              "cam_bush_flange"
+            ],
+            "kind": "union",
+            "name": "Turned flanged cam bushing",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "cam_bushing_oil_tool_length",
+              "radius": "oil_feed_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_bush_oil_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Cam bushing cross-drill",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_bush_oil_axis",
+            "inputs": [
+              "cam_bush_oil_tool"
+            ],
+            "kind": "transform",
+            "name": "Cam oil feed along local Y",
+            "params": {
+              "rx": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_bush_output",
+            "inputs": [
+              "cam_bush_body",
+              "cam_bush_oil_axis"
+            ],
+            "kind": "cut",
+            "name": "Cam bushing with connected oil passage",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "camshaft_bushing",
+        "name": "Flanged bronze camshaft bushing with cross-drilled oil feed",
+        "output": "cam_bush_output",
+        "ports": [
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "diameter": "cam_bushing_od",
+            "kind": "shaft",
+            "name": "housing",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "diameter": "cam_bushing_id",
+            "kind": "bore",
+            "name": "journal",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#B28A45"
+          },
+          "deliver_stl": false,
+          "finish": "Turn outside, flange and bore in one setup; cross-drill oil feed and deburr bore.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "Bearing bronze; grade requires selection",
+            "name": "Bronze",
+            "source_claim_ids": []
+          },
+          "process": "manual",
+          "procurement": null,
+          "role": "make",
+          "source_claim_ids": []
+        },
+        "source": "Owner requests replaceable bronze shaft bushings. Dimensions derive from shared camshaft and housing inputs. External flanges locate the bushings against the block ends. The positive-Y oil openings require aligned feeds in the forthcoming removable camshaft support cover. Radial retention, anti-rotation, physical fit and lubrication performance remain unverified."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "piston_height",
+              "radius": "piston_outer_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_blank",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Turned piston blank",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "piston_slot_width",
+              "y": "piston_transverse_tool_length",
+              "z": "piston_slot_tool_depth"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_slot_tool",
+            "inputs": [],
+            "kind": "box",
+            "name": "Open underside rod-slot tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "piston_slot_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_slot_positioned",
+            "inputs": [
+              "piston_slot_tool"
+            ],
+            "kind": "transform",
+            "name": "Place rod-slot tool below crown",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_slotted",
+            "inputs": [
+              "piston_blank",
+              "piston_slot_positioned"
+            ],
+            "kind": "cut",
+            "name": "Mill open rod slot",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "piston_transverse_tool_length",
+              "radius": "wrist_pin_bore_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_pin_bore_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Wrist-pin drilling tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_pin_bore_axis",
+            "inputs": [
+              "piston_pin_bore_tool"
+            ],
+            "kind": "transform",
+            "name": "Orient wrist-pin bore along X",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_pin_bored",
+            "inputs": [
+              "piston_slotted",
+              "piston_pin_bore_axis"
+            ],
+            "kind": "cut",
+            "name": "Drill both piston cheeks",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "wrist_oil_tool_length",
+              "radius": "wrist_oil_feed_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_oil_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Crown oil-feed drill",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "wrist_cheek_center_x",
+              "z": "wrist_oil_tool_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_oil_positioned",
+            "inputs": [
+              "piston_oil_tool"
+            ],
+            "kind": "transform",
+            "name": "Connect crown oil feed to pin bore",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "piston_output",
+            "inputs": [
+              "piston_pin_bored",
+              "piston_oil_positioned"
+            ],
+            "kind": "cut",
+            "name": "Piston with drilled wrist-pin lubrication path",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "piston",
+        "name": "Aluminum piston with open rod slot and wrist-pin oil feed",
+        "output": "piston_output",
+        "ports": [
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "wrist_pin_bore_d",
+            "kind": "bore",
+            "name": "wrist_bore",
+            "origin": [
+              "wrist_cheek_center_x",
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#C5CCD2"
+          },
+          "deliver_stl": false,
+          "finish": "Turn outside diameter and faces. Mill the open underside slot. Drill and finish the transverse pin bore; drill the crown oil feed and deburr intersections.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "6061-T6, proposed design choice",
+            "name": "Aluminum",
+            "source_claim_ids": []
+          },
+          "process": "manual",
+          "procurement": null,
+          "role": "make",
+          "source_claim_ids": []
+        },
+        "source": "Owner requests pistons and conventional machining. This reusable piston uses the existing bore diameter minus the existing diametral clearance. The underside slot receives a proposed 8 mm axial-width rod with 0.2 mm clearance per side. A transverse 6.04 mm bore receives a nominal 6 mm pin. One crown drilling reaches the positive-X cheek bore for manual oil application. These are design choices, not measured fits. Four occurrences follow the existing crank reference pose. Rods, pin retention, full-cycle clearance and physical lubrication remain unfinished or unverified."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "wrist_pin_length",
+              "radius": "wrist_pin_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "wrist_pin_blank",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Nominal cylindrical wrist-pin envelope",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "wrist_pin_output",
+            "inputs": [
+              "wrist_pin_blank"
+            ],
+            "kind": "transform",
+            "name": "Orient wrist pin along X",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "piston_pin",
+        "name": "Nominal steel wrist pin, procurement pending",
+        "output": "wrist_pin_output",
+        "ports": [
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "wrist_pin_nominal_d",
+            "kind": "shaft",
+            "name": "piston_journal",
+            "origin": [
+              "wrist_cheek_center_x",
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#697580"
+          },
+          "deliver_stl": false,
+          "finish": "Nominal cylindrical procurement envelope. Supplier dimensions, tolerances, finish and retention arrangement require confirmation.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "Ground pin steel; grade and supplier pending",
+            "name": "Steel",
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "procurement": null,
+          "role": "buy",
+          "source_claim_ids": []
+        },
+        "source": "Proposed purchased steel wrist-pin envelope, not a sourced catalog product. Diameter is a delegated design choice. Length derives from piston diameter with a nominal 1 mm recess at each end. Four pins are placed in the piston bores. Supplier availability, tolerances and positive axial retention are unresolved. The envelope does not establish physical suitability."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "piston_rod_axial_width",
+              "y": "rod_big_end_width",
+              "z": "rod_big_end_upper_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_upper_stock",
+            "inputs": [],
+            "kind": "box",
+            "name": "Upper big-end rectangular stock",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "rod_upper_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_upper_positioned",
+            "inputs": [
+              "rod_upper_stock"
+            ],
+            "kind": "transform",
+            "name": "Locate big-end split face at local Z zero",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "piston_rod_axial_width",
+              "y": "rod_shank_width",
+              "z": "connecting_rod_centers"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_shank_stock",
+            "inputs": [],
+            "kind": "box",
+            "name": "Milled connecting-rod shank",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "rod_shank_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_shank_positioned",
+            "inputs": [
+              "rod_shank_stock"
+            ],
+            "kind": "transform",
+            "name": "Connect big end to wrist-pin center",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "piston_rod_axial_width",
+              "radius": "rod_small_end_outer_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_small_eye_stock",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Small-end cylindrical stock",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "connecting_rod_centers"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_small_eye_positioned",
+            "inputs": [
+              "rod_small_eye_stock"
+            ],
+            "kind": "transform",
+            "name": "Orient wrist-pin eye along X",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_body_union",
+            "inputs": [
+              "rod_upper_positioned",
+              "rod_shank_positioned",
+              "rod_small_eye_positioned"
+            ],
+            "kind": "union",
+            "name": "Join upper saddle, shank and wrist-pin eye",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "rod_cross_bore_tool_length",
+              "radius": "rod_big_end_bore_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_big_bore_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Crankpin running-bore cutter",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_big_bore_axis",
+            "inputs": [
+              "rod_big_bore_tool"
+            ],
+            "kind": "transform",
+            "name": "Orient crankpin cutter along X",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "rod_cross_bore_tool_length",
+              "radius": "rod_small_end_bore_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_small_bore_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Wrist-pin running-bore cutter",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "connecting_rod_centers"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_small_bore_axis",
+            "inputs": [
+              "rod_small_bore_tool"
+            ],
+            "kind": "transform",
+            "name": "Locate wrist-pin bore at shared rod centers",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_bored_body",
+            "inputs": [
+              "rod_body_union",
+              "rod_big_bore_axis",
+              "rod_small_bore_axis"
+            ],
+            "kind": "cut",
+            "name": "Cut open big-end saddle and wrist-pin bore",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "rod_cap_screw_tool_length",
+              "radius": "rod_cap_screw_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_cap_thread_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Nominal cap-screw thread envelope cutter",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "y": "rod_cap_screw_half_spacing",
+              "z": "rod_upper_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_cap_thread_positive",
+            "inputs": [
+              "rod_cap_thread_tool"
+            ],
+            "kind": "transform",
+            "name": "Positive-Y cap-screw hole",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "y": "rod_cap_screw_negative_y",
+              "z": "rod_upper_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_cap_thread_negative",
+            "inputs": [
+              "rod_cap_thread_tool"
+            ],
+            "kind": "transform",
+            "name": "Negative-Y cap-screw hole",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "rod_output",
+            "inputs": [
+              "rod_bored_body",
+              "rod_cap_thread_positive",
+              "rod_cap_thread_negative"
+            ],
+            "kind": "cut",
+            "name": "Finished connecting-rod upper body",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "connecting_rod",
+        "name": "Machined aluminum connecting rod with open big-end saddle",
+        "output": "rod_output",
+        "ports": [
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "rod_big_end_bore_d",
+            "kind": "bore",
+            "name": "crankpin_saddle",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "rod_small_end_bore_d",
+            "kind": "bore",
+            "name": "wrist_bore",
+            "origin": [
+              0.0,
+              0.0,
+              "connecting_rod_centers"
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#C5CCD2"
+          },
+          "deliver_stl": false,
+          "finish": "Mill the upper body and shank. Drill and finish the wrist-pin bore. Finish the big-end bore with its matching cap installed. Cap-screw holes are nominal thread envelopes; thread manufacture requires a separate machining specification.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "6061-T6, proposed design choice",
+            "name": "Aluminum",
+            "source_claim_ids": []
+          },
+          "process": "manual",
+          "procurement": null,
+          "role": "make",
+          "source_claim_ids": []
+        },
+        "source": "Owner requests rods and conventional milling, turning and drilling. Four occurrences use the existing cylinder stations, crank throw and 38 mm rod centers. Axial thickness uses the existing 8 mm piston-rod width. Small-end outside radius is a design choice constrained by the existing piston slot. Each big end is open at its center plane for installation around the one-piece crankshaft. Matching removable caps and screws remain to be constructed. Cap-screw holes represent nominal thread envelopes, not tap-drill geometry or measured engagement. Running clearances are proposed nominal values. Full-cycle collision, oil supply, cap retention, strength and physical hand-turnability remain unverified."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "block_length",
+              "y": "block_width",
+              "z": "service_cover_plate_thickness"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_cover_plate_stock",
+            "inputs": [],
+            "kind": "box",
+            "name": "Bottom service-cover plate",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "svc_bottom_plate_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_cover_plate_positioned",
+            "inputs": [
+              "cc_cover_plate_stock"
+            ],
+            "kind": "transform",
+            "name": "Place plate below block bottom datum",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "end_wall_thickness",
+              "y": "crank_bushing_seat_d",
+              "z": "svc_main_support_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_support_stock",
+            "inputs": [],
+            "kind": "box",
+            "name": "Integral lower main-bearing support stock",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "bearing_station_negative_x",
+              "z": "svc_main_support_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_support_left",
+            "inputs": [
+              "cc_support_stock"
+            ],
+            "kind": "transform",
+            "name": "Left lower main-bearing support",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "bearing_station_x",
+              "z": "svc_main_support_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_support_right",
+            "inputs": [
+              "cc_support_stock"
+            ],
+            "kind": "transform",
+            "name": "Right lower main-bearing support",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_cover_union",
+            "inputs": [
+              "cc_cover_plate_positioned",
+              "cc_support_left",
+              "cc_support_right"
+            ],
+            "kind": "union",
+            "name": "Integral plate and bearing supports",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "shaft_bore_cut_length",
+              "radius": "crank_bushing_seat_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_bearing_cut_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Main-bearing housing bore tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "crank_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_bearing_cut_axis",
+            "inputs": [
+              "cc_bearing_cut_tool"
+            ],
+            "kind": "transform",
+            "name": "Align lower bearing seats to crankshaft datum",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_cover_bored",
+            "inputs": [
+              "cc_cover_union",
+              "cc_bearing_cut_axis"
+            ],
+            "kind": "cut",
+            "name": "Cut lower bronze-bushing seats",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "svc_hole_cut_length",
+              "radius": "svc_clearance_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_clearance_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Cover screw clearance drill",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cover_hole_negative_x",
+              "y": "bottom_cover_hole_negative_y",
+              "z": "svc_bottom_plate_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_clearance_first",
+            "inputs": [
+              "cc_clearance_tool"
+            ],
+            "kind": "transform",
+            "name": "First bottom-cover clearance hole",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "bottom_cover_columns",
+              "x": "bottom_cover_hole_pitch_x"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_clearance_row",
+            "inputs": [
+              "cc_clearance_first"
+            ],
+            "kind": "pattern",
+            "name": "Three clearance holes along X",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "cover_rows",
+              "y": "bottom_cover_hole_span_y"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_clearance_rows",
+            "inputs": [
+              "cc_clearance_row"
+            ],
+            "kind": "pattern",
+            "name": "Both bottom-cover clearance rows",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cc_cover_output",
+            "inputs": [
+              "cc_cover_bored",
+              "cc_clearance_rows"
+            ],
+            "kind": "cut",
+            "name": "Removable crankcase cover with lower bearing supports",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "crankcase_service_cover",
+        "name": "Aluminum crankcase cover with integral lower bearing supports",
+        "output": "cc_cover_output",
+        "ports": [
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crank_bushing_seat_d",
+            "kind": "bore",
+            "name": "main_left_lower_seat",
+            "origin": [
+              "bearing_station_negative_x",
+              0.0,
+              "crank_axis_z"
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "crank_bushing_seat_d",
+            "kind": "bore",
+            "name": "main_right_lower_seat",
+            "origin": [
+              "bearing_station_x",
+              0.0,
+              "crank_axis_z"
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#AEB6BE"
+          },
+          "deliver_stl": false,
+          "finish": "Mill plate and integral support towers from billet. Finish bearing seats with the cover installed. Drill clearance holes and deburr.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "6061-T6, proposed design choice",
+            "name": "Aluminum",
+            "source_claim_ids": []
+          },
+          "process": "manual",
+          "procurement": null,
+          "role": "make",
+          "source_claim_ids": []
+        },
+        "source": "Owner requests removable service covers, replaceable bronze bushings and conventional machining. This proposed aluminum bottom cover has integral support towers that enter the existing downward-open main-bearing slots. The lower housing seats share the block bearing datums. Six clearance holes match the existing nominal M3 block holes. Machine the bearing seats with the cover installed. The native union represents one machined billet. Actual tool access, fits, thread engagement, cover strength, bushing anti-rotation and shaft axial retention remain unverified."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "block_length",
+              "y": "service_cover_plate_thickness",
+              "z": "svc_side_cover_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_plate_stock",
+            "inputs": [],
+            "kind": "box",
+            "name": "Side service-cover plate",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "y": "svc_side_plate_center_y",
+              "z": "svc_side_cover_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_plate_positioned",
+            "inputs": [
+              "cam_cover_plate_stock"
+            ],
+            "kind": "transform",
+            "name": "Place side cover on positive Y face",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "end_wall_thickness",
+              "y": "svc_cam_support_depth",
+              "z": "cam_bushing_seat_d"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_support_stock",
+            "inputs": [],
+            "kind": "box",
+            "name": "Integral cam-bearing tongue stock",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "bearing_station_negative_x",
+              "y": "svc_cam_support_center_y",
+              "z": "cam_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_support_left",
+            "inputs": [
+              "cam_cover_support_stock"
+            ],
+            "kind": "transform",
+            "name": "Left cam-bearing support tongue",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "bearing_station_x",
+              "y": "svc_cam_support_center_y",
+              "z": "cam_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_support_right",
+            "inputs": [
+              "cam_cover_support_stock"
+            ],
+            "kind": "transform",
+            "name": "Right cam-bearing support tongue",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_union",
+            "inputs": [
+              "cam_cover_plate_positioned",
+              "cam_cover_support_left",
+              "cam_cover_support_right"
+            ],
+            "kind": "union",
+            "name": "Integral plate and cam-bearing tongues",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "shaft_bore_cut_length",
+              "radius": "cam_bushing_seat_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_seat_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Cam-bearing housing bore tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "y": "cam_axis_y",
+              "z": "cam_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_seat_axis",
+            "inputs": [
+              "cam_cover_seat_tool"
+            ],
+            "kind": "transform",
+            "name": "Align cover seats with camshaft datum",
+            "params": {
+              "ry": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_bored",
+            "inputs": [
+              "cam_cover_union",
+              "cam_cover_seat_axis"
+            ],
+            "kind": "cut",
+            "name": "Cut outer halves of cam-bearing housings",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "crankcase_length",
+              "y": "svc_cam_pocket_depth",
+              "z": "cam_chamber_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_pocket_tool",
+            "inputs": [],
+            "kind": "box",
+            "name": "Internal lobe-clearance milling tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "y": "svc_cam_pocket_center_y",
+              "z": "cam_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_pocket_positioned",
+            "inputs": [
+              "cam_cover_pocket_tool"
+            ],
+            "kind": "transform",
+            "name": "Extend cam chamber into cover",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_pocketed",
+            "inputs": [
+              "cam_cover_bored",
+              "cam_cover_pocket_positioned"
+            ],
+            "kind": "cut",
+            "name": "Mill internal pocket for cam-lobe clearance",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "svc_hole_cut_length",
+              "radius": "svc_clearance_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_clearance_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Side-cover screw clearance drill",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "cover_hole_negative_x",
+              "y": "svc_side_plate_center_y",
+              "z": "side_cover_hole_lower_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_clearance_first",
+            "inputs": [
+              "cam_cover_clearance_tool"
+            ],
+            "kind": "transform",
+            "name": "First side-cover clearance hole",
+            "params": {
+              "rx": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "side_cover_columns",
+              "x": "cover_hole_span_x"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_clearance_row",
+            "inputs": [
+              "cam_cover_clearance_first"
+            ],
+            "kind": "pattern",
+            "name": "Two side-cover holes along X",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "count": "cover_rows",
+              "z": "side_cover_hole_pitch_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_clearance_rows",
+            "inputs": [
+              "cam_cover_clearance_row"
+            ],
+            "kind": "pattern",
+            "name": "Upper and lower side-cover clearance rows",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_drilled",
+            "inputs": [
+              "cam_cover_pocketed",
+              "cam_cover_clearance_rows"
+            ],
+            "kind": "cut",
+            "name": "Drill four removable-cover fastener holes",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "svc_cam_oil_length",
+              "radius": "oil_feed_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_oil_tool",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Cam-bearing oil-feed drill",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "bearing_station_negative_x",
+              "y": "svc_cam_oil_center_y",
+              "z": "cam_axis_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_oil_first",
+            "inputs": [
+              "cam_cover_oil_tool"
+            ],
+            "kind": "transform",
+            "name": "Oil feed through cover to left bronze bushing",
+            "params": {
+              "rx": 90.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "bearing_station_span"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_oil_both",
+            "inputs": [
+              "cam_cover_oil_first"
+            ],
+            "kind": "pattern",
+            "name": "Oil feeds at both cam-bearing stations",
+            "params": {
+              "count": 2.0
+            },
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "cam_cover_output",
+            "inputs": [
+              "cam_cover_drilled",
+              "cam_cover_oil_both"
+            ],
+            "kind": "cut",
+            "name": "Removable cam cover with support seats and oil feeds",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "camshaft_service_cover",
+        "name": "Aluminum camshaft cover with bearing supports and oil feeds",
+        "output": "cam_cover_output",
+        "ports": [
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "cam_bushing_seat_d",
+            "kind": "bore",
+            "name": "cam_left_outer_seat",
+            "origin": [
+              "bearing_station_negative_x",
+              "cam_axis_y",
+              "cam_axis_z"
+            ]
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "cam_bushing_seat_d",
+            "kind": "bore",
+            "name": "cam_right_outer_seat",
+            "origin": [
+              "bearing_station_x",
+              "cam_axis_y",
+              "cam_axis_z"
+            ]
+          }
+        ],
+        "production": {
+          "appearance": {
+            "color": "#AEB6BE"
+          },
+          "deliver_stl": false,
+          "finish": "Mill plate, internal clearance pocket and integral bearing tongues. Finish housing seats with cover installed. Drill fastener and oil holes; deburr.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "6061-T6, proposed design choice",
+            "name": "Aluminum",
+            "source_claim_ids": []
+          },
+          "process": "manual",
+          "procurement": null,
+          "role": "make",
+          "source_claim_ids": []
+        },
+        "source": "Owner requests a camshaft, lubrication paths, removable covers and replaceable bronze bushings. This proposed aluminum cover closes the positive-Y service opening. Integral tongues enter the existing side-open bearing slots. Two drilled oil feeds share the existing cam-bushing stations and cross-hole axes. Four clearance holes match the block fastening pattern. An internal pocket adds nominal clearance beyond the cam swept radius. These intended relationships need saved-geometry inspection. Bushing anti-rotation, shaft axial retention, oil flow, cover stiffness and physical fit remain unverified."
+      },
+      {
+        "features": [
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "service_cover_screw_length",
+              "radius": "svc_screw_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "svc_screw_shank_stock",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Nominal screw thread-crest cylinder",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "svc_screw_shank_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "svc_screw_shank_positioned",
+            "inputs": [
+              "svc_screw_shank_stock"
+            ],
+            "kind": "transform",
+            "name": "Set under-head datum at local Z zero",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "height": "svc_screw_head_stock_height",
+              "radius": "svc_screw_head_radius"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "svc_screw_head_stock",
+            "inputs": [],
+            "kind": "cylinder",
+            "name": "Nominal cylindrical screw head",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "svc_screw_head_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "svc_screw_head_positioned",
+            "inputs": [
+              "svc_screw_head_stock"
+            ],
+            "kind": "transform",
+            "name": "Place head behind under-head datum",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "svc_screw_union",
+            "inputs": [
+              "svc_screw_shank_positioned",
+              "svc_screw_head_positioned"
+            ],
+            "kind": "union",
+            "name": "Join nominal screw head and shank",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "x": "svc_screw_slot_length",
+              "y": "service_cover_screw_slot_width",
+              "z": "svc_screw_slot_cut_height"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "svc_screw_slot_tool",
+            "inputs": [],
+            "kind": "box",
+            "name": "Screwdriver-slot tool",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {
+              "z": "svc_screw_slot_center_z"
+            },
+            "catalog_id": null,
+            "code": "",
+            "id": "svc_screw_slot_positioned",
+            "inputs": [
+              "svc_screw_slot_tool"
+            ],
+            "kind": "transform",
+            "name": "Place screwdriver slot in exposed head",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          },
+          {
+            "asset_id": null,
+            "bindings": {},
+            "catalog_id": null,
+            "code": "",
+            "id": "svc_screw_output",
+            "inputs": [
+              "svc_screw_union",
+              "svc_screw_slot_positioned"
+            ],
+            "kind": "cut",
+            "name": "Nominal slotted service-cover screw",
+            "params": {},
+            "points": [],
+            "selection": [],
+            "sketch": null,
+            "suppressed": false
+          }
+        ],
+        "id": "service_cover_fastener",
+        "name": "Nominal M3 by 8 slotted cover screw envelope",
+        "output": "svc_screw_output",
+        "ports": [],
+        "production": {
+          "appearance": {
+            "color": "#697580"
+          },
+          "deliver_stl": false,
+          "finish": "Nominal crest-diameter shank and slotted cylindrical head. Threads are not modeled. Confirm supplier dimensions and engagement before manufacture.",
+          "material": {
+            "density_kg_m3": null,
+            "grade": "Supplier and grade pending",
+            "name": "Steel",
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "procurement": null,
+          "role": "buy",
+          "source_claim_ids": []
+        },
+        "source": "Proposed purchased M3 by 8 slotted screw envelope, not a sourced product. Six occurrences attach the bottom cover and four attach the side cover. The shank uses the shared nominal block thread diameter. The design gives nominal 4 mm insertion beyond each 4 mm plate. Block holes and screw shanks represent thread envelopes, not thread engagement. Supplier availability, actual head dimensions, thread pitch, tolerances, tightening torque and retention capacity remain unverified."
+      }
+    ],
+    "roots": [
+      {
+        "definition": "engine_block",
+        "id": "block",
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "crankshaft",
+        "id": "crank",
+        "position": [
+          0.0,
+          0.0,
+          "crank_axis_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "camshaft",
+        "id": "cam",
+        "position": [
+          0.0,
+          "cam_axis_y",
+          "cam_axis_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "crankshaft_bushing",
+        "id": "main_bush_left",
+        "position": [
+          "bearing_station_negative_x",
+          0.0,
+          "crank_axis_z"
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "crankshaft_bushing",
+        "id": "main_bush_right",
+        "position": [
+          "bearing_station_x",
+          0.0,
+          "crank_axis_z"
+        ],
+        "rotation": [
+          0.0,
+          -90.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "camshaft_bushing",
+        "id": "cam_bush_left",
+        "position": [
+          "bearing_station_negative_x",
+          "cam_axis_y",
+          "cam_axis_z"
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "camshaft_bushing",
+        "id": "cam_bush_right",
+        "position": [
+          "bearing_station_x",
+          "cam_axis_y",
+          "cam_axis_z"
+        ],
+        "rotation": [
+          0.0,
+          -90.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "piston",
+        "id": "piston_1",
+        "position": [
+          "cylinder_first_x",
+          0.0,
+          "piston_tdc_pin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "piston",
+        "id": "piston_2",
+        "position": [
+          "piston_station_2_x",
+          0.0,
+          "piston_bdc_pin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "piston",
+        "id": "piston_3",
+        "position": [
+          "piston_station_3_x",
+          0.0,
+          "piston_bdc_pin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "piston",
+        "id": "piston_4",
+        "position": [
+          "piston_station_4_x",
+          0.0,
+          "piston_tdc_pin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "piston_pin",
+        "id": "wrist_pin_1",
+        "position": [
+          "cylinder_first_x",
+          0.0,
+          "piston_tdc_pin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "piston_pin",
+        "id": "wrist_pin_2",
+        "position": [
+          "piston_station_2_x",
+          0.0,
+          "piston_bdc_pin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "piston_pin",
+        "id": "wrist_pin_3",
+        "position": [
+          "piston_station_3_x",
+          0.0,
+          "piston_bdc_pin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "piston_pin",
+        "id": "wrist_pin_4",
+        "position": [
+          "piston_station_4_x",
+          0.0,
+          "piston_tdc_pin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "connecting_rod",
+        "id": "rod_1",
+        "position": [
+          "rod_station_1_x",
+          0.0,
+          "rod_outer_crankpin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "connecting_rod",
+        "id": "rod_2",
+        "position": [
+          "rod_station_2_x",
+          0.0,
+          "rod_inner_crankpin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "connecting_rod",
+        "id": "rod_3",
+        "position": [
+          "rod_station_3_x",
+          0.0,
+          "rod_inner_crankpin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "connecting_rod",
+        "id": "rod_4",
+        "position": [
+          "rod_station_4_x",
+          0.0,
+          "rod_outer_crankpin_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "crankcase_service_cover",
+        "id": "crankcase_cover",
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "camshaft_service_cover",
+        "id": "camshaft_cover",
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "bottom_cover_screw_1",
+        "position": [
+          "cover_hole_negative_x",
+          "bottom_cover_hole_negative_y",
+          "svc_bottom_outer_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "bottom_cover_screw_2",
+        "position": [
+          "svc_cover_middle_x",
+          "bottom_cover_hole_negative_y",
+          "svc_bottom_outer_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "bottom_cover_screw_3",
+        "position": [
+          "svc_cover_positive_x",
+          "bottom_cover_hole_negative_y",
+          "svc_bottom_outer_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "bottom_cover_screw_4",
+        "position": [
+          "cover_hole_negative_x",
+          "svc_bottom_positive_y",
+          "svc_bottom_outer_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "bottom_cover_screw_5",
+        "position": [
+          "svc_cover_middle_x",
+          "svc_bottom_positive_y",
+          "svc_bottom_outer_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "bottom_cover_screw_6",
+        "position": [
+          "svc_cover_positive_x",
+          "svc_bottom_positive_y",
+          "svc_bottom_outer_z"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "cam_cover_screw_1",
+        "position": [
+          "cover_hole_negative_x",
+          "svc_side_outer_y",
+          "side_cover_hole_lower_z"
+        ],
+        "rotation": [
+          90.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "cam_cover_screw_2",
+        "position": [
+          "svc_cover_positive_x",
+          "svc_side_outer_y",
+          "side_cover_hole_lower_z"
+        ],
+        "rotation": [
+          90.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "cam_cover_screw_3",
+        "position": [
+          "cover_hole_negative_x",
+          "svc_side_outer_y",
+          "side_cover_hole_upper_svc"
+        ],
+        "rotation": [
+          90.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "definition": "service_cover_fastener",
+        "id": "cam_cover_screw_4",
+        "position": [
+          "svc_cover_positive_x",
+          "svc_side_outer_y",
+          "side_cover_hole_upper_svc"
+        ],
+        "rotation": [
+          90.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "subassemblies": []
+  },
+  "features": [],
+  "mechanism": null,
+  "motion_rig": null,
+  "name": "Desktop inline-four mechanical prototype",
+  "outputs": [],
+  "production": null,
+  "relations": [
+    {
+      "a": "cylinder_count",
+      "b": 1.0,
+      "name": "cylinder_intervals",
+      "operation": "subtract"
+    },
+    {
+      "a": "cylinder_intervals",
+      "b": "cylinder_pitch",
+      "name": "cylinder_center_span",
+      "operation": "multiply"
+    },
+    {
+      "a": "cylinder_center_span",
+      "b": "cylinder_bore_d",
+      "name": "cylinder_outer_span",
+      "operation": "add"
+    },
+    {
+      "a": "cylinder_end_margin",
+      "b": 2.0,
+      "name": "block_end_allowance",
+      "operation": "multiply"
+    },
+    {
+      "a": "cylinder_outer_span",
+      "b": "block_end_allowance",
+      "name": "block_length",
+      "operation": "add"
+    },
+    {
+      "a": "block_length",
+      "b": 2.0,
+      "name": "block_half_length",
+      "operation": "divide"
+    },
+    {
+      "a": "block_width",
+      "b": 2.0,
+      "name": "block_half_width",
+      "operation": "divide"
+    },
+    {
+      "a": "block_height",
+      "b": 2.0,
+      "name": "block_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "cylinder_center_span",
+      "b": -2.0,
+      "name": "cylinder_first_x",
+      "operation": "divide"
+    },
+    {
+      "a": "cylinder_bore_d",
+      "b": 2.0,
+      "name": "cylinder_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "cylinder_bore_d",
+      "b": "piston_diametral_clearance",
+      "name": "piston_diameter",
+      "operation": "subtract"
+    },
+    {
+      "a": "crank_throw",
+      "b": 2.0,
+      "name": "stroke",
+      "operation": "multiply"
+    },
+    {
+      "a": "crank_axis_z",
+      "b": "connecting_rod_centers",
+      "name": "piston_midstroke_z",
+      "operation": "add"
+    },
+    {
+      "a": "piston_midstroke_z",
+      "b": "crank_throw",
+      "name": "piston_tdc_pin_z",
+      "operation": "add"
+    },
+    {
+      "a": "piston_midstroke_z",
+      "b": "crank_throw",
+      "name": "piston_bdc_pin_z",
+      "operation": "subtract"
+    },
+    {
+      "a": "piston_height",
+      "b": 2.0,
+      "name": "piston_half_height",
+      "operation": "divide"
+    },
+    {
+      "a": "piston_tdc_pin_z",
+      "b": "piston_half_height",
+      "name": "piston_tdc_crown_z",
+      "operation": "add"
+    },
+    {
+      "a": "block_height",
+      "b": "piston_tdc_crown_z",
+      "name": "deck_clearance_at_tdc",
+      "operation": "subtract"
+    },
+    {
+      "a": "end_wall_thickness",
+      "b": 2.0,
+      "name": "end_walls_total",
+      "operation": "multiply"
+    },
+    {
+      "a": "block_length",
+      "b": "end_walls_total",
+      "name": "crankcase_length",
+      "operation": "subtract"
+    },
+    {
+      "a": "crankcase_side_wall",
+      "b": 2.0,
+      "name": "crankcase_side_walls_total",
+      "operation": "multiply"
+    },
+    {
+      "a": "block_width",
+      "b": "crankcase_side_walls_total",
+      "name": "crankcase_width",
+      "operation": "subtract"
+    },
+    {
+      "a": "crank_axis_z",
+      "b": "crank_throw",
+      "name": "crank_throw_top_z",
+      "operation": "add"
+    },
+    {
+      "a": "crank_throw_top_z",
+      "b": "crankcase_clearance_above_throw",
+      "name": "crankcase_roof_z",
+      "operation": "add"
+    },
+    {
+      "a": "crankcase_roof_z",
+      "b": "cut_overtravel",
+      "name": "crankcase_cut_height",
+      "operation": "add"
+    },
+    {
+      "a": "crankcase_roof_z",
+      "b": "cut_overtravel",
+      "name": "crankcase_cut_center_numerator",
+      "operation": "subtract"
+    },
+    {
+      "a": "crankcase_cut_center_numerator",
+      "b": 2.0,
+      "name": "crankcase_cut_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "cut_overtravel",
+      "b": 2.0,
+      "name": "double_overtravel",
+      "operation": "multiply"
+    },
+    {
+      "a": "block_height",
+      "b": "double_overtravel",
+      "name": "cylinder_cut_height",
+      "operation": "add"
+    },
+    {
+      "a": "block_length",
+      "b": "double_overtravel",
+      "name": "shaft_bore_cut_length",
+      "operation": "add"
+    },
+    {
+      "a": "crank_bushing_nominal_wall",
+      "b": 2.0,
+      "name": "crank_bushing_wall_total",
+      "operation": "multiply"
+    },
+    {
+      "a": "crankshaft_journal_d",
+      "b": "crank_bushing_wall_total",
+      "name": "crank_bushing_seat_d",
+      "operation": "add"
+    },
+    {
+      "a": "crank_bushing_seat_d",
+      "b": 2.0,
+      "name": "crank_bushing_seat_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "crank_bushing_seat_d",
+      "b": "bushing_housing_clearance",
+      "name": "crank_bushing_od",
+      "operation": "subtract"
+    },
+    {
+      "a": "crankshaft_journal_d",
+      "b": "bushing_running_clearance",
+      "name": "crank_bushing_id",
+      "operation": "add"
+    },
+    {
+      "a": "cam_bushing_nominal_wall",
+      "b": 2.0,
+      "name": "cam_bushing_wall_total",
+      "operation": "multiply"
+    },
+    {
+      "a": "camshaft_journal_d",
+      "b": "cam_bushing_wall_total",
+      "name": "cam_bushing_seat_d",
+      "operation": "add"
+    },
+    {
+      "a": "cam_bushing_seat_d",
+      "b": 2.0,
+      "name": "cam_bushing_seat_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "cam_bushing_seat_d",
+      "b": "bushing_housing_clearance",
+      "name": "cam_bushing_od",
+      "operation": "subtract"
+    },
+    {
+      "a": "camshaft_journal_d",
+      "b": "bushing_running_clearance",
+      "name": "cam_bushing_id",
+      "operation": "add"
+    },
+    {
+      "a": "crank_axis_z",
+      "b": 0.0,
+      "name": "cam_axis_z",
+      "operation": "add"
+    },
+    {
+      "a": "end_wall_thickness",
+      "b": 2.0,
+      "name": "half_end_wall",
+      "operation": "divide"
+    },
+    {
+      "a": "block_half_length",
+      "b": "half_end_wall",
+      "name": "bearing_station_x",
+      "operation": "subtract"
+    },
+    {
+      "a": "bearing_station_x",
+      "b": -1.0,
+      "name": "bearing_station_negative_x",
+      "operation": "multiply"
+    },
+    {
+      "a": "bearing_station_x",
+      "b": 2.0,
+      "name": "bearing_station_span",
+      "operation": "multiply"
+    },
+    {
+      "a": "crank_axis_z",
+      "b": "cut_overtravel",
+      "name": "crank_entry_cut_height",
+      "operation": "add"
+    },
+    {
+      "a": "crank_axis_z",
+      "b": "cut_overtravel",
+      "name": "crank_entry_center_numerator",
+      "operation": "subtract"
+    },
+    {
+      "a": "crank_entry_center_numerator",
+      "b": 2.0,
+      "name": "crank_entry_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "cam_lobe_swept_radius",
+      "b": "cam_chamber_radial_clearance",
+      "name": "cam_chamber_half_height",
+      "operation": "add"
+    },
+    {
+      "a": "cam_chamber_half_height",
+      "b": 2.0,
+      "name": "cam_chamber_height",
+      "operation": "multiply"
+    },
+    {
+      "a": "cam_lobe_swept_radius",
+      "b": "cam_chamber_inner_clearance",
+      "name": "cam_chamber_inner_reach",
+      "operation": "add"
+    },
+    {
+      "a": "cam_axis_y",
+      "b": "cam_chamber_inner_reach",
+      "name": "cam_chamber_inner_y",
+      "operation": "subtract"
+    },
+    {
+      "a": "block_half_width",
+      "b": "cut_overtravel",
+      "name": "side_cut_outer_y",
+      "operation": "add"
+    },
+    {
+      "a": "side_cut_outer_y",
+      "b": "cam_chamber_inner_y",
+      "name": "cam_chamber_cut_depth",
+      "operation": "subtract"
+    },
+    {
+      "a": "side_cut_outer_y",
+      "b": "cam_chamber_inner_y",
+      "name": "cam_chamber_center_sum",
+      "operation": "add"
+    },
+    {
+      "a": "cam_chamber_center_sum",
+      "b": 2.0,
+      "name": "cam_chamber_center_y",
+      "operation": "divide"
+    },
+    {
+      "a": "side_cut_outer_y",
+      "b": "cam_axis_y",
+      "name": "cam_entry_cut_depth",
+      "operation": "subtract"
+    },
+    {
+      "a": "side_cut_outer_y",
+      "b": "cam_axis_y",
+      "name": "cam_entry_center_sum",
+      "operation": "add"
+    },
+    {
+      "a": "cam_entry_center_sum",
+      "b": 2.0,
+      "name": "cam_entry_center_y",
+      "operation": "divide"
+    },
+    {
+      "a": "oil_feed_d",
+      "b": 2.0,
+      "name": "oil_feed_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "block_half_width",
+      "b": "cut_overtravel",
+      "name": "main_oil_cut_length",
+      "operation": "add"
+    },
+    {
+      "a": "main_oil_cut_length",
+      "b": -2.0,
+      "name": "main_oil_center_y",
+      "operation": "divide"
+    },
+    {
+      "a": "cover_thread_nominal_d",
+      "b": 2.0,
+      "name": "cover_thread_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "block_half_length",
+      "b": "cover_end_offset",
+      "name": "cover_hole_x",
+      "operation": "subtract"
+    },
+    {
+      "a": "cover_hole_x",
+      "b": -1.0,
+      "name": "cover_hole_negative_x",
+      "operation": "multiply"
+    },
+    {
+      "a": "cover_hole_x",
+      "b": 2.0,
+      "name": "cover_hole_span_x",
+      "operation": "multiply"
+    },
+    {
+      "a": "bottom_cover_columns",
+      "b": 1.0,
+      "name": "bottom_cover_column_intervals",
+      "operation": "subtract"
+    },
+    {
+      "a": "cover_hole_span_x",
+      "b": "bottom_cover_column_intervals",
+      "name": "bottom_cover_hole_pitch_x",
+      "operation": "divide"
+    },
+    {
+      "a": "block_half_width",
+      "b": "bottom_cover_side_offset",
+      "name": "bottom_cover_hole_y",
+      "operation": "subtract"
+    },
+    {
+      "a": "bottom_cover_hole_y",
+      "b": -1.0,
+      "name": "bottom_cover_hole_negative_y",
+      "operation": "multiply"
+    },
+    {
+      "a": "bottom_cover_hole_y",
+      "b": 2.0,
+      "name": "bottom_cover_hole_span_y",
+      "operation": "multiply"
+    },
+    {
+      "a": "bottom_thread_depth",
+      "b": "cut_overtravel",
+      "name": "bottom_thread_cut_height",
+      "operation": "add"
+    },
+    {
+      "a": "bottom_thread_depth",
+      "b": "cut_overtravel",
+      "name": "bottom_thread_center_numerator",
+      "operation": "subtract"
+    },
+    {
+      "a": "bottom_thread_center_numerator",
+      "b": 2.0,
+      "name": "bottom_thread_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "cam_chamber_half_height",
+      "b": "side_cover_hole_edge_offset",
+      "name": "side_cover_hole_z_offset",
+      "operation": "add"
+    },
+    {
+      "a": "cam_axis_z",
+      "b": "side_cover_hole_z_offset",
+      "name": "side_cover_hole_lower_z",
+      "operation": "subtract"
+    },
+    {
+      "a": "side_cover_hole_z_offset",
+      "b": 2.0,
+      "name": "side_cover_hole_pitch_z",
+      "operation": "multiply"
+    },
+    {
+      "a": "block_half_width",
+      "b": "side_thread_depth",
+      "name": "side_thread_inner_y",
+      "operation": "subtract"
+    },
+    {
+      "a": "side_thread_depth",
+      "b": "cut_overtravel",
+      "name": "side_thread_cut_length",
+      "operation": "add"
+    },
+    {
+      "a": "side_cut_outer_y",
+      "b": "side_thread_inner_y",
+      "name": "side_thread_center_sum",
+      "operation": "add"
+    },
+    {
+      "a": "side_thread_center_sum",
+      "b": 2.0,
+      "name": "side_thread_center_y",
+      "operation": "divide"
+    },
+    {
+      "a": "block_half_length",
+      "b": "crankshaft_end_extension",
+      "name": "crankshaft_half_length",
+      "operation": "add"
+    },
+    {
+      "a": "crankshaft_half_length",
+      "b": 2.0,
+      "name": "crankshaft_length",
+      "operation": "multiply"
+    },
+    {
+      "a": "crankshaft_journal_d",
+      "b": 2.0,
+      "name": "crankshaft_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "crankpin_diameter",
+      "b": 2.0,
+      "name": "crankpin_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "crankpin_width",
+      "b": 2.0,
+      "name": "crankpin_half_width",
+      "operation": "divide"
+    },
+    {
+      "a": "crankpin_width",
+      "b": "boolean_joint_overlap",
+      "name": "crankpin_fuse_length",
+      "operation": "add"
+    },
+    {
+      "a": "crank_web_thickness",
+      "b": 2.0,
+      "name": "crank_web_half_thickness",
+      "operation": "divide"
+    },
+    {
+      "a": "crankpin_half_width",
+      "b": "crank_web_half_thickness",
+      "name": "crank_web_station_offset",
+      "operation": "add"
+    },
+    {
+      "a": "crank_throw",
+      "b": "crankshaft_journal_d",
+      "name": "crank_web_height",
+      "operation": "add"
+    },
+    {
+      "a": "crank_throw",
+      "b": 2.0,
+      "name": "crank_web_center_up",
+      "operation": "divide"
+    },
+    {
+      "a": "crank_web_center_up",
+      "b": -1.0,
+      "name": "crank_web_center_down",
+      "operation": "multiply"
+    },
+    {
+      "a": "crank_throw",
+      "b": -1.0,
+      "name": "crank_throw_down",
+      "operation": "multiply"
+    },
+    {
+      "a": "cylinder_first_x",
+      "b": "cylinder_pitch",
+      "name": "cylinder_second_x",
+      "operation": "add"
+    },
+    {
+      "a": "cylinder_second_x",
+      "b": "cylinder_pitch",
+      "name": "cylinder_third_x",
+      "operation": "add"
+    },
+    {
+      "a": "cylinder_third_x",
+      "b": "cylinder_pitch",
+      "name": "cylinder_fourth_x",
+      "operation": "add"
+    },
+    {
+      "a": "cylinder_first_x",
+      "b": "crank_web_station_offset",
+      "name": "crank_web_1_left_x",
+      "operation": "subtract"
+    },
+    {
+      "a": "cylinder_first_x",
+      "b": "crank_web_station_offset",
+      "name": "crank_web_1_right_x",
+      "operation": "add"
+    },
+    {
+      "a": "cylinder_second_x",
+      "b": "crank_web_station_offset",
+      "name": "crank_web_2_left_x",
+      "operation": "subtract"
+    },
+    {
+      "a": "cylinder_second_x",
+      "b": "crank_web_station_offset",
+      "name": "crank_web_2_right_x",
+      "operation": "add"
+    },
+    {
+      "a": "cylinder_third_x",
+      "b": "crank_web_station_offset",
+      "name": "crank_web_3_left_x",
+      "operation": "subtract"
+    },
+    {
+      "a": "cylinder_third_x",
+      "b": "crank_web_station_offset",
+      "name": "crank_web_3_right_x",
+      "operation": "add"
+    },
+    {
+      "a": "cylinder_fourth_x",
+      "b": "crank_web_station_offset",
+      "name": "crank_web_4_left_x",
+      "operation": "subtract"
+    },
+    {
+      "a": "cylinder_fourth_x",
+      "b": "crank_web_station_offset",
+      "name": "crank_web_4_right_x",
+      "operation": "add"
+    },
+    {
+      "a": "crankshaft_journal_d",
+      "b": "double_overtravel",
+      "name": "journal_gap_tool_span",
+      "operation": "add"
+    },
+    {
+      "a": "handwheel_thickness",
+      "b": 2.0,
+      "name": "handwheel_half_thickness",
+      "operation": "divide"
+    },
+    {
+      "a": "crankshaft_half_length",
+      "b": "handwheel_half_thickness",
+      "name": "handwheel_center_x",
+      "operation": "subtract"
+    },
+    {
+      "a": "block_half_length",
+      "b": "camshaft_end_extension",
+      "name": "camshaft_half_length",
+      "operation": "add"
+    },
+    {
+      "a": "camshaft_half_length",
+      "b": 2.0,
+      "name": "camshaft_length",
+      "operation": "multiply"
+    },
+    {
+      "a": "camshaft_journal_d",
+      "b": 2.0,
+      "name": "camshaft_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "cam_lobe_swept_radius",
+      "b": "cam_lobe_eccentricity",
+      "name": "cam_lobe_radius",
+      "operation": "subtract"
+    },
+    {
+      "a": "cam_lobe_eccentricity",
+      "b": -1.0,
+      "name": "cam_lobe_negative_eccentricity",
+      "operation": "multiply"
+    },
+    {
+      "a": "cam_lobe_radius",
+      "b": "cam_lobe_eccentricity",
+      "name": "cam_lobe_inner_reach",
+      "operation": "subtract"
+    },
+    {
+      "a": "cam_lobe_inner_reach",
+      "b": "camshaft_radius",
+      "name": "cam_lobe_shaft_containment_margin",
+      "operation": "subtract"
+    },
+    {
+      "a": "bushing_flange_radial_extension",
+      "b": 2.0,
+      "name": "bushing_flange_diameter_increment",
+      "operation": "multiply"
+    },
+    {
+      "a": "crank_bushing_od",
+      "b": "bushing_flange_diameter_increment",
+      "name": "main_bushing_flange_diameter",
+      "operation": "add"
+    },
+    {
+      "a": "cam_bushing_od",
+      "b": "bushing_flange_diameter_increment",
+      "name": "cam_bushing_flange_diameter",
+      "operation": "add"
+    },
+    {
+      "a": "bushing_flange_thickness",
+      "b": 2.0,
+      "name": "bushing_flange_half_thickness",
+      "operation": "divide"
+    },
+    {
+      "a": "half_end_wall",
+      "b": "bushing_flange_half_thickness",
+      "name": "bushing_flange_center_distance",
+      "operation": "add"
+    },
+    {
+      "a": "bushing_flange_center_distance",
+      "b": -1.0,
+      "name": "bushing_flange_center_z",
+      "operation": "multiply"
+    },
+    {
+      "a": "crank_bushing_od",
+      "b": "double_overtravel",
+      "name": "main_bushing_oil_tool_length",
+      "operation": "add"
+    },
+    {
+      "a": "cam_bushing_od",
+      "b": "double_overtravel",
+      "name": "cam_bushing_oil_tool_length",
+      "operation": "add"
+    },
+    {
+      "a": "piston_diameter",
+      "b": 2.0,
+      "name": "piston_outer_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "wrist_pin_nominal_d",
+      "b": 2.0,
+      "name": "wrist_pin_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "wrist_pin_nominal_d",
+      "b": "wrist_pin_running_clearance",
+      "name": "wrist_pin_bore_d",
+      "operation": "add"
+    },
+    {
+      "a": "wrist_pin_bore_d",
+      "b": 2.0,
+      "name": "wrist_pin_bore_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "wrist_pin_end_recess",
+      "b": 2.0,
+      "name": "wrist_pin_total_recess",
+      "operation": "multiply"
+    },
+    {
+      "a": "piston_diameter",
+      "b": "wrist_pin_total_recess",
+      "name": "wrist_pin_length",
+      "operation": "subtract"
+    },
+    {
+      "a": "piston_rod_side_clearance",
+      "b": 2.0,
+      "name": "piston_slot_total_clearance",
+      "operation": "multiply"
+    },
+    {
+      "a": "piston_rod_axial_width",
+      "b": "piston_slot_total_clearance",
+      "name": "piston_slot_width",
+      "operation": "add"
+    },
+    {
+      "a": "piston_slot_width",
+      "b": 2.0,
+      "name": "piston_slot_half_width",
+      "operation": "divide"
+    },
+    {
+      "a": "cut_overtravel",
+      "b": 2.0,
+      "name": "piston_tool_total_overtravel",
+      "operation": "multiply"
+    },
+    {
+      "a": "piston_diameter",
+      "b": "piston_tool_total_overtravel",
+      "name": "piston_transverse_tool_length",
+      "operation": "add"
+    },
+    {
+      "a": "piston_height",
+      "b": "piston_crown_thickness",
+      "name": "piston_slot_internal_depth",
+      "operation": "subtract"
+    },
+    {
+      "a": "piston_slot_internal_depth",
+      "b": "cut_overtravel",
+      "name": "piston_slot_tool_depth",
+      "operation": "add"
+    },
+    {
+      "a": "piston_crown_thickness",
+      "b": "cut_overtravel",
+      "name": "piston_slot_center_sum",
+      "operation": "add"
+    },
+    {
+      "a": "piston_slot_center_sum",
+      "b": -2.0,
+      "name": "piston_slot_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "piston_slot_half_width",
+      "b": "piston_outer_radius",
+      "name": "wrist_cheek_center_sum",
+      "operation": "add"
+    },
+    {
+      "a": "wrist_cheek_center_sum",
+      "b": 2.0,
+      "name": "wrist_cheek_center_x",
+      "operation": "divide"
+    },
+    {
+      "a": "wrist_oil_feed_d",
+      "b": 2.0,
+      "name": "wrist_oil_feed_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "piston_half_height",
+      "b": "cut_overtravel",
+      "name": "wrist_oil_tool_length",
+      "operation": "add"
+    },
+    {
+      "a": "wrist_oil_tool_length",
+      "b": 2.0,
+      "name": "wrist_oil_tool_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "cylinder_first_x",
+      "b": "cylinder_pitch",
+      "name": "piston_station_2_x",
+      "operation": "add"
+    },
+    {
+      "a": "piston_station_2_x",
+      "b": "cylinder_pitch",
+      "name": "piston_station_3_x",
+      "operation": "add"
+    },
+    {
+      "a": "piston_station_3_x",
+      "b": "cylinder_pitch",
+      "name": "piston_station_4_x",
+      "operation": "add"
+    },
+    {
+      "a": "crankpin_diameter",
+      "b": "rod_big_end_running_clearance",
+      "name": "rod_big_end_bore_d",
+      "operation": "add"
+    },
+    {
+      "a": "rod_big_end_bore_d",
+      "b": 2.0,
+      "name": "rod_big_end_bore_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "wrist_pin_nominal_d",
+      "b": "wrist_pin_running_clearance",
+      "name": "rod_small_end_bore_d",
+      "operation": "add"
+    },
+    {
+      "a": "rod_small_end_bore_d",
+      "b": 2.0,
+      "name": "rod_small_end_bore_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "rod_big_end_upper_height",
+      "b": 2.0,
+      "name": "rod_upper_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "connecting_rod_centers",
+      "b": 2.0,
+      "name": "rod_shank_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "cut_overtravel",
+      "b": 2.0,
+      "name": "rod_tool_extra_length",
+      "operation": "multiply"
+    },
+    {
+      "a": "piston_rod_axial_width",
+      "b": "rod_tool_extra_length",
+      "name": "rod_cross_bore_tool_length",
+      "operation": "add"
+    },
+    {
+      "a": "rod_cap_screw_nominal_d",
+      "b": 2.0,
+      "name": "rod_cap_screw_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "rod_cap_screw_spacing",
+      "b": 2.0,
+      "name": "rod_cap_screw_half_spacing",
+      "operation": "divide"
+    },
+    {
+      "a": "rod_cap_screw_half_spacing",
+      "b": -1.0,
+      "name": "rod_cap_screw_negative_y",
+      "operation": "multiply"
+    },
+    {
+      "a": "rod_big_end_upper_height",
+      "b": "rod_tool_extra_length",
+      "name": "rod_cap_screw_tool_length",
+      "operation": "add"
+    },
+    {
+      "a": "cylinder_first_x",
+      "b": 0.0,
+      "name": "rod_station_1_x",
+      "operation": "add"
+    },
+    {
+      "a": "rod_station_1_x",
+      "b": "cylinder_pitch",
+      "name": "rod_station_2_x",
+      "operation": "add"
+    },
+    {
+      "a": "rod_station_2_x",
+      "b": "cylinder_pitch",
+      "name": "rod_station_3_x",
+      "operation": "add"
+    },
+    {
+      "a": "rod_station_3_x",
+      "b": "cylinder_pitch",
+      "name": "rod_station_4_x",
+      "operation": "add"
+    },
+    {
+      "a": "crank_axis_z",
+      "b": "crank_throw",
+      "name": "rod_outer_crankpin_z",
+      "operation": "add"
+    },
+    {
+      "a": "crank_axis_z",
+      "b": "crank_throw",
+      "name": "rod_inner_crankpin_z",
+      "operation": "subtract"
+    },
+    {
+      "a": "service_cover_plate_thickness",
+      "b": 2.0,
+      "name": "svc_plate_half",
+      "operation": "divide"
+    },
+    {
+      "a": 0.0,
+      "b": "svc_plate_half",
+      "name": "svc_bottom_plate_center_z",
+      "operation": "subtract"
+    },
+    {
+      "a": 0.0,
+      "b": "service_cover_plate_thickness",
+      "name": "svc_bottom_outer_z",
+      "operation": "subtract"
+    },
+    {
+      "a": "service_cover_screw_clearance_d",
+      "b": 2.0,
+      "name": "svc_clearance_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "cut_overtravel",
+      "b": 2.0,
+      "name": "svc_hole_overtravel",
+      "operation": "multiply"
+    },
+    {
+      "a": "service_cover_plate_thickness",
+      "b": "svc_hole_overtravel",
+      "name": "svc_hole_cut_length",
+      "operation": "add"
+    },
+    {
+      "a": "crank_axis_z",
+      "b": "boolean_joint_overlap",
+      "name": "svc_main_support_height",
+      "operation": "add"
+    },
+    {
+      "a": "crank_axis_z",
+      "b": "boolean_joint_overlap",
+      "name": "svc_main_support_center_numerator",
+      "operation": "subtract"
+    },
+    {
+      "a": "svc_main_support_center_numerator",
+      "b": 2.0,
+      "name": "svc_main_support_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "side_cover_hole_lower_z",
+      "b": "side_cover_hole_pitch_z",
+      "name": "side_cover_hole_upper_svc",
+      "operation": "add"
+    },
+    {
+      "a": "side_cover_hole_lower_z",
+      "b": "side_cover_hole_upper_svc",
+      "name": "svc_side_cover_height",
+      "operation": "add"
+    },
+    {
+      "a": "svc_side_cover_height",
+      "b": 2.0,
+      "name": "svc_side_cover_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "block_half_width",
+      "b": "svc_plate_half",
+      "name": "svc_side_plate_center_y",
+      "operation": "add"
+    },
+    {
+      "a": "block_half_width",
+      "b": "service_cover_plate_thickness",
+      "name": "svc_side_outer_y",
+      "operation": "add"
+    },
+    {
+      "a": "block_half_width",
+      "b": "boolean_joint_overlap",
+      "name": "svc_cam_support_outer_y",
+      "operation": "add"
+    },
+    {
+      "a": "svc_cam_support_outer_y",
+      "b": "cam_axis_y",
+      "name": "svc_cam_support_depth",
+      "operation": "subtract"
+    },
+    {
+      "a": "svc_cam_support_outer_y",
+      "b": "cam_axis_y",
+      "name": "svc_cam_support_center_sum",
+      "operation": "add"
+    },
+    {
+      "a": "svc_cam_support_center_sum",
+      "b": 2.0,
+      "name": "svc_cam_support_center_y",
+      "operation": "divide"
+    },
+    {
+      "a": "block_half_width",
+      "b": "service_cover_cam_pocket_depth",
+      "name": "svc_cam_pocket_outer_y",
+      "operation": "add"
+    },
+    {
+      "a": "block_half_width",
+      "b": "cut_overtravel",
+      "name": "svc_cam_pocket_inner_y",
+      "operation": "subtract"
+    },
+    {
+      "a": "svc_cam_pocket_outer_y",
+      "b": "svc_cam_pocket_inner_y",
+      "name": "svc_cam_pocket_depth",
+      "operation": "subtract"
+    },
+    {
+      "a": "svc_cam_pocket_outer_y",
+      "b": "svc_cam_pocket_inner_y",
+      "name": "svc_cam_pocket_center_sum",
+      "operation": "add"
+    },
+    {
+      "a": "svc_cam_pocket_center_sum",
+      "b": 2.0,
+      "name": "svc_cam_pocket_center_y",
+      "operation": "divide"
+    },
+    {
+      "a": "svc_side_outer_y",
+      "b": "cut_overtravel",
+      "name": "svc_cam_oil_outer_y",
+      "operation": "add"
+    },
+    {
+      "a": "cam_axis_y",
+      "b": "cut_overtravel",
+      "name": "svc_cam_oil_inner_y",
+      "operation": "subtract"
+    },
+    {
+      "a": "svc_cam_oil_outer_y",
+      "b": "svc_cam_oil_inner_y",
+      "name": "svc_cam_oil_length",
+      "operation": "subtract"
+    },
+    {
+      "a": "svc_cam_oil_outer_y",
+      "b": "svc_cam_oil_inner_y",
+      "name": "svc_cam_oil_center_sum",
+      "operation": "add"
+    },
+    {
+      "a": "svc_cam_oil_center_sum",
+      "b": 2.0,
+      "name": "svc_cam_oil_center_y",
+      "operation": "divide"
+    },
+    {
+      "a": "cover_thread_nominal_d",
+      "b": 2.0,
+      "name": "svc_screw_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "service_cover_screw_length",
+      "b": 2.0,
+      "name": "svc_screw_shank_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "service_cover_screw_head_d",
+      "b": 2.0,
+      "name": "svc_screw_head_radius",
+      "operation": "divide"
+    },
+    {
+      "a": "service_cover_screw_head_height",
+      "b": "boolean_joint_overlap",
+      "name": "svc_screw_head_stock_height",
+      "operation": "add"
+    },
+    {
+      "a": "boolean_joint_overlap",
+      "b": "service_cover_screw_head_height",
+      "name": "svc_screw_head_center_numerator",
+      "operation": "subtract"
+    },
+    {
+      "a": "svc_screw_head_center_numerator",
+      "b": 2.0,
+      "name": "svc_screw_head_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "service_cover_screw_head_d",
+      "b": "svc_hole_overtravel",
+      "name": "svc_screw_slot_length",
+      "operation": "add"
+    },
+    {
+      "a": "service_cover_screw_slot_depth",
+      "b": "cut_overtravel",
+      "name": "svc_screw_slot_cut_height",
+      "operation": "add"
+    },
+    {
+      "a": 0.0,
+      "b": "service_cover_screw_head_height",
+      "name": "svc_screw_head_top_z",
+      "operation": "subtract"
+    },
+    {
+      "a": "svc_screw_head_top_z",
+      "b": "service_cover_screw_slot_depth",
+      "name": "svc_screw_slot_inner_z",
+      "operation": "add"
+    },
+    {
+      "a": "svc_screw_head_top_z",
+      "b": "cut_overtravel",
+      "name": "svc_screw_slot_outer_z",
+      "operation": "subtract"
+    },
+    {
+      "a": "svc_screw_slot_inner_z",
+      "b": "svc_screw_slot_outer_z",
+      "name": "svc_screw_slot_center_sum",
+      "operation": "add"
+    },
+    {
+      "a": "svc_screw_slot_center_sum",
+      "b": 2.0,
+      "name": "svc_screw_slot_center_z",
+      "operation": "divide"
+    },
+    {
+      "a": "bottom_cover_hole_negative_y",
+      "b": "bottom_cover_hole_span_y",
+      "name": "svc_bottom_positive_y",
+      "operation": "add"
+    },
+    {
+      "a": "cover_hole_negative_x",
+      "b": "cover_hole_span_x",
+      "name": "svc_cover_positive_x",
+      "operation": "add"
+    },
+    {
+      "a": "cover_hole_negative_x",
+      "b": "bottom_cover_hole_pitch_x",
+      "name": "svc_cover_middle_x",
+      "operation": "add"
+    }
+  ],
+  "units": "mm",
+  "variables": {
+    "block_height": 88.0,
+    "block_width": 76.0,
+    "boolean_joint_overlap": 0.2,
+    "bottom_cover_columns": 3.0,
+    "bottom_cover_side_offset": 9.0,
+    "bottom_thread_depth": 6.0,
+    "bushing_flange_radial_extension": 2.0,
+    "bushing_flange_thickness": 1.5,
+    "bushing_housing_clearance": 0.02,
+    "bushing_running_clearance": 0.04,
+    "cam_axis_y": 30.0,
+    "cam_bushing_nominal_wall": 2.0,
+    "cam_chamber_inner_clearance": 2.0,
+    "cam_chamber_radial_clearance": 4.0,
+    "cam_lobe_eccentricity": 1.5,
+    "cam_lobe_swept_radius": 8.0,
+    "cam_lobe_width": 6.0,
+    "camshaft_end_extension": 6.0,
+    "camshaft_journal_d": 8.0,
+    "connecting_rod_centers": 38.0,
+    "cover_end_offset": 16.0,
+    "cover_rows": 2.0,
+    "cover_thread_nominal_d": 3.0,
+    "crank_axis_z": 24.0,
+    "crank_bushing_nominal_wall": 3.0,
+    "crank_throw": 10.0,
+    "crank_web_thickness": 4.0,
+    "crank_web_width": 12.0,
+    "crankcase_clearance_above_throw": 14.0,
+    "crankcase_side_wall": 16.0,
+    "crankpin_diameter": 8.0,
+    "crankpin_width": 10.0,
+    "crankshaft_end_extension": 12.0,
+    "crankshaft_journal_d": 10.0,
+    "cut_overtravel": 2.0,
+    "cylinder_bore_d": 22.0,
+    "cylinder_count": 4.0,
+    "cylinder_end_margin": 18.0,
+    "cylinder_pitch": 30.0,
+    "end_wall_thickness": 8.0,
+    "handwheel_radius": 20.0,
+    "handwheel_thickness": 6.0,
+    "oil_feed_d": 3.0,
+    "piston_crown_thickness": 6.0,
+    "piston_diametral_clearance": 0.08,
+    "piston_height": 20.0,
+    "piston_rod_axial_width": 8.0,
+    "piston_rod_side_clearance": 0.2,
+    "rod_big_end_running_clearance": 0.04,
+    "rod_big_end_upper_height": 8.0,
+    "rod_big_end_width": 20.0,
+    "rod_cap_screw_nominal_d": 3.0,
+    "rod_cap_screw_spacing": 14.0,
+    "rod_shank_width": 5.0,
+    "rod_small_end_outer_radius": 3.8,
+    "service_cover_cam_pocket_depth": 2.0,
+    "service_cover_plate_thickness": 4.0,
+    "service_cover_screw_clearance_d": 3.4,
+    "service_cover_screw_head_d": 5.5,
+    "service_cover_screw_head_height": 3.0,
+    "service_cover_screw_length": 8.0,
+    "service_cover_screw_slot_depth": 1.5,
+    "service_cover_screw_slot_width": 0.8,
+    "side_cover_columns": 2.0,
+    "side_cover_hole_edge_offset": 4.0,
+    "side_thread_depth": 8.0,
+    "wrist_oil_feed_d": 1.5,
+    "wrist_pin_end_recess": 1.0,
+    "wrist_pin_nominal_d": 6.0,
+    "wrist_pin_running_clearance": 0.04
+  },
+  "version": 1
+}

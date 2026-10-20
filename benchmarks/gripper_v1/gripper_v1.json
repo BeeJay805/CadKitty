@@ -1,0 +1,132 @@
+{
+  "version": "gripper_v1",
+  "authored_by": "claude-sonnet-4-6 (independent rubric author; never the CAD author model)",
+  "paraphrase_rule": "P1 reorders the clauses of the base prompt without changing any number, unit, or component name. P2 swaps phrasing/synonyms and register (e.g. 'build me' vs 'design') without changing any number, unit, or component name. All three variants are run once each; a prompt's score is the MINIMUM across its variants.",
+  "prompts": [
+    {
+      "id": "gripper_2finger_mg996r_basic",
+      "class": "gripper",
+      "prompt": "Design a two-finger gripper driven by one MG996R servo. No payload object is specified; the gripper must open and close symmetrically about the centerline.",
+      "paraphrases": [
+        "Using one MG996R servo, design a two-finger gripper that opens and closes symmetrically about the centerline. No payload object is specified.",
+        "Build me a symmetric two-finger gripper with a single MG996R servo driving both fingers; no particular payload object is required."
+      ],
+      "expect": {
+        "min_parts": 3,
+        "joints": [
+          {"type": "revolute", "min_count": 2}
+        ],
+        "min_sweep_deg": 8,
+        "collision_checked": "swept",
+        "mounts": [
+          {"component": "mg996r", "min_count": 1}
+        ],
+        "bbox_max_mm": [220, 220, 120],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "gripper_2finger_mg996r_soda_can",
+      "class": "gripper",
+      "prompt": "Design an MG996R two-finger gripper that can grip a standard 12 oz / 355 ml soda can with a 66 mm body diameter. The fingers must clear the can when open and clamp it when closed.",
+      "paraphrases": [
+        "Using one MG996R servo, design a two-finger gripper for a 12 oz / 355 ml soda can (66 mm body diameter); fingers must open wider than the can and close to grip it.",
+        "Build me a two-finger MG996R gripper sized to grab a standard 355 ml soda can (body diameter 66 mm): open position clears the can, closed position clamps it."
+      ],
+      "expect": {
+        "min_parts": 3,
+        "joints": [
+          {"type": "revolute", "min_count": 2}
+        ],
+        "min_sweep_deg": 8,
+        "collision_checked": "swept",
+        "mounts": [
+          {"component": "mg996r", "min_count": 1}
+        ],
+        "aperture": {
+          "payload_diameter_mm": 66,
+          "open_min_mm": 74,
+          "closed_max_mm": 64
+        },
+        "bbox_max_mm": [220, 220, 120],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "gripper_claw_mg996r_beverage_can",
+      "class": "gripper",
+      "prompt": "Model a claw mechanism for an MG996R servo to grab a 355 ml beverage can. The can body diameter is 66 mm.",
+      "paraphrases": [
+        "For an MG996R servo, model a claw that grabs a 355 ml beverage can (66 mm body diameter).",
+        "Create a claw driven by a single MG996R servo capable of grasping a 355 ml beverage can whose body is 66 mm in diameter."
+      ],
+      "expect": {
+        "min_parts": 3,
+        "joints": [
+          {"type": "revolute", "min_count": 2}
+        ],
+        "min_sweep_deg": 8,
+        "collision_checked": "swept",
+        "mounts": [
+          {"component": "mg996r", "min_count": 1}
+        ],
+        "aperture": {
+          "payload_diameter_mm": 66,
+          "open_min_mm": 74,
+          "closed_max_mm": 64
+        },
+        "bbox_max_mm": [220, 220, 120],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "gripper_2finger_mg996r_gear_coupled",
+      "class": "gripper",
+      "prompt": "Design a two-finger MG996R gripper with gear-coupled fingers so that both fingers close symmetrically from a single servo input. No payload object is specified.",
+      "paraphrases": [
+        "Using one MG996R servo and a gear coupling, design a two-finger gripper where both fingers close symmetrically; no payload object is specified.",
+        "Build me a symmetric two-finger gripper driven by a single MG996R servo where the fingers are coupled via gears for simultaneous, equal closure."
+      ],
+      "expect": {
+        "min_parts": 4,
+        "joints": [
+          {"type": "revolute", "min_count": 2}
+        ],
+        "min_sweep_deg": 8,
+        "collision_checked": "swept",
+        "mounts": [
+          {"component": "mg996r", "min_count": 1}
+        ],
+        "bbox_max_mm": [220, 220, 120],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "arm_turntable_mg996r",
+      "class": "arm",
+      "prompt": "Design a turntable driven by one MG996R servo that rotates a platform 360 deg about the vertical axis.",
+      "paraphrases": [
+        "Using one MG996R servo, design a turntable that spins a platform 360 deg about the vertical axis.",
+        "Build me a rotating turntable platform driven by a single MG996R servo with full 360 deg rotation about the vertical axis."
+      ],
+      "expect": {
+        "min_parts": 2,
+        "joints": [
+          {"type": "revolute", "min_count": 1}
+        ],
+        "min_sweep_deg": 360,
+        "collision_checked": "swept",
+        "mounts": [
+          {"component": "mg996r", "min_count": 1}
+        ],
+        "bbox_max_mm": [220, 220, 120],
+        "watertight": true,
+        "named_step": true
+      }
+    }
+  ]
+}

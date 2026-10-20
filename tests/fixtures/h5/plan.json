@@ -1,0 +1,1725 @@
+{
+  "object_name": "desktop humanoid robot (350 mm, MG996R shoulder/hip drive)",
+  "parts": [
+    {
+      "name": "torso_frame",
+      "prompt": "Torso structural frame of a 350 mm consumer humanoid, ONE solid, shared frame (Z up from sole, X forward, Y left). A shelled inner frame, 2.5 mm wall, z 160-300, elliptical cross-section tapering 105 wide x 55 deep at the shoulders (z 290) to 88 x 50 at the waist (z 200), flank half-width 52.1 at z 285, all edges filleted R2 (no rectangular boxes; every outer surface convex). Features: (1) Two MG996R shoulder servo pockets on {x=0, z=290}: case volumes y 10 to 48 (L) and -48 to -10 (R), 40.7 mm along X (x -30.7 to +10.0), 19.7 mm along Z (z 280.2-299.8), 0.5 mm air per side, opening AFT (-X) so each servo drops in; per servo 4x M4 self-tapper holes in Ø5.5 bosses on the 49.5 x 10.0 lug pattern; an 8 x 4 mm wire slot at each pocket's inboard-low corner. (2) Two hip servo pockets on {x=0, z=180}: cases y 1 to 39 (L) / -39 to -1 (R), same X/Z orientation (z 170.2-189.8), opening UP (+Z), same lug bosses and 0.5 air; Ø8 wire grommet holes through the pelvis top deck at (-15, +20, 192) and (-15, -20, 192), 0.5 mm lead-in chamfer both entries, with a Ø4 zip-tie boss beside each. (3) Shoulder bearing bosses: Ø34 annular bosses on each flank about the +Y axis through (0, +/-71, 290): outer face at |y|=60, Ø20.4 bore land |y| 55.0-60.0 (5 mm), Ø26 x 5 horn-clearance counterbore |y| 50.0-55.0, 0.5 lead-in both bore entries (running fit 0.40 over the arm pod's Ø20.0 journal). (4) Hip bearing bosses on the pelvis flanks about the +Y axis through (0, +/-40, 180): Ø34 OD spanning |y| 42.0-51.0, Ø26 counterbore |y| 42.0-46.0, Ø20.4 bore land |y| 46.0-51.0, 0.5 lead-ins. (5) Neck stub on top: Ø8.0 journal, 6 mm land z 299-305, 0.5 lead-in at tip, e-clip groove 0.9 wide x 0.6 deep (root Ø6.8) at z 305.0-305.9. (6) Perimeter tongue lips 1.2 wide x 1.5 deep around the front chest opening (+X, z 200-298) and the rear service opening over the electronics bay (z 200-260), each with 4x Ø4.5 M3 screw bosses (Ø2.5 pilot, 0.5 lead-in). (7) 6 mm half-round wire channels molded down the inner side walls from both shoulder pockets and up from both hip grommets to the bay. PLA, print upright, minimal support.",
+      "ports": [
+        {
+          "name": "servo_shoulder_L_mount",
+          "origin": {
+            "x": 0.0,
+            "y": 48.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "servo_shoulder_R_mount",
+          "origin": {
+            "x": 0.0,
+            "y": -48.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "servo_hip_L_mount",
+          "origin": {
+            "x": 0.0,
+            "y": 39.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "servo_hip_R_mount",
+          "origin": {
+            "x": 0.0,
+            "y": -39.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "neck_stub",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 302.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 8.0
+        },
+        {
+          "name": "neck_groove",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 305.5
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 6.8
+        },
+        {
+          "name": "chest_seam",
+          "origin": {
+            "x": 26.0,
+            "y": 0.0,
+            "z": 240.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "back_seam",
+          "origin": {
+            "x": -26.0,
+            "y": 0.0,
+            "z": 240.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "chest_plate",
+      "prompt": "Crowned chest plate, ONE solid, shared frame (Z up, X forward). A curved 2.5 mm shell panel closing the torso frame's front opening z 200-298, width following the torso taper (100 at the shoulders to 84 at the waist), swelling forward with an 8 mm crown (apex near x=+33 at z 260) then tapering smoothly to the waist; all edges R2, visibly thin 2.5 mm shell edge at the seam. Perimeter carries the mating groove for the frame's 1.2 wide x 1.5 deep tongue at location fit (0.15 mm per side, 0.5 lead-in), plus 4x Ø3.4 countersunk holes aligning with the frame's M3 bosses. Surface detail: a Ø14 x 0.8 deep circular badge recess at the crown apex and two 0.6 wide x 0.5 deep panel-line grooves sweeping from shoulder to waist. The seam interface sits on the +X front of the origin frame, seam reference at (26, 0, 240). PLA, print outer face up with the concave side down, minimal support.",
+      "ports": [
+        {
+          "name": "seam",
+          "origin": {
+            "x": 26.0,
+            "y": 0.0,
+            "z": 240.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "back_plate",
+      "prompt": "Crowned back plate / service door, ONE solid, shared frame (Z up, X forward; this panel faces -X). A curved 2.5 mm shell panel mirroring the chest plate's form over the rear opening z 200-298, width 100 to 84 following the torso taper, 6 mm rearward crown, edges R2. Perimeter groove mates the frame's 1.2 x 1.5 tongue (location fit 0.15 per side, 0.5 lead-in); 4x Ø3.4 countersunk holes over the frame's M3 bosses so the door unscrews to open the electronics bay (z 200-260) without disturbing any joint. Surface detail: three recessed vent slats 1.5 wide x 30 long x 0.8 deep at z 235-250, and a 0.6 x 0.5 panel-line groove around the door field. Seam reference at (-26, 0, 240), axis -X. PLA, print outer face up, minimal support.",
+      "ports": [
+        {
+          "name": "seam",
+          "origin": {
+            "x": -26.0,
+            "y": 0.0,
+            "z": 240.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "head_shell",
+      "prompt": "Rounded helmet-like head shell, ONE solid, shared frame (Z up, X forward; neck yaw axis +Z through (0,0,302)). An ellipsoidal helmet 50 wide (Y) x 48 deep (X) x 45 tall spanning z 305-350, blending into a short neck collar z 296-305; shelled to 2.5 mm wall, open at the bottom neck aperture, all transitions R2, fully convex. Inside the collar a neck bearing boss: Ø8.35 bore, 6 mm land z 299-305, 0.5 mm lead-in chamfer both entries (running fit 0.35 over the torso's Ø8.0 stub), opening above the land into an internal Ø14 x 3 clearance recess for the retaining C-clip. Visor recess: a 2.0 mm deep x 18 mm tall band z 320-338 wrapping the front 140 degrees of the face, with a 1.0 mm perimeter seating lip for the visor plate and two Ø2.5-pilot M3 bosses reachable from below through the neck aperture. Visor seat reference at (24, 0, 325), axis +X. PLA, print dome-up, minimal support.",
+      "ports": [
+        {
+          "name": "neck_bore",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 302.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 8.35
+        },
+        {
+          "name": "visor_seat",
+          "origin": {
+            "x": 24.0,
+            "y": 0.0,
+            "z": 325.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "visor_plate",
+      "prompt": "Dark visor face plate, ONE solid, shared frame (Z up, X forward). A 2.0 mm thick smoothly curved shield following the helmet's front at ~25 mm face radius, wrapping 140 degrees, 18 mm tall spanning z 320-338, corners R6, convex outer face. It seats into the helmet's 2.0 deep visor recess on the recess's 1.0 mm perimeter lip so its outer face finishes flush with the helmet surface; two integral tabs extend down-inward with Ø3.4 through-holes for 2x M3x10 self-tappers driven from below inside the helmet's neck aperture into the helmet's Ø2.5-pilot bosses. Seat reference at (24, 0, 325), axis +X. PLA, print concave side up on a raft or outer face up with light support.",
+      "ports": [
+        {
+          "name": "seat",
+          "origin": {
+            "x": 24.0,
+            "y": 0.0,
+            "z": 325.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "neck_clip",
+      "prompt": "Printed retaining C-clip for the neck, ONE solid, shared frame (Z up; clip axis +Z through (0,0,305.5)). A flat open C-clip 0.8 mm thick (fits the torso stub's 0.9 wide x 0.6 deep e-clip groove at z 305.0-305.9), outer Ø12, bore Ø6.6 that snaps over the groove root Ø6.8 (retention snap; 0.1 mm interference per side), mouth opening 5.5 mm wide with 0.3 mm lead-in chamfers on the mouth edges; outer edge filleted R0.4. It seats inside the helmet's internal Ø14 clip recess and axially retains the head on the neck stub. PLA, print flat.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 305.5
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 6.6
+        }
+      ]
+    },
+    {
+      "name": "upper_arm_L",
+      "prompt": "LEFT upper arm with integral shoulder pod, ONE solid, shared frame (Z up, X forward, Y left; shoulder axis +Y through (0,71,290), elbow axis +Y through (0,71,235)). Shoulder pod: a polished domed drum Ø36 about the shoulder axis spanning y 61.0-82.0 (1.0 mm axial air to the static torso boss face at y=60.0); on its inboard side a Ø20.0 x 5.6 register journal y 54.4-60.0 riding the torso Ø20.4 bore land (running fit 0.40 diametral, 0.5 lead-in), ending in a Ø24 x 1.4 hub disc y 53.0-54.4 (spins inside the torso's Ø26 counterbore with 1.0 mm radial air). The hub's inboard face (y=53.0) couples ONLY through the MG996R round horn: 4x M2.5 self-tapper holes on the Ø16 horn screw circle plus a central Ø3.4 through-hole for the M3x10 retention screw into the servo output-shaft tap, all driven from outboard through Ø6 counterbored access holes in the drum face. Outboard face carries a Ø16.0 x 4 spigot spanning y 82.0-86.0 (0.5 lead-in) for the press-on dome cap. Arm shell: an elegant elliptical loft, cross-section 26 wide at the root to 20 at the elbow, 2.5 mm wall, centerline {x=0, y=71}, from z 271 (top radius 19 from the shoulder axis, clearing the Ø34 torso boss by 2 mm through the full +/-90 swing) down to z 245; a 0.6 wide x 0.5 deep cosmetic panel-line groove runs the sagittal-parallel split plane y=71; 2x Ø4.5 M3 bosses inside at the ends. Elbow end: a rounded R8 tongue nose about the elbow axis, tongue 10.0 mm wide spanning y 66.0-76.0 (the forearm clevis ear inner faces sit at y 65.0 and 77.0, giving 1.0 mm air per side); a Ø4.95 pin socket bored on the elbow axis through the tongue (press fit 0.05 over the Ø5.0 pin, 0.5 lead-in both entries), with a Ø9.2 x 2.1 counterbore on the tongue's inboard approach face is NOT needed (the pin root flange sits inboard of the ear). All exposed edges filleted R1.5. PLA, print elbow-end down, minimal support.",
+      "ports": [
+        {
+          "name": "shoulder_horn",
+          "origin": {
+            "x": 0.0,
+            "y": 71.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "elbow_pin_socket",
+          "origin": {
+            "x": 0.0,
+            "y": 71.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 4.95
+        },
+        {
+          "name": "pod_spigot",
+          "origin": {
+            "x": 0.0,
+            "y": 84.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 16.0
+        }
+      ]
+    },
+    {
+      "name": "upper_arm_R",
+      "prompt": "RIGHT upper arm with integral shoulder pod: EXACT sagittal mirror (all y negated) of upper_arm_L, identical dimensions. Shared frame (Z up, X forward, Y left; shoulder axis through (0,-71,290) along Y, elbow axis through (0,-71,235) along Y). Domed drum Ø36 spanning y -82.0 to -61.0 (1.0 mm air to torso boss face y=-60.0); Ø20.0 x 5.6 register journal y -60.0 to -54.4 in the torso Ø20.4 land (running 0.40, 0.5 lead-in); Ø24 x 1.4 hub disc y -54.4 to -53.0, inboard face (y=-53.0) coupling only through the MG996R horn: 4x M2.5 on the Ø16 horn circle + central Ø3.4 for the M3x10 output-shaft screw, driven from outboard through Ø6 counterbored access holes. Ø16.0 x 4 cap spigot y -86.0 to -82.0, 0.5 lead-in. Elliptical shell 26 -> 20, 2.5 mm wall, centerline {x=0, y=-71}, z 271 to 245 (top radius 19 clears the Ø34 boss by 2 mm over +/-90 swing), panel-line groove 0.6 x 0.5 at y=-71, 2x M3 bosses. Elbow tongue 10.0 wide spanning y -76.0 to -66.0 (clevis ear inner faces at -77.0 and -65.0, 1.0 mm air per side), R8 nose, Ø4.95 press socket (0.05 press over the Ø5.0 pin, 0.5 lead-ins). Edges R1.5. PLA, print elbow-end down.",
+      "ports": [
+        {
+          "name": "shoulder_horn",
+          "origin": {
+            "x": 0.0,
+            "y": -71.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "elbow_pin_socket",
+          "origin": {
+            "x": 0.0,
+            "y": -71.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 4.95
+        },
+        {
+          "name": "pod_spigot",
+          "origin": {
+            "x": 0.0,
+            "y": -84.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 16.0
+        }
+      ]
+    },
+    {
+      "name": "forearm_L",
+      "prompt": "LEFT forearm, ONE solid, shared frame (Z up, X forward, Y left; elbow axis +Y through (0,71,235)). Elbow clevis at the top: two rounded ears (R9 about the elbow axis) straddling the upper-arm's 10.0 mm tongue -- ear inner faces at y 65.0 and 77.0 (12.0 mm gap = 10.0 tongue + 1.0 mm air per side), each ear 4.0 mm thick spanning y 61.0-65.0 and y 77.0-81.0; both ears bored Ø5.35 on the elbow axis (combined 8 mm bore land, running fit 0.35 diametral over the Ø5.0 elbow pin, 0.5 mm lead-in chamfer at both bore entries). Shell: an elliptical loft, 24 wide at the clevis root tapering to 19 at the wrist, 2.5 mm wall, centerline {x=0, y=71}, from z 228 down to a smoothly rounded closed wrist tip at z 175 (tip Ø19: inner edge y=61.5, clearing the thigh shell outer edge y=49.5 by 12 mm through the full swing); 0.6 x 0.5 panel-line groove along the y=71 split plane; 2x Ø4.5 M3 bosses hidden inside the clevis end. All edges R1.5, no flat boxes. Home pose hangs straight down. PLA, print wrist-down, minimal support.",
+      "ports": [
+        {
+          "name": "elbow_bore",
+          "origin": {
+            "x": 0.0,
+            "y": 71.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        }
+      ]
+    },
+    {
+      "name": "forearm_R",
+      "prompt": "RIGHT forearm: EXACT sagittal mirror (all y negated) of forearm_L, identical dimensions. Shared frame; elbow axis through (0,-71,235) along Y. Clevis ears R9, inner faces at y -77.0 and -65.0 (1.0 mm air per side over the 10.0 tongue), ears 4.0 thick spanning y -81.0 to -77.0 and -65.0 to -61.0, bored Ø5.35 (8 mm total land, running 0.35 over the Ø5.0 pin, 0.5 lead-ins both entries). Elliptical shell 24 -> 19, 2.5 mm wall, centerline {x=0, y=-71}, z 228 down to the rounded wrist tip at z 175 (tip inner edge y=-61.5, 12 mm to the thigh outer edge y=-49.5); panel groove 0.6 x 0.5 at y=-71; 2x M3 bosses in the clevis end; edges R1.5. PLA, print wrist-down.",
+      "ports": [
+        {
+          "name": "elbow_bore",
+          "origin": {
+            "x": 0.0,
+            "y": -71.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        }
+      ]
+    },
+    {
+      "name": "elbow_pin_L",
+      "prompt": "LEFT elbow pin, ONE solid on the elbow axis (+Y through (0,71,235)) in the shared frame. A stepped cylindrical pin: root shoulder flange Ø9 x 2.0 spanning y 58.5-60.5 (0.5 mm axial air to the rotating clevis ear face at y=61.0, insertion stop only); Ø5.0 journal spanning y 60.5-81.0 (presses 0.05 into the upper-arm tongue's Ø4.95 socket at y 66-76; runs in the forearm clevis Ø5.35 bores at 0.35 diametral running fit over the 8 mm land); Ø5.0 x 3.0 cap spigot spanning y 81.0-84.0. 0.5 mm lead-in chamfer at the pin tip and at the spigot end; light R0.3 fillet under the root flange. Axial retention: tongue press fit at the root plus the press-on Ø28 dome cap on the spigot. PLA, print standing on the flange end.",
+      "ports": [
+        {
+          "name": "root",
+          "origin": {
+            "x": 0.0,
+            "y": 71.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        },
+        {
+          "name": "journal",
+          "origin": {
+            "x": 0.0,
+            "y": 71.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        },
+        {
+          "name": "tip_spigot",
+          "origin": {
+            "x": 0.0,
+            "y": 82.5,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        }
+      ]
+    },
+    {
+      "name": "elbow_pin_R",
+      "prompt": "RIGHT elbow pin: EXACT mirror (y negated) of elbow_pin_L on the elbow axis through (0,-71,235) along Y. Root flange Ø9 x 2.0 at y -60.5 to -58.5 (0.5 air to the ear face at y=-61.0); Ø5.0 journal y -81.0 to -60.5 (0.05 press in the tongue's Ø4.95 socket at y -76 to -66; 0.35 running fit in the Ø5.35 clevis bores); Ø5.0 x 3.0 cap spigot y -84.0 to -81.0. 0.5 lead-ins at tip and spigot, R0.3 root fillet. PLA, print on the flange end.",
+      "ports": [
+        {
+          "name": "root",
+          "origin": {
+            "x": 0.0,
+            "y": -71.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        },
+        {
+          "name": "journal",
+          "origin": {
+            "x": 0.0,
+            "y": -71.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        },
+        {
+          "name": "tip_spigot",
+          "origin": {
+            "x": 0.0,
+            "y": -82.5,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        }
+      ]
+    },
+    {
+      "name": "elbow_cap_L",
+      "prompt": "LEFT elbow domed cap, ONE solid, shared frame (cap axis +Y through (0,82.5,235)). A polished dome Ø28, 9 mm tall along +Y, shelled inside to 2.5 mm wall, rim edge R1; its inner rim face sits at y=81.5 (0.5 mm axial air to the rotating clevis ear outer face at y=81.0). A central Ø4.95 x 4.0 blind bore (0.5 mm lead-in chamfer at the entry) presses at 0.05 mm interference onto the elbow pin's Ø5.0 spigot (spigot spans y 81.0-84.0), dressing the elbow as a cylindrical joint module with a domed cap and axially retaining the pin. PLA, print dome-up.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": 82.5,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 4.95
+        }
+      ]
+    },
+    {
+      "name": "elbow_cap_R",
+      "prompt": "RIGHT elbow domed cap: EXACT mirror (y negated) of elbow_cap_L, axis through (0,-82.5,235) along Y. Dome Ø28 x 9, 2.5 wall, rim R1, inner rim face at y=-81.5 (0.5 air to the ear face at y=-81.0); central Ø4.95 x 4.0 blind bore, 0.5 lead-in, pressing 0.05 onto the Ø5.0 pin spigot (y -84.0 to -81.0). PLA, print dome-up.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": -82.5,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 4.95
+        }
+      ]
+    },
+    {
+      "name": "thigh_L",
+      "prompt": "LEFT thigh with integral hip pod, ONE solid, shared frame (Z up, X forward, Y left; hip axis +Y through (0,40,180), knee axis +Y through (0,34,105)). Hip pod group about the hip axis: a Ø24 x 1.4 hub disc spanning y 44.0-45.4 (spins in the pelvis Ø26 counterbore with 1.0 mm radial air; its inboard face at y=44.0 keeps 5.0 mm from the servo case face at y=39.0) coupling ONLY through the MG996R round horn -- 4x M2.5 self-tapper holes on the Ø16 horn screw circle plus a central Ø3.4 through-hole for the M3x10 retention screw into the servo output tap, driven from outboard through Ø6 counterbored access holes; a Ø20.0 x 5.6 register journal spanning y 45.4-51.0 riding the pelvis Ø20.4 bore land (running fit 0.40, 0.5 lead-in); a polished pod drum Ø36 spanning y 52.0-59.0 (1.0 mm axial air to the pelvis boss outer face at y=51.0) whose outboard face carries a Ø14.0 x 4 cap spigot spanning y 59.0-63.0 (0.5 lead-in). A tapered blade shroud connects drum to shell within the y 44.5-59.0 band; wherever it overlaps the pelvis boss span (y 42-51) its inner surface follows an 18.5 mm radius arc about the hip axis (boss OD radius 17.0 -> 1.5 mm running air at every swing angle). SWEEP ARITHMETIC (stated for the +/-40 deg hip travel): the hip servo case corner inside the swing sector lies at radius 14.0 from the axis, so the shell's top edge sits at radius 20 (z=160), giving >= 5 mm swept clearance; all material inboard of y=44.0 stays below z=160. Shell: elliptical loft Ø31 at the root to Ø26 at the knee, 2.5 mm wall, centerline {x=0, y=34} (outer edge y=49.5), z 160 down to 115; 0.6 x 0.5 panel-line groove along the y=34 split plane; 2x Ø4.5 M3 bosses inside at the ends. Knee end: rounded R10 tongue nose about the knee axis, tongue 12.0 mm wide spanning y 28.0-40.0 (shin ear inner faces at y 27.0 and 41.0, 1.0 mm air per side); Ø5.95 pin socket through the tongue on the knee axis (press 0.05 over the Ø6.0 pin, 0.5 lead-in both entries). Edges R1.5. PLA, print knee-end down, minimal support.",
+      "ports": [
+        {
+          "name": "hip_horn",
+          "origin": {
+            "x": 0.0,
+            "y": 40.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "knee_pin_socket",
+          "origin": {
+            "x": 0.0,
+            "y": 34.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.95
+        },
+        {
+          "name": "pod_spigot",
+          "origin": {
+            "x": 0.0,
+            "y": 61.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 14.0
+        }
+      ]
+    },
+    {
+      "name": "thigh_R",
+      "prompt": "RIGHT thigh with integral hip pod: EXACT sagittal mirror (all y negated) of thigh_L, identical dimensions. Shared frame; hip axis through (0,-40,180) along Y, knee axis through (0,-34,105) along Y. Hub disc Ø24 x 1.4 at y -45.4 to -44.0 (inboard face y=-44.0, 5.0 mm to the servo case face at y=-39.0; 4x M2.5 on Ø16 horn circle + central Ø3.4 for M3x10, outboard Ø6 access counterbores); Ø20.0 x 5.6 journal y -51.0 to -45.4 in the pelvis Ø20.4 land (running 0.40, 0.5 lead-in); pod drum Ø36 y -59.0 to -52.0 (1.0 air to boss face y=-51.0) with Ø14.0 x 4 cap spigot y -63.0 to -59.0, 0.5 lead-in; blade shroud in the y -59.0 to -44.5 band with inner surface at 18.5 mm radius over the boss span (y -51 to -42). Shell top edge at radius 20 (z=160, >= 5 mm swept clearance past the servo case corner at radius 14.0 across the +/-40 deg travel); all material outboard of y=-44.0 stays... all material with y > -44.0 stays below z=160. Elliptical shell Ø31 -> Ø26, 2.5 wall, centerline {x=0, y=-34}, z 160 to 115, panel groove at y=-34, 2x M3 bosses. Knee tongue 12.0 wide spanning y -40.0 to -28.0 (ear inner faces at -41.0 and -27.0, 1.0 air/side), R10 nose, Ø5.95 press socket, 0.5 lead-ins. Edges R1.5. PLA, print knee-end down.",
+      "ports": [
+        {
+          "name": "hip_horn",
+          "origin": {
+            "x": 0.0,
+            "y": -40.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "knee_pin_socket",
+          "origin": {
+            "x": 0.0,
+            "y": -34.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.95
+        },
+        {
+          "name": "pod_spigot",
+          "origin": {
+            "x": 0.0,
+            "y": -61.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 14.0
+        }
+      ]
+    },
+    {
+      "name": "shin_L",
+      "prompt": "LEFT shin, ONE solid, shared frame (Z up, X forward, Y left; knee axis +Y through (0,34,105)). Knee clevis at the top: two rounded ears (R10 about the knee axis) straddling the thigh's 12.0 mm tongue -- ear inner faces at y 27.0 and 41.0 (14.0 mm gap = 12.0 tongue + 1.0 mm air per side), each ear 5.0 mm thick spanning y 22.0-27.0 and y 41.0-46.0; both bored Ø6.35 on the knee axis (combined 10 mm land, running fit 0.35 diametral over the Ø6.0 knee pin, 0.5 mm lead-in at both entries). Shell: elliptical loft 28 wide at the clevis to 22 at the ankle, 2.5 mm wall, centerline {x=0, y=34}, z 101 down to 25; 0.6 x 0.5 panel-line groove along the y=34 split plane; 2x Ø4.5 M3 bosses inside at the clevis end. Ankle: the shell closes into a rounded ankle boss ending in a flat oval seat pad at z 25-20 (seat plane z=20) with a 1.0 mm perimeter locating lip and two Ø4.5 screw bosses (Ø2.5 pilots, 0.5 lead-in) opening DOWN for the foot's 2x M3x10 driven from underneath. Edges R1.5, no boxes. PLA, print ankle-down, minimal support.",
+      "ports": [
+        {
+          "name": "knee_bore",
+          "origin": {
+            "x": 0.0,
+            "y": 34.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.35
+        },
+        {
+          "name": "foot_seat",
+          "origin": {
+            "x": 0.0,
+            "y": 34.0,
+            "z": 20.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "shin_R",
+      "prompt": "RIGHT shin: EXACT sagittal mirror (all y negated) of shin_L, identical dimensions. Shared frame; knee axis through (0,-34,105) along Y. Clevis ears R10, inner faces at y -41.0 and -27.0 (1.0 air per side over the 12.0 tongue), ears 5.0 thick spanning y -46.0 to -41.0 and -27.0 to -22.0, bored Ø6.35 (10 mm total land, running 0.35 over the Ø6.0 pin, 0.5 lead-ins). Elliptical shell 28 -> 22, 2.5 wall, centerline {x=0, y=-34}, z 101 to 25; panel groove at y=-34; 2x M3 bosses at the clevis end; ankle seat pad at z 25-20 (plane z=20) with 1.0 locating lip and two Ø4.5 down-opening screw bosses (Ø2.5 pilots, 0.5 lead-in). Edges R1.5. PLA, print ankle-down.",
+      "ports": [
+        {
+          "name": "knee_bore",
+          "origin": {
+            "x": 0.0,
+            "y": -34.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.35
+        },
+        {
+          "name": "foot_seat",
+          "origin": {
+            "x": 0.0,
+            "y": -34.0,
+            "z": 20.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "knee_pin_L",
+      "prompt": "LEFT knee pin, ONE solid on the knee axis (+Y through (0,34,105)) in the shared frame. Stepped cylindrical pin: root shoulder flange Ø10 x 2.0 spanning y 19.5-21.5 (0.5 mm axial air to the rotating ear face at y=22.0, insertion stop only); Ø6.0 journal spanning y 21.5-46.5 (presses 0.05 into the thigh tongue's Ø5.95 socket at y 28-40; runs in the shin clevis Ø6.35 bores at 0.35 diametral running fit over the 10 mm land); Ø6.0 x 3.0 cap spigot spanning y 46.5-49.5. 0.5 mm lead-in chamfers at the tip and spigot; R0.3 fillet under the flange. Retention: tongue press fit plus press-on Ø30 dome cap. PLA, print standing on the flange end.",
+      "ports": [
+        {
+          "name": "root",
+          "origin": {
+            "x": 0.0,
+            "y": 34.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        },
+        {
+          "name": "journal",
+          "origin": {
+            "x": 0.0,
+            "y": 34.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        },
+        {
+          "name": "tip_spigot",
+          "origin": {
+            "x": 0.0,
+            "y": 48.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        }
+      ]
+    },
+    {
+      "name": "knee_pin_R",
+      "prompt": "RIGHT knee pin: EXACT mirror (y negated) of knee_pin_L on the knee axis through (0,-34,105) along Y. Root flange Ø10 x 2.0 at y -21.5 to -19.5 (0.5 air to the ear face at y=-22.0); Ø6.0 journal y -46.5 to -21.5 (0.05 press in the Ø5.95 tongue socket at y -40 to -28; 0.35 running in the Ø6.35 clevis bores); Ø6.0 x 3.0 cap spigot y -49.5 to -46.5. 0.5 lead-ins, R0.3 root fillet. PLA, print on the flange end.",
+      "ports": [
+        {
+          "name": "root",
+          "origin": {
+            "x": 0.0,
+            "y": -34.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        },
+        {
+          "name": "journal",
+          "origin": {
+            "x": 0.0,
+            "y": -34.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        },
+        {
+          "name": "tip_spigot",
+          "origin": {
+            "x": 0.0,
+            "y": -48.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        }
+      ]
+    },
+    {
+      "name": "knee_cap_L",
+      "prompt": "LEFT knee domed cap, ONE solid, shared frame (cap axis +Y through (0,48,105)). A polished dome Ø30, 9 mm tall along +Y, shelled to 2.5 mm wall, rim R1; inner rim face at y=47.0 (1.0 mm axial air to the rotating shin ear outer face at y=46.0). Central Ø5.95 x 4.0 blind bore (0.5 mm lead-in) pressing at 0.05 mm interference onto the knee pin's Ø6.0 spigot (spigot spans y 46.5-49.5), dressing the knee as a cylindrical joint module with a domed cap and retaining the pin axially. PLA, print dome-up.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": 48.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.95
+        }
+      ]
+    },
+    {
+      "name": "knee_cap_R",
+      "prompt": "RIGHT knee domed cap: EXACT mirror (y negated) of knee_cap_L, axis through (0,-48,105) along Y. Dome Ø30 x 9, 2.5 wall, rim R1, inner rim face at y=-47.0 (1.0 air to the ear face at y=-46.0); central Ø5.95 x 4.0 blind bore, 0.5 lead-in, pressing 0.05 onto the Ø6.0 spigot (y -49.5 to -46.5). PLA, print dome-up.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": -48.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.95
+        }
+      ]
+    },
+    {
+      "name": "shoulder_pod_cap_L",
+      "prompt": "LEFT shoulder pod dome cap, ONE solid, shared frame (axis +Y through (0,84,290)). A polished dome Ø36, 8 mm tall along +Y, shelled to 2.5 mm wall, rim R1.5; its inner rim seats flush against the upper-arm pod drum's outboard face at y=82.0 (same rotating body -- contact intended). Central Ø15.95 x 4.5 blind bore (0.5 mm lead-in chamfer at the entry) pressing at 0.05 mm interference onto the upper arm's Ø16.0 pod spigot (spigot spans y 82.0-86.0), closing the shoulder joint module with its proud polished dome. PLA, print dome-up.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": 84.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 15.95
+        }
+      ]
+    },
+    {
+      "name": "shoulder_pod_cap_R",
+      "prompt": "RIGHT shoulder pod dome cap: EXACT mirror (y negated) of shoulder_pod_cap_L, axis through (0,-84,290) along Y. Dome Ø36 x 8, 2.5 wall, rim R1.5, rim seating on the pod drum face at y=-82.0; central Ø15.95 x 4.5 blind bore, 0.5 lead-in, pressing 0.05 onto the Ø16.0 spigot (y -86.0 to -82.0). PLA, print dome-up.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": -84.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 15.95
+        }
+      ]
+    },
+    {
+      "name": "hip_pod_cap_L",
+      "prompt": "LEFT hip pod dome cap, ONE solid, shared frame (axis +Y through (0,61,180)). A polished dome Ø36, 8 mm tall along +Y, shelled to 2.5 mm wall, rim R1.5; inner rim seats flush against the thigh pod drum's outboard face at y=59.0 (same rotating body -- contact intended). Central Ø13.95 x 4.5 blind bore (0.5 mm lead-in) pressing at 0.05 mm interference onto the thigh's Ø14.0 pod spigot (spigot spans y 59.0-63.0), closing the hip joint module with its proud polished dome. PLA, print dome-up.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": 61.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 13.95
+        }
+      ]
+    },
+    {
+      "name": "hip_pod_cap_R",
+      "prompt": "RIGHT hip pod dome cap: EXACT mirror (y negated) of hip_pod_cap_L, axis through (0,-61,180) along Y. Dome Ø36 x 8, 2.5 wall, rim R1.5, rim seating on the pod drum face at y=-59.0; central Ø13.95 x 4.5 blind bore, 0.5 lead-in, pressing 0.05 onto the Ø14.0 spigot (y -63.0 to -59.0). PLA, print dome-up.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": -61.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 13.95
+        }
+      ]
+    },
+    {
+      "name": "foot_L",
+      "prompt": "LEFT foot pad, ONE solid, shared frame (Z up, X forward, Y left; ankle mount axis +Z through (0,34,20)). A low rounded pad 60 mm long (x -22 to +38, toe forward) x 32 mm wide centered on y=34, 20 mm tall (z 0-20), splayed 8 degrees toe-out about the ankle axis; crowned top surface (R60 crown), all perimeter edges R4, fully convex -- no boxes. The top carries a recessed oval seat matching the shin's ankle pad with a 1.0 mm locating lip (location fit 0.15 per side), and two Ø3.4 through-holes counterbored Ø6.5 from BELOW for M3x10 self-tappers driven up into the shin's Ø2.5-pilot bosses; 0.5 mm lead-in on the hole entries. Underside flat for printing plus a 0.8 deep tread recess ring. PLA, print flat on the plate, no support.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": 0.0,
+            "y": 34.0,
+            "z": 20.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "foot_R",
+      "prompt": "RIGHT foot pad: EXACT sagittal mirror (y negated) of foot_L, identical dimensions. Shared frame; ankle mount axis +Z through (0,-34,20). Pad 60 long (x -22 to +38) x 32 wide centered on y=-34, 20 tall (z 0-20), splayed 8 degrees toe-out (mirrored), crowned top R60, edges R4; recessed oval seat with 1.0 locating lip (0.15/side), two Ø3.4 holes counterbored Ø6.5 from below for M3x10 up into the shin bosses, 0.5 lead-ins; 0.8 tread recess underside. PLA, print flat.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": 0.0,
+            "y": -34.0,
+            "z": 20.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    }
+  ],
+  "assembly_note": "All parts are authored in one shared frame (Z up from the sole, X forward, Y left) and overlay at the origin: servos drop into torso-frame pockets (aft-opening shoulders, top-opening hips), each limb pod's Ø20 journal rides its torso/pelvis Ø20.4 boss and screws to the MG996R horn, elbow/knee pins press into tongues and run in clevis bores retained by press-on domed caps, the head drops onto the Ø8 neck stub and is retained by the snap-on C-clip, and chest/back/visor/foot plates screw onto their tongue-and-groove seats.",
+  "joints": [
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "torso_frame.servo_shoulder_L_mount",
+      "b": "servo_shoulder_L.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "torso_frame.servo_shoulder_R_mount",
+      "b": "servo_shoulder_R.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "torso_frame.servo_hip_L_mount",
+      "b": "servo_hip_L.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "torso_frame.servo_hip_R_mount",
+      "b": "servo_hip_R.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": "shoulder_L",
+      "type": "revolute",
+      "a": "servo_shoulder_L.horn",
+      "b": "upper_arm_L.shoulder_horn",
+      "range_deg": [
+        -90.0,
+        90.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": "shoulder_R",
+      "type": "revolute",
+      "a": "servo_shoulder_R.horn",
+      "b": "upper_arm_R.shoulder_horn",
+      "range_deg": [
+        -90.0,
+        90.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": "hip_L",
+      "type": "revolute",
+      "a": "servo_hip_L.horn",
+      "b": "thigh_L.hip_horn",
+      "range_deg": [
+        -40.0,
+        40.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": "hip_R",
+      "type": "revolute",
+      "a": "servo_hip_R.horn",
+      "b": "thigh_R.hip_horn",
+      "range_deg": [
+        -40.0,
+        40.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": "elbow_L",
+      "type": "revolute",
+      "a": "elbow_pin_L.journal",
+      "b": "forearm_L.elbow_bore",
+      "range_deg": [
+        0.0,
+        120.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": "elbow_R",
+      "type": "revolute",
+      "a": "elbow_pin_R.journal",
+      "b": "forearm_R.elbow_bore",
+      "range_deg": [
+        0.0,
+        120.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "upper_arm_L.elbow_pin_socket",
+      "b": "elbow_pin_L.root",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "upper_arm_R.elbow_pin_socket",
+      "b": "elbow_pin_R.root",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "elbow_pin_L.tip_spigot",
+      "b": "elbow_cap_L.bore",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "elbow_pin_R.tip_spigot",
+      "b": "elbow_cap_R.bore",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": "knee_L",
+      "type": "revolute",
+      "a": "knee_pin_L.journal",
+      "b": "shin_L.knee_bore",
+      "range_deg": [
+        0.0,
+        90.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": "knee_R",
+      "type": "revolute",
+      "a": "knee_pin_R.journal",
+      "b": "shin_R.knee_bore",
+      "range_deg": [
+        0.0,
+        90.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "thigh_L.knee_pin_socket",
+      "b": "knee_pin_L.root",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "thigh_R.knee_pin_socket",
+      "b": "knee_pin_R.root",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "knee_pin_L.tip_spigot",
+      "b": "knee_cap_L.bore",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "knee_pin_R.tip_spigot",
+      "b": "knee_cap_R.bore",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "upper_arm_L.pod_spigot",
+      "b": "shoulder_pod_cap_L.bore",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "upper_arm_R.pod_spigot",
+      "b": "shoulder_pod_cap_R.bore",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "thigh_L.pod_spigot",
+      "b": "hip_pod_cap_L.bore",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "thigh_R.pod_spigot",
+      "b": "hip_pod_cap_R.bore",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": "neck_yaw",
+      "type": "revolute",
+      "a": "torso_frame.neck_stub",
+      "b": "head_shell.neck_bore",
+      "range_deg": [
+        -90.0,
+        90.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "torso_frame.neck_groove",
+      "b": "neck_clip.bore",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "press_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "torso_frame.chest_seam",
+      "b": "chest_plate.seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "torso_frame.back_seam",
+      "b": "back_plate.seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "head_shell.visor_seat",
+      "b": "visor_plate.seat",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "shin_L.foot_seat",
+      "b": "foot_L.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "name": null,
+      "type": "fixed",
+      "a": "shin_R.foot_seat",
+      "b": "foot_R.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    }
+  ]
+}

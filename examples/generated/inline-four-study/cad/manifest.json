@@ -1,0 +1,89 @@
+{
+  "case": {
+    "case_id": "inline-four-candidate-partial",
+    "limits": {
+      "actions": 60,
+      "seconds": 1800
+    },
+    "model": "gpt-6-astra",
+    "origin": "saved_partial",
+    "prompt": "Design a small machinable inline-four engine assembly with a hand-turnable crankshaft, camshaft, pistons, rods, bearings, lubrication paths and removable service covers. Keep the assembled envelope within X 200, Y 120, Z 160 mm, with cylinders in a row along X and their axes along Z. Use a machinable aluminum block and steel shafts with replaceable bronze bushings; choose the remaining dimensions for a desktop mechanical prototype. Use conventional milling, turning and drilling. No combustion qualification is requested.",
+    "rights_owned_or_authorized": true,
+    "title": "Inline-four mechanical assembly: partial generation candidate"
+  },
+  "files": {
+    "GUIDE.md": {
+      "bytes": 7024,
+      "projection": "Only the four recorded instruction strings; no basis, facts or history",
+      "sha256": "77eba37b448035421a5bd2c28773a8fe065bd1ff169dd2421e7ab7884632bfa3",
+      "source_archive_path": "customer-guidance.json",
+      "source_member_sha256": "7fb928d22b14afd5119b224a0a6b5c28dc16b2663163e226beb7b0969be1cf1c"
+    },
+    "README.md": {
+      "bytes": 2344,
+      "sha256": "5e3cc85d633ba172be618d3b62edf20ed96253ab64dcc0e4a7406440caa4c7b4"
+    },
+    "assembly/part.step": {
+      "bytes": 1738613,
+      "sha256": "6f3569289d2a6ba45fb610f4b576588815895f62005488f2aa6999868e7e74b2",
+      "source_archive_path": "assembly/part.step"
+    },
+    "document.json": {
+      "bytes": 153495,
+      "sha256": "3f8a8d851b36bc735cbbecab56803f3f19c77ef396da30f3275736a10b3d5c7b",
+      "source_archive_path": "document.json"
+    },
+    "make/definition_camshaft.step": {
+      "bytes": 39897,
+      "sha256": "253e98c344beba71f7d7969343fef9b80ddd4b4f14f80b6f02d75fe7c755770a",
+      "source_archive_path": "make/definition_camshaft.step"
+    },
+    "make/definition_camshaft_bushing.step": {
+      "bytes": 88855,
+      "sha256": "2c2539033fe8321cab4b518c0ac3b036a9fefbf5d6af0a41004ed038adefada1",
+      "source_archive_path": "make/definition_camshaft_bushing.step"
+    },
+    "make/definition_camshaft_service_cover.step": {
+      "bytes": 114020,
+      "sha256": "42ebf2750815566e8afdc6c3dcb98845744856bc25df71396f8c4192b8b88816",
+      "source_archive_path": "make/definition_camshaft_service_cover.step"
+    },
+    "make/definition_connecting_rod.step": {
+      "bytes": 49989,
+      "sha256": "970e2bf4c8b61fdbff212ba3620d1d341f7b0f10bebf1a210f3c255fbce43019",
+      "source_archive_path": "make/definition_connecting_rod.step"
+    },
+    "make/definition_crankcase_service_cover.step": {
+      "bytes": 68718,
+      "sha256": "5257e8288a03407c1bae2c95cbb7c11ff54379d83f3af1424bc93045adfa9ac6",
+      "source_archive_path": "make/definition_crankcase_service_cover.step"
+    },
+    "make/definition_crankshaft.step": {
+      "bytes": 171452,
+      "sha256": "067fa19786a3900a30b725c45afc8e395f38feacd4646a32c8fbd95a4d0aa984",
+      "source_archive_path": "make/definition_crankshaft.step"
+    },
+    "make/definition_crankshaft_bushing.step": {
+      "bytes": 66937,
+      "sha256": "edda74afd2165bc96dd93dc0876b6a1cb614fa53416725fe0ecded3975640ed9",
+      "source_archive_path": "make/definition_crankshaft_bushing.step"
+    },
+    "make/definition_engine_block.step": {
+      "bytes": 190363,
+      "sha256": "ed89a4f22db39a02ce0c0970fecb28e8c62ae3039c969bc55730c422e06d87d4",
+      "source_archive_path": "make/definition_engine_block.step"
+    },
+    "make/definition_piston.step": {
+      "bytes": 75210,
+      "sha256": "02b5ba7fdaa3b0b9f0d970ec2a491a841ed9f1cf01cd20fcb5351190dcc73a9e",
+      "source_archive_path": "make/definition_piston.step"
+    }
+  },
+  "full_task_success": null,
+  "package": {
+    "bytes": 599335,
+    "sha256": "ee793bf424a1ae20dad8f64c3cb85c373a77db8f94564885c8824ccfe831e10f"
+  },
+  "physical_readiness": "unverified",
+  "schema_version": 1
+}

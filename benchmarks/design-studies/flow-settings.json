@@ -1,0 +1,38 @@
+{
+  "density_kg_m3": 1.0,
+  "dynamic_viscosity_pa_s": 20.0,
+  "velocity_m_s": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "reference_area_m2": 3.141592653589793,
+  "reference_length_m": 2.0,
+  "regime": "laminar",
+  "wall_policy": "resolved_no_slip",
+  "solid_index": null,
+  "mesh": {
+    "surface_size_factor": 0.2,
+    "farfield_size_factor": 1.5,
+    "refinement_distance_factor": 3.0,
+    "domain_padding_factor": 12.0,
+    "refinement": "coarse",
+    "fine_scale": 0.8,
+    "wall_layers": 12,
+    "first_layer_size_factor": 0.005,
+    "layer_growth": 1.25
+  },
+  "numerics": {
+    "iterations": 3000,
+    "cfl": 100,
+    "residual_log10_max": -6.0,
+    "force_window": 30,
+    "force_relative_tolerance": 0.005,
+    "beta_factor": 100000,
+    "linear_solver_iterations": 60
+  },
+  "resources": {
+    "threads": 2,
+    "max_seconds": 1800
+  }
+}

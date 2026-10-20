@@ -1,0 +1,11 @@
+{
+  "pattern": "pi4_case",
+  "name": "pi4_tray_via_component",
+  "board_component_id": "raspberry_pi_4",
+  "envelope_mm": { "x": 95.0, "y": 70.0, "z": 30.0 },
+  "material": "PLA",
+  "min_wall_mm": 2.0,
+  "clearance_mm": 2.0,
+  "ventilation": "slots",
+  "lid": "none"
+}

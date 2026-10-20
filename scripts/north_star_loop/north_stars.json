@@ -1,0 +1,185 @@
+[
+  {
+    "name": "inline4",
+    "status": "passing-baseline",
+    "note": "Known-passing (TEST_LOG row 60). Use FIRST to smoke-test the LOOP itself: it should run, PASS immediately, and exit -- proving the harness before it is turned loose on a frontier target.",
+    "prompt_ref": "C:\\Users\\brenn\\work\\run_i4_v2.py",
+    "accept": [
+      {
+        "path": "disposition",
+        "op": "in",
+        "value": [
+          "shipped",
+          "shipped_with_caveats"
+        ],
+        "desc": "built + judged the object"
+      },
+      {
+        "path": "motion.motion_status",
+        "op": "eq",
+        "value": "pass",
+        "desc": "motion sweep passed"
+      },
+      {
+        "path": "motion.articulates",
+        "op": "true",
+        "desc": "articulates"
+      },
+      {
+        "path": "motion.joints_validated",
+        "op": "gte",
+        "value": 13,
+        "desc": ">=13 joints validated"
+      },
+      {
+        "path": "fit.seated",
+        "op": "true",
+        "desc": "assembly seated"
+      }
+    ],
+    "capability": "slider-crank loop closure",
+    "held_out": [
+      "frontier_v1 corpus (frozen); any other reciprocating slider-crank"
+    ],
+    "signature_tokens": [
+      "inline-4",
+      "inline4",
+      "merlin"
+    ]
+  },
+  {
+    "name": "planetary",
+    "status": "frontier-certifiable",
+    "note": "Near-term rung: coupled gear train (sun + planets + ring + carrier). Stresses the multi-mesh gear driver + worst-case tolerance stack. Expected to certify once the gear driver handles epicyclic coupling. Prompt frozen 2026-07-12 (founder-approved discover): 12T sun / 3x18T planets / fixed 48T ring, assembly constraints verified (48=12+2*18; (12+48)/3=20).",
+    "prompt_ref": "C:\\Users\\brenn\\work\\run_planetary.py",
+    "accept": [
+      {
+        "path": "disposition",
+        "op": "in",
+        "value": [
+          "shipped",
+          "shipped_with_caveats"
+        ],
+        "desc": "built + judged"
+      },
+      {
+        "path": "motion.motion_status",
+        "op": "eq",
+        "value": "pass",
+        "desc": "gear train sweeps clear"
+      },
+      {
+        "path": "motion.articulates",
+        "op": "true",
+        "desc": "turns freely"
+      },
+      {
+        "path": "fit.seated",
+        "op": "true",
+        "desc": "all gears mesh (seated)"
+      }
+    ],
+    "capability": "coupled gear trains (simultaneous meshes on a moving carrier)",
+    "held_out": [
+      "frontier_v1 corpus; a DIFFERENT gear train (e.g. compound spur reduction) -- must also improve, else the fix was narrow"
+    ],
+    "signature_tokens": [
+      "planetary",
+      "epicyclic",
+      "sun gear",
+      "ring gear",
+      "carrier"
+    ]
+  },
+  {
+    "name": "strandbeest",
+    "status": "north-star-stretch",
+    "note": "The HERO north star: a Jansen walking linkage. Stresses the closed-loop linkage driver (four-bar -> general n-bar). EXPECTED to WITHHOLD today (undriven_loop_joint_ids fires on the coupled loops) -- that withhold IS the milestone marker; closing it is the next wave. Do NOT treat withhold as failure to fix by weakening; it is the honest frontier.",
+    "prompt_ref": "TBD (author via `discover` then freeze)",
+    "accept": [
+      {
+        "path": "disposition",
+        "op": "in",
+        "value": [
+          "shipped",
+          "shipped_with_caveats"
+        ],
+        "desc": "built + judged"
+      },
+      {
+        "path": "motion.motion_status",
+        "op": "eq",
+        "value": "pass",
+        "desc": "walking gait sweeps clear (loop-closure driven, not withheld)"
+      },
+      {
+        "path": "motion.articulates",
+        "op": "true",
+        "desc": "the leg articulates through a full crank turn"
+      }
+    ],
+    "capability": "general n-bar closed-loop linkage driving",
+    "held_out": [
+      "frontier_v1 corpus; a DIFFERENT multi-bar linkage (e.g. a Klann leg, a 6-bar) -- driving must generalize beyond the Jansen topology"
+    ],
+    "signature_tokens": [
+      "strandbeest",
+      "jansen",
+      "klann"
+    ]
+  },
+  {
+    "name": "arm_link_v1",
+    "status": "m1-first-number",
+    "note": "The M1 de-risk benchmark (ADR-0097; TEST_LOG rows 75/77): the physics section-author must beat the reference link on mass at equal validated stiffness with ALL gates, reproducible from one CLI command. Conditions are over the author's own emitted analytic_link_report.json. NEVER worded 'superhuman' (Fable ruling: the reference is not mass-optimized); the differentiating claim is M2/M3.",
+    "prompt_ref": "scripts/arm_search/analytic_link.py --ref-mass-g 145.49 --ref-deflection-mm 0.0457 --out <dir>",
+    "capability": "physics-authored structural link: lighter than the reference at equal validated stiffness, all gates",
+    "accept": [
+      {
+        "path": "built",
+        "op": "true",
+        "desc": "artifact built (watertight, mass measured)"
+      },
+      {
+        "path": "geometry_passed",
+        "op": "true",
+        "desc": "watertight + buckling floor + measured min-wall"
+      },
+      {
+        "path": "within_deflection_bound",
+        "op": "true",
+        "desc": "validated FEA deflection <= the reference bound (never None)"
+      },
+      {
+        "path": "mass_g",
+        "op": "lte",
+        "value": 130.94,
+        "desc": "<= 0.9 x the reference link mass (145.49 g)"
+      },
+      {
+        "path": "buckling_ok",
+        "op": "true",
+        "desc": "plate-buckling + yield margins recorded, >= the 2x floor"
+      },
+      {
+        "path": "print_gates.min_wall_pass",
+        "op": "true",
+        "desc": "measured min wall >= the material minimum"
+      },
+      {
+        "path": "print_gates.slice_ok",
+        "op": "true",
+        "desc": "a real slicer pass succeeded (tri-state must be TRUE)"
+      }
+    ],
+    "held_out": [
+      "the other reference link (span 130.7, section 24.0 x 64.4, bar 115.19 g @ 0.0459 mm) via the identical author command"
+    ],
+    "signature_tokens": [
+      "so-101",
+      "so101",
+      "upper_arm",
+      "under_arm"
+    ]
+  }
+]

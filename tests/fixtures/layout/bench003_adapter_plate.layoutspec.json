@@ -1,0 +1,12 @@
+{
+  "pattern": "adapter_plate",
+  "name": "nema17_2020_adapter_layoutspec",
+  "envelope_mm": { "x": 70.0, "y": 50.0, "z": 8.0 },
+  "material": "PLA",
+  "min_wall_mm": 4.0,
+  "max_overhang_deg": 45.0,
+  "plate_width_mm": 65.0,
+  "plate_depth_mm": 45.0,
+  "motor_center_x_mm": 11.0,
+  "extrusion_center_x_mm": -22.0
+}

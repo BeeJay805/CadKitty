@@ -1,0 +1,13 @@
+{
+  "note": "CANNED bench fixture, not real product data. Values exist to measure pipeline honesty against a known corpus; verify against physical hardware before any real use.",
+  "by_query": {
+    "nr200": [
+      {
+        "url": "bench://nr200/spec",
+        "title": "Cooler Master NR200 specifications (bench fixture)",
+        "text": "Cooler Master NR200 layout fixture (canned bench corpus; verify against your physical hardware). The area behind the front panel offers a clearance height of 92 mm for drive mounting. The usable width beside the drive tray is 110 mm. The usable depth along the bottom rail is 160 mm. The front intake supports a 92 mm fan and requires 15 mm of free clearance in front of the fan frame.",
+        "fetched_at": "2026-07-06"
+      }
+    ]
+  }
+}

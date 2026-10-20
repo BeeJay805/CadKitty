@@ -1,0 +1,19 @@
+# Exemplar-library seed prompts (lever e, ADR-0045). DISJOINT from benchmarks/arbitrary_v1
+# by construction and enforced by the deny guard + the disjointness test. Diverse single
+# parts so retrieval has a neighbor for most long-tail requests.
+a corner brace 50 mm x 50 mm x 3 mm with two 4.5 mm holes per leg
+a desk grommet cap for an 60 mm desk hole with a 12 mm cable slot
+a round knob 30 mm diameter with a straight 5 mm bore and six finger scallops
+a U-shaped cable clamp for a 10 mm bundle with one 4.5 mm screw hole
+a robe hook with a 35 mm projection on a 40 x 60 mm back plate with two 4 mm holes
+a cylindrical spacer 12 mm OD, 6.2 mm ID, 15 mm long
+a conical funnel from 80 mm inlet to 15 mm outlet, 90 mm tall, 2 mm wall
+a straight pull handle 110 mm long with two M5 mounting bores 96 mm apart
+a flat belt roller 50 mm diameter, 20 mm wide, with a 8.2 mm axle bore
+a circular blanking plug for a 22 mm panel cutout with a 1.5 mm flange
+a rectangular storage tray 120 x 80 x 25 mm with 2.5 mm walls and a finger notch
+a hex driver bit holder block 70 x 30 x 15 mm with six 7.2 mm hex pockets
+a doorstop wedge 100 mm long, 35 mm wide, rising to 28 mm with a ribbed top
+a triangular shelf gusset 80 x 80 x 5 mm with three 5.4 mm holes
+a soap dish 110 x 70 x 20 mm with five 8 mm drain slots
+a bottle opener 130 mm long with a 28 mm cap lip and a hanging hole

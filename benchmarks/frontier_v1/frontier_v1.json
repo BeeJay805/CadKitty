@@ -1,0 +1,232 @@
+{
+  "version": "frontier_v1",
+  "frozen": "2026-07-09",
+  "authored_by": "claude-fable-5 (corpus + rubric author; the run arm is opus per the model-economy rule, so rubric-author and CAD-author stay independent)",
+  "fabrication_mode": "print_3d",
+  "hole_semantics": "penetrations",
+  "bbox_semantics": "sorted",
+  "score_metric": "pass@1, single variant per prompt, print-mode; mean over prompts",
+  "prompts": [
+    {
+      "id": "golden_ssd_bracket",
+      "class": "bracket_multihole",
+      "source": "problems_v1 nr200_ssd golden brief (rows 37-38), resolved facts embedded",
+      "prompt": "Design a single-piece printable mounting bracket for one 2.5-inch SSD (the drive is 69.85 mm wide x 100.2 mm long x 9.5 mm thick): a flat base plate 110 x 80 x 4 mm that bolts to a case floor rail with two M4 clearance holes (4.4 mm) spaced 60 mm apart along the base centerline; two side rails 3 mm thick that cradle the drive width with 0.4 mm clearance per side; four M3 clearance holes (3.4 mm) through the side rails matching the SSD side-mount pattern, two per side spaced 61.7 mm apart along the length, centered 6.35 mm above the drive seating surface. Leave the connector end fully open. All walls at least 2 mm thick.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [130, 100, 45],
+        "holes": [
+          {"diameter_mm": 3.4, "tol_mm": 0.3, "min_count": 4},
+          {"diameter_mm": 4.4, "tol_mm": 0.3, "min_count": 2}
+        ]
+      }
+    },
+    {
+      "id": "golden_hdd_tray",
+      "class": "tray_multihole",
+      "source": "problems_v1 nr200_hdd35 golden brief (rows 37-38), resolved facts embedded",
+      "prompt": "Design a single-piece printable tray bracket that mounts one 3.5-inch hard drive (101.6 mm wide x 147.0 mm long x 26.1 mm tall) to a case bottom rail: base plate 160 x 115 x 4 mm with four M5 clearance holes (5.4 mm) at the corners of a 130 x 90 mm rectangle; two side walls 3 mm thick and 30 mm tall that cradle the drive width with 0.5 mm clearance per side; four 4.0 mm clearance holes through the side walls for the drive's side screws, two per side spaced 76.2 mm apart along the length, centered 10 mm above the base top surface. Leave the connector end fully open.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [180, 130, 60],
+        "holes": [
+          {"diameter_mm": 4.0, "tol_mm": 0.25, "min_count": 4},
+          {"diameter_mm": 5.4, "tol_mm": 0.4, "min_count": 4}
+        ]
+      }
+    },
+    {
+      "id": "golden_fan_duct",
+      "class": "duct_thinwall",
+      "source": "problems_v1 meshify_duct golden brief (rows 37-38, 47) with the printable-envelope constraint W1 exposed (the 334 mm duct exceeded a 250 mm bed)",
+      "prompt": "Design a single-piece printable air duct that mounts on a 120 mm case fan and turns its airflow 90 degrees: square inlet flange 120 x 120 x 4 mm with four M4 clearance holes (4.4 mm) on the standard 105 x 105 mm fan bolt pattern; duct walls 2.4 mm thick; smooth internal transition to a rectangular outlet 100 x 40 mm. The whole duct must fit within a 240 x 240 x 200 mm printer build volume, and the run along the airflow direction must be at most 200 mm.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [240, 240, 200],
+        "holes": [
+          {"diameter_mm": 4.4, "tol_mm": 0.4, "min_count": 4}
+        ]
+      }
+    },
+    {
+      "id": "res_pipe_clamp",
+      "class": "bracket",
+      "source": "arbitrary_v1 bracket_pipe_clamp_single (residual fail, row 33), prompt + expect verbatim",
+      "prompt": "Design a single-piece pipe clamp bracket for a 25 mm OD pipe: semi-circular saddle 13 mm inner radius x 20 mm wide, two M5 bolt ears each 30 x 15 x 5 mm extending from the saddle ends, M5 clearance hole centered in each ear. Flat back face 60 x 20 mm with two M4 clearance holes 20 mm apart for wall mounting.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [100, 60, 55],
+        "holes": [
+          {"diameter_mm": 5.4, "tol_mm": 0.5, "min_count": 2},
+          {"diameter_mm": 4.4, "tol_mm": 0.5, "min_count": 2}
+        ]
+      }
+    },
+    {
+      "id": "res_pen_cup_hex",
+      "class": "organizer_thinwall",
+      "source": "arbitrary_v1 organizer_pen_cup_hex (residual fail, row 33), prompt + expect verbatim",
+      "prompt": "Design a single-piece hexagonal pen cup organizer: regular hexagon outer across-flats 70 mm, height 100 mm, wall thickness 3 mm, open top, flat bottom 3 mm thick, six equally-spaced 10 mm diameter circular drain holes on the bottom face.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [112, 112, 160],
+        "holes": [
+          {"diameter_mm": 10.0, "tol_mm": 0.4, "min_count": 6}
+        ]
+      }
+    },
+    {
+      "id": "fx_mounting_plate",
+      "class": "plate_multihole",
+      "source": "make_audit_fixtures.py fx_mounting_plate family, prompt verbatim",
+      "prompt": "Design a single-piece flat mounting plate: 100 mm long x 60 mm wide x 6 mm thick; a 12 mm central drive bore through the plate; 4 M5 clearance holes (5.4 mm) on a 40 mm bolt circle.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [110, 70, 12],
+        "holes": [
+          {"diameter_mm": 12.0, "tol_mm": 0.5, "min_count": 1},
+          {"diameter_mm": 5.4, "tol_mm": 0.4, "min_count": 4}
+        ]
+      }
+    },
+    {
+      "id": "fx_linkage_bar",
+      "class": "bar_multihole",
+      "source": "make_audit_fixtures.py fx_linkage_bar family, prompt verbatim",
+      "prompt": "Design a single-piece linkage bar: 120 mm long x 24 mm wide x 8 mm thick; a 10 mm pivot bore through each end, 100 mm apart; 3 M4 clearance holes (4.4 mm) along the centre line for lightening.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [130, 32, 12],
+        "holes": [
+          {"diameter_mm": 10.0, "tol_mm": 0.4, "min_count": 2},
+          {"diameter_mm": 4.4, "tol_mm": 0.3, "min_count": 3}
+        ]
+      }
+    },
+    {
+      "id": "fx_pillow_block",
+      "class": "block_bore",
+      "source": "make_audit_fixtures.py fx_pillow_block family, prompt verbatim",
+      "prompt": "Design a single-piece pillow block: 80 mm long x 40 mm wide x 30 mm tall; a 22 mm bearing bore through the length; 4 M6 clearance holes (6.6 mm) through the base.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [90, 50, 40],
+        "holes": [
+          {"diameter_mm": 22.0, "tol_mm": 0.6, "min_count": 1},
+          {"diameter_mm": 6.6, "tol_mm": 0.4, "min_count": 4}
+        ]
+      }
+    },
+    {
+      "id": "hard_pipe_flange",
+      "class": "flange_radial",
+      "source": "fresh, hard-holdout flange family (pass@8 HARD set, board 2026-07-04)",
+      "prompt": "Design a single-piece printable pipe flange adapter: circular flange 90 mm outer diameter x 8 mm thick; a central 32 mm diameter through-bore; six M5 clearance holes (5.4 mm) equally spaced on a 70 mm bolt circle; a raised concentric neck 45 mm outer diameter x 20 mm tall around the bore on one face.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [100, 100, 35],
+        "holes": [
+          {"diameter_mm": 32.0, "tol_mm": 0.6, "min_count": 1},
+          {"diameter_mm": 5.4, "tol_mm": 0.4, "min_count": 6}
+        ]
+      }
+    },
+    {
+      "id": "hard_indexer_plate",
+      "class": "indexer_radial",
+      "source": "fresh, hard-holdout indexer family (pass@8 HARD set, board 2026-07-04)",
+      "prompt": "Design a single-piece printable rotary indexer plate: disc 100 mm diameter x 6 mm thick; a central 15 mm diameter bore; twelve 6 mm diameter index holes equally spaced on an 80 mm circle; three M4 clearance holes (4.4 mm) equally spaced on a 40 mm bolt circle.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [110, 110, 10],
+        "holes": [
+          {"diameter_mm": 15.0, "tol_mm": 0.5, "min_count": 1},
+          {"diameter_mm": 6.0, "tol_mm": 0.4, "min_count": 12},
+          {"diameter_mm": 4.4, "tol_mm": 0.3, "min_count": 3}
+        ]
+      }
+    },
+    {
+      "id": "fresh_cable_comb",
+      "class": "comb_thinwall",
+      "source": "fresh, thin-wall slot-array class (W1/E1 min-wall lens)",
+      "prompt": "Design a single-piece printable cable management comb: a spine 80 mm long x 30 mm wide x 12 mm tall carrying 8 open-top slots, each slot 6 mm wide x 8 mm deep, separated by 2 mm walls; solid base 4 mm thick; two M4 clearance holes (4.4 mm) through the base spaced 60 mm apart along the length.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [90, 40, 20],
+        "holes": [
+          {"diameter_mm": 4.4, "tol_mm": 0.4, "min_count": 2}
+        ]
+      }
+    },
+    {
+      "id": "fresh_patch_panel",
+      "class": "panel_multihole_groups",
+      "source": "fresh, distinct-diameter hole-group class (row 39 assignment-pool lesson)",
+      "prompt": "Design a single-piece printable connector patch panel: flat plate 140 x 50 x 3 mm; one rectangular cutout 30 x 12 mm centered in the plate; four M3 clearance holes (3.4 mm) at the corners of a 120 x 36 mm rectangle; two 6.5 mm diameter cable pass-through holes on the horizontal centerline, one 40 mm to each side of center; one 12 mm diameter grommet hole on the horizontal centerline 25 mm from the left edge.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [150, 60, 6],
+        "holes": [
+          {"diameter_mm": 3.4, "tol_mm": 0.3, "min_count": 4},
+          {"diameter_mm": 6.5, "tol_mm": 0.4, "min_count": 2},
+          {"diameter_mm": 12.0, "tol_mm": 0.5, "min_count": 1}
+        ]
+      }
+    },
+    {
+      "id": "fresh_vented_tray",
+      "class": "tray_thinwall_vents",
+      "source": "fresh, thin-wall tray with vents + standoffs (rows 37-38 tray class)",
+      "prompt": "Design a single-piece printable electronics tray: outer envelope 120 x 90 x 25 mm; side walls 2 mm thick; floor 2.5 mm thick; at least six ventilation slots in the floor, each 40 mm long x 4 mm wide; four internal corner standoffs 8 mm diameter x 6 mm tall, each with an M3 clearance hole (3.4 mm) through the standoff and the floor, the four holes at the corners of a 100 x 70 mm rectangle.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [130, 100, 35],
+        "holes": [
+          {"diameter_mm": 3.4, "tol_mm": 0.3, "min_count": 4}
+        ]
+      }
+    },
+    {
+      "id": "fresh_hose_manifold",
+      "class": "manifold_internal_bores",
+      "source": "fresh, internal bore-junction class (hard-holdout manifold family)",
+      "prompt": "Design a single-piece printable 3-way hose manifold block: rectangular body 60 mm long x 30 mm wide x 30 mm tall; one 8 mm diameter bore running straight through the full length; two 8 mm diameter branch bores entering through the top face, spaced 20 mm apart and centered on the width, each meeting the main bore at 90 degrees; wall thickness at least 4 mm around every bore.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [70, 40, 40],
+        "holes": [
+          {"diameter_mm": 8.0, "tol_mm": 0.4, "min_count": 1}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "origin": "Appearance render of exact downloaded scripted-fixture STL",
+  "geometry_modified_for_display": false,
+  "preset": "metal",
+  "renderer_source_sha256": "6930cc1cb972a7952a55da5a805d764bc6379c22b041189faf1371f9f74cb7c1",
+  "scope": "Uniform appearance only; no material, motion, manufacture or physical approval.",
+  "images": [
+    {
+      "path": "previews/assembly-standard.png",
+      "sha256": "1f1401aeec5c6e06059a8ee0bc139eb66a6197721f73e07cfbb1e32e0ec1102c",
+      "mesh_sha256": "1f70a328dd029b73e52de97dad2586cab180e8474177b1feed890c8f1fac740c",
+      "view": "standard"
+    },
+    {
+      "path": "previews/assembly-opposed_upper.png",
+      "sha256": "71f36e1a4f34e21d3381b9c5c43570f1090ddb672b04a0b9364c4b86082d863d",
+      "mesh_sha256": "1f70a328dd029b73e52de97dad2586cab180e8474177b1feed890c8f1fac740c",
+      "view": "opposed_upper"
+    }
+  ]
+}

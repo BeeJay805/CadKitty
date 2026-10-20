@@ -1,0 +1,3040 @@
+{
+  "production": null,
+  "version": 1,
+  "name": "MCP acceptance fixture: opposed-jaw clamping concept",
+  "units": "mm",
+  "variables": {
+    "jaw_opening": 80.0
+  },
+  "relations": [
+    {
+      "name": "half_gap",
+      "operation": "divide",
+      "a": "jaw_opening",
+      "b": 2.0
+    },
+    {
+      "name": "jaw_right_x",
+      "operation": "add",
+      "a": "half_gap",
+      "b": 16.0
+    },
+    {
+      "name": "jaw_left_x",
+      "operation": "multiply",
+      "a": "jaw_right_x",
+      "b": -1.0
+    },
+    {
+      "name": "pad_right_x",
+      "operation": "add",
+      "a": "half_gap",
+      "b": 2.0
+    },
+    {
+      "name": "pad_left_x",
+      "operation": "multiply",
+      "a": "pad_right_x",
+      "b": -1.0
+    },
+    {
+      "name": "pad_bolt_right_x",
+      "operation": "add",
+      "a": "half_gap",
+      "b": 0.2
+    },
+    {
+      "name": "pad_bolt_left_x",
+      "operation": "multiply",
+      "a": "pad_bolt_right_x",
+      "b": -1.0
+    }
+  ],
+  "features": [],
+  "outputs": [],
+  "mechanism": null,
+  "motion_rig": {
+    "kind": "prescribed_rigid_v1",
+    "frame": "cad_z_up_mm_rest_world",
+    "drivers": [
+      {
+        "id": "opening",
+        "name": "Jaw opening",
+        "unit": "mm",
+        "minimum": 20.0,
+        "maximum": 100.0,
+        "reference": "jaw_opening"
+      }
+    ],
+    "groups": [
+      {
+        "id": "left",
+        "name": "Left carriage",
+        "parent": null,
+        "driver": "opening",
+        "kind": "slide",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "pivot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ratio": -0.5,
+        "occurrences": [
+          "jaw_left",
+          "pad_left",
+          "drive_nut_left",
+          "bushing_left_0",
+          "bushing_left_1",
+          "pad_bolt_left_0",
+          "pad_bolt_left_1"
+        ]
+      },
+      {
+        "id": "right",
+        "name": "Right carriage",
+        "parent": null,
+        "driver": "opening",
+        "kind": "slide",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "pivot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ratio": 0.5,
+        "occurrences": [
+          "jaw_right",
+          "pad_right",
+          "drive_nut_right",
+          "bushing_right_0",
+          "bushing_right_1",
+          "pad_bolt_right_0",
+          "pad_bolt_right_1"
+        ]
+      }
+    ]
+  },
+  "assembly": {
+    "parts": [
+      {
+        "production": {
+          "role": "make",
+          "deliver_stl": false,
+          "material": {
+            "name": "Aluminum, proposed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "cnc",
+          "finish": null,
+          "appearance": {
+            "color": "#7f9bad"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "base",
+        "name": "Mounting base",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "box",
+            "inputs": [],
+            "params": {
+              "x": 272.0,
+              "y": 112.0,
+              "z": 12.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 2.75,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "transform",
+            "inputs": [
+              "f1"
+            ],
+            "params": {
+              "x": -116.0,
+              "y": -42.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f3",
+            "name": "f3",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 2.75,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f4",
+            "name": "f4",
+            "kind": "transform",
+            "inputs": [
+              "f3"
+            ],
+            "params": {
+              "x": -116.0,
+              "y": 42.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f5",
+            "name": "f5",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 2.75,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f6",
+            "name": "f6",
+            "kind": "transform",
+            "inputs": [
+              "f5"
+            ],
+            "params": {
+              "x": 116.0,
+              "y": -42.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f7",
+            "name": "f7",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 2.75,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f8",
+            "name": "f8",
+            "kind": "transform",
+            "inputs": [
+              "f7"
+            ],
+            "params": {
+              "x": 116.0,
+              "y": 42.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f9",
+            "name": "f9",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 3.5,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f10",
+            "name": "f10",
+            "kind": "transform",
+            "inputs": [
+              "f9"
+            ],
+            "params": {
+              "x": -95.0,
+              "y": -45.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f11",
+            "name": "f11",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 3.5,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f12",
+            "name": "f12",
+            "kind": "transform",
+            "inputs": [
+              "f11"
+            ],
+            "params": {
+              "x": -95.0,
+              "y": 45.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f13",
+            "name": "f13",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 3.5,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f14",
+            "name": "f14",
+            "kind": "transform",
+            "inputs": [
+              "f13"
+            ],
+            "params": {
+              "x": 95.0,
+              "y": -45.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f15",
+            "name": "f15",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 3.5,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f16",
+            "name": "f16",
+            "kind": "transform",
+            "inputs": [
+              "f15"
+            ],
+            "params": {
+              "x": 95.0,
+              "y": 45.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f17",
+            "name": "f17",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f2",
+              "f4",
+              "f6",
+              "f8",
+              "f10",
+              "f12",
+              "f14",
+              "f16"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f17",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "make",
+          "deliver_stl": false,
+          "material": {
+            "name": "Aluminum, proposed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "cnc",
+          "finish": null,
+          "appearance": {
+            "color": "#7f9bad"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "end_plate",
+        "name": "Guide and drive support end plate",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "box",
+            "inputs": [],
+            "params": {
+              "x": 12.0,
+              "y": 100.0,
+              "z": 44.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.1,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "transform",
+            "inputs": [
+              "f1"
+            ],
+            "params": {
+              "ry": 90.0,
+              "y": -30.0,
+              "z": -2.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f3",
+            "name": "f3",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.1,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f4",
+            "name": "f4",
+            "kind": "transform",
+            "inputs": [
+              "f3"
+            ],
+            "params": {
+              "ry": 90.0,
+              "y": 30.0,
+              "z": -2.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f5",
+            "name": "f5",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 14.1,
+              "height": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f6",
+            "name": "f6",
+            "kind": "transform",
+            "inputs": [
+              "f5"
+            ],
+            "params": {
+              "ry": 90.0,
+              "z": -2.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f7",
+            "name": "f7",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 2.75,
+              "height": 48.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f8",
+            "name": "f8",
+            "kind": "transform",
+            "inputs": [
+              "f7"
+            ],
+            "params": {
+              "y": -42.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f9",
+            "name": "f9",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 2.75,
+              "height": 48.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f10",
+            "name": "f10",
+            "kind": "transform",
+            "inputs": [
+              "f9"
+            ],
+            "params": {
+              "y": 42.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f11",
+            "name": "f11",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f2",
+              "f4",
+              "f6",
+              "f8",
+              "f10"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f11",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "guide_rod",
+        "name": "Purchased diameter 12 guide rod envelope",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.0,
+              "height": 260.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f0",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "bushing",
+        "name": "Purchased plain bushing 18 OD / 12.2 ID / 20 long envelope",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 9.0,
+              "height": 20.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.1,
+              "height": 22.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f1"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f2",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "make",
+          "deliver_stl": false,
+          "material": {
+            "name": "Aluminum, proposed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "cnc",
+          "finish": null,
+          "appearance": {
+            "color": "#7f9bad"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "jaw",
+        "name": "Reusable carriage and integral jaw tower",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "box",
+            "inputs": [],
+            "params": {
+              "x": 24.0,
+              "y": 84.0,
+              "z": 24.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "box",
+            "inputs": [],
+            "params": {
+              "x": 16.0,
+              "y": 50.0,
+              "z": 24.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "transform",
+            "inputs": [
+              "f1"
+            ],
+            "params": {
+              "x": -4.0,
+              "z": 24.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f3",
+            "name": "f3",
+            "kind": "union",
+            "inputs": [
+              "f0",
+              "f2"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f4",
+            "name": "f4",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 9.1,
+              "height": 28.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f5",
+            "name": "f5",
+            "kind": "transform",
+            "inputs": [
+              "f4"
+            ],
+            "params": {
+              "ry": 90.0,
+              "y": -30.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f6",
+            "name": "f6",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 9.1,
+              "height": 28.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f7",
+            "name": "f7",
+            "kind": "transform",
+            "inputs": [
+              "f6"
+            ],
+            "params": {
+              "ry": 90.0,
+              "y": 30.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f8",
+            "name": "f8",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 10.1,
+              "height": 28.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f9",
+            "name": "f9",
+            "kind": "transform",
+            "inputs": [
+              "f8"
+            ],
+            "params": {
+              "ry": 90.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f10",
+            "name": "f10",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 1.75,
+              "height": 28.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f11",
+            "name": "f11",
+            "kind": "transform",
+            "inputs": [
+              "f10"
+            ],
+            "params": {
+              "ry": 90.0,
+              "y": -16.0,
+              "z": 28.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f12",
+            "name": "f12",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 1.75,
+              "height": 28.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f13",
+            "name": "f13",
+            "kind": "transform",
+            "inputs": [
+              "f12"
+            ],
+            "params": {
+              "ry": 90.0,
+              "y": 16.0,
+              "z": 28.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f14",
+            "name": "f14",
+            "kind": "cut",
+            "inputs": [
+              "f3",
+              "f5",
+              "f7",
+              "f9",
+              "f11",
+              "f13"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f14",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "make",
+          "deliver_stl": false,
+          "material": {
+            "name": "Polymer jaw pad, grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "cnc",
+          "finish": null,
+          "appearance": {
+            "color": "#7f9bad"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "pad",
+        "name": "Replaceable jaw pad with recessed fastener heads",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "box",
+            "inputs": [],
+            "params": {
+              "x": 4.0,
+              "y": 48.0,
+              "z": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 1.75,
+              "height": 6.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "transform",
+            "inputs": [
+              "f1"
+            ],
+            "params": {
+              "ry": 90.0,
+              "y": -16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f3",
+            "name": "f3",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 1.75,
+              "height": 6.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f4",
+            "name": "f4",
+            "kind": "transform",
+            "inputs": [
+              "f3"
+            ],
+            "params": {
+              "ry": 90.0,
+              "y": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f5",
+            "name": "f5",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 3.75,
+              "height": 3.5
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f6",
+            "name": "f6",
+            "kind": "transform",
+            "inputs": [
+              "f5"
+            ],
+            "params": {
+              "ry": 90.0,
+              "x": -0.25,
+              "y": -16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f7",
+            "name": "f7",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 3.75,
+              "height": 3.5
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f8",
+            "name": "f8",
+            "kind": "transform",
+            "inputs": [
+              "f7"
+            ],
+            "params": {
+              "ry": 90.0,
+              "x": -0.25,
+              "y": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f9",
+            "name": "f9",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f2",
+              "f4",
+              "f6",
+              "f8"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f9",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "drive_envelope",
+        "name": "TR12x3 opposed-hand screw CLEARANCE ENVELOPE; threads absent",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.0,
+              "height": 288.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f0",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "drive_nut_left",
+        "name": "left-hand drive nut CLEARANCE ENVELOPE; engagement unverified",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 10.0,
+              "height": 18.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.1,
+              "height": 20.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f1"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f2",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "drive_nut_right",
+        "name": "right-hand drive nut CLEARANCE ENVELOPE; engagement unverified",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 10.0,
+              "height": 18.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.1,
+              "height": 20.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f1"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f2",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "drive_bearing",
+        "name": "Drive bearing 28 OD / 12.2 ID envelope",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 14.0,
+              "height": 8.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.1,
+              "height": 10.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f1"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f2",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "make",
+          "deliver_stl": false,
+          "material": {
+            "name": "Aluminum, proposed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "cnc",
+          "finish": null,
+          "appearance": {
+            "color": "#7f9bad"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "handwheel",
+        "name": "Handwheel with unqualified shaft retention",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 30.0,
+              "height": 8.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.1,
+              "height": 10.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f1"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f2",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "make",
+          "deliver_stl": false,
+          "material": {
+            "name": "Aluminum, proposed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "cnc",
+          "finish": null,
+          "appearance": {
+            "color": "#7f9bad"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "grip",
+        "name": "Handwheel grip",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.0,
+              "height": 40.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f0",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "end_bolt",
+        "name": "M5x65 end support bolt minor-diameter envelope",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 2.4,
+              "height": 65.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "transform",
+            "inputs": [
+              "f0"
+            ],
+            "params": {
+              "z": 32.5
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 4.25,
+              "height": 5.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f3",
+            "name": "f3",
+            "kind": "transform",
+            "inputs": [
+              "f2"
+            ],
+            "params": {
+              "z": -2.5
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f4",
+            "name": "f4",
+            "kind": "union",
+            "inputs": [
+              "f1",
+              "f3"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f4",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "washer",
+        "name": "M5 washer clearance envelope",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 5.0,
+              "height": 1.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 2.75,
+              "height": 3.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f1"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f2",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "end_nut",
+        "name": "M5 nut clearance envelope; threads absent",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 4.5,
+              "height": 4.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 2.75,
+              "height": 6.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f1"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f2",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "pad_bolt",
+        "name": "M4 pad screw minor-diameter envelope",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 3.5,
+              "height": 3.2
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "transform",
+            "inputs": [
+              "f0"
+            ],
+            "params": {
+              "z": 1.6
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 1.6,
+              "height": 14.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f3",
+            "name": "f3",
+            "kind": "transform",
+            "inputs": [
+              "f2"
+            ],
+            "params": {
+              "z": 10.2
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f4",
+            "name": "f4",
+            "kind": "union",
+            "inputs": [
+              "f1",
+              "f3"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f4",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "collar",
+        "name": "Drive collar envelope; set-screw retention unverified",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 11.0,
+              "height": 6.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f1",
+            "name": "f1",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 6.1,
+              "height": 8.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f2",
+            "name": "f2",
+            "kind": "cut",
+            "inputs": [
+              "f0",
+              "f1"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f3",
+            "name": "f3",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 1.7,
+              "height": 26.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f4",
+            "name": "f4",
+            "kind": "transform",
+            "inputs": [
+              "f3"
+            ],
+            "params": {
+              "rx": 90.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          },
+          {
+            "id": "f5",
+            "name": "f5",
+            "kind": "cut",
+            "inputs": [
+              "f2",
+              "f4"
+            ],
+            "params": {},
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f5",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "deliver_stl": false,
+          "material": {
+            "name": "Steel, proposed; supplier and grade unconfirmed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#b4bbc0"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "set_screw",
+        "name": "Collar set screw envelope; no modeled thread",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "cylinder",
+            "inputs": [],
+            "params": {
+              "radius": 1.5,
+              "height": 4.8
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f0",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      },
+      {
+        "production": {
+          "role": "make",
+          "deliver_stl": false,
+          "material": {
+            "name": "Aluminum, proposed",
+            "grade": null,
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "cnc",
+          "finish": null,
+          "appearance": {
+            "color": "#7f9bad"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "side_guard",
+        "name": "Fixed guide channel side guard",
+        "features": [
+          {
+            "id": "f0",
+            "name": "f0",
+            "kind": "box",
+            "inputs": [],
+            "params": {
+              "x": 220.0,
+              "y": 4.0,
+              "z": 16.0
+            },
+            "bindings": {},
+            "points": [],
+            "code": "",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "f0",
+        "ports": [],
+        "source": "Scripted acceptance fixture. Nominal geometry only; manufacture, procurement and mechanical function unverified."
+      }
+    ],
+    "subassemblies": [],
+    "roots": [
+      {
+        "id": "base",
+        "definition": "base",
+        "position": [
+          0.0,
+          0.0,
+          6.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "end_left",
+        "definition": "end_plate",
+        "position": [
+          -116.0,
+          0.0,
+          34.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "bearing_left",
+        "definition": "drive_bearing",
+        "position": [
+          -116.0,
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "collar_left",
+        "definition": "collar",
+        "position": [
+          -127.0,
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "set_screw_left",
+        "definition": "set_screw",
+        "position": [
+          -127.0,
+          8.6,
+          32.0
+        ],
+        "rotation": [
+          90.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "end_bolt_left_0",
+        "definition": "end_bolt",
+        "position": [
+          -116.0,
+          -42.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "washer_left_0",
+        "definition": "washer",
+        "position": [
+          -116.0,
+          -42.0,
+          56.5
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "nut_left_0",
+        "definition": "end_nut",
+        "position": [
+          -116.0,
+          -42.0,
+          59.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "end_bolt_left_1",
+        "definition": "end_bolt",
+        "position": [
+          -116.0,
+          42.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "washer_left_1",
+        "definition": "washer",
+        "position": [
+          -116.0,
+          42.0,
+          56.5
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "nut_left_1",
+        "definition": "end_nut",
+        "position": [
+          -116.0,
+          42.0,
+          59.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "jaw_left",
+        "definition": "jaw",
+        "position": [
+          "jaw_left_x",
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          180.0
+        ]
+      },
+      {
+        "id": "pad_left",
+        "definition": "pad",
+        "position": [
+          "pad_left_x",
+          0.0,
+          60.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          180.0
+        ]
+      },
+      {
+        "id": "drive_nut_left",
+        "definition": "drive_nut_left",
+        "position": [
+          "jaw_left_x",
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "bushing_left_0",
+        "definition": "bushing",
+        "position": [
+          "jaw_left_x",
+          -30.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "bushing_left_1",
+        "definition": "bushing",
+        "position": [
+          "jaw_left_x",
+          30.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "pad_bolt_left_0",
+        "definition": "pad_bolt",
+        "position": [
+          "pad_bolt_left_x",
+          -16.0,
+          60.0
+        ],
+        "rotation": [
+          0.0,
+          -90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "pad_bolt_left_1",
+        "definition": "pad_bolt",
+        "position": [
+          "pad_bolt_left_x",
+          16.0,
+          60.0
+        ],
+        "rotation": [
+          0.0,
+          -90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "end_right",
+        "definition": "end_plate",
+        "position": [
+          116.0,
+          0.0,
+          34.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "bearing_right",
+        "definition": "drive_bearing",
+        "position": [
+          116.0,
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "collar_right",
+        "definition": "collar",
+        "position": [
+          127.0,
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "set_screw_right",
+        "definition": "set_screw",
+        "position": [
+          127.0,
+          8.6,
+          32.0
+        ],
+        "rotation": [
+          90.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "end_bolt_right_0",
+        "definition": "end_bolt",
+        "position": [
+          116.0,
+          -42.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "washer_right_0",
+        "definition": "washer",
+        "position": [
+          116.0,
+          -42.0,
+          56.5
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "nut_right_0",
+        "definition": "end_nut",
+        "position": [
+          116.0,
+          -42.0,
+          59.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "end_bolt_right_1",
+        "definition": "end_bolt",
+        "position": [
+          116.0,
+          42.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "washer_right_1",
+        "definition": "washer",
+        "position": [
+          116.0,
+          42.0,
+          56.5
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "nut_right_1",
+        "definition": "end_nut",
+        "position": [
+          116.0,
+          42.0,
+          59.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "jaw_right",
+        "definition": "jaw",
+        "position": [
+          "jaw_right_x",
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "pad_right",
+        "definition": "pad",
+        "position": [
+          "pad_right_x",
+          0.0,
+          60.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "drive_nut_right",
+        "definition": "drive_nut_right",
+        "position": [
+          "jaw_right_x",
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "bushing_right_0",
+        "definition": "bushing",
+        "position": [
+          "jaw_right_x",
+          -30.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "bushing_right_1",
+        "definition": "bushing",
+        "position": [
+          "jaw_right_x",
+          30.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "pad_bolt_right_0",
+        "definition": "pad_bolt",
+        "position": [
+          "pad_bolt_right_x",
+          -16.0,
+          60.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "pad_bolt_right_1",
+        "definition": "pad_bolt",
+        "position": [
+          "pad_bolt_right_x",
+          16.0,
+          60.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "guide_0",
+        "definition": "guide_rod",
+        "position": [
+          0.0,
+          -30.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "guide_1",
+        "definition": "guide_rod",
+        "position": [
+          0.0,
+          30.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "guard_0",
+        "definition": "side_guard",
+        "position": [
+          0.0,
+          -52.0,
+          20.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "guard_1",
+        "definition": "side_guard",
+        "position": [
+          0.0,
+          52.0,
+          20.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "drive",
+        "definition": "drive_envelope",
+        "position": [
+          0.0,
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "wheel",
+        "definition": "handwheel",
+        "position": [
+          148.0,
+          0.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      },
+      {
+        "id": "grip",
+        "definition": "grip",
+        "position": [
+          172.0,
+          22.0,
+          32.0
+        ],
+        "rotation": [
+          0.0,
+          90.0,
+          0.0
+        ]
+      }
+    ],
+    "mates": []
+  }
+}

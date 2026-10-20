@@ -1,0 +1,634 @@
+{
+  "production": null,
+  "version": 1,
+  "name": "Split-seat bench support / nominal CNC assembly",
+  "units": "mm",
+  "variables": {
+    "shaft_diameter": 8.0,
+    "bearing_outer_diameter": 22.0,
+    "bearing_width": 7.0,
+    "bearing_spacing": 70.0,
+    "shaft_axis_height": 35.0,
+    "base_length": 110.0,
+    "base_width": 64.0,
+    "base_thickness": 6.0,
+    "housing_axial_length": 14.0,
+    "housing_width": 54.0,
+    "cap_height": 15.0,
+    "seat_diametral_clearance": 0.02,
+    "seat_axial_clearance": 0.2,
+    "shoulder_aperture_diameter": 19.0,
+    "cap_screw_y_offset": 18.0,
+    "cap_clearance_diameter": 4.5,
+    "cap_screw_diameter": 4.0,
+    "cap_screw_pitch": 0.7,
+    "cap_screw_length": 25.0,
+    "screw_head_diameter": 7.22,
+    "screw_head_height": 4.0,
+    "screw_socket_af": 3.0,
+    "screw_socket_depth": 2.0,
+    "washer_outer_diameter": 9.0,
+    "washer_inner_diameter": 4.3,
+    "washer_thickness": 0.9,
+    "thread_engagement_depth": 12.0,
+    "tap_drill_diameter": 3.3,
+    "locator_diameter": 4.0,
+    "locator_height": 2.0,
+    "locator_y_offset": 24.0,
+    "locator_diametral_clearance": 0.05,
+    "locator_axial_clearance": 0.2,
+    "mount_hole_diameter": 5.5,
+    "mount_x_edge_offset": 7.0,
+    "mount_y_edge_offset": 7.0,
+    "shaft_reference_length": 110.0,
+    "max_length": 120.0,
+    "max_width": 70.0,
+    "max_height": 70.0
+  },
+  "relations": [
+    {
+      "name": "bearing_half_spacing",
+      "operation": "divide",
+      "a": "bearing_spacing",
+      "b": 2.0
+    },
+    {
+      "name": "bearing_left_x",
+      "operation": "multiply",
+      "a": "bearing_half_spacing",
+      "b": -1.0
+    },
+    {
+      "name": "seat_diameter",
+      "operation": "add",
+      "a": "bearing_outer_diameter",
+      "b": "seat_diametral_clearance"
+    },
+    {
+      "name": "seat_width",
+      "operation": "add",
+      "a": "bearing_width",
+      "b": "seat_axial_clearance"
+    },
+    {
+      "name": "cap_top_height",
+      "operation": "add",
+      "a": "shaft_axis_height",
+      "b": "cap_height"
+    },
+    {
+      "name": "screw_underhead_height",
+      "operation": "add",
+      "a": "cap_top_height",
+      "b": "washer_thickness"
+    },
+    {
+      "name": "screw_y_negative",
+      "operation": "multiply",
+      "a": "cap_screw_y_offset",
+      "b": -1.0
+    }
+  ],
+  "features": [],
+  "outputs": [],
+  "mechanism": null,
+  "motion_rig": null,
+  "assembly": {
+    "parts": [
+      {
+        "production": {
+          "role": "make",
+          "material": {
+            "name": "Aluminium",
+            "grade": "6061-T6",
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "cnc",
+          "finish": "Deburr edges; protect bearing seats and mounting plane from coatings",
+          "appearance": {
+            "color": "#889BA8"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "base",
+        "name": "MAKE: integral base and two lower bearing seats",
+        "features": [
+          {
+            "id": "body",
+            "name": "Base, split seats, locating posts and mounting holes",
+            "kind": "python",
+            "inputs": [],
+            "params": {},
+            "bindings": {
+              "L": "base_length",
+              "W": "base_width",
+              "T": "base_thickness",
+              "S": "bearing_spacing",
+              "H": "shaft_axis_height",
+              "A": "housing_axial_length",
+              "B": "housing_width",
+              "D": "seat_diameter",
+              "Q": "seat_width",
+              "R": "shoulder_aperture_diameter",
+              "Y": "cap_screw_y_offset",
+              "F": "cap_screw_diameter",
+              "E": "thread_engagement_depth",
+              "P": "locator_diameter",
+              "PH": "locator_height",
+              "PY": "locator_y_offset",
+              "MD": "mount_hole_diameter",
+              "MX": "mount_x_edge_offset",
+              "MY": "mount_y_edge_offset"
+            },
+            "points": [],
+            "code": "L,W,T,S,H,A,B,D,Q,R,Y,F,E,P,PH,PY,MD,MX,MY = [params[k] for k in ('L','W','T','S','H','A','B','D','Q','R','Y','F','E','P','PH','PY','MD','MX','MY')]\nresult = b.Pos(0,0,T/2) * b.Box(L,W,T)\nfor x in (-S/2,S/2):\n    pedestal = b.Pos(x,0,(T+H)/2) * b.Box(A,B,H-T)\n    opening = b.Pos(x,0,H) * b.Rot(0,90,0) * b.Cylinder(R/2,A+2)\n    seat = b.Pos(x,0,H) * b.Rot(0,90,0) * b.Cylinder(D/2,Q)\n    pedestal = pedestal - opening - seat\n    result = result + pedestal\n    for y in (-Y,Y):\n        result = result - b.Pos(x,y,H-E/2) * b.Cylinder(F/2,E)\n    for y in (-PY,PY):\n        result = result + b.Pos(x,y,H+PH/2) * b.Cylinder(P/2,PH)\nfor x in (-L/2+MX,L/2-MX):\n    for y in (-W/2+MY,W/2-MY):\n        result = result - b.Pos(x,y,T/2) * b.Cylinder(MD/2,T+2)",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "body",
+        "ports": [],
+        "source": "CNC mill from aluminium billet. Flat underside is mounting plane z=0. Two integral lower seats; matched caps close on z=35. Finish both seats coaxially with caps fitted, retaining the axial shoulder lips. Nominal seat 22.02 x 7.20; shoulder opening 19.00. Establish seat tolerance, coaxiality, flatness and lip contact on actual bearing outer rings before release. Four blind M4x0.7 tapped holes: drill 3.3 mm, provide 12 mm usable thread below split plane with sufficient drill-point depth; CAD shows 4 mm major-diameter thread envelopes, not tap drills or helical threads. Four external mounting holes 5.5 mm, pattern 96 x 50. No adhesive needed."
+      },
+      {
+        "production": {
+          "role": "make",
+          "material": {
+            "name": "Aluminium",
+            "grade": "6061-T6",
+            "density_kg_m3": null,
+            "source_claim_ids": []
+          },
+          "process": "cnc",
+          "finish": "Deburr; keep split faces and seats free of coatings",
+          "appearance": {
+            "color": "#C3CDD4"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "cap",
+        "name": "MAKE: removable located bearing cap / qty 2",
+        "features": [
+          {
+            "id": "body",
+            "name": "Split upper seat, outer-ring shoulders and locator pockets",
+            "kind": "python",
+            "inputs": [],
+            "params": {},
+            "bindings": {
+              "A": "housing_axial_length",
+              "B": "housing_width",
+              "C": "cap_height",
+              "D": "seat_diameter",
+              "Q": "seat_width",
+              "R": "shoulder_aperture_diameter",
+              "Y": "cap_screw_y_offset",
+              "F": "cap_clearance_diameter",
+              "P": "locator_diameter",
+              "PH": "locator_height",
+              "PY": "locator_y_offset",
+              "PC": "locator_diametral_clearance",
+              "AC": "locator_axial_clearance"
+            },
+            "points": [],
+            "code": "A,B,C,D,Q,R,Y,F,P,PH,PY,PC,AC = [params[k] for k in ('A','B','C','D','Q','R','Y','F','P','PH','PY','PC','AC')]\nresult = b.Pos(0,0,C/2) * b.Box(A,B,C)\nresult = result - b.Rot(0,90,0) * b.Cylinder(R/2,A+2)\nresult = result - b.Rot(0,90,0) * b.Cylinder(D/2,Q)\nfor y in (-Y,Y):\n    result = result - b.Pos(0,y,C/2) * b.Cylinder(F/2,C+2)\nfor y in (-PY,PY):\n    result = result - b.Pos(0,y,(PH+AC)/2) * b.Cylinder((P+PC)/2,PH+AC)",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "body",
+        "ports": [],
+        "source": "Two copies of this made-part definition. Match-mark left and right after final seat finishing. Bottom plane seats on base split plane. Two 4.5 mm screw clearances; two blind 4.05 x 2.20 mm locating pockets for integral base posts. Local z=0 is split plane and bearing center. Seat and shoulders match base. CAD has sharp nominal edges: add small shop edge breaks away from locating, seat and mounting faces; determine cutter corner relief during process planning. Caps lift vertically after all screws and washers are removed."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "material": null,
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#B5BDC6"
+          },
+          "procurement": {
+            "catalog_id": "bearing_608",
+            "supplier": "Local sourced standards catalog",
+            "part_number": "608 / M8-22-7 (SKT backend)",
+            "source_claim_ids": []
+          },
+          "source_claim_ids": []
+        },
+        "id": "bearing608",
+        "name": "BUY: 608 ball bearing / SIMPLIFIED annular envelope",
+        "features": [
+          {
+            "id": "body",
+            "name": "Nominal 608 envelope, axis X and centered",
+            "kind": "python",
+            "inputs": [],
+            "params": {},
+            "bindings": {
+              "D": "bearing_outer_diameter",
+              "d": "shaft_diameter",
+              "B": "bearing_width"
+            },
+            "points": [],
+            "code": "D,d,B = [params[k] for k in ('D','d','B')]\nresult = b.Rot(0,90,0) * (b.Cylinder(D/2,B) - b.Cylinder(d/2,B+2))",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "body",
+        "ports": [
+          {
+            "name": "bore",
+            "kind": "bore",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "shaft_diameter"
+          },
+          {
+            "name": "outer",
+            "kind": "shaft",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "bearing_outer_diameter"
+          }
+        ],
+        "source": "Catalog bearing_608: ordinary single-row deep groove radial ball bearing, 8 x 22 x 7 mm; dsl/standards ISO 15 + bd_warehouse SKT SingleRowDeepGrooveBallBearing M8-22-7. Simplified nominal annular envelope only: rolling elements, race separations, seals, chamfers and tolerances are omitted. Supplier commercial SKU, sealing choice, lubrication and actual outer-ring face dimensions remain unresolved. This geometry establishes nominal interfaces only; no physical fit or rating claimed."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "material": null,
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#454D55"
+          },
+          "procurement": {
+            "catalog_id": "shcs_m4x25",
+            "supplier": "Local sourced standards catalog",
+            "part_number": "ISO 4762 M4-0.7x25",
+            "source_claim_ids": []
+          },
+          "source_claim_ids": []
+        },
+        "id": "cap_screw",
+        "name": "BUY: ISO 4762 M4x25 / SIMPLIFIED nominal screw",
+        "features": [
+          {
+            "id": "body",
+            "name": "Nominal screw envelope with tool socket",
+            "kind": "python",
+            "inputs": [],
+            "params": {},
+            "bindings": {
+              "d": "cap_screw_diameter",
+              "L": "cap_screw_length",
+              "HD": "screw_head_diameter",
+              "HH": "screw_head_height",
+              "AF": "screw_socket_af",
+              "SD": "screw_socket_depth"
+            },
+            "points": [],
+            "code": "d,L,HD,HH,AF,SD = [params[k] for k in ('d','L','HD','HH','AF','SD')]\nresult = b.Pos(0,0,-L/2) * b.Cylinder(d/2,L)\nresult = result + b.Pos(0,0,HH/2) * b.Cylinder(HD/2,HH)\nsocket = b.extrude(b.RegularPolygon(AF/(3**0.5),6),amount=SD+1)\nresult = result - b.Pos(0,0,HH-SD) * socket",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "body",
+        "ports": [],
+        "source": "Catalog shcs_m4x25, bd_warehouse iso4762 + ISO 273. Four required. Nominal plain 4 mm thread envelope, 25 mm underhead length, 7.22 x 4 mm head, 3 mm hex socket. Threads and tip chamfer omitted; material/property class, surface finish, purchase SKU and tightening torque unresolved. Local origin is underside of head; shank points in negative Z. Nominal engagement in base is 9.1 mm. No nuts: screws engage tapped aluminium base. Select torque after material, screw class and joint validation."
+      },
+      {
+        "production": {
+          "role": "buy",
+          "material": null,
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#7E8890"
+          },
+          "procurement": {
+            "catalog_id": "washer_flat_m4_normal",
+            "supplier": "Local sourced standards catalog",
+            "part_number": "ISO 7089 M4 normal",
+            "source_claim_ids": []
+          },
+          "source_claim_ids": []
+        },
+        "id": "washer",
+        "name": "BUY: ISO 7089 M4 washer / nominal",
+        "features": [
+          {
+            "id": "body",
+            "name": "Nominal washer ring",
+            "kind": "python",
+            "inputs": [],
+            "params": {},
+            "bindings": {
+              "D": "washer_outer_diameter",
+              "d": "washer_inner_diameter",
+              "T": "washer_thickness"
+            },
+            "points": [],
+            "code": "D,d,T = [params[k] for k in ('D','d','T')]\nresult = b.Pos(0,0,T/2) * (b.Cylinder(D/2,T) - b.Cylinder(d/2,T+2))",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "body",
+        "ports": [],
+        "source": "Catalog washer_flat_m4_normal, bd_warehouse iso7089: bore 4.3, OD 9, thickness 0.9 mm. Four required, under cap screw heads. Simplified nominal annulus; material, hardness, finish and commercial SKU unresolved. Local z=0 is lower contact face."
+      },
+      {
+        "production": {
+          "role": "reference",
+          "material": null,
+          "process": "unspecified",
+          "finish": null,
+          "appearance": {
+            "color": "#C0A064"
+          },
+          "procurement": null,
+          "source_claim_ids": []
+        },
+        "id": "shaft",
+        "name": "REFERENCE ONLY: straight 8 mm shaft",
+        "features": [
+          {
+            "id": "body",
+            "name": "Editable reference shaft envelope",
+            "kind": "python",
+            "inputs": [],
+            "params": {},
+            "bindings": {
+              "d": "shaft_diameter",
+              "L": "shaft_reference_length"
+            },
+            "points": [],
+            "code": "result = b.Rot(0,90,0) * b.Cylinder(params['d']/2,params['L'])",
+            "sketch": null,
+            "asset_id": null,
+            "catalog_id": null,
+            "selection": [],
+            "suppressed": false
+          }
+        ],
+        "output": "body",
+        "ports": [
+          {
+            "name": "journal",
+            "kind": "shaft",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "diameter": "shaft_diameter"
+          }
+        ],
+        "source": "Reference shaft envelope only, 8 mm nominal diameter, 110 mm display length. No shaft supplied in purchased support BOM. Shaft material, diameter tolerance, finish and straightness are unspecified. No shaft axial stop is included; the support permits axial shaft movement. Bearings slide onto shaft from an accessible end; actual fit must be selected and verified."
+      }
+    ],
+    "subassemblies": [],
+    "roots": [
+      {
+        "id": "support_base",
+        "definition": "base",
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "cap_left",
+        "definition": "cap",
+        "position": [
+          "bearing_left_x",
+          0.0,
+          "shaft_axis_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "cap_right",
+        "definition": "cap",
+        "position": [
+          "bearing_half_spacing",
+          0.0,
+          "shaft_axis_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "bearing_left",
+        "definition": "bearing608",
+        "position": [
+          "bearing_left_x",
+          0.0,
+          "shaft_axis_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "bearing_right",
+        "definition": "bearing608",
+        "position": [
+          "bearing_half_spacing",
+          0.0,
+          "shaft_axis_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "screw_left_front",
+        "definition": "cap_screw",
+        "position": [
+          "bearing_left_x",
+          "screw_y_negative",
+          "screw_underhead_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "screw_left_back",
+        "definition": "cap_screw",
+        "position": [
+          "bearing_left_x",
+          "cap_screw_y_offset",
+          "screw_underhead_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "screw_right_front",
+        "definition": "cap_screw",
+        "position": [
+          "bearing_half_spacing",
+          "screw_y_negative",
+          "screw_underhead_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "screw_right_back",
+        "definition": "cap_screw",
+        "position": [
+          "bearing_half_spacing",
+          "cap_screw_y_offset",
+          "screw_underhead_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "washer_left_front",
+        "definition": "washer",
+        "position": [
+          "bearing_left_x",
+          "screw_y_negative",
+          "cap_top_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "washer_left_back",
+        "definition": "washer",
+        "position": [
+          "bearing_left_x",
+          "cap_screw_y_offset",
+          "cap_top_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "washer_right_front",
+        "definition": "washer",
+        "position": [
+          "bearing_half_spacing",
+          "screw_y_negative",
+          "cap_top_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "washer_right_back",
+        "definition": "washer",
+        "position": [
+          "bearing_half_spacing",
+          "cap_screw_y_offset",
+          "cap_top_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "reference_shaft",
+        "definition": "shaft",
+        "position": [
+          0.0,
+          0.0,
+          "shaft_axis_height"
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "mates": []
+  }
+}

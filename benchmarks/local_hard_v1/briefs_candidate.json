@@ -1,0 +1,882 @@
+[
+ {
+  "_meta": "local_hard_v1 CANDIDATE roster v2 (NOT FROZEN -- founder curation pending). The humanoid-ladder instrument (rungs R1-R2, single-body servo-interface parts; founder directive 2026-07-22). Servo = MG996R, BOUGHT part, dims cited from src/forge_mind/assembly/servo.py. v2 folds the idiom survey (docs/research/2026-07-22-humanoid-bracket-idioms.md): cable_chain_link CUT (gantry idiom, domain uses molded wire grooves -- grooves now ride shin_link + torso_side_frame); battery_cradle swapped to torso_back_cover (same snap class, domain-real); waist_bracket + idler_bushing ADDED (survey's missing classes); high-load joints (shoulder/hip yokes, U-bracket) min_wall 3.0 per the survey's triangulated 2-4mm band. VERIFICATION PENDING (do not freeze without resolving): servo.py's horn BC 17.0 is provisional and BOTH research agents converged on ~14mm domain norms -- verify against a physical MG996R round horn / primary drawing; body 40.7x19.7x42.9 same tier. Briefs regenerate from servo.py constants, so a registry correction re-authors the corpus in one command. Comparator-bridge anchors ride along at freeze time by label from legacy corpora: exhaust_manifold_4to1, fan_duct, tslot_nut, desk_grommet. Rungs R3+ (subassemblies w/ mapped servos; STS3215 ingest PARTIAL -- no-flange dual-horn architecture needs its own frame contract, docs/research/2026-07-22-sts3215-facts.md) need the assembly-lane bench harness -- separate iteration."
+ },
+ {
+  "label": "servo_side_bracket",
+  "rung": "R1",
+  "prompt": "An L-shaped side-mount bracket for an MG996R hobby servo: the vertical face takes the servo's four flange screws, the base bolts to a frame with M3 screws, and the servo wire exits through a slot. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "MG996R servo side-mount bracket",
+   "summary": "L-bracket: vertical servo face with the 4-hole tab pattern and a wire slot, horizontal base with M3 mounting holes.",
+   "visual_description": "A sturdy L of two rectangular plates meeting at 90 degrees with a filleted root. The tall face shows four small screw holes in a wide flat rectangle pattern and one open-ended vertical slot; the flat base shows four corner holes. Uniform wall, no taper.",
+   "overall_envelope_mm": "60 x 30 x 52 -- the vertical face must span the 54.4 mm servo flange; the base is deep enough for stable M3 mounting.",
+   "features": [
+    {
+     "name": "vertical_servo_face",
+     "purpose": "carries the servo flange",
+     "approx_dims_mm": "58 x 3.5 x 50",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "servo_tab_holes",
+     "purpose": "clearance for the four flange screws on the cited rectangle",
+     "approx_dims_mm": "d4.5 x 3.5, pattern 49.5 x 10.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "wire_exit_slot",
+     "purpose": "open-ended slot so the servo lead passes without pinching",
+     "approx_dims_mm": "6 x 14 through",
+     "method": "pocket",
+     "count": 1
+    },
+    {
+     "name": "horizontal_base",
+     "purpose": "bolts the bracket to a frame",
+     "approx_dims_mm": "58 x 26 x 3.5",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "base_mount_holes",
+     "purpose": "M3 clearance to the frame",
+     "approx_dims_mm": "d3.4 x 3.5",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "root_fillet_rib",
+     "purpose": "stiffens the 90-degree joint against servo torque",
+     "approx_dims_mm": "58 x 6 x 6",
+     "method": "box",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.5,
+   "material": "PLA",
+   "print_orientation_note": "Base flat on the bed; the vertical face prints upward without support (the wire slot opens upward).",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "servo_horn_hub",
+  "rung": "R1",
+  "prompt": "A round hub adapter that screws onto an MG996R round servo horn and presents a square key boss for a link. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "MG996R horn hub adapter",
+   "summary": "Disc that mates the round horn (center bore + 4 horn screws on the cited bolt circle) and carries a square drive boss on top.",
+   "visual_description": "A thick coin-like disc; from the top a small square boss rises from the center. Top view shows one center bore and four tiny screw holes evenly spaced on a circle around it. Edges lightly chamfered, everything concentric.",
+   "overall_envelope_mm": "26 x 26 x 12 -- disc slightly wider than the 21 mm horn; boss height gives the link a full key.",
+   "features": [
+    {
+     "name": "hub_disc",
+     "purpose": "the body that seats on the horn face",
+     "approx_dims_mm": "d26 x 6",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "center_bore",
+     "purpose": "clears the horn's center screw boss",
+     "approx_dims_mm": "d8.1 x 12 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "horn_screw_holes",
+     "purpose": "the four horn screws on the cited bolt circle",
+     "approx_dims_mm": "d2.2 x 6, BC 14.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "square_key_boss",
+     "purpose": "keys the driven link so it cannot spin",
+     "approx_dims_mm": "12 x 12 x 6",
+     "method": "box",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Disc face down; the boss prints upward, bores are vertical.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "servo_c_bracket",
+  "rung": "R1",
+  "prompt": "A C-bracket that cradles an MG996R servo body from below and screws up into its mounting flange. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1. The servo case is 40.7 x 19.7 x 42.9 mm.",
+  "brief": {
+   "object_name": "MG996R servo C-bracket",
+   "summary": "U-channel cradle: bottom plate with the 4 tab holes, two side walls hugging the servo case with clearance.",
+   "visual_description": "A squat open-topped channel like a wide staple. Flat bottom plate with four screw holes near its ends; two parallel upright walls with a rectangular window between them where the servo body sits. Slightly rounded outer corners.",
+   "overall_envelope_mm": "58 x 26 x 22 -- the plate spans the 54.4 mm flange; walls stop below the flange underside.",
+   "features": [
+    {
+     "name": "bottom_plate",
+     "purpose": "takes the four flange screws from below",
+     "approx_dims_mm": "58 x 26 x 3.5",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "servo_tab_holes",
+     "purpose": "clearance holes on the cited rectangle",
+     "approx_dims_mm": "d4.5 x 3.5, pattern 49.5 x 10.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "side_walls",
+     "purpose": "cradle the 19.7 mm wide case with 0.3 mm clearance per side",
+     "approx_dims_mm": "58 x 3.0 x 18",
+     "method": "box",
+     "count": 2
+    },
+    {
+     "name": "case_window",
+     "purpose": "the opening the servo body drops into",
+     "approx_dims_mm": "41.3 x 20.3 through",
+     "method": "pocket",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.5,
+   "material": "PLA",
+   "print_orientation_note": "Bottom plate on the bed, walls print upward.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "servo_foot_plate",
+  "rung": "R1",
+  "prompt": "A humanoid robot foot: a flat sole plate with a raised mount for the ankle MG996R servo and grip pads at the corners. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "humanoid foot plate with ankle servo mount",
+   "summary": "Rounded-corner sole with two raised rails carrying the servo tab pattern and four corner grip pads.",
+   "visual_description": "A flat rounded-rectangle sole like a shoe print. Two short parallel rails rise near the middle, drilled with the four servo screw holes; four shallow round pads sit at the sole corners underneath. Mostly flat, low profile.",
+   "overall_envelope_mm": "92 x 55 x 14 -- sole big enough for static stability; rails lift the servo flange clear of the sole.",
+   "features": [
+    {
+     "name": "sole_plate",
+     "purpose": "the ground contact plate",
+     "approx_dims_mm": "92 x 55 x 4",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "servo_rail",
+     "purpose": "raised rails the ankle servo flange screws onto",
+     "approx_dims_mm": "54 x 8 x 8",
+     "method": "box",
+     "count": 2
+    },
+    {
+     "name": "servo_tab_holes",
+     "purpose": "the cited flange pattern through the rails",
+     "approx_dims_mm": "d4.5 x 8, pattern 49.5 x 10.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "grip_pad",
+     "purpose": "corner pads for ground grip",
+     "approx_dims_mm": "d8 x 2",
+     "method": "revolve",
+     "count": 4
+    },
+    {
+     "name": "toe_relief_chamfer",
+     "purpose": "front edge chamfer so the foot rolls forward smoothly",
+     "approx_dims_mm": "55 x 4 x 3",
+     "method": "box",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.5,
+   "material": "PLA",
+   "print_orientation_note": "Sole flat on the bed, pads down (they print as first layers), rails upward.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "head_sensor_plate",
+  "rung": "R1",
+  "prompt": "A head plate for a humanoid robot: mounts on an MG996R horn (pan axis) and carries a small camera board. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "humanoid head sensor plate",
+   "summary": "Flat plate with the horn interface at its center of rotation, two camera board holes, and a cable slot.",
+   "visual_description": "A rounded rectangular plate. Near one end a center bore ringed by four tiny screw holes (the horn mount); near the other, two small holes side by side for a camera board and one oblong slot for its ribbon cable. Thin, flat, clean outline.",
+   "overall_envelope_mm": "62 x 42 x 5 -- room for a 32 mm camera board forward of the horn axis.",
+   "features": [
+    {
+     "name": "head_plate",
+     "purpose": "the structural plate",
+     "approx_dims_mm": "62 x 42 x 4",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "horn_center_bore",
+     "purpose": "clears the horn center boss at the pan axis",
+     "approx_dims_mm": "d8.1 x 4 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "horn_screw_holes",
+     "purpose": "the cited horn bolt circle",
+     "approx_dims_mm": "d2.2 x 4, BC 14.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "camera_mount_holes",
+     "purpose": "M3 standoff holes for the camera board",
+     "approx_dims_mm": "d3.4 x 4, spacing 30",
+     "method": "bolt_holes",
+     "count": 2
+    },
+    {
+     "name": "cable_slot",
+     "purpose": "ribbon cable pass-through",
+     "approx_dims_mm": "10 x 4 through",
+     "method": "pocket",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Flat on the bed; all holes vertical.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "servo_u_bracket",
+  "rung": "R2",
+  "prompt": "The classic hobby-servo U-bracket for an MG996R: one arm bolts to the round horn, the opposite arm carries an idler pivot bore coaxial with the horn axis. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "MG996R U-bracket (horn + idler)",
+   "summary": "U-shaped yoke: horn-interface arm (center bore + cited bolt circle), opposite idler arm with a coaxial pivot bore, joined by a base web.",
+   "visual_description": "A squared U like a tuning fork from the side. One upright arm shows the center bore ringed by four tiny holes; the facing arm shows a single larger bore exactly opposite. The connecting base is a flat web with lightly filleted inner corners. Arms parallel, bores coaxial.",
+   "overall_envelope_mm": "50 x 32 x 58 -- inner span clears the 42.9 mm case height plus horn stack; arms deep enough for full bolt circles.",
+   "features": [
+    {
+     "name": "horn_arm",
+     "purpose": "the arm bolted to the servo horn",
+     "approx_dims_mm": "48 x 3.5 x 30",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "horn_center_bore",
+     "purpose": "clears the horn center boss",
+     "approx_dims_mm": "d8.1 x 3.5 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "horn_screw_holes",
+     "purpose": "the cited horn bolt circle",
+     "approx_dims_mm": "d2.2 x 3.5, BC 14.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "idler_arm",
+     "purpose": "the opposite arm riding the rear pivot",
+     "approx_dims_mm": "48 x 3.5 x 30",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "idler_pivot_bore",
+     "purpose": "coaxial bore for an M6 shoulder bolt or bushing",
+     "approx_dims_mm": "d6.1 x 3.5 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "base_web",
+     "purpose": "joins the two arms into a rigid U",
+     "approx_dims_mm": "48 x 32 x 4",
+     "method": "box",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "Base web on the bed, arms upward (bores print as vertical walls' horizontal holes -- bridge-capable at these diameters).",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "hip_yoke_plate",
+  "rung": "R2",
+  "prompt": "A mirrored hip yoke plate for a humanoid: two MG996R horn interfaces at a fixed center distance on one rigid plate, mirror-symmetric, with lightening slots. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "humanoid hip yoke plate",
+   "summary": "One plate carrying TWO horn interfaces (center bore + cited bolt circle each) at 48 mm centers, mirror-symmetric, with lightening slots and an edge rib.",
+   "visual_description": "A wide bone-shaped plate. Two identical bore-plus-four-screws clusters sit left and right, perfectly mirrored about the center line; between them two oblong slots lighten the web. A raised rib runs along the long edges.",
+   "overall_envelope_mm": "84 x 40 x 8 -- two full bolt circles at 48 mm centers plus edge margin.",
+   "features": [
+    {
+     "name": "yoke_plate",
+     "purpose": "the structural web",
+     "approx_dims_mm": "84 x 40 x 4",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "horn_center_bore",
+     "purpose": "one per hip servo, mirrored pair at 48 mm centers",
+     "approx_dims_mm": "d8.1 x 4 through",
+     "method": "bore",
+     "count": 2
+    },
+    {
+     "name": "horn_screw_holes",
+     "purpose": "the cited bolt circle around EACH center bore",
+     "approx_dims_mm": "d2.2 x 4, BC 14.0",
+     "method": "bolt_holes",
+     "count": 8
+    },
+    {
+     "name": "lightening_slot",
+     "purpose": "weight reduction between the hips",
+     "approx_dims_mm": "18 x 6 through",
+     "method": "pocket",
+     "count": 2
+    },
+    {
+     "name": "edge_rib",
+     "purpose": "stiffening rib along each long edge",
+     "approx_dims_mm": "84 x 2.5 x 4",
+     "method": "box",
+     "count": 2
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "Plate flat on the bed, ribs upward.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "shin_link",
+  "rung": "R2",
+  "prompt": "A shin link for a humanoid leg: horn interface at the knee end, idler pivot bore at the ankle end, ribbed I-beam web between. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "humanoid shin link",
+   "summary": "Elongated link: horn interface (center bore + cited bolt circle) one end, d6.1 idler bore the other, ribbed web spanning 80 mm centers.",
+   "visual_description": "A long flat link like a wrench silhouette. One rounded end carries the center bore with its four-screw circle; the far rounded end a single bore. Between them the web narrows with a raised central rib forming a shallow I-beam. Straight, symmetric about its long axis.",
+   "overall_envelope_mm": "98 x 30 x 9 -- 80 mm hole centers plus full end bosses.",
+   "features": [
+    {
+     "name": "link_web",
+     "purpose": "the spanning structure",
+     "approx_dims_mm": "98 x 22 x 4",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "horn_center_bore",
+     "purpose": "knee servo horn center",
+     "approx_dims_mm": "d8.1 x 4 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "horn_screw_holes",
+     "purpose": "the cited horn bolt circle at the knee end",
+     "approx_dims_mm": "d2.2 x 4, BC 14.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "ankle_pivot_bore",
+     "purpose": "idler bore at 80 mm center distance from the horn bore",
+     "approx_dims_mm": "d6.1 x 4 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "central_rib",
+     "purpose": "I-beam rib down the web's spine",
+     "approx_dims_mm": "70 x 2.5 x 5",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "end_boss",
+     "purpose": "thickened round boss around each end bore",
+     "approx_dims_mm": "d20 x 8",
+     "method": "revolve",
+     "count": 2
+    },
+    {
+     "name": "wire_groove",
+     "purpose": "molded channel down the web face routing the servo lead (the SO-ARM101/Bioloid idiom)",
+     "approx_dims_mm": "70 x 5 x 2",
+     "method": "pocket",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.5,
+   "material": "PLA",
+   "print_orientation_note": "Flat on the bed; rib upward; bores vertical.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "torso_side_frame",
+  "rung": "R2",
+  "prompt": "A torso side frame for a humanoid: one plate carrying TWO MG996R flange tab patterns (shoulder above hip) at 55 mm vertical spacing, with lightening cutouts. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "humanoid torso side frame",
+   "summary": "Tall plate with two full servo tab patterns (4x d4.5 on 49.5 x 10.0 each) at 55 mm vertical spacing, three lightening cutouts, edge flanges.",
+   "visual_description": "A tall rectangular plate. Two wide four-hole screw rows cross it horizontally, one high one low; between and below them three rounded rectangular windows lighten the panel. Short perpendicular flanges run up both vertical edges.",
+   "overall_envelope_mm": "60 x 34 x 110 -- spans both servo bays with edge margin.",
+   "features": [
+    {
+     "name": "frame_plate",
+     "purpose": "the structural panel",
+     "approx_dims_mm": "58 x 3.5 x 108",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "shoulder_tab_holes",
+     "purpose": "upper servo flange pattern, cited rectangle",
+     "approx_dims_mm": "d4.5 x 3.5, pattern 49.5 x 10.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "hip_tab_holes",
+     "purpose": "lower servo flange pattern, same cited rectangle, 55 mm below",
+     "approx_dims_mm": "d4.5 x 3.5, pattern 49.5 x 10.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "lightening_cutout",
+     "purpose": "panel windows for weight",
+     "approx_dims_mm": "24 x 14 through",
+     "method": "pocket",
+     "count": 3
+    },
+    {
+     "name": "edge_flange",
+     "purpose": "perpendicular stiffening flange on each vertical edge",
+     "approx_dims_mm": "3.0 x 30 x 108",
+     "method": "box",
+     "count": 2
+    },
+    {
+     "name": "wire_groove",
+     "purpose": "vertical molded channel routing both servo leads to the torso top",
+     "approx_dims_mm": "100 x 5 x 2",
+     "method": "pocket",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.5,
+   "material": "PLA",
+   "print_orientation_note": "Plate flat on the bed, flanges upward (flanges are the only vertical walls).",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "shoulder_yoke",
+  "rung": "R2",
+  "prompt": "A shoulder yoke joining two MG996R axes at 90 degrees: a horn interface on the horizontal face and a flange tab pattern on the vertical face, webbed corner between. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "humanoid shoulder yoke (orthogonal axes)",
+   "summary": "Two plates at 90 degrees: horizontal face with the horn interface (center bore + cited bolt circle), vertical face with the cited tab pattern, gusset webs in the corner.",
+   "visual_description": "Two flat plates meeting like an open book at a right angle. The horizontal page shows a center bore ringed by four small holes; the vertical page a wide rectangle of four screw holes. Two triangular gussets brace the corner from the outside.",
+   "overall_envelope_mm": "58 x 45 x 45 -- each face large enough for its full pattern; gussets inside the elbow of the L.",
+   "features": [
+    {
+     "name": "horn_face_plate",
+     "purpose": "the horizontal plate riding the shoulder-pitch horn",
+     "approx_dims_mm": "44 x 44 x 4",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "horn_center_bore",
+     "purpose": "horn center boss clearance",
+     "approx_dims_mm": "d8.1 x 4 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "horn_screw_holes",
+     "purpose": "the cited horn bolt circle",
+     "approx_dims_mm": "d2.2 x 4, BC 14.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "flange_face_plate",
+     "purpose": "the vertical plate the roll servo flange bolts to",
+     "approx_dims_mm": "58 x 4 x 42",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "servo_tab_holes",
+     "purpose": "the cited flange rectangle on the vertical face",
+     "approx_dims_mm": "d4.5 x 4, pattern 49.5 x 10.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "corner_gusset",
+     "purpose": "triangular web bracing the right angle",
+     "approx_dims_mm": "20 x 3 x 20",
+     "method": "box",
+     "count": 2
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "Horn face flat on the bed; the vertical face and gussets print upward.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "torso_back_cover",
+  "rung": "R2",
+  "prompt": "A snap-on electronics back cover for a humanoid torso: a shallow shell that closes the torso cavity, retained by two printed snap latches, with alignment pins and a wire notch.",
+  "brief": {
+   "object_name": "snap-latch torso back cover",
+   "summary": "Shallow rectangular shell 90 x 60 with 2.0 walls, two cantilever snap latches with lips on the long edges, two alignment pins, one wire notch.",
+   "visual_description": "A shallow rectangular lid like a project-box cover, gently rounded corners. Two thin flexible tongues with small hooks extend from the long edges; two short round pins rise near the corners of the open face; one edge carries a rounded notch. Uniform thin walls.",
+   "overall_envelope_mm": "90 x 60 x 14 -- shallow shell over the electronics bay plus latch overtravel.",
+   "features": [
+    {
+     "name": "cover_shell",
+     "purpose": "the shallow closing shell",
+     "approx_dims_mm": "90 x 60 x 12",
+     "method": "shell",
+     "count": 1
+    },
+    {
+     "name": "snap_latch",
+     "purpose": "cantilever latch with a lip, one per long edge",
+     "approx_dims_mm": "12 x 1.6 x 10",
+     "method": "box",
+     "count": 2
+    },
+    {
+     "name": "latch_lip",
+     "purpose": "the inward hook at each latch tip",
+     "approx_dims_mm": "12 x 2 x 2",
+     "method": "box",
+     "count": 2
+    },
+    {
+     "name": "alignment_pin",
+     "purpose": "registers the cover before the latches engage",
+     "approx_dims_mm": "d3.0 x 5",
+     "method": "revolve",
+     "count": 2
+    },
+    {
+     "name": "wire_notch",
+     "purpose": "rounded exit for the harness",
+     "approx_dims_mm": "10 x 6 through",
+     "method": "pocket",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PETG",
+   "print_orientation_note": "Open face up (shell floor on the bed); latches print vertically for along-finger layer strength.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "waist_bracket",
+  "rung": "R1",
+  "prompt": "A single-DOF waist bracket for a budget humanoid: a flat base that bolts to the hip plate and a perpendicular face carrying the torso MG996R flange. MG996R interface dims are the registry-cited values (TowerPro datasheet, provisional; src/forge_mind/assembly/servo.py): tab holes 4x d4.5 on a 49.5 x 10.0 mm rectangle, horn screws 4x d2.2 on a 17.0 mm bolt circle, hub center bore d8.1.",
+  "brief": {
+   "object_name": "single-DOF waist bracket",
+   "summary": "Base plate with four M3 frame holes; one perpendicular face with the cited servo tab pattern; a single center gusset.",
+   "visual_description": "A plain right-angle bracket, wider than tall. The flat base shows four corner holes; the upright face shows the wide four-hole servo rectangle. One triangular gusset splits the angle at the center line. Simple, blocky, functional.",
+   "overall_envelope_mm": "60 x 40 x 46 -- base wide enough for stable M3 spread; face spans the 54.4 mm flange.",
+   "features": [
+    {
+     "name": "base_plate",
+     "purpose": "bolts to the hip plate",
+     "approx_dims_mm": "58 x 38 x 4",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "base_mount_holes",
+     "purpose": "M3 clearance to the frame",
+     "approx_dims_mm": "d3.4 x 4",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "servo_face",
+     "purpose": "the upright plate the torso servo flange bolts to",
+     "approx_dims_mm": "58 x 4 x 42",
+     "method": "box",
+     "count": 1
+    },
+    {
+     "name": "servo_tab_holes",
+     "purpose": "the cited flange rectangle",
+     "approx_dims_mm": "d4.5 x 4, pattern 49.5 x 10.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "center_gusset",
+     "purpose": "one triangular web bracing the angle",
+     "approx_dims_mm": "18 x 3 x 18",
+     "method": "box",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.5,
+   "material": "PLA",
+   "print_orientation_note": "Base flat on the bed; face and gusset print upward.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "idler_bushing",
+  "rung": "R1",
+  "prompt": "A small flanged idler bushing for a humanoid joint: presses into a bracket's d6.1 idler bore and rides an M3 shoulder screw.",
+  "brief": {
+   "object_name": "flanged idler bushing",
+   "summary": "Flanged sleeve: outer d6.0 press body, inner d3.2 bore, d10 x 1.5 flange, small lead-in chamfer.",
+   "visual_description": "A tiny top-hat: a short cylinder with a wider thin disc brim at one end. A hole runs straight through the center. Edges cleanly chamfered; entirely rotationally symmetric.",
+   "overall_envelope_mm": "10 x 10 x 8 -- flange diameter dominates; body length matches a 3.5 mm bracket arm plus protrusion.",
+   "features": [
+    {
+     "name": "bushing_body",
+     "purpose": "the press-fit sleeve entering the bracket's d6.1 bore",
+     "approx_dims_mm": "d6.0 x 6.5",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "flange_brim",
+     "purpose": "seats against the bracket arm face",
+     "approx_dims_mm": "d10 x 1.5",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "screw_bore",
+     "purpose": "rides the M3 shoulder screw",
+     "approx_dims_mm": "d3.2 x 8 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "lead_in_chamfer",
+     "purpose": "eases the press insertion",
+     "approx_dims_mm": "d6.0 x 0.5",
+     "method": "revolve",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 1.2,
+   "material": "PETG",
+   "print_orientation_note": "Flange down on the bed; the body prints upward, bore vertical.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "threaded_jar",
+  "rung": "R2-hard",
+  "prompt": "A small storage jar with a REAL external ISO thread on its neck (M40x2 class) so a lid can screw on.",
+  "brief": {
+   "object_name": "threaded storage jar",
+   "summary": "Cylindrical jar, wall 2.5, with a real external thread on the neck.",
+   "visual_description": "A squat cylinder with an open top; the top 12 mm is a slightly narrower neck carrying visible helical thread ridges all the way around. Flat bottom, plain sides.",
+   "overall_envelope_mm": "50 x 50 x 60 -- body plus the threaded neck.",
+   "features": [
+    {
+     "name": "jar_body",
+     "purpose": "the container",
+     "approx_dims_mm": "d50 x 48",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "inner_cavity",
+     "purpose": "the storage volume",
+     "approx_dims_mm": "d43 x 52",
+     "method": "pocket",
+     "count": 1
+    },
+    {
+     "name": "threaded_neck",
+     "purpose": "external ISO thread for the lid",
+     "approx_dims_mm": "d40 x 12",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "neck_thread",
+     "purpose": "the helical thread itself",
+     "approx_dims_mm": "pitch 2",
+     "method": "sweep",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.5,
+   "material": "PETG",
+   "print_orientation_note": "Bottom on the bed; the thread prints in place.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "threaded_lid",
+  "rung": "R2-hard",
+  "prompt": "The matching screw lid for a jar with an M40x2-class neck: an INTERNAL thread inside the skirt, knurled grip ribs outside.",
+  "brief": {
+   "object_name": "threaded jar lid",
+   "summary": "Disc lid with an internal thread in its skirt and grip ribs.",
+   "visual_description": "A shallow round cap; inside its hanging skirt are helical thread grooves; the outside wall carries fine vertical grip ribs all around. Flat top.",
+   "overall_envelope_mm": "48 x 48 x 16",
+   "features": [
+    {
+     "name": "lid_top",
+     "purpose": "the cap disc",
+     "approx_dims_mm": "d48 x 4",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "skirt",
+     "purpose": "the hanging wall carrying the thread",
+     "approx_dims_mm": "d44 x 12",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "internal_thread",
+     "purpose": "the internal ISO thread",
+     "approx_dims_mm": "d40 pitch 2",
+     "method": "sweep",
+     "count": 1
+    },
+    {
+     "name": "grip_rib",
+     "purpose": "knurl ribs for grip",
+     "approx_dims_mm": "1.5 x 1.5 x 12",
+     "method": "box",
+     "count": 24
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PETG",
+   "print_orientation_note": "Top face down; skirt and internal thread print upward.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "gear_hub",
+  "rung": "R2-hard",
+  "prompt": "A drive gear with REAL involute teeth: module 1.5, 24 teeth, 8 mm thick, on a hub with a 6 mm bore and two radial M4 set-screw holes 90 degrees apart.",
+  "brief": {
+   "object_name": "involute drive gear with set-screw hub",
+   "summary": "m1.5 z24 involute spur gear, hub d20x12, bore d6, two radial set screws.",
+   "visual_description": "A proper gear: 24 clearly involute-profiled teeth around a disc, a thicker round hub standing on one face with a central bore, and two small radial holes into the hub 90 degrees apart. Everything concentric.",
+   "overall_envelope_mm": "39 x 39 x 20 -- tip diameter m*(z+2)=39; gear 8 plus hub 12.",
+   "features": [
+    {
+     "name": "gear_disc",
+     "purpose": "the toothed body, module 1.5 x 24 teeth",
+     "approx_dims_mm": "d39 x 8",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "hub_boss",
+     "purpose": "the clamping hub",
+     "approx_dims_mm": "d20 x 12",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "center_bore",
+     "purpose": "the 6 mm shaft bore",
+     "approx_dims_mm": "d6 x 20 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "set_screw_hole",
+     "purpose": "radial M4 taps 90 deg apart",
+     "approx_dims_mm": "d3.3 x 7",
+     "method": "bolt_holes",
+     "count": 2
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Gear face down, hub up; teeth print in plane.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "impeller",
+  "rung": "R3-hard",
+  "prompt": "A centrifugal fan impeller: a hub disc with 8 backward-curved blades in a polar array, each blade a smooth curved wall from hub to rim.",
+  "brief": {
+   "object_name": "centrifugal impeller",
+   "summary": "Hub disc d20, 8 backward-curved blades to d70, base ring, bore d5.",
+   "visual_description": "A turbine-like wheel: a small central hub on a thin base disc, with eight identical curved blades sweeping outward like a pinwheel, evenly spaced, each leaning backward against the spin direction. Open on top.",
+   "overall_envelope_mm": "70 x 70 x 18",
+   "features": [
+    {
+     "name": "base_disc",
+     "purpose": "the floor carrying the blades",
+     "approx_dims_mm": "d70 x 2.5",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "hub",
+     "purpose": "the driven center",
+     "approx_dims_mm": "d20 x 18",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "center_bore",
+     "purpose": "the motor shaft bore",
+     "approx_dims_mm": "d5 x 18 through",
+     "method": "bore",
+     "count": 1
+    },
+    {
+     "name": "curved_blade",
+     "purpose": "backward-curved blade, hub to rim",
+     "approx_dims_mm": "28 x 2 x 15",
+     "method": "sweep",
+     "count": 8
+    }
+   ],
+   "min_wall_mm": 1.8,
+   "material": "PETG",
+   "print_orientation_note": "Base disc on the bed; blades print upward.",
+   "target": "cosmetic"
+  }
+ }
+]

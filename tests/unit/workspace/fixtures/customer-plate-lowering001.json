@@ -1,0 +1,497 @@
+{
+  "source": "Make a 60 x 40 x 5 mm plate in X/Y/Z. Four 5 mm diameter through-holes run along Z. Hole centers are 8 mm from each adjacent edge. Square edges.",
+  "raw_response": {
+    "canonical_requirements": [],
+    "coverage_notes": [
+      "The designed subject is designated a plate. No reference or environment subjects are specified.",
+      "The request specifies no coordinate origin. The proposed CAD subcheck uses a centered body frame.",
+      "No material, manufacturing process, or dimensional tolerances are specified.",
+      "No owner-requested digital deliverables or nominal-only scope restriction appear in the source. Server delivery policy remains separate metadata."
+    ],
+    "digital_requirements": [],
+    "fact_groups": [
+      {
+        "candidate_subject_ids": [],
+        "quote_ref": "q1",
+        "requirement_ids": [
+          "r1"
+        ],
+        "subject_id": "s1",
+        "unit": "mm",
+        "values": [
+          {
+            "id": "f1",
+            "property": "plate dimension in X",
+            "value": 60.0
+          },
+          {
+            "id": "f2",
+            "property": "plate dimension in Y",
+            "value": 40.0
+          },
+          {
+            "id": "f3",
+            "property": "plate dimension in Z",
+            "value": 5.0
+          }
+        ]
+      },
+      {
+        "candidate_subject_ids": [],
+        "quote_ref": "q2",
+        "requirement_ids": [
+          "r2"
+        ],
+        "subject_id": "s1",
+        "unit": "holes",
+        "values": [
+          {
+            "id": "f4",
+            "property": "hole count",
+            "value": 4.0
+          }
+        ]
+      },
+      {
+        "candidate_subject_ids": [],
+        "quote_ref": "q2",
+        "requirement_ids": [
+          "r3"
+        ],
+        "subject_id": "s1",
+        "unit": "mm",
+        "values": [
+          {
+            "id": "f5",
+            "property": "hole diameter",
+            "value": 5.0
+          }
+        ]
+      },
+      {
+        "candidate_subject_ids": [],
+        "quote_ref": "q3",
+        "requirement_ids": [
+          "r6"
+        ],
+        "subject_id": "s1",
+        "unit": "mm",
+        "values": [
+          {
+            "id": "f6",
+            "property": "hole center distance from each adjacent edge",
+            "value": 8.0
+          }
+        ]
+      }
+    ],
+    "fact_order": [
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5",
+      "f6"
+    ],
+    "issues": [],
+    "nominal_delivery_scope": [],
+    "nominal_perforated_box": [],
+    "nominal_subject_inventory": [],
+    "nominal_targets": [
+      {
+        "criterion": {
+          "axis": "z",
+          "center_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "count_policy": "exact",
+          "frame": "definition_local",
+          "holes": [
+            {
+              "center_mm": [
+                -22.0,
+                -12.0
+              ],
+              "diameter_mm": 5.0,
+              "diameter_tolerance_mm": 0.0,
+              "position_tolerance_mm": 0.0
+            },
+            {
+              "center_mm": [
+                22.0,
+                -12.0
+              ],
+              "diameter_mm": 5.0,
+              "diameter_tolerance_mm": 0.0,
+              "position_tolerance_mm": 0.0
+            },
+            {
+              "center_mm": [
+                22.0,
+                12.0
+              ],
+              "diameter_mm": 5.0,
+              "diameter_tolerance_mm": 0.0,
+              "position_tolerance_mm": 0.0
+            },
+            {
+              "center_mm": [
+                -22.0,
+                12.0
+              ],
+              "diameter_mm": 5.0,
+              "diameter_tolerance_mm": 0.0,
+              "position_tolerance_mm": 0.0
+            }
+          ],
+          "kind": "nominal_perforated_box",
+          "scope": "nominal_cad",
+          "size_mm": [
+            60.0,
+            40.0,
+            5.0
+          ],
+          "source_quote": "Make a 60 x 40 x 5 mm plate in X/Y/Z. Four 5 mm diameter through-holes run along Z. Hole centers are 8 mm from each adjacent edge. Square edges.",
+          "subject_id": "s1",
+          "subject_role": "designed",
+          "version": 1
+        },
+        "field_bindings": [
+          {
+            "basis": "source_relation",
+            "field": "size_mm.0",
+            "terms": [
+              {
+                "fact_id": "f1",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "size_mm.1",
+            "terms": [
+              {
+                "fact_id": "f2",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "size_mm.2",
+            "terms": [
+              {
+                "fact_id": "f3",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "design_origin",
+            "field": "center_mm.0",
+            "terms": []
+          },
+          {
+            "basis": "design_origin",
+            "field": "center_mm.1",
+            "terms": []
+          },
+          {
+            "basis": "design_origin",
+            "field": "center_mm.2",
+            "terms": []
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.0.center_mm.0",
+            "terms": [
+              {
+                "fact_id": "f1",
+                "operation": "negative_half"
+              },
+              {
+                "fact_id": "f6",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.0.center_mm.1",
+            "terms": [
+              {
+                "fact_id": "f2",
+                "operation": "negative_half"
+              },
+              {
+                "fact_id": "f6",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.0.diameter_mm",
+            "terms": [
+              {
+                "fact_id": "f5",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.1.center_mm.0",
+            "terms": [
+              {
+                "fact_id": "f1",
+                "operation": "half"
+              },
+              {
+                "fact_id": "f6",
+                "operation": "negative"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.1.center_mm.1",
+            "terms": [
+              {
+                "fact_id": "f2",
+                "operation": "negative_half"
+              },
+              {
+                "fact_id": "f6",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.1.diameter_mm",
+            "terms": [
+              {
+                "fact_id": "f5",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.2.center_mm.0",
+            "terms": [
+              {
+                "fact_id": "f1",
+                "operation": "half"
+              },
+              {
+                "fact_id": "f6",
+                "operation": "negative"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.2.center_mm.1",
+            "terms": [
+              {
+                "fact_id": "f2",
+                "operation": "half"
+              },
+              {
+                "fact_id": "f6",
+                "operation": "negative"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.2.diameter_mm",
+            "terms": [
+              {
+                "fact_id": "f5",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.3.center_mm.0",
+            "terms": [
+              {
+                "fact_id": "f1",
+                "operation": "negative_half"
+              },
+              {
+                "fact_id": "f6",
+                "operation": "value"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.3.center_mm.1",
+            "terms": [
+              {
+                "fact_id": "f2",
+                "operation": "half"
+              },
+              {
+                "fact_id": "f6",
+                "operation": "negative"
+              }
+            ]
+          },
+          {
+            "basis": "source_relation",
+            "field": "holes.3.diameter_mm",
+            "terms": [
+              {
+                "fact_id": "f5",
+                "operation": "value"
+              }
+            ]
+          }
+        ],
+        "frame_policy": "centered_body",
+        "hole_count_fact_id": "f4",
+        "requirement_id": "t1",
+        "source_requirement_ids": [
+          "r1",
+          "r2",
+          "r3",
+          "r4",
+          "r5",
+          "r6",
+          "r7"
+        ]
+      }
+    ],
+    "nominal_through_hole_pattern": [],
+    "quotes": [
+      {
+        "id": "q1",
+        "text": "Make a 60 x 40 x 5 mm plate in X/Y/Z."
+      },
+      {
+        "id": "q2",
+        "text": "Four 5 mm diameter through-holes run along Z."
+      },
+      {
+        "id": "q3",
+        "text": "Hole centers are 8 mm from each adjacent edge."
+      },
+      {
+        "id": "q4",
+        "text": "Square edges."
+      }
+    ],
+    "requirement_order": [
+      "r1",
+      "r2",
+      "r3",
+      "r4",
+      "r5",
+      "r6",
+      "r7"
+    ],
+    "requirements": [
+      {
+        "critical": true,
+        "id": "r1",
+        "quote_ref": "q1",
+        "scalar": null,
+        "source": "request",
+        "subject_ids": [
+          "s1"
+        ],
+        "text": "Make the plate 60 mm in X, 40 mm in Y, and 5 mm in Z.",
+        "verification_id": null
+      },
+      {
+        "critical": true,
+        "id": "r2",
+        "quote_ref": "q2",
+        "scalar": null,
+        "source": "request",
+        "subject_ids": [
+          "s1"
+        ],
+        "text": "Provide four holes in the plate.",
+        "verification_id": null
+      },
+      {
+        "critical": true,
+        "id": "r3",
+        "quote_ref": "q2",
+        "scalar": null,
+        "source": "request",
+        "subject_ids": [
+          "s1"
+        ],
+        "text": "Each hole must have a 5 mm diameter.",
+        "verification_id": null
+      },
+      {
+        "critical": true,
+        "id": "r4",
+        "quote_ref": "q2",
+        "scalar": null,
+        "source": "request",
+        "subject_ids": [
+          "s1"
+        ],
+        "text": "Each hole must pass through the plate.",
+        "verification_id": null
+      },
+      {
+        "critical": true,
+        "id": "r5",
+        "quote_ref": "q2",
+        "scalar": null,
+        "source": "request",
+        "subject_ids": [
+          "s1"
+        ],
+        "text": "The hole axes must run along Z.",
+        "verification_id": null
+      },
+      {
+        "critical": true,
+        "id": "r6",
+        "quote_ref": "q3",
+        "scalar": null,
+        "source": "request",
+        "subject_ids": [
+          "s1"
+        ],
+        "text": "Hole centers must be 8 mm from each adjacent edge.",
+        "verification_id": null
+      },
+      {
+        "critical": true,
+        "id": "r7",
+        "quote_ref": "q4",
+        "scalar": null,
+        "source": "request",
+        "subject_ids": [
+          "s1"
+        ],
+        "text": "The plate must have square edges.",
+        "verification_id": null
+      }
+    ],
+    "subjects": [
+      {
+        "id": "s1",
+        "label": "plate",
+        "quote_ref": "q1",
+        "role": "designed"
+      }
+    ]
+  }
+}

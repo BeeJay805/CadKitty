@@ -1,0 +1,2983 @@
+{
+  "id": "9ddd84c4136142d28c9152ea89bdb354",
+  "document": {
+    "version": 1,
+    "name": "Manually adjustable belt-idler prototype",
+    "units": "mm",
+    "variables": {
+      "carriage_x": 0.0
+    },
+    "relations": [],
+    "features": [],
+    "outputs": [],
+    "mechanism": null,
+    "assembly": {
+      "parts": [
+        {
+          "id": "base",
+          "name": "base",
+          "features": [
+            {
+              "id": "base_blank",
+              "name": "Centered base plate",
+              "kind": "box",
+              "inputs": [],
+              "params": {
+                "x": 120.0,
+                "y": 80.0,
+                "z": 8.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "mount_drill",
+              "name": "6.6 mm through-hole tool",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 3.3,
+                "height": 10.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "mount_nn",
+              "name": "Mounting hole at -50,-30",
+              "kind": "transform",
+              "inputs": [
+                "mount_drill"
+              ],
+              "params": {
+                "x": -50.0,
+                "y": -30.0,
+                "z": 0.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "mount_np",
+              "name": "Mounting hole at -50,+30",
+              "kind": "transform",
+              "inputs": [
+                "mount_drill"
+              ],
+              "params": {
+                "x": -50.0,
+                "y": 30.0,
+                "z": 0.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "mount_pn",
+              "name": "Mounting hole at +50,-30",
+              "kind": "transform",
+              "inputs": [
+                "mount_drill"
+              ],
+              "params": {
+                "x": 50.0,
+                "y": -30.0,
+                "z": 0.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "mount_pp",
+              "name": "Mounting hole at +50,+30",
+              "kind": "transform",
+              "inputs": [
+                "mount_drill"
+              ],
+              "params": {
+                "x": 50.0,
+                "y": 30.0,
+                "z": 0.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "base_finished",
+              "name": "Base with four through mounting holes",
+              "kind": "cut",
+              "inputs": [
+                "base_blank",
+                "mount_nn",
+                "mount_np",
+                "mount_pn",
+                "mount_pp"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "base_finished",
+          "ports": [
+            {
+              "name": "mount_nn",
+              "kind": "bore",
+              "origin": [
+                -50.0,
+                -30.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "diameter": 6.6
+            },
+            {
+              "name": "mount_np",
+              "kind": "bore",
+              "origin": [
+                -50.0,
+                30.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "diameter": 6.6
+            },
+            {
+              "name": "mount_pn",
+              "kind": "bore",
+              "origin": [
+                50.0,
+                -30.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "diameter": 6.6
+            },
+            {
+              "name": "mount_pp",
+              "kind": "bore",
+              "origin": [
+                50.0,
+                30.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "diameter": 6.6
+            }
+          ],
+          "source": "Manufactured base plate, 120 x 80 x 8 mm. Material, manufacturing process and mounting-fastener capacity remain unverified. Four clearance holes are reserved for machine mounting."
+        },
+        {
+          "id": "guide_support",
+          "name": "Welded guide end support",
+          "features": [
+            {
+              "id": "support_blank",
+              "name": "Support block",
+              "kind": "box",
+              "inputs": [],
+              "params": {
+                "x": 8.0,
+                "y": 64.0,
+                "z": 20.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "guide_socket_tool",
+              "name": "Blind guide socket cutter",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.0,
+                "height": 4.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "socket_positive",
+              "name": "Positive Y guide socket",
+              "kind": "transform",
+              "inputs": [
+                "guide_socket_tool"
+              ],
+              "params": {
+                "ry": 90.0,
+                "x": -2.0,
+                "y": 24.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "socket_negative",
+              "name": "Negative Y guide socket",
+              "kind": "transform",
+              "inputs": [
+                "guide_socket_tool"
+              ],
+              "params": {
+                "ry": 90.0,
+                "x": -2.0,
+                "y": -24.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "screw_clearance_tool",
+              "name": "Screw support clearance",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.1,
+                "height": 10.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "screw_clearance_axis",
+              "name": "Orient screw support bore along X",
+              "kind": "transform",
+              "inputs": [
+                "screw_clearance_tool"
+              ],
+              "params": {
+                "ry": 90.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "support_finished",
+              "name": "Blind guide sockets and screw support bore",
+              "kind": "cut",
+              "inputs": [
+                "support_blank",
+                "socket_positive",
+                "socket_negative",
+                "screw_clearance_axis"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "support_finished",
+          "ports": [
+            {
+              "name": "guide_positive",
+              "kind": "bore",
+              "origin": [
+                -2.0,
+                24.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "guide_negative",
+              "kind": "bore",
+              "origin": [
+                -2.0,
+                -24.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "screw_support",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.2
+            }
+          ],
+          "source": "Manufactured support, reused twice. Bottom face contacts base at Z8. Intended welded attachment to base; weld beads omitted, compatible materials, weld procedure, distortion and strength unverified. Blind sockets trap guide shafts axially when both supports are attached. Inner faces are positive carriage travel stops."
+        },
+        {
+          "id": "guide_shaft",
+          "name": "Ground guide shaft diameter 8 length 68",
+          "features": [
+            {
+              "id": "guide_round",
+              "name": "Guide shaft blank",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.0,
+                "height": 68.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "guide_finished",
+              "name": "Guide axis X",
+              "kind": "transform",
+              "inputs": [
+                "guide_round"
+              ],
+              "params": {
+                "ry": 90.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "guide_finished",
+          "ports": [
+            {
+              "name": "left_seat",
+              "kind": "shaft",
+              "origin": [
+                -32.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "right_seat",
+              "kind": "shaft",
+              "origin": [
+                32.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "sliding_surface",
+              "kind": "shaft",
+              "origin": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            }
+          ],
+          "source": "Manufactured cut-to-length guide shaft, reused twice; diameter 8 x 68. Material, straightness, hardness, finish and sliding wear unverified. Nominal line fit in end sockets; shafts axially enclosed by socket bottoms."
+        },
+        {
+          "id": "carriage",
+          "name": "carriage",
+          "features": [
+            {
+              "id": "slider_blank",
+              "name": "Thirty millimeter long guide block",
+              "kind": "box",
+              "inputs": [],
+              "params": {
+                "x": 30.0,
+                "y": 58.0,
+                "z": 13.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "slider_positioned",
+              "name": "Guide block Z11 to Z24",
+              "kind": "transform",
+              "inputs": [
+                "slider_blank"
+              ],
+              "params": {
+                "z": 17.5
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "ear_blank",
+              "name": "Fork ear",
+              "kind": "box",
+              "inputs": [],
+              "params": {
+                "x": 30.0,
+                "y": 6.0,
+                "z": 28.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "ear_positive",
+              "name": "Positive Y fork ear",
+              "kind": "transform",
+              "inputs": [
+                "ear_blank"
+              ],
+              "params": {
+                "y": 21.0,
+                "z": 37.5
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "ear_negative",
+              "name": "Negative Y fork ear",
+              "kind": "transform",
+              "inputs": [
+                "ear_blank"
+              ],
+              "params": {
+                "y": -21.0,
+                "z": 37.5
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "fork_blank",
+              "name": "Integral machined fork and guide block",
+              "kind": "union",
+              "inputs": [
+                "slider_positioned",
+                "ear_positive",
+                "ear_negative"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "guide_bore_tool",
+              "name": "Guide sliding clearance tool",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.1,
+                "height": 32.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "guide_bore_positive",
+              "name": "Positive Y guide bore",
+              "kind": "transform",
+              "inputs": [
+                "guide_bore_tool"
+              ],
+              "params": {
+                "ry": 90.0,
+                "y": 24.0,
+                "z": 18.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "guide_bore_negative",
+              "name": "Negative Y guide bore",
+              "kind": "transform",
+              "inputs": [
+                "guide_bore_tool"
+              ],
+              "params": {
+                "ry": 90.0,
+                "y": -24.0,
+                "z": 18.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "thread_tool",
+              "name": "Simplified nominal M8 thread envelope",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.0,
+                "height": 32.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "thread_axis",
+              "name": "Integral screw nut bore along X",
+              "kind": "transform",
+              "inputs": [
+                "thread_tool"
+              ],
+              "params": {
+                "ry": 90.0,
+                "z": 18.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "collar_tool",
+              "name": "Thrust collar end relief tool",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 6.5,
+                "height": 3.2
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "collar_relief_positive",
+              "name": "Positive X collar clearance",
+              "kind": "transform",
+              "inputs": [
+                "collar_tool"
+              ],
+              "params": {
+                "ry": 90.0,
+                "x": 13.5,
+                "z": 18.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "collar_relief_negative",
+              "name": "Negative X collar clearance",
+              "kind": "transform",
+              "inputs": [
+                "collar_tool"
+              ],
+              "params": {
+                "ry": 90.0,
+                "x": -13.5,
+                "z": 18.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "axle_tool",
+              "name": "Fork axle clearance cutter",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.1,
+                "height": 60.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "axle_axis",
+              "name": "Y axle at height 45",
+              "kind": "transform",
+              "inputs": [
+                "axle_tool"
+              ],
+              "params": {
+                "rx": 90.0,
+                "z": 45.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "carriage_finished",
+              "name": "Guided fork with integral nut and axle bores",
+              "kind": "cut",
+              "inputs": [
+                "fork_blank",
+                "guide_bore_positive",
+                "guide_bore_negative",
+                "thread_axis",
+                "collar_relief_positive",
+                "collar_relief_negative",
+                "axle_axis"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "carriage_finished",
+          "ports": [
+            {
+              "name": "guide_positive",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                24.0,
+                18.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.2
+            },
+            {
+              "name": "guide_negative",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                -24.0,
+                18.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.2
+            },
+            {
+              "name": "adjustment_thread",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                0.0,
+                18.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "axle_positive",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                21.0,
+                45.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 8.2
+            },
+            {
+              "name": "axle_negative",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                -21.0,
+                45.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 8.2
+            }
+          ],
+          "source": "Manufactured one-piece fork carriage with integral M8x1.25 nut intent. Thread represented by smooth nominal-diameter bore; helical engagement, backlash, self-locking and thread strength unverified. Two diameter 8.2 guide bores on 48 mm spacing provide antirotation; clearance and wear require process validation. Fork inner faces Y=+-18 leave room for 30 mm roller and two 3 mm spacers. End reliefs clear future screw thrust collars at travel limits."
+        },
+        {
+          "id": "roller",
+          "name": "roller",
+          "features": [
+            {
+              "id": "roller_blank",
+              "name": "Diameter 40 by 30 face",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 20.0,
+                "height": 30.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "roller_axis",
+              "name": "Roller axis parallel Y",
+              "kind": "transform",
+              "inputs": [
+                "roller_blank"
+              ],
+              "params": {
+                "rx": -90.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "seat_tool",
+              "name": "Diameter 22 bearing seat tool",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 11.0,
+                "height": 7.2
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "seat_positive",
+              "name": "Positive bearing seat shoulder at Y8",
+              "kind": "transform",
+              "inputs": [
+                "seat_tool"
+              ],
+              "params": {
+                "rx": -90.0,
+                "y": 11.6
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "seat_negative",
+              "name": "Negative bearing seat shoulder at Y minus 8",
+              "kind": "transform",
+              "inputs": [
+                "seat_tool"
+              ],
+              "params": {
+                "rx": -90.0,
+                "y": -11.6
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "relief_tool",
+              "name": "Inner sleeve clearance",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 7.0,
+                "height": 32.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "relief_axis",
+              "name": "Through relief along Y",
+              "kind": "transform",
+              "inputs": [
+                "relief_tool"
+              ],
+              "params": {
+                "rx": -90.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "tap_tool",
+              "name": "Simplified M3 tapped hole envelope",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 1.5,
+                "height": 6.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "tap_pp",
+              "name": "Positive end right tapped hole",
+              "kind": "transform",
+              "inputs": [
+                "tap_tool"
+              ],
+              "params": {
+                "rx": -90.0,
+                "x": 16.0,
+                "y": 13.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "tap_pn",
+              "name": "Positive end left tapped hole",
+              "kind": "transform",
+              "inputs": [
+                "tap_tool"
+              ],
+              "params": {
+                "rx": -90.0,
+                "x": -16.0,
+                "y": 13.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "tap_np",
+              "name": "Negative end right tapped hole",
+              "kind": "transform",
+              "inputs": [
+                "tap_tool"
+              ],
+              "params": {
+                "rx": -90.0,
+                "x": 16.0,
+                "y": -13.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "tap_nn",
+              "name": "Negative end left tapped hole",
+              "kind": "transform",
+              "inputs": [
+                "tap_tool"
+              ],
+              "params": {
+                "rx": -90.0,
+                "x": -16.0,
+                "y": -13.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "roller_finished",
+              "name": "Shouldered roller with retainer mounting holes",
+              "kind": "cut",
+              "inputs": [
+                "roller_axis",
+                "seat_positive",
+                "seat_negative",
+                "relief_axis",
+                "tap_pp",
+                "tap_pn",
+                "tap_np",
+                "tap_nn"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "roller_finished",
+          "ports": [
+            {
+              "name": "bearing_positive",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                11.5,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 22.0
+            },
+            {
+              "name": "bearing_negative",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                -11.5,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 22.0
+            }
+          ],
+          "source": "Manufactured cylindrical idler, diameter 40 and face width 30, local axis Y. Two diameter 22 x 7 bearing seats terminate at integral shoulders Y=+-8. Central diameter 14 relief clears the inner-ring sleeve. Two M3 tapped holes per end accept positive outer-ring retainer plates. Threads are represented by nominal smooth bores. Materials, fits, runout, balance and 100 N load capacity unverified. A centered 20 mm belt has 5 mm nominal face margin per side; tracking is unverified."
+        },
+        {
+          "id": "bearing608",
+          "name": "Purchased 608 bearing envelope",
+          "features": [
+            {
+              "id": "bearing_envelope",
+              "name": "Catalog 608 dimensional envelope",
+              "kind": "hardware",
+              "inputs": [],
+              "params": {
+                "envelope": 1.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": "bearing_608",
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "bearing_envelope",
+          "ports": [
+            {
+              "name": "outer_ring",
+              "kind": "shaft",
+              "origin": [
+                0.0,
+                0.0,
+                3.5
+              ],
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "diameter": 22.0
+            },
+            {
+              "name": "inner_ring",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                0.0,
+                3.5
+              ],
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "diameter": 8.0
+            }
+          ],
+          "source": "Purchased hardware sourced from catalog bearing_608: 608 deep groove ball bearing, 8 x 22 x 7 mm; source dsl/standards (ISO 15) + bd_warehouse SKT. Envelope only, one annular solid. Internal races, rolling contact, seals, rotation and ratings are not represented or verified."
+        },
+        {
+          "id": "roller_retainer",
+          "name": "Manufactured bearing retaining plate",
+          "features": [
+            {
+              "id": "plate_blank",
+              "name": "Retainer disk",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 18.5,
+                "height": 1.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "plate_axis",
+              "name": "Plate axis Y",
+              "kind": "transform",
+              "inputs": [
+                "plate_blank"
+              ],
+              "params": {
+                "rx": -90.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "plate_clearance",
+              "name": "Inner race and spacer clearance tool",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 8.0,
+                "height": 3.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "plate_clearance_axis",
+              "name": "Central clearance along Y",
+              "kind": "transform",
+              "inputs": [
+                "plate_clearance"
+              ],
+              "params": {
+                "rx": -90.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "plate_hole",
+              "name": "M3 clearance cutter",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 1.65,
+                "height": 3.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "plate_hole_p",
+              "name": "Right screw clearance",
+              "kind": "transform",
+              "inputs": [
+                "plate_hole"
+              ],
+              "params": {
+                "rx": -90.0,
+                "x": 16.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "plate_hole_n",
+              "name": "Left screw clearance",
+              "kind": "transform",
+              "inputs": [
+                "plate_hole"
+              ],
+              "params": {
+                "rx": -90.0,
+                "x": -16.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "plate_finished",
+              "name": "Two screw bearing retainer",
+              "kind": "cut",
+              "inputs": [
+                "plate_axis",
+                "plate_clearance_axis",
+                "plate_hole_p",
+                "plate_hole_n"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "plate_finished",
+          "ports": [
+            {
+              "name": "screw_positive",
+              "kind": "bore",
+              "origin": [
+                16.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 3.3
+            },
+            {
+              "name": "screw_negative",
+              "kind": "bore",
+              "origin": [
+                -16.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 3.3
+            }
+          ],
+          "source": "Manufactured plate reused on both roller ends. Diameter 37 x 1 with diameter 16 central clearance, retained by two M3 screws on 32 mm spacing. Plate overlaps the bearing envelope at each outer end; contact restricted to the actual outer race requires verification against a manufacturer bearing drawing. No assumed bearing rating."
+        },
+        {
+          "id": "retainer_screw",
+          "name": "M3 slotted retainer screw simplified",
+          "features": [
+            {
+              "id": "screw_shank",
+              "name": "Nominal M3 shank",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 1.5,
+                "height": 6.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "screw_shank_position",
+              "name": "Shank below bearing face",
+              "kind": "transform",
+              "inputs": [
+                "screw_shank"
+              ],
+              "params": {
+                "z": -3.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "screw_head",
+              "name": "Low profile screw head",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 2.5,
+                "height": 1.5
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "screw_head_position",
+              "name": "Head above bearing face",
+              "kind": "transform",
+              "inputs": [
+                "screw_head"
+              ],
+              "params": {
+                "z": 0.75
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "screw_blank",
+              "name": "Headed screw",
+              "kind": "union",
+              "inputs": [
+                "screw_shank_position",
+                "screw_head_position"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "slot_tool",
+              "name": "Screwdriver slot cutter",
+              "kind": "box",
+              "inputs": [],
+              "params": {
+                "x": 6.0,
+                "y": 0.8,
+                "z": 1.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "slot_position",
+              "name": "Open head slot",
+              "kind": "transform",
+              "inputs": [
+                "slot_tool"
+              ],
+              "params": {
+                "z": 1.3
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "screw_finished",
+              "name": "Slotted screw with simplified threads",
+              "kind": "cut",
+              "inputs": [
+                "screw_blank",
+                "slot_position"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "screw_finished",
+          "ports": [
+            {
+              "name": "shank",
+              "kind": "shaft",
+              "origin": [
+                0.0,
+                0.0,
+                -0.5
+              ],
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "diameter": 3.0
+            }
+          ],
+          "source": "Unsourced purchased-fastener specification, reused four times: M3 nominal shank, 6 mm under-head length, diameter 5 x 1.5 head with actual screwdriver slot. Smooth thread envelope, no helical engagement or strength evidence. Final supplier dimensions and loosening prevention must be verified."
+        },
+        {
+          "id": "axle_spacer",
+          "name": "Manufactured outer inner-ring spacer",
+          "features": [
+            {
+              "id": "spacer_outer",
+              "name": "Spacer outside diameter",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 6.0,
+                "height": 3.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "spacer_bore",
+              "name": "Axle clearance",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.05,
+                "height": 5.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "spacer_finished",
+              "name": "Three millimeter spacer",
+              "kind": "cut",
+              "inputs": [
+                "spacer_outer",
+                "spacer_bore"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "spacer_finished",
+          "ports": [
+            {
+              "name": "axle",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "diameter": 8.1
+            }
+          ],
+          "source": "Manufactured spacer reused twice, diameter 12, bore 8.1 and length 3. Bridges bearing outer face to fork inner face while clearing the rotating retaining plate. Actual inner-ring contact diameter, tolerance stack and preload require verification."
+        },
+        {
+          "id": "inner_sleeve",
+          "name": "Manufactured inner-ring distance sleeve",
+          "features": [
+            {
+              "id": "sleeve_outer",
+              "name": "Distance sleeve outside",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 6.0,
+                "height": 16.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "sleeve_bore",
+              "name": "Axle clearance",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.05,
+                "height": 18.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "sleeve_finished",
+              "name": "Inner ring distance sleeve",
+              "kind": "cut",
+              "inputs": [
+                "sleeve_outer",
+                "sleeve_bore"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "sleeve_finished",
+          "ports": [
+            {
+              "name": "axle",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "diameter": 8.1
+            }
+          ],
+          "source": "Manufactured diameter 12 x 16 sleeve with bore 8.1 between the two bearing inner rings. Allows axle clamping load to bypass rolling elements in the intended real bearing stack. Actual inner-ring widths and endplay require tolerance verification."
+        },
+        {
+          "id": "idler_axle",
+          "name": "Manufactured headed 8 mm axle",
+          "features": [
+            {
+              "id": "axle_shank",
+              "name": "Eight millimeter axle shank",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.0,
+                "height": 53.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "axle_position",
+              "name": "Y oriented axle with nut extension",
+              "kind": "transform",
+              "inputs": [
+                "axle_shank"
+              ],
+              "params": {
+                "rx": -90.0,
+                "y": 2.5
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "axle_head",
+              "name": "Integral square wrench head",
+              "kind": "box",
+              "inputs": [],
+              "params": {
+                "x": 12.0,
+                "y": 3.0,
+                "z": 12.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "axle_head_position",
+              "name": "Head outside negative fork ear",
+              "kind": "transform",
+              "inputs": [
+                "axle_head"
+              ],
+              "params": {
+                "y": -25.5
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "axle_finished",
+              "name": "Positively headed axle",
+              "kind": "union",
+              "inputs": [
+                "axle_position",
+                "axle_head_position"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "axle_finished",
+          "ports": [
+            {
+              "name": "bearing_positive",
+              "kind": "shaft",
+              "origin": [
+                0.0,
+                11.5,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "bearing_negative",
+              "kind": "shaft",
+              "origin": [
+                0.0,
+                -11.5,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "fork_positive",
+              "kind": "shaft",
+              "origin": [
+                0.0,
+                21.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "fork_negative",
+              "kind": "shaft",
+              "origin": [
+                0.0,
+                -21.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "nut_thread",
+              "kind": "shaft",
+              "origin": [
+                0.0,
+                26.5,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 8.0
+            }
+          ],
+          "source": "Manufactured diameter 8 axle with integral square head at negative Y and M8 threaded end at positive Y. Head provides positive axial retention and wrench flats. Nominal shank extends Y=-24 to +29; head Y=-27 to -24. Threads are smooth envelopes. Material, bearing fit, bending fatigue and thread strength under the illustrative 100 N load are unverified."
+        },
+        {
+          "id": "axle_nut",
+          "name": "M8 square axle nut simplified",
+          "features": [
+            {
+              "id": "nut_blank",
+              "name": "Square wrenchable nut",
+              "kind": "box",
+              "inputs": [],
+              "params": {
+                "x": 12.0,
+                "y": 5.0,
+                "z": 12.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "nut_tool",
+              "name": "Nominal M8 thread envelope",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.0,
+                "height": 7.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "nut_axis",
+              "name": "Nut bore along Y",
+              "kind": "transform",
+              "inputs": [
+                "nut_tool"
+              ],
+              "params": {
+                "rx": -90.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "nut_finished",
+              "name": "Square axle retention nut",
+              "kind": "cut",
+              "inputs": [
+                "nut_blank",
+                "nut_axis"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "nut_finished",
+          "ports": [
+            {
+              "name": "thread",
+              "kind": "bore",
+              "origin": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "diameter": 8.0
+            }
+          ],
+          "source": "Unsourced purchased-fastener specification: M8 square nut, 12 mm across flats and 5 mm thick. Positive end retention is represented by a nut body bearing against the fork, with smooth nominal thread bore. Thread interlock, torque, loosening resistance and supplier dimensions remain unverified."
+        },
+        {
+          "id": "adjustment_screw",
+          "name": "Manufactured M8 adjustment screw with integral thrust shoulder",
+          "features": [
+            {
+              "id": "screw_stock",
+              "name": "Nominal M8 screw envelope length 110",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.0,
+                "height": 110.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "screw_axis",
+              "name": "X screw from minus 38 to plus 72",
+              "kind": "transform",
+              "inputs": [
+                "screw_stock"
+              ],
+              "params": {
+                "ry": 90.0,
+                "x": 17.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "shoulder_stock",
+              "name": "Integral diameter 12 thrust shoulder",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 6.0,
+                "height": 3.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "shoulder_axis",
+              "name": "Thrust shoulder X27 to X30",
+              "kind": "transform",
+              "inputs": [
+                "shoulder_stock"
+              ],
+              "params": {
+                "ry": 90.0,
+                "x": 28.5
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "adjustment_screw_finished",
+              "name": "Screw and integral captive thrust shoulder",
+              "kind": "union",
+              "inputs": [
+                "screw_axis",
+                "shoulder_axis"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "adjustment_screw_finished",
+          "ports": [
+            {
+              "name": "carriage_thread",
+              "kind": "shaft",
+              "origin": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "right_journal",
+              "kind": "shaft",
+              "origin": [
+                34.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "left_journal",
+              "kind": "shaft",
+              "origin": [
+                -34.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "retention_thread",
+              "kind": "shaft",
+              "origin": [
+                40.5,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            },
+            {
+              "name": "handwheel_thread",
+              "kind": "shaft",
+              "origin": [
+                53.5,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            }
+          ],
+          "source": "Manufactured M8x1.25 adjustment screw, local X axis. Diameter 8 nominal envelope from X=-38 to +72; integral diameter 12 shoulder at X27..30 bears on right support inner face. Reused M8 nut at X38..43 provides opposing axial retention and jams against threaded handwheel hub. Thread helices omitted; journals use nominal diameter envelopes. Intended travel 30 mm requires 24 turns at 1.25 mm pitch, not experimentally verified or kinematically solved. Material, thread engagement, backlash, self-locking, thrust friction, lubrication, tolerances, retention and strength remain unverified. Insert screw from left before fixing left support; rotate through carriage thread, seat shoulder, fit nut and wheel from right."
+        },
+        {
+          "id": "adjustment_handwheel",
+          "name": "Manufactured threaded handwheel with extended hub",
+          "features": [
+            {
+              "id": "hub_stock",
+              "name": "Diameter 12 extended handwheel hub",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 6.0,
+                "height": 23.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "hub_axis",
+              "name": "Hub local X0 to X23",
+              "kind": "transform",
+              "inputs": [
+                "hub_stock"
+              ],
+              "params": {
+                "ry": 90.0,
+                "x": 11.5
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "wheel_stock",
+              "name": "Diameter 28 hand grip disc",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 14.0,
+                "height": 8.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "wheel_axis",
+              "name": "Grip disc local X21 to X29",
+              "kind": "transform",
+              "inputs": [
+                "wheel_stock"
+              ],
+              "params": {
+                "ry": 90.0,
+                "x": 25.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "wheel_blank",
+              "name": "Integral hub and hand grip",
+              "kind": "union",
+              "inputs": [
+                "hub_axis",
+                "wheel_axis"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "thread_stock",
+              "name": "Smooth nominal M8 thread cutter",
+              "kind": "cylinder",
+              "inputs": [],
+              "params": {
+                "radius": 4.0,
+                "height": 31.0
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "thread_axis",
+              "name": "Through threaded bore local X minus 1 to 30",
+              "kind": "transform",
+              "inputs": [
+                "thread_stock"
+              ],
+              "params": {
+                "ry": 90.0,
+                "x": 14.5
+              },
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            },
+            {
+              "id": "adjustment_handwheel_finished",
+              "name": "Threaded handwheel and extended hub",
+              "kind": "cut",
+              "inputs": [
+                "wheel_blank",
+                "thread_axis"
+              ],
+              "params": {},
+              "bindings": {},
+              "sketch": null,
+              "asset_id": null,
+              "catalog_id": null,
+              "selection": [],
+              "suppressed": false
+            }
+          ],
+          "output": "adjustment_handwheel_finished",
+          "ports": [
+            {
+              "name": "thread",
+              "kind": "bore",
+              "origin": [
+                10.5,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "diameter": 8.0
+            }
+          ],
+          "source": "Manufactured diameter 28 x 8 handwheel with integral diameter 12 extended hub, threaded M8x1.25 through bore represented by smooth nominal diameter. Occurrence starts at X43; grip spans X64..72, beyond base edge X60 for finger access. Hub end bears against reused M8 square nut at X43; tighten the jam interface while setting screw endplay so the right support is not clamped rigidly. Nut has 12 mm wrench flats. Bidirectional torque transmission, jam torque, loosening resistance, human hand clearance and adjustment effort require verification. No material or load rating assumed."
+        }
+      ],
+      "subassemblies": [
+        {
+          "id": "moving_unit",
+          "name": "Translating roller carriage assembly",
+          "children": [
+            {
+              "id": "carrier",
+              "definition": "carriage",
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "idler",
+              "definition": "roller",
+              "position": [
+                0.0,
+                0.0,
+                45.0
+              ],
+              "rotation": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "bearing_positive",
+              "definition": "bearing608",
+              "position": [
+                0.0,
+                8.0,
+                45.0
+              ],
+              "rotation": [
+                -90.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "bearing_negative",
+              "definition": "bearing608",
+              "position": [
+                0.0,
+                -15.0,
+                45.0
+              ],
+              "rotation": [
+                -90.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "retainer_positive",
+              "definition": "roller_retainer",
+              "position": [
+                0.0,
+                15.5,
+                45.0
+              ],
+              "rotation": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "retainer_negative",
+              "definition": "roller_retainer",
+              "position": [
+                0.0,
+                -15.5,
+                45.0
+              ],
+              "rotation": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "retainer_screw_pp",
+              "definition": "retainer_screw",
+              "position": [
+                16.0,
+                16.0,
+                45.0
+              ],
+              "rotation": [
+                -90.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "retainer_screw_pn",
+              "definition": "retainer_screw",
+              "position": [
+                -16.0,
+                16.0,
+                45.0
+              ],
+              "rotation": [
+                -90.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "retainer_screw_np",
+              "definition": "retainer_screw",
+              "position": [
+                16.0,
+                -16.0,
+                45.0
+              ],
+              "rotation": [
+                90.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "retainer_screw_nn",
+              "definition": "retainer_screw",
+              "position": [
+                -16.0,
+                -16.0,
+                45.0
+              ],
+              "rotation": [
+                90.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "spacer_positive",
+              "definition": "axle_spacer",
+              "position": [
+                0.0,
+                16.5,
+                45.0
+              ],
+              "rotation": [
+                -90.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "spacer_negative",
+              "definition": "axle_spacer",
+              "position": [
+                0.0,
+                -16.5,
+                45.0
+              ],
+              "rotation": [
+                -90.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "distance_sleeve",
+              "definition": "inner_sleeve",
+              "position": [
+                0.0,
+                0.0,
+                45.0
+              ],
+              "rotation": [
+                -90.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "axle",
+              "definition": "idler_axle",
+              "position": [
+                0.0,
+                0.0,
+                45.0
+              ],
+              "rotation": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "id": "axle_retention",
+              "definition": "axle_nut",
+              "position": [
+                0.0,
+                26.5,
+                45.0
+              ],
+              "rotation": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        }
+      ],
+      "roots": [
+        {
+          "id": "base_fixed",
+          "definition": "base",
+          "position": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "support_right",
+          "definition": "guide_support",
+          "position": [
+            34.0,
+            0.0,
+            18.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "support_left",
+          "definition": "guide_support",
+          "position": [
+            -34.0,
+            0.0,
+            18.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            180.0
+          ]
+        },
+        {
+          "id": "guide_positive",
+          "definition": "guide_shaft",
+          "position": [
+            0.0,
+            24.0,
+            18.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "guide_negative",
+          "definition": "guide_shaft",
+          "position": [
+            0.0,
+            -24.0,
+            18.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "moving",
+          "definition": "moving_unit",
+          "position": [
+            "carriage_x",
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "adjuster",
+          "definition": "adjustment_screw",
+          "position": [
+            0.0,
+            0.0,
+            18.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "adjuster_retention",
+          "definition": "axle_nut",
+          "position": [
+            40.5,
+            0.0,
+            18.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -90.0
+          ]
+        },
+        {
+          "id": "handwheel",
+          "definition": "adjustment_handwheel",
+          "position": [
+            43.0,
+            0.0,
+            18.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "mates": [
+        {
+          "id": "guide_positive_right",
+          "a": "support_right.guide_positive",
+          "b": "guide_positive.right_seat",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "guide_negative_right",
+          "a": "support_right.guide_negative",
+          "b": "guide_negative.right_seat",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "guide_positive_left",
+          "a": "support_left.guide_negative",
+          "b": "guide_positive.left_seat",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "guide_negative_left",
+          "a": "support_left.guide_positive",
+          "b": "guide_negative.left_seat",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "carriage_guide_positive",
+          "a": "moving/carrier.guide_positive",
+          "b": "guide_positive.sliding_surface",
+          "min_clearance": 0.19,
+          "max_clearance": 0.21,
+          "axial_tolerance": 15.0
+        },
+        {
+          "id": "carriage_guide_negative",
+          "a": "moving/carrier.guide_negative",
+          "b": "guide_negative.sliding_surface",
+          "min_clearance": 0.19,
+          "max_clearance": 0.21,
+          "axial_tolerance": 15.0
+        },
+        {
+          "id": "roller_bearing_positive",
+          "a": "moving/idler.bearing_positive",
+          "b": "moving/bearing_positive.outer_ring",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "roller_bearing_negative",
+          "a": "moving/idler.bearing_negative",
+          "b": "moving/bearing_negative.outer_ring",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "axle_bearing_positive",
+          "a": "moving/bearing_positive.inner_ring",
+          "b": "moving/axle.bearing_positive",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "axle_bearing_negative",
+          "a": "moving/bearing_negative.inner_ring",
+          "b": "moving/axle.bearing_negative",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "axle_fork_positive",
+          "a": "moving/carrier.axle_positive",
+          "b": "moving/axle.fork_positive",
+          "min_clearance": 0.19,
+          "max_clearance": 0.21,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "axle_fork_negative",
+          "a": "moving/carrier.axle_negative",
+          "b": "moving/axle.fork_negative",
+          "min_clearance": 0.19,
+          "max_clearance": 0.21,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "axle_nut_retention",
+          "a": "moving/axle_retention.thread",
+          "b": "moving/axle.nut_thread",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "retainer_fastener_pp",
+          "a": "moving/retainer_positive.screw_positive",
+          "b": "moving/retainer_screw_pp.shank",
+          "min_clearance": 0.29,
+          "max_clearance": 0.31,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "retainer_fastener_pn",
+          "a": "moving/retainer_positive.screw_negative",
+          "b": "moving/retainer_screw_pn.shank",
+          "min_clearance": 0.29,
+          "max_clearance": 0.31,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "retainer_fastener_np",
+          "a": "moving/retainer_negative.screw_positive",
+          "b": "moving/retainer_screw_np.shank",
+          "min_clearance": 0.29,
+          "max_clearance": 0.31,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "retainer_fastener_nn",
+          "a": "moving/retainer_negative.screw_negative",
+          "b": "moving/retainer_screw_nn.shank",
+          "min_clearance": 0.29,
+          "max_clearance": 0.31,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "adjuster_carriage_thread",
+          "a": "moving/carrier.adjustment_thread",
+          "b": "adjuster.carriage_thread",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 15.0
+        },
+        {
+          "id": "adjuster_right_support",
+          "a": "support_right.screw_support",
+          "b": "adjuster.right_journal",
+          "min_clearance": 0.19,
+          "max_clearance": 0.21,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "adjuster_left_support",
+          "a": "support_left.screw_support",
+          "b": "adjuster.left_journal",
+          "min_clearance": 0.19,
+          "max_clearance": 0.21,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "adjuster_retaining_nut",
+          "a": "adjuster_retention.thread",
+          "b": "adjuster.retention_thread",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        },
+        {
+          "id": "adjuster_handwheel_thread",
+          "a": "handwheel.thread",
+          "b": "adjuster.handwheel_thread",
+          "min_clearance": 0.0,
+          "max_clearance": 0.01,
+          "axial_tolerance": 0.01
+        }
+      ]
+    }
+  },
+  "contract": {
+    "requirements": [
+      {
+        "id": "intent",
+        "text": "Complete mechanical function and construction intent",
+        "source_quote": "y order and tool access. Source catalog hardware if available; do not invent ratings. The illustrative design load is 100 N radial belt load; materials, fatigue life, bearing rating and thread strength require verified assumptions or must remain unverified. This is a prototype engineering design for review, not a machine-safety certificate.\nBefore finishing, inspect exported geometry, review interference and check the carriage at -15, 0 and +15 mm. Disclose every unmet or unmeasured requirement.",
+        "source": "explicit",
+        "metric": "unmeasured",
+        "comparator": "eq",
+        "value": null,
+        "tolerance": 0.0,
+        "part_id": null,
+        "axis": "z",
+        "center": null,
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "envelope_x",
+        "text": "Overall envelope",
+        "source_quote": "180 x 130 x 100 mm",
+        "source": "explicit",
+        "metric": "extent_x",
+        "comparator": "le",
+        "value": 180.0,
+        "tolerance": 0.0,
+        "part_id": null,
+        "axis": "z",
+        "center": null,
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "envelope_y",
+        "text": "Overall envelope",
+        "source_quote": "180 x 130 x 100 mm",
+        "source": "explicit",
+        "metric": "extent_y",
+        "comparator": "le",
+        "value": 130.0,
+        "tolerance": 0.0,
+        "part_id": null,
+        "axis": "z",
+        "center": null,
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "envelope_z",
+        "text": "Overall envelope",
+        "source_quote": "180 x 130 x 100 mm",
+        "source": "explicit",
+        "metric": "extent_z",
+        "comparator": "le",
+        "value": 100.0,
+        "tolerance": 0.0,
+        "part_id": null,
+        "axis": "z",
+        "center": null,
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "base_x",
+        "text": "Base local x extent",
+        "source_quote": "base is 120 x 80 x 8 mm",
+        "source": "explicit",
+        "metric": "extent_x",
+        "comparator": "eq",
+        "value": 120.0,
+        "tolerance": 0.0,
+        "part_id": "base",
+        "axis": "z",
+        "center": null,
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "base_y",
+        "text": "Base local y extent",
+        "source_quote": "base is 120 x 80 x 8 mm",
+        "source": "explicit",
+        "metric": "extent_y",
+        "comparator": "eq",
+        "value": 80.0,
+        "tolerance": 0.0,
+        "part_id": "base",
+        "axis": "z",
+        "center": null,
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "base_z",
+        "text": "Base local z extent",
+        "source_quote": "base is 120 x 80 x 8 mm",
+        "source": "explicit",
+        "metric": "extent_z",
+        "comparator": "eq",
+        "value": 8.0,
+        "tolerance": 0.0,
+        "part_id": "base",
+        "axis": "z",
+        "center": null,
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "base_holes",
+        "text": "Four base mounting holes",
+        "source_quote": "four 6.6 mm through mounting holes",
+        "source": "explicit",
+        "metric": "hole_count",
+        "comparator": "eq",
+        "value": 4.0,
+        "tolerance": 0.0,
+        "part_id": "base",
+        "axis": "z",
+        "center": null,
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "mount_0",
+        "text": "Base mounting bore at pattern corner",
+        "source_quote": "100 x 60 mm rectangular pattern",
+        "source": "explicit",
+        "metric": "hole_diameter",
+        "comparator": "eq",
+        "value": 6.6,
+        "tolerance": 0.0,
+        "part_id": "base",
+        "axis": "z",
+        "center": [
+          -50.0,
+          -30.0
+        ],
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "mount_1",
+        "text": "Base mounting bore at pattern corner",
+        "source_quote": "100 x 60 mm rectangular pattern",
+        "source": "explicit",
+        "metric": "hole_diameter",
+        "comparator": "eq",
+        "value": 6.6,
+        "tolerance": 0.0,
+        "part_id": "base",
+        "axis": "z",
+        "center": [
+          -50.0,
+          30.0
+        ],
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "mount_2",
+        "text": "Base mounting bore at pattern corner",
+        "source_quote": "100 x 60 mm rectangular pattern",
+        "source": "explicit",
+        "metric": "hole_diameter",
+        "comparator": "eq",
+        "value": 6.6,
+        "tolerance": 0.0,
+        "part_id": "base",
+        "axis": "z",
+        "center": [
+          50.0,
+          -30.0
+        ],
+        "position_tolerance": 0.1,
+        "critical": true
+      },
+      {
+        "id": "mount_3",
+        "text": "Base mounting bore at pattern corner",
+        "source_quote": "100 x 60 mm rectangular pattern",
+        "source": "explicit",
+        "metric": "hole_diameter",
+        "comparator": "eq",
+        "value": 6.6,
+        "tolerance": 0.0,
+        "part_id": "base",
+        "axis": "z",
+        "center": [
+          50.0,
+          30.0
+        ],
+        "position_tolerance": 0.1,
+        "critical": true
+      }
+    ],
+    "coverage_notes": []
+  }
+}

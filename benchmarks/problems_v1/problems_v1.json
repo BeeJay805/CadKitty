@@ -1,0 +1,666 @@
+{
+  "version": "problems_v1",
+  "frozen": "2026-07-06",
+  "authored_by": "claude-fable-5 (bench author, 2026-07-06). The runtime decompose/research brain (BRAIN_MODEL, Opus by default) never sees this file. Registry expectation values are copied from the committed cited registries (dsl/standards/computer.py); corpus values are canned fixtures (bench:// URLs).",
+  "answer_policy": "The canned user answers every field the pipeline asks: numbers by fact name from answers.facts; registry dropdowns from answers.registry_choices; the variant choice from answers.variant_choice; free-text asks with answers.default_text. SOLVABLE prompts carry answers.fallback_number — a real owner can measure their own hardware, so any uncovered number question gets that measurement (over-asking stays visible via question_budget). Must-refuse prompts have NO fallback: their unknown_facts (and anything uncovered) answer unknown=true, so refusal correctness measures refusal LOGIC, not answer-list completeness.",
+  "prompts": [
+    {
+      "id": "spec_plate",
+      "class": "route_spec",
+      "goal": "a 40 x 40 x 4 mm plate with four M3 clearance holes at the corners",
+      "context": "",
+      "expected_route": "spec"
+    },
+    {
+      "id": "spec_standoff",
+      "class": "route_spec",
+      "goal": "hex standoff, M3 thread, 20 mm tall, 6 mm across flats",
+      "context": "",
+      "expected_route": "spec"
+    },
+    {
+      "id": "hdd_tray_desk",
+      "class": "registry_only",
+      "goal": "I need a tray to hold one more 3.5in HDD",
+      "context": "open shelf under my desk with plenty of room around it",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface"
+      ],
+      "question_budget": 5,
+      "expected_facts": {
+        "payload_width": {
+          "closure": "registry",
+          "value": 101.6,
+          "unit": "mm"
+        },
+        "payload_length": {
+          "closure": "registry",
+          "value": 147.0,
+          "unit": "mm"
+        },
+        "mount_hole_pitch": {
+          "closure": "registry",
+          "value": 76.2,
+          "unit": "mm"
+        },
+        "payload_thickness": {
+          "closure": "asked"
+        }
+      },
+      "answers": {
+        "facts": {
+          "payload_thickness": {
+            "value": 26.1,
+            "unit": "mm"
+          },
+          "available_height": {
+            "value": 200.0,
+            "unit": "mm"
+          },
+          "available_width": {
+            "value": 200.0,
+            "unit": "mm"
+          },
+          "available_length": {
+            "value": 300.0,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 40.0,
+            "unit": "mm"
+          },
+          "connector_clearance": {
+            "value": 30.0,
+            "unit": "mm"
+          }
+        },
+        "default_text": "under the desk shelf, front edge accessible",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": null,
+      "golden_build": false
+    },
+    {
+      "id": "nr200_ssd",
+      "class": "needs_research",
+      "goal": "I'm building a PC in a Cooler Master NR200 and I need to mount one more 2.5in SSD. Make me a printable bracket.",
+      "context": "Cooler Master NR200",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface",
+        "fit_envelope"
+      ],
+      "question_budget": 6,
+      "expected_facts": {
+        "payload_width": {
+          "closure": "registry",
+          "value": 69.85,
+          "unit": "mm"
+        },
+        "available_height": {
+          "closure": "researched",
+          "value": 92.0,
+          "unit": "mm"
+        },
+        "payload_thickness": {
+          "closure": "asked"
+        },
+        "mount_hole_pitch": {
+          "closure": "asked"
+        },
+        "payload_length": {
+          "closure": "registry",
+          "value": 100.2,
+          "unit": "mm"
+        }
+      },
+      "answers": {
+        "facts": {
+          "payload_thickness": {
+            "value": 9.5,
+            "unit": "mm"
+          },
+          "mount_hole_pitch": {
+            "value": 61.7,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 30.0,
+            "unit": "mm"
+          },
+          "connector_clearance": {
+            "value": 25.0,
+            "unit": "mm"
+          }
+        },
+        "default_text": "on the bottom rail, connector side left open",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": "corpora/nr200.json",
+      "golden_build": true
+    },
+    {
+      "id": "meshify_duct",
+      "class": "needs_research",
+      "goal": "I want a duct that guides air from the front 120 mm fan toward the GPU in my Meshify C case",
+      "context": "Fractal Design Meshify C, front 120 mm fan",
+      "expected_route": "problem",
+      "expected_domains": [
+        "thermal_airflow"
+      ],
+      "question_budget": 6,
+      "expected_facts": {
+        "fan_frame_size": {
+          "closure": "registry",
+          "value": 120.0,
+          "unit": "mm"
+        },
+        "airflow_clearance": {
+          "closure": "researched",
+          "value": 160.0,
+          "unit": "mm"
+        }
+      },
+      "answers": {
+        "facts": {
+          "airflow_clearance": {
+            "value": 160.0,
+            "unit": "mm"
+          },
+          "available_height": {
+            "value": 300.0,
+            "unit": "mm"
+          },
+          "available_width": {
+            "value": 140.0,
+            "unit": "mm"
+          },
+          "available_length": {
+            "value": 330.0,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 30.0,
+            "unit": "mm"
+          },
+          "connector_clearance": {
+            "value": 20.0,
+            "unit": "mm"
+          }
+        },
+        "default_text": "route along the bottom edge of the case",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": "corpora/meshify.json",
+      "golden_build": true
+    },
+    {
+      "id": "router_bracket",
+      "class": "needs_clarify",
+      "goal": "I need a bracket to hold my router to the underside of a shelf",
+      "context": "wooden shelf, 18 mm thick; the router is a small home unit",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface"
+      ],
+      "question_budget": 6,
+      "expected_facts": {
+        "payload_width": {
+          "closure": "asked"
+        },
+        "payload_thickness": {
+          "closure": "asked"
+        }
+      },
+      "answers": {
+        "facts": {
+          "payload_width": {
+            "value": 180.0,
+            "unit": "mm"
+          },
+          "payload_length": {
+            "value": 120.0,
+            "unit": "mm"
+          },
+          "payload_thickness": {
+            "value": 35.0,
+            "unit": "mm"
+          },
+          "available_height": {
+            "value": 300.0,
+            "unit": "mm"
+          },
+          "available_width": {
+            "value": 300.0,
+            "unit": "mm"
+          },
+          "available_length": {
+            "value": 300.0,
+            "unit": "mm"
+          },
+          "connector_clearance": {
+            "value": 30.0,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 25.0,
+            "unit": "mm"
+          }
+        },
+        "default_text": "cables exit toward the wall side",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": null,
+      "golden_build": false
+    },
+    {
+      "id": "nr200_variant",
+      "class": "ambiguous_variant",
+      "goal": "mount one more 2.5in SSD in my Cooler Master NR200",
+      "context": "Cooler Master NR200 (not sure which version I have)",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface"
+      ],
+      "question_budget": 7,
+      "expect_variant_question": true,
+      "expected_facts": {
+        "payload_width": {
+          "closure": "registry",
+          "value": 69.85,
+          "unit": "mm"
+        },
+        "payload_thickness": {
+          "closure": "asked"
+        }
+      },
+      "answers": {
+        "facts": {
+          "payload_thickness": {
+            "value": 9.5,
+            "unit": "mm"
+          },
+          "mount_hole_pitch": {
+            "value": 61.7,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 30.0,
+            "unit": "mm"
+          },
+          "connector_clearance": {
+            "value": 25.0,
+            "unit": "mm"
+          }
+        },
+        "variant_choice": "NR200",
+        "default_text": "behind the front panel",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": "corpora/nr200_variants.json",
+      "golden_build": false
+    },
+    {
+      "id": "car_dashboard",
+      "class": "must_refuse",
+      "goal": "I need to mount a 2.5in SSD inside my car dashboard",
+      "context": "2014 sedan, somewhere behind the dash — I have not measured anything",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface",
+        "fit_envelope"
+      ],
+      "question_budget": 8,
+      "expected_facts": {
+        "payload_width": {
+          "closure": "registry",
+          "value": 69.85,
+          "unit": "mm"
+        }
+      },
+      "answers": {
+        "facts": {
+          "payload_thickness": {
+            "value": 9.5,
+            "unit": "mm"
+          },
+          "mount_hole_pitch": {
+            "value": 61.7,
+            "unit": "mm"
+          }
+        },
+        "unknown_facts": [
+          "available_height",
+          "available_width",
+          "available_length",
+          "airflow_clearance",
+          "connector_clearance",
+          "tool_access_clearance"
+        ],
+        "default_text": null
+      },
+      "must_refuse": true,
+      "expected_refusal_gap": "available",
+      "corpus": null,
+      "golden_build": false
+    },
+    {
+      "id": "espresso_bolts",
+      "class": "must_refuse",
+      "goal": "a bracket that bolts into the threaded mounting holes on the bottom of my espresso machine",
+      "context": "a small consumer espresso machine, model unknown — I cannot measure it right now",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface"
+      ],
+      "question_budget": 8,
+      "expected_facts": {},
+      "answers": {
+        "facts": {},
+        "unknown_facts": [
+          "mount_hole_pitch",
+          "payload_width",
+          "payload_length",
+          "payload_thickness",
+          "available_height",
+          "available_width",
+          "available_length"
+        ],
+        "default_text": null
+      },
+      "must_refuse": true,
+      "expected_refusal_gap": "mount_hole",
+      "corpus": null,
+      "golden_build": false
+    },
+    {
+      "id": "htpc_grille_92",
+      "class": "registry_only",
+      "goal": "a finger guard for the 92 mm fan on the rear panel of my HTPC",
+      "context": "rear 92 mm fan, small HTPC on a shelf",
+      "expected_route": "problem",
+      "expected_domains": [
+        "thermal_airflow"
+      ],
+      "question_budget": 6,
+      "expected_facts": {
+        "fan_frame_size": {
+          "closure": "registry",
+          "value": 92.0,
+          "unit": "mm"
+        }
+      },
+      "answers": {
+        "facts": {
+          "airflow_clearance": {
+            "value": 5.0,
+            "unit": "mm"
+          },
+          "available_height": {
+            "value": 120.0,
+            "unit": "mm"
+          },
+          "available_width": {
+            "value": 120.0,
+            "unit": "mm"
+          },
+          "available_length": {
+            "value": 30.0,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 25.0,
+            "unit": "mm"
+          }
+        },
+        "default_text": "screws come in from outside the rear panel",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": null,
+      "golden_build": false
+    },
+    {
+      "id": "nr200_hdd35",
+      "class": "needs_research",
+      "goal": "I need to mount one more 3.5in HDD on the bottom rail of my Cooler Master NR200",
+      "context": "Cooler Master NR200",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface",
+        "fit_envelope"
+      ],
+      "question_budget": 5,
+      "expected_facts": {
+        "payload_width": {
+          "closure": "registry",
+          "value": 101.6,
+          "unit": "mm"
+        },
+        "payload_length": {
+          "closure": "registry",
+          "value": 147.0,
+          "unit": "mm"
+        },
+        "mount_hole_pitch": {
+          "closure": "registry",
+          "value": 76.2,
+          "unit": "mm"
+        },
+        "available_height": {
+          "closure": "researched",
+          "value": 92.0,
+          "unit": "mm"
+        },
+        "payload_thickness": {
+          "closure": "asked"
+        }
+      },
+      "answers": {
+        "facts": {
+          "payload_thickness": {
+            "value": 26.1,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 30.0,
+            "unit": "mm"
+          },
+          "connector_clearance": {
+            "value": 30.0,
+            "unit": "mm"
+          }
+        },
+        "default_text": "bottom rail, connectors toward the PSU side",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": "corpora/nr200.json",
+      "golden_build": true
+    },
+    {
+      "id": "sg13_no_docs",
+      "class": "needs_clarify",
+      "goal": "a bracket for one more 2.5in SSD in my SilverStone SG13",
+      "context": "SilverStone SG13",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface"
+      ],
+      "question_budget": 7,
+      "expected_facts": {
+        "payload_width": {
+          "closure": "registry",
+          "value": 69.85,
+          "unit": "mm"
+        },
+        "payload_thickness": {
+          "closure": "asked"
+        }
+      },
+      "answers": {
+        "facts": {
+          "payload_thickness": {
+            "value": 7.0,
+            "unit": "mm"
+          },
+          "mount_hole_pitch": {
+            "value": 61.7,
+            "unit": "mm"
+          },
+          "available_height": {
+            "value": 60.0,
+            "unit": "mm"
+          },
+          "available_width": {
+            "value": 120.0,
+            "unit": "mm"
+          },
+          "available_length": {
+            "value": 150.0,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 25.0,
+            "unit": "mm"
+          },
+          "connector_clearance": {
+            "value": 25.0,
+            "unit": "mm"
+          }
+        },
+        "default_text": "beside the power supply",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": null,
+      "golden_build": false
+    },
+    {
+      "id": "desk_ssd_mount",
+      "class": "needs_clarify",
+      "goal": "mount a 2.5in SSD under my desk top",
+      "context": "desk top is 30 mm thick, open space below",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface"
+      ],
+      "question_budget": 7,
+      "expected_facts": {
+        "payload_width": {
+          "closure": "registry",
+          "value": 69.85,
+          "unit": "mm"
+        },
+        "payload_thickness": {
+          "closure": "asked"
+        }
+      },
+      "answers": {
+        "facts": {
+          "payload_thickness": {
+            "value": 9.5,
+            "unit": "mm"
+          },
+          "mount_hole_pitch": {
+            "value": 61.7,
+            "unit": "mm"
+          },
+          "available_height": {
+            "value": 40.0,
+            "unit": "mm"
+          },
+          "available_width": {
+            "value": 120.0,
+            "unit": "mm"
+          },
+          "available_length": {
+            "value": 150.0,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 30.0,
+            "unit": "mm"
+          },
+          "connector_clearance": {
+            "value": 25.0,
+            "unit": "mm"
+          }
+        },
+        "default_text": "front edge, connectors facing back",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": null,
+      "golden_build": false
+    },
+    {
+      "id": "c4000d_dropdown",
+      "class": "registry_dropdown",
+      "goal": "I need a bracket for one more SSD in my Corsair 4000D",
+      "context": "Corsair 4000D",
+      "expected_route": "problem",
+      "expected_domains": [
+        "mount_interface"
+      ],
+      "question_budget": 8,
+      "expect_registry_dropdown": "drive_form",
+      "expected_facts": {
+        "payload_thickness": {
+          "closure": "asked"
+        },
+        "available_height": {
+          "closure": "researched",
+          "value": 120.0,
+          "unit": "mm"
+        }
+      },
+      "answers": {
+        "facts": {
+          "payload_thickness": {
+            "value": 9.5,
+            "unit": "mm"
+          },
+          "mount_hole_pitch": {
+            "value": 61.7,
+            "unit": "mm"
+          },
+          "tool_access_clearance": {
+            "value": 30.0,
+            "unit": "mm"
+          },
+          "connector_clearance": {
+            "value": 25.0,
+            "unit": "mm"
+          },
+          "available_height": {
+            "value": 120.0,
+            "unit": "mm"
+          },
+          "available_width": {
+            "value": 100.0,
+            "unit": "mm"
+          },
+          "available_length": {
+            "value": 140.0,
+            "unit": "mm"
+          }
+        },
+        "registry_choices": {
+          "drive_form": "2.5in_drive"
+        },
+        "default_text": "behind the motherboard tray",
+        "fallback_number": 30.0
+      },
+      "must_refuse": false,
+      "corpus": "corpora/c4000d.json",
+      "golden_build": false
+    }
+  ]
+}

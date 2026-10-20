@@ -1,0 +1,439 @@
+{
+  "version": "breadth_v1",
+  "authored_by": "claude-sonnet-4-6 (independent rubric author; never the CAD author model)",
+  "paraphrase_rule": "P1 reorders the clauses of the base prompt without changing any number, unit, or component name. P2 swaps phrasing/synonyms and register (e.g. 'build me' vs 'design') without changing any number, unit, or component name. All three variants are run once each; a prompt's score is the MINIMUM across its variants.",
+  "prompts": [
+    {
+      "id": "arm_pan_tilt_mg996r_2dof",
+      "class": "arm",
+      "prompt": "Design a 2-DOF pan-tilt head using two MG996R servos: pan joint rotates 180 deg about the vertical axis, tilt joint rotates 90 deg about the horizontal axis. Overall envelope must fit within 80 x 80 x 60 mm.",
+      "paraphrases": [
+        "Using two MG996R servos, design a 2-DOF pan-tilt head where pan rotates 180 deg about the vertical axis and tilt rotates 90 deg about the horizontal axis, fitting within an 80 x 80 x 60 mm envelope.",
+        "Build me a 2-DOF pan-tilt bracket driven by two MG996R servos — one for pan (180 deg vertical-axis swing) and one for tilt (90 deg horizontal-axis swing); keep the whole assembly under 80 x 80 x 60 mm."
+      ],
+      "expect": {
+        "min_parts": 3,
+        "joints": [
+          {"type": "revolute", "min_count": 2}
+        ],
+        "min_sweep_deg": 90,
+        "collision_checked": "swept",
+        "mounts": [
+          {"component": "mg996r", "min_count": 2}
+        ],
+        "bbox_max_mm": [120, 120, 90],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "arm_3dof_robot_arm_mg996r",
+      "class": "arm",
+      "prompt": "Model a 3-DOF desktop robot arm with three MG996R servos: shoulder revolves 180 deg, elbow revolves 135 deg, wrist revolves 180 deg. Link lengths are 100 mm shoulder, 80 mm forearm, 50 mm wrist. All links hollow-box 30 x 20 mm cross-section, 2 mm wall.",
+      "paraphrases": [
+        "With three MG996R servos (shoulder 180 deg, elbow 135 deg, wrist 180 deg) and link lengths of 100 mm shoulder, 80 mm forearm, 50 mm wrist, model a 3-DOF desktop robot arm where links are hollow 30 x 20 mm box sections with 2 mm walls.",
+        "Create a 3-DOF tabletop robot arm driven by three MG996R servos: shoulder at 180 deg, elbow at 135 deg, wrist at 180 deg; shoulder link 100 mm, forearm 80 mm, wrist 50 mm; all links are hollow rectangular tubes 30 x 20 mm outer, 2 mm wall thickness."
+      ],
+      "expect": {
+        "min_parts": 4,
+        "joints": [
+          {"type": "revolute", "min_count": 3}
+        ],
+        "min_sweep_deg": 135,
+        "collision_checked": "swept",
+        "mounts": [
+          {"component": "mg996r", "min_count": 3}
+        ],
+        "bbox_max_mm": [360, 360, 360],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "arm_gimbal_3axis_camera",
+      "class": "arm",
+      "prompt": "Design a 3-axis brushless gimbal for a 60 x 40 x 30 mm camera payload: roll axis ±45 deg, pitch axis ±90 deg, yaw axis ±30 deg. Each axis uses a hollow cylindrical bearing seat 22 mm inner diameter. Overall cage no larger than 120 x 120 x 120 mm.",
+      "paraphrases": [
+        "For a 60 x 40 x 30 mm camera payload, design a 3-axis brushless gimbal with roll ±45 deg, pitch ±90 deg, yaw ±30 deg; each axis has a hollow cylindrical bearing seat 22 mm inner diameter; cage stays within 120 x 120 x 120 mm.",
+        "Build me a 3-axis camera gimbal cage (roll ±45 deg, pitch ±90 deg, yaw ±30 deg) that holds a 60 x 40 x 30 mm camera; bearing seats are 22 mm ID cylinders; keep the whole cage under 120 x 120 x 120 mm."
+      ],
+      "expect": {
+        "min_parts": 4,
+        "joints": [
+          {"type": "revolute", "min_count": 3}
+        ],
+        "min_sweep_deg": 60,
+        "collision_checked": "swept",
+        "holes": [
+          {"diameter_mm": 22.0, "min_count": 3, "tol_mm": 0.2}
+        ],
+        "bbox_max_mm": [180, 180, 180],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "arm_gripper_parallel_mg996r",
+      "class": "arm",
+      "prompt": "Model a parallel-jaw gripper driven by one MG996R servo: jaws open 40 mm and close to 0 mm, each jaw 60 mm long x 15 mm wide x 8 mm thick, connected via a symmetric four-bar linkage. Mount plate has four M3 holes on a 40 x 40 mm bolt circle.",
+      "paraphrases": [
+        "Using one MG996R servo, model a parallel-jaw gripper with 40 mm open stroke closing to 0 mm; each jaw is 60 mm long x 15 mm wide x 8 mm thick, linked by a symmetric four-bar mechanism; mount plate carries four M3 holes on a 40 x 40 mm bolt circle.",
+        "Design a parallel-jaw gripper with a single MG996R servo: jaw stroke from 0 to 40 mm, each jaw 60 x 15 x 8 mm, four-bar linkage symmetric; four M3 mounting holes on a 40 x 40 mm pattern on the base plate."
+      ],
+      "expect": {
+        "min_parts": 5,
+        "joints": [
+          {"type": "revolute", "min_count": 4}
+        ],
+        "min_sweep_deg": 30,
+        "collision_checked": "swept",
+        "mounts": [
+          {"component": "mg996r", "min_count": 1}
+        ],
+        "holes": [
+          {"diameter_mm": 3.0, "min_count": 4, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [120, 100, 60],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "artic_door_hinge_pair",
+      "class": "articulated_assembly",
+      "prompt": "Model a pair of butt hinges for a 400 x 800 mm door panel: each hinge has two 50 x 35 mm leaves, 2 mm thick, joined by a 6 mm diameter pin; hinge opens 0 to 120 deg. Provide both hinges as separate parts plus the door leaf as a single flat plate.",
+      "paraphrases": [
+        "Provide both hinges as separate parts plus the door leaf as a flat plate; each butt hinge has two 50 x 35 mm leaves 2 mm thick joined by a 6 mm diameter pin and opens 0 to 120 deg; the door panel is 400 x 800 mm.",
+        "Build me a 400 x 800 mm door panel with two butt hinges; each hinge consists of two 50 x 35 mm x 2 mm leaves on a 6 mm diameter pin, swinging 0 to 120 deg; output the hinges and the door leaf as distinct parts."
+      ],
+      "expect": {
+        "min_parts": 5,
+        "joints": [
+          {"type": "revolute", "min_count": 2}
+        ],
+        "min_sweep_deg": 120,
+        "collision_checked": "swept",
+        "holes": [
+          {"diameter_mm": 6.0, "min_count": 2, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [600, 1200, 100],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "artic_slider_crank_mechanism",
+      "class": "articulated_assembly",
+      "prompt": "Design a slider-crank mechanism: crank radius 30 mm, connecting rod 80 mm, slider travels 60 mm along the X axis. Crank rotates 360 deg. All links 8 mm thick, 12 mm wide cross-section. Include a base plate 200 x 60 x 6 mm with 6 mm guide rails.",
+      "paraphrases": [
+        "With a crank radius of 30 mm, connecting rod 80 mm, and 60 mm slider travel along the X axis, design a slider-crank mechanism; crank rotates 360 deg; links are 8 mm thick x 12 mm wide; base plate 200 x 60 x 6 mm with 6 mm guide rails.",
+        "Create a slider-crank assembly: 30 mm crank radius, 80 mm connecting rod, 60 mm prismatic slider travel, full 360 deg crank rotation; link cross-section 12 mm wide x 8 mm thick; 200 x 60 x 6 mm base plate with 6 mm guide rails."
+      ],
+      "expect": {
+        "min_parts": 4,
+        "joints": [
+          {"type": "revolute", "min_count": 2},
+          {"type": "prismatic", "min_count": 1}
+        ],
+        "min_sweep_deg": 360,
+        "collision_checked": "swept",
+        "bbox_max_mm": [300, 120, 60],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "artic_scissor_lift_2stage",
+      "class": "articulated_assembly",
+      "prompt": "Model a 2-stage scissor lift: platform 150 x 100 mm, minimum height 40 mm, maximum height 160 mm, driven by a single central prismatic actuator stroke of 80 mm. All scissor links 10 x 6 mm cross-section, 120 mm long. Pivot pins 4 mm diameter.",
+      "paraphrases": [
+        "Design a 2-stage scissor lift with 150 x 100 mm platform, 40 mm collapsed height, 160 mm extended height, driven by a central prismatic actuator with 80 mm stroke; scissor links 120 mm long x 10 x 6 mm cross-section; pivot pins 4 mm diameter.",
+        "Build me a 2-stage scissor lift (platform 150 x 100 mm, height range 40 to 160 mm) with a single central 80 mm prismatic actuator; each scissor link is 120 mm long, 10 x 6 mm section; pins are 4 mm diameter."
+      ],
+      "expect": {
+        "min_parts": 6,
+        "joints": [
+          {"type": "revolute", "min_count": 4},
+          {"type": "prismatic", "min_count": 1}
+        ],
+        "min_sweep_deg": 45,
+        "collision_checked": "swept",
+        "holes": [
+          {"diameter_mm": 4.0, "min_count": 4, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [225, 150, 240],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "artic_gear_pair_spur",
+      "class": "articulated_assembly",
+      "prompt": "Model a meshing spur-gear pair: driver gear 20 teeth module 2 mm, driven gear 40 teeth module 2 mm, face width 10 mm, center distance 60 mm. Both gears on 5 mm diameter shafts; include a housing plate 100 x 60 x 8 mm with two 5 mm bore shaft holes. Driver rotates 360 deg.",
+      "paraphrases": [
+        "With a 20-tooth driver gear module 2 mm and 40-tooth driven gear module 2 mm, face width 10 mm, on 5 mm diameter shafts at 60 mm center distance, model a meshing spur-gear pair; include a 100 x 60 x 8 mm housing plate with two 5 mm bore shaft holes; driver rotates 360 deg.",
+        "Design a spur-gear pair assembly: driver 20 teeth module 2 mm, driven gear 40 teeth module 2 mm, face width 10 mm, center distance 60 mm, shaft diameter 5 mm; mount on a 100 x 60 x 8 mm plate with two 5 mm shaft bores; full 360 deg driver rotation."
+      ],
+      "expect": {
+        "min_parts": 4,
+        "joints": [
+          {"type": "revolute", "min_count": 2}
+        ],
+        "min_sweep_deg": 360,
+        "collision_checked": "swept",
+        "holes": [
+          {"diameter_mm": 5.0, "min_count": 2, "tol_mm": 0.05}
+        ],
+        "bbox_max_mm": [150, 90, 40],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "artic_latch_clamp_over_center",
+      "class": "articulated_assembly",
+      "prompt": "Model an over-center toggle clamp: arm length 60 mm, pivot-to-pivot 40 mm, clamp foot 20 x 15 x 5 mm, handle 80 mm long. Over-center travel is 10 deg past dead center. Base plate 80 x 40 x 6 mm with four M4 mounting holes in the corners.",
+      "paraphrases": [
+        "Design an over-center toggle clamp with arm length 60 mm, pivot-to-pivot 40 mm, clamp foot 20 x 15 x 5 mm, handle 80 mm; over-center travel 10 deg past dead center; base plate 80 x 40 x 6 mm, four M4 holes in the corners.",
+        "Build me an over-center toggle clamp: arm 60 mm, pivot spacing 40 mm, foot 20 x 15 x 5 mm, 80 mm handle, 10 deg over-center; mount on an 80 x 40 x 6 mm base plate with M4 corner holes."
+      ],
+      "expect": {
+        "min_parts": 4,
+        "joints": [
+          {"type": "revolute", "min_count": 3}
+        ],
+        "min_sweep_deg": 100,
+        "collision_checked": "swept",
+        "holes": [
+          {"diameter_mm": 4.0, "min_count": 4, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [160, 120, 80],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "artic_rack_pinion_slide",
+      "class": "articulated_assembly",
+      "prompt": "Model a rack-and-pinion linear slide: pinion 20 teeth module 1.5 mm on a 6 mm shaft, rack 150 mm long x 12 mm wide x 6 mm tall module 1.5 mm, slide carriage 60 x 40 x 10 mm rides on two 8 mm guide rods 120 mm apart, pinion rotates 300 deg driving the carriage 60 mm of prismatic travel. Base plate 200 x 80 x 6 mm.",
+      "paraphrases": [
+        "Design a rack-and-pinion slide with a 20-tooth module 1.5 mm pinion on a 6 mm shaft, 150 x 12 x 6 mm module 1.5 mm rack, 60 x 40 x 10 mm carriage on two 8 mm guide rods 120 mm apart, 300 deg pinion rotation giving 60 mm carriage travel, and a 200 x 80 x 6 mm base plate.",
+        "Create a rack-and-pinion linear-slide assembly: pinion 20 teeth module 1.5 mm, shaft 6 mm; rack 150 mm long x 12 mm wide x 6 mm tall module 1.5 mm; carriage 60 x 40 x 10 mm on two 8 mm rods spaced 120 mm; 300 deg pinion travel = 60 mm linear stroke; base plate 200 x 80 x 6 mm."
+      ],
+      "expect": {
+        "min_parts": 4,
+        "joints": [
+          {"type": "revolute", "min_count": 1},
+          {"type": "prismatic", "min_count": 1}
+        ],
+        "min_sweep_deg": 300,
+        "collision_checked": "swept",
+        "holes": [
+          {"diameter_mm": 8.0, "min_count": 2, "tol_mm": 0.05},
+          {"diameter_mm": 6.0, "min_count": 1, "tol_mm": 0.05}
+        ],
+        "bbox_max_mm": [300, 120, 60],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "single_swivel_fork_casting",
+      "class": "single_complex",
+      "prompt": "Model a single-piece swivel caster fork body: overall height 65 mm, two legs each 8 mm wide x 6 mm thick spaced 30 mm apart, axle bore 8 mm diameter through both legs at the bottom, swivel stem 10 mm diameter x 20 mm tall on top, top flange 60 x 60 x 4 mm with four 5 mm diameter mounting holes on a 50 x 50 mm bolt pattern, 3 mm fillet on all internal transitions.",
+      "paraphrases": [
+        "Design a single-piece caster fork casting 65 mm tall: two 8 x 6 mm legs 30 mm apart with an 8 mm axle bore at the bottom, a 10 mm diameter x 20 mm swivel stem on top, a 60 x 60 x 4 mm top flange with four 5 mm holes on a 50 x 50 mm bolt pattern, 3 mm fillets on all internal transitions.",
+        "Create a single-body swivel fork for a caster: height 65 mm, dual legs 8 mm wide x 6 mm thick spaced 30 mm, 8 mm axle bore through both leg bottoms, 10 mm diameter x 20 mm tall swivel stem above, 60 x 60 x 4 mm mounting flange with four 5 mm holes on a 50 x 50 mm pattern, 3 mm internal fillets throughout."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "holes": [
+          {"diameter_mm": 8.0, "min_count": 1, "tol_mm": 0.05},
+          {"diameter_mm": 5.0, "min_count": 4, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [120, 120, 100],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "static_nema17_bracket_2020",
+      "class": "static_assembly",
+      "prompt": "Design a bracket that mounts one NEMA17 stepper to a 2020 aluminum extrusion: bracket body 60 x 60 x 4 mm plate, four M3 holes on NEMA17 31 x 31 mm bolt circle, two M5 T-nut slots for ext_2020 attachment. No moving joints.",
+      "paraphrases": [
+        "With a 60 x 60 x 4 mm plate body, four M3 holes on a 31 x 31 mm NEMA17 bolt circle, and two M5 T-nut slots for ext_2020 attachment, design a static NEMA17-to-2020-extrusion mount bracket.",
+        "Create a static bracket that mounts a NEMA17 stepper motor to an ext_2020 extrusion: 60 x 60 x 4 mm plate, four M3 mounting holes on the NEMA17 31 x 31 mm pitch, two M5 slots for ext_2020 T-nuts; no moving parts."
+      ],
+      "expect": {
+        "min_parts": 2,
+        "mounts": [
+          {"component": "nema17", "min_count": 1},
+          {"component": "ext_2020", "min_count": 1}
+        ],
+        "holes": [
+          {"diameter_mm": 3.2, "min_count": 4, "tol_mm": 0.3},
+          {"diameter_mm": 5.0, "min_count": 2, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [120, 120, 60],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "static_rpi4_fan_sandwich",
+      "class": "static_assembly",
+      "prompt": "Model a passive sandwich enclosure for a Raspberry Pi 4 and a 60 mm fan: top and bottom plates 95 x 65 x 3 mm, four M2.5 standoffs 10 mm tall aligned to raspberry_pi_4 mounting holes, fan_60mm mounts to the top plate with four M4 holes on a 50 x 50 mm bolt circle. No articulation.",
+      "paraphrases": [
+        "For a Raspberry Pi 4 and 60 mm fan, with top and bottom plates 95 x 65 x 3 mm, four M2.5 standoffs 10 mm tall on raspberry_pi_4 mounting holes, and fan_60mm attached to the top plate via four M4 holes on a 50 x 50 mm bolt circle, model a passive sandwich enclosure; no moving parts.",
+        "Create a non-articulated sandwich enclosure holding a raspberry_pi_4 and a fan_60mm: two 95 x 65 x 3 mm plates, four M2.5 standoffs 10 mm tall at raspberry_pi_4 hole positions, four M4 holes on a 50 x 50 mm bolt circle for the fan_60mm on the top plate."
+      ],
+      "expect": {
+        "min_parts": 3,
+        "mounts": [
+          {"component": "raspberry_pi_4", "min_count": 1},
+          {"component": "fan_60mm", "min_count": 1}
+        ],
+        "holes": [
+          {"diameter_mm": 2.5, "min_count": 4, "tol_mm": 0.1},
+          {"diameter_mm": 4.3, "min_count": 4, "tol_mm": 0.3}
+        ],
+        "bbox_max_mm": [145, 100, 30],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "single_angled_port_manifold",
+      "class": "single_complex",
+      "prompt": "Model a single-piece pneumatic manifold block 80 x 40 x 30 mm: two 8 mm diameter inlet ports on the bottom face spaced 30 mm apart, four 6 mm diameter outlet ports on the front face equally spaced along 60 mm, one 4 mm bleed port at 45 deg angle on the right side face, all ports blind 20 mm deep meeting an internal 6 mm diameter cross-channel along the long axis.",
+      "paraphrases": [
+        "Design a single-piece 80 x 40 x 30 mm pneumatic manifold with two 8 mm inlet ports on the bottom 30 mm apart, four equally-spaced 6 mm outlet ports along a 60 mm span on the front face, a 4 mm bleed port at 45 deg on the right face, all blind 20 mm and intersecting a 6 mm internal cross-channel along the long axis.",
+        "Build me a solid pneumatic manifold block 80 x 40 x 30 mm: bottom face has two 8 mm diameter inlets 30 mm apart; front face has four 6 mm diameter outlets equally spaced over 60 mm; right face has a 45-deg angled 4 mm bleed port; all ports 20 mm deep meeting an internal 6 mm cross-channel along the long axis."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "holes": [
+          {"diameter_mm": 8.0, "min_count": 2, "tol_mm": 0.1},
+          {"diameter_mm": 6.0, "min_count": 4, "tol_mm": 0.1},
+          {"diameter_mm": 4.0, "min_count": 1, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [120, 60, 45],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "single_5blade_impeller",
+      "class": "single_complex",
+      "prompt": "Design a single-piece centrifugal impeller: hub diameter 20 mm, hub height 15 mm, outer diameter 80 mm, 5 forward-swept blades each 3 mm thick and swept 35 deg, shroud disk 3 mm thick. Central bore 8 mm diameter through the hub. Overall height 25 mm.",
+      "paraphrases": [
+        "Model a single-piece centrifugal impeller 80 mm outer diameter, hub 20 mm diameter x 15 mm tall, 5 forward-swept 3 mm thick blades swept 35 deg, 3 mm shroud disk, 8 mm central bore through hub, 25 mm total height.",
+        "Create a single-body centrifugal impeller: OD 80 mm, hub 20 mm diameter x 15 mm tall, 5 forward-swept blades 3 mm thick at 35 deg sweep, 3 mm top shroud, 8 mm bore through the hub, 25 mm height overall."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "holes": [
+          {"diameter_mm": 8.0, "min_count": 1, "tol_mm": 0.05}
+        ],
+        "bbox_max_mm": [120, 120, 40],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "single_ratchet_wheel_24tooth",
+      "class": "single_complex",
+      "prompt": "Model a single-piece ratchet wheel: 24 asymmetric sawtooth teeth, outer diameter 60 mm, tooth depth 4 mm, face width 10 mm, central bore 12 mm diameter, hub diameter 20 mm extending 5 mm beyond each face, one 3 mm keyway 2.5 mm deep cut axially into the bore.",
+      "paraphrases": [
+        "Design a single-piece ratchet wheel with 24 asymmetric sawtooth teeth, 60 mm outer diameter, 4 mm tooth depth, 10 mm face width, 12 mm central bore, 20 mm hub extending 5 mm past each face, and a 3 mm keyway 2.5 mm deep in the bore.",
+        "Create a ratchet wheel (single body): outer diameter 60 mm, 24 asymmetric teeth 4 mm deep, face width 10 mm, 12 mm bore through center, hub 20 mm diameter protruding 5 mm each side, axial 3 mm x 2.5 mm deep keyway in the bore."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "holes": [
+          {"diameter_mm": 12.0, "min_count": 1, "tol_mm": 0.05},
+          {"diameter_mm": 3.0, "min_count": 1, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [90, 90, 30],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "single_cable_chain_link",
+      "class": "single_complex",
+      "prompt": "Model a single cable chain link: outer width 40 mm, inner channel 25 x 18 mm, link pitch 25 mm, side wall thickness 3 mm, outer radius 3 mm on all external edges, two 5 mm diameter hinge pin holes on each end tab, end tabs 8 mm wide x 8 mm long. Overall link length 25 mm.",
+      "paraphrases": [
+        "Design a single cable chain link 25 mm long, outer width 40 mm, inner channel 25 x 18 mm, pitch 25 mm, 3 mm side walls, 3 mm fillet on all outer edges, two 5 mm hinge pin holes in each 8 x 8 mm end tab.",
+        "Create a cable chain link (single part): 40 mm outer width, 25 x 18 mm inner cable channel, 25 mm pitch, 25 mm length, 3 mm walls, 3 mm external edge radius, 5 mm diameter hinge pin holes (two per end tab), end tabs 8 mm wide x 8 mm long."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "holes": [
+          {"diameter_mm": 5.0, "min_count": 4, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [60, 50, 35],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "single_dovetail_slide_block",
+      "class": "single_complex",
+      "prompt": "Design a single-piece dovetail slide block 80 x 40 x 30 mm: female dovetail slot 16 mm wide at base, 22 mm wide at top, 12 mm deep, running the full 80 mm length along the X axis; two M5 clamping holes perpendicular to the dovetail axis, spaced 40 mm apart; overall block has four M4 mounting holes 10 mm from each corner on the bottom face.",
+      "paraphrases": [
+        "Model a single-body dovetail slide block 80 x 40 x 30 mm with a female dovetail slot 16 mm base x 22 mm top x 12 mm deep running 80 mm along X, two perpendicular M5 clamping holes 40 mm apart, and four M4 mounting holes 10 mm from each corner on the bottom.",
+        "Create a dovetail slide block (one part, 80 x 40 x 30 mm): female dovetail 16 mm wide at root, 22 mm wide at opening, 12 mm deep, full 80 mm length along X axis; two M5 clamping holes normal to the dovetail, 40 mm apart; four M4 holes 10 mm from corners on the bottom face."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "holes": [
+          {"diameter_mm": 5.0, "min_count": 2, "tol_mm": 0.1},
+          {"diameter_mm": 4.0, "min_count": 4, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [120, 60, 45],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "single_multi_boss_enclosure_base",
+      "class": "single_complex",
+      "prompt": "Model a single-piece electronics enclosure base 120 x 80 x 25 mm with 2 mm uniform wall: four internal M2.5 screw bosses 6 mm outer diameter x 20 mm tall at 10 mm inset from each corner; two 10 x 6 mm rectangular cable cutouts centered on each 120 mm side wall; one 22 mm diameter circular cutout centered on one 80 mm end wall; all bosses have 2.5 mm through-bore.",
+      "paraphrases": [
+        "Design a single-body electronics base 120 x 80 x 25 mm, 2 mm wall: four M2.5 bosses 6 mm OD x 20 mm tall at 10 mm inset from each corner with 2.5 mm bore; two 10 x 6 mm cable notches centered on each 120 mm side wall; one 22 mm round cutout centered on one 80 mm end wall.",
+        "Create a single-piece PCB enclosure base 120 x 80 x 25 mm with 2 mm walls: four internal 6 mm OD x 20 mm tall bosses inset 10 mm from each corner, each with a 2.5 mm bore (all bores 2.5 mm); two 10 x 6 mm rectangular cutouts centered on each 120 mm side wall; one 22 mm diameter hole centered on one 80 mm end wall."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "holes": [
+          {"diameter_mm": 2.5, "min_count": 4, "tol_mm": 0.1},
+          {"diameter_mm": 22.0, "min_count": 1, "tol_mm": 0.2}
+        ],
+        "bbox_max_mm": [180, 120, 40],
+        "watertight": true,
+        "named_step": true
+      }
+    },
+    {
+      "id": "single_cam_plate_eccentric",
+      "class": "single_complex",
+      "prompt": "Model a single-piece eccentric cam plate: overall disk diameter 70 mm, thickness 12 mm, central drive bore 10 mm diameter, eccentric follower lobe offset 15 mm from disk center, lobe radius 10 mm blended with the disk profile, two M4 set-screw holes 6 mm deep radially into the bore 90 deg apart, one 3 mm key slot 3 mm deep axial in the bore.",
+      "paraphrases": [
+        "Design a single-body eccentric cam plate: disk diameter 70 mm, 12 mm thick, 10 mm central bore, follower lobe 10 mm radius offset 15 mm from center blended to the disk, two radial M4 set-screw holes 6 mm deep at 90 deg spacing into the bore, one axial 3 mm key slot 3 mm deep in the bore.",
+        "Create an eccentric cam plate (single part): 70 mm disk diameter, 12 mm thickness, 10 mm drive bore, eccentric lobe radius 10 mm offset 15 mm from disk center and blended to disk profile, two M4 radial set-screw holes 6 mm deep at 90 deg intervals, axial 3 mm x 3 mm key slot in bore."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "holes": [
+          {"diameter_mm": 10.0, "min_count": 1, "tol_mm": 0.05},
+          {"diameter_mm": 4.0, "min_count": 2, "tol_mm": 0.1},
+          {"diameter_mm": 3.0, "min_count": 1, "tol_mm": 0.1}
+        ],
+        "bbox_max_mm": [105, 105, 18],
+        "watertight": true,
+        "named_step": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# bench-005: the LLM drives the GENERAL assembly path for TWO mechanism families
+# (a revolute hinge and a prismatic slide) from one decontaminated prompt set.
+# A trial passes when generate -> solve -> compile -> validate_assembly all pass.
+
+trials_per_prompt: 8        # x 6 paraphrased prompts (3 families x 2 wordings) = 48 trials
+gate_wilson_lb: 0.70        # overall Wilson 95% lower bound must clear this
+max_cost_usd: 1.50          # hard ceiling; the harness stops cleanly if reached
+
+prompts:
+  - hinge_butt
+  - hinge_door
+  - slide_piston
+  - slide_telescope
+  - linkage_arm
+  - linkage_chain

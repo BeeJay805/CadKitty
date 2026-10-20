@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "path": "benchmarks/customer_outcomes_v1/references/plain-washer.jpg",
+      "sha256": "e5375de99c2f35129e5a2333e907e7045034a36e352c89f5c3254aba80d25dfe",
+      "origin": "external_photograph",
+      "attribution": "benchmarks/customer_outcomes_v1/ATTRIBUTION.json",
+      "license": "Author public-domain dedication; retained original attribution",
+      "scope": "Shape reference only; dimensions are not inferred from pixels."
+    }
+  ],
+  "code_license": "MIT",
+  "third_party_packages": "Not bundled; dependency licenses remain their own.",
+  "examples": "Generated assets require their own exact per-example provenance before publication."
+}

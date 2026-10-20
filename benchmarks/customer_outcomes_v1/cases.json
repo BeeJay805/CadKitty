@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "name": "customer_outcomes_v1",
+  "origin": "Prospective author-written customer-style requests; not historical customer jobs",
+  "cases": [
+    {
+      "id": "block_stop",
+      "family": "block",
+      "split": "development",
+      "prompt": "Make a plain rectangular CAD stop, X 30 mm, Y 20 mm, Z 8 mm. Square edges; no holes.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "block",
+        "size_mm": [
+          30,
+          20,
+          8
+        ],
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "plate_four_holes",
+      "family": "mounting_plate",
+      "split": "development",
+      "prompt": "Make a 60 x 40 x 5 mm plate in X/Y/Z. Four 5 mm diameter through-holes run along Z. Hole centers are 8 mm from each adjacent edge. Square edges.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "plate_holes",
+        "size_mm": [
+          60,
+          40,
+          5
+        ],
+        "hole_diameter_mm": 5,
+        "hole_centers_mm": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            32
+          ],
+          [
+            52,
+            8
+          ],
+          [
+            52,
+            32
+          ]
+        ],
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "tube_spacer",
+      "family": "spacer",
+      "split": "development",
+      "prompt": "Make a plain cylindrical spacer: outside diameter 20 mm, concentric bore 8 mm, length 12 mm along Z. Square ends.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "tube",
+        "diameter_mm": 20,
+        "bore_mm": 8,
+        "height_mm": 12,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "round_pad",
+      "family": "disk",
+      "split": "development",
+      "prompt": "Make a solid round CAD pad, 36 mm diameter and 6 mm thick along Z. No holes or rounded edges.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "disk",
+        "diameter_mm": 36,
+        "height_mm": 6,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "open_tray",
+      "family": "tray",
+      "split": "development",
+      "prompt": "Make an open rectangular tray. Outer X/Y/Z is 80/50/20 mm. Flat bottom and all four walls are 3 mm thick. No lid, holes, or edge rounds.",
+      "printable": true,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "cup",
+        "size_mm": [
+          80,
+          50,
+          20
+        ],
+        "wall_mm": 3,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "angle_rail",
+      "family": "angle",
+      "split": "development",
+      "prompt": "Make an L-section rail 70 mm along X. Its outside Y width is 30 mm and Z height is 25 mm. Both legs are 4 mm thick, at Y=0 and Z=0. No holes or rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "angle",
+        "size_mm": [
+          70,
+          30,
+          25
+        ],
+        "wall_mm": 4,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "open_channel",
+      "family": "channel",
+      "split": "development",
+      "prompt": "Make a U channel 90 mm along X, outside Y width 30 mm, outside Z height 20 mm. Bottom and both side walls are 3 mm thick. Both ends and the top are open; no rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "channel",
+        "size_mm": [
+          90,
+          30,
+          20
+        ],
+        "wall_mm": 3,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "two_hole_strip",
+      "family": "strap",
+      "split": "development",
+      "prompt": "Make a 100 x 12 x 3 mm X/Y/Z strap. Two 4 mm diameter Z-through holes have centers (10,6) and (90,6) mm from the lower left. No rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "plate_holes",
+        "size_mm": [
+          100,
+          12,
+          3
+        ],
+        "hole_diameter_mm": 4,
+        "hole_centers_mm": [
+          [
+            10,
+            6
+          ],
+          [
+            90,
+            6
+          ]
+        ],
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "square_spacer",
+      "family": "spacer",
+      "split": "development",
+      "prompt": "Make a 24 x 24 x 10 mm block with one 8 mm diameter Z-through hole in its center. Square edges.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "plate_holes",
+        "size_mm": [
+          24,
+          24,
+          10
+        ],
+        "hole_diameter_mm": 8,
+        "hole_centers_mm": [
+          [
+            12,
+            12
+          ]
+        ],
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "flat_round_cover",
+      "family": "cover",
+      "split": "development",
+      "prompt": "Make a plain solid circular cover blank, diameter 50 mm, Z thickness 4 mm. No holes, lips, bevels or rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "disk",
+        "diameter_mm": 50,
+        "height_mm": 4,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "photo_plain_washer",
+      "family": "photo_washer",
+      "split": "development",
+      "prompt": "Use the plain flat washer in the photo as a shape reference. Make only one plain ring, outside diameter 24 mm, concentric bore 8 mm, Z thickness 2 mm. Use these target dimensions, not scale inferred from the photo.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "tube",
+        "diameter_mm": 24,
+        "bore_mm": 8,
+        "height_mm": 2,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      },
+      "reference": {
+        "file": "references/plain-washer.jpg",
+        "media_type": "image/jpeg",
+        "known_dimension": {
+          "label": "Requested new washer outside diameter; not a measurement of the pictured item",
+          "value": 24.0,
+          "unit": "mm"
+        }
+      }
+    },
+    {
+      "id": "photo_large_washer",
+      "family": "photo_washer",
+      "split": "development",
+      "prompt": "Use the plain flat ring in the photo as a shape reference. Make a CAD washer with 40 mm outside diameter, 16 mm concentric bore, and 3 mm Z thickness. Do not include the split spring washer. These are new target dimensions.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "tube",
+        "diameter_mm": 40,
+        "bore_mm": 16,
+        "height_mm": 3,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      },
+      "reference": {
+        "file": "references/plain-washer.jpg",
+        "media_type": "image/jpeg",
+        "known_dimension": {
+          "label": "Requested new washer outside diameter",
+          "value": 40.0,
+          "unit": "mm"
+        }
+      }
+    },
+    {
+      "id": "approve_plate",
+      "family": "approval",
+      "split": "development",
+      "prompt": "Make a plain 50 x 30 x 4 mm X/Y/Z plate with no holes or rounds. Ask me to approve the saved construction plan before making CAD.",
+      "printable": true,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "block",
+        "size_mm": [
+          50,
+          30,
+          4
+        ],
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      },
+      "approval_required": true
+    },
+    {
+      "id": "recover_creation",
+      "family": "recovery",
+      "split": "development",
+      "prompt": "Make a plain 32 x 18 x 7 mm X/Y/Z rectangular block. No holes or rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "block",
+        "size_mm": [
+          32,
+          18,
+          7
+        ],
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      },
+      "recovery": "lost_creation_response"
+    },
+    {
+      "id": "edit_plate_thickness",
+      "family": "edit",
+      "split": "development",
+      "prompt": "Make a plain 60 x 35 x 4 mm X/Y/Z rectangular plate. No holes or rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "block",
+        "size_mm": [
+          60,
+          35,
+          7
+        ],
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      },
+      "edit": "Change only the Z thickness from 4 mm to 7 mm. Keep the X and Y dimensions and plain square edges."
+    },
+    {
+      "id": "edit_spacer_length",
+      "family": "edit",
+      "split": "development",
+      "prompt": "Make a plain cylindrical spacer, outside diameter 18 mm, concentric bore 6 mm, Z length 10 mm. No rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "tube",
+        "diameter_mm": 18,
+        "bore_mm": 6,
+        "height_mm": 16,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      },
+      "edit": "Change only the Z length from 10 mm to 16 mm. Keep both diameters."
+    },
+    {
+      "id": "ambiguous_hole_layout",
+      "family": "ambiguity",
+      "split": "development",
+      "prompt": "Make a 60 x 40 x 5 mm plate with four 5 mm holes, 8 mm from the corners. Ask whether 8 mm means hole centers or hole edges before making CAD.",
+      "printable": false,
+      "oracle": {
+        "kind": "clarification_v1",
+        "reason": "Explicitly asks for center-versus-boundary clarification before any CAD."
+      }
+    },
+    {
+      "id": "ambiguous_reference_scale",
+      "family": "ambiguity",
+      "split": "development",
+      "prompt": "Make a washer like the plain flat ring in this photo. I do not know the outside diameter, bore, or thickness. Ask for those dimensions before making CAD.",
+      "printable": false,
+      "oracle": {
+        "kind": "clarification_v1",
+        "reason": "Missing target geometry must remain an owner question."
+      },
+      "reference": {
+        "file": "references/plain-washer.jpg",
+        "media_type": "image/jpeg"
+      }
+    },
+    {
+      "id": "enclosure_and_lid",
+      "family": "enclosure",
+      "split": "development",
+      "prompt": "Make a two-part electronics enclosure, outside 90 x 60 x 30 mm, walls 3 mm, with a separate 3 mm lid and four M3 lid screws. Show parts, screw locations, assembly steps and unresolved hardware choices.",
+      "printable": false,
+      "oracle": {
+        "kind": "unassessed_v1",
+        "reason": "No independent full multi-part fastener and assembly oracle in v1. Files and guidance are still measured."
+      }
+    },
+    {
+      "id": "hinge_pair",
+      "family": "hinge",
+      "split": "development",
+      "prompt": "Make a small two-leaf hinge with two 40 x 20 x 3 mm leaves, a 3 mm removable pin and three alternating knuckles. Retain separate parts and explain assembly.",
+      "printable": false,
+      "oracle": {
+        "kind": "unassessed_v1",
+        "reason": "Knuckle assignment, nominal clearance and assembly sequence require independent observers outside v1."
+      }
+    },
+    {
+      "id": "heldout_deep_tray",
+      "family": "tray",
+      "split": "heldout",
+      "prompt": "Make an open square tray. Outer X/Y/Z is 65/65/35 mm. The bottom and four walls are 2.5 mm thick. No holes, rounds, lid or feet.",
+      "printable": true,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "cup",
+        "size_mm": [
+          65,
+          65,
+          35
+        ],
+        "wall_mm": 2.5,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "heldout_short_angle",
+      "family": "angle",
+      "split": "heldout",
+      "prompt": "Make a plain L-section 42 mm long in X. Outside Y width 22 mm and Z height 32 mm. Both legs are 3 mm thick at Y=0 and Z=0. No holes or rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "angle",
+        "size_mm": [
+          42,
+          22,
+          32
+        ],
+        "wall_mm": 3,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "heldout_wide_channel",
+      "family": "channel",
+      "split": "heldout",
+      "prompt": "Make an open-ended U channel 55 mm along X, 46 mm outside Y width, and 18 mm outside Z height. Both sides and bottom are 4 mm thick. No rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "channel",
+        "size_mm": [
+          55,
+          46,
+          18
+        ],
+        "wall_mm": 4,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "heldout_six_hole_plate",
+      "family": "mounting_plate",
+      "split": "heldout",
+      "prompt": "Make an 80 x 45 x 6 mm X/Y/Z plate. Six 4 mm diameter Z-through holes have X/Y centers (10,10), (40,10), (70,10), (10,35), (40,35), (70,35) mm from lower left. Square edges.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "plate_holes",
+        "size_mm": [
+          80,
+          45,
+          6
+        ],
+        "hole_diameter_mm": 4,
+        "hole_centers_mm": [
+          [
+            10,
+            10
+          ],
+          [
+            40,
+            10
+          ],
+          [
+            70,
+            10
+          ],
+          [
+            10,
+            35
+          ],
+          [
+            40,
+            35
+          ],
+          [
+            70,
+            35
+          ]
+        ],
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "heldout_long_sleeve",
+      "family": "spacer",
+      "split": "heldout",
+      "prompt": "Make a plain round sleeve: outside diameter 28 mm, concentric bore 20 mm, Z length 45 mm. No holes in the wall or rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "tube",
+        "diameter_mm": 28,
+        "bore_mm": 20,
+        "height_mm": 45,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      }
+    },
+    {
+      "id": "heldout_photo_washer",
+      "family": "photo_washer",
+      "split": "heldout",
+      "prompt": "Use the plain flat washer in the photo as a shape reference for a new ring, outside diameter 30 mm, concentric bore 12 mm, Z thickness 2.5 mm. Ignore the split washer and use these dimensions exactly.",
+      "printable": true,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "tube",
+        "diameter_mm": 30,
+        "bore_mm": 12,
+        "height_mm": 2.5,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      },
+      "reference": {
+        "file": "references/plain-washer.jpg",
+        "media_type": "image/jpeg",
+        "known_dimension": {
+          "label": "Requested new washer outside diameter",
+          "value": 30.0,
+          "unit": "mm"
+        }
+      }
+    },
+    {
+      "id": "heldout_edit_block",
+      "family": "edit",
+      "split": "heldout",
+      "prompt": "Make a plain 25 x 20 x 12 mm X/Y/Z block with square edges and no holes.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "block",
+        "size_mm": [
+          38,
+          20,
+          12
+        ],
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      },
+      "edit": "Change only X length from 25 mm to 38 mm. Keep Y at 20 mm and Z at 12 mm."
+    },
+    {
+      "id": "heldout_recover_sleeve",
+      "family": "recovery",
+      "split": "heldout",
+      "prompt": "Make a plain cylindrical sleeve, outside diameter 16 mm, concentric bore 10 mm, Z length 22 mm. No rounds.",
+      "printable": false,
+      "oracle": {
+        "kind": "analytic_solid_v1",
+        "shape": "tube",
+        "diameter_mm": 16,
+        "bore_mm": 10,
+        "height_mm": 22,
+        "scope": "Independent dimensions, analytic volume, solid count and finite occupied/empty samples. No exact equivalence, English-meaning or physical proof."
+      },
+      "recovery": "lost_creation_response"
+    },
+    {
+      "id": "heldout_unknown_mount",
+      "family": "ambiguity",
+      "split": "heldout",
+      "prompt": "Make a bracket to hold my monitor on the wall. I have not supplied mounting-hole dimensions, monitor mass, wall material or anchors. Ask for the missing inputs before making CAD.",
+      "printable": false,
+      "oracle": {
+        "kind": "clarification_v1",
+        "reason": "Missing geometry and load/anchor inputs must not be invented."
+      }
+    },
+    {
+      "id": "heldout_slider_mechanism",
+      "family": "mechanism",
+      "split": "heldout",
+      "prompt": "Make a hand-operated 100 mm travel linear slider with a leadscrew, carriage and end supports. Keep made and bought parts separate. Explain assembly and the unresolved hardware choices.",
+      "printable": false,
+      "oracle": {
+        "kind": "unassessed_v1",
+        "reason": "No independent motion/clearance/thread/assembly authority in v1. Must remain unassessed."
+      }
+    }
+  ]
+}

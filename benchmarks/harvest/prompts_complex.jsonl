@@ -1,0 +1,36 @@
+{"id": "nozzle_000", "family": "nozzle", "tier": 3, "prompt": "a rocket engine bell nozzle, 60 mm throat, 120 mm exit, revolved expansion contour, 3 mm wall", "features": []}
+{"id": "nozzle_001", "family": "nozzle", "tier": 3, "prompt": "a converging-diverging venturi nozzle, 40 mm inlet tapering to a 12 mm throat then flaring to 30 mm", "features": []}
+{"id": "impeller_002", "family": "impeller", "tier": 3, "prompt": "a centrifugal pump impeller, 60 mm diameter, six backward-curved vanes, 10 mm bore", "features": []}
+{"id": "impeller_003", "family": "impeller", "tier": 3, "prompt": "a closed centrifugal compressor impeller, 50 mm, seven curved blades on a hub", "features": []}
+{"id": "turbine_blade_004", "family": "turbine_blade", "tier": 3, "prompt": "a single axial turbine blade with a twisted aerofoil and a fir-tree root, 45 mm span", "features": []}
+{"id": "propeller_005", "family": "propeller", "tier": 3, "prompt": "a three-blade marine propeller, 80 mm diameter, pitched twisted blades, 8 mm bore", "features": []}
+{"id": "propeller_006", "family": "propeller", "tier": 3, "prompt": "a two-blade drone propeller, 100 mm, thin cambered aerofoil blades", "features": []}
+{"id": "fan_007", "family": "fan", "tier": 3, "prompt": "an axial cooling fan rotor, 60 mm, nine swept blades, hub with a 4 mm D-bore", "features": []}
+{"id": "duct_008", "family": "duct", "tier": 3, "prompt": "a lofted transition duct from a 40 mm round inlet to a 40x40 mm square outlet, 60 mm long", "features": []}
+{"id": "duct_009", "family": "duct", "tier": 3, "prompt": "an aerodynamic S-bend intake duct, 30 mm bore, smooth swept centreline", "features": []}
+{"id": "volute_010", "family": "volute", "tier": 3, "prompt": "a centrifugal blower volute housing with an expanding spiral scroll and a tangential outlet", "features": []}
+{"id": "manifold_011", "family": "manifold", "tier": 3, "prompt": "a three-into-one intake manifold with smooth swept runners merging into a plenum", "features": []}
+{"id": "handle_012", "family": "handle", "tier": 3, "prompt": "an ergonomic door lever handle with a smoothly curved organic grip, 120 mm long", "features": []}
+{"id": "grip_013", "family": "grip", "tier": 3, "prompt": "an ergonomic joystick grip contoured for a hand, with finger reliefs", "features": []}
+{"id": "gear_014", "family": "gear", "tier": 3, "prompt": "a spur gear, module 2, 24 teeth, true involute tooth profile, 8 mm bore with a keyway", "features": []}
+{"id": "gear_015", "family": "gear", "tier": 3, "prompt": "a helical gear, module 1.5, 30 teeth, 20 degree helix, 10 mm bore", "features": []}
+{"id": "gear_016", "family": "gear", "tier": 3, "prompt": "a straight bevel gear, module 2, 20 teeth, 45 degree pitch cone, 8 mm bore", "features": []}
+{"id": "gear_017", "family": "gear", "tier": 3, "prompt": "a worm gear wheel, module 1.5, 40 teeth, throated to mesh a worm, 10 mm bore", "features": []}
+{"id": "gear_018", "family": "gear", "tier": 3, "prompt": "a herringbone gear, module 2, 28 double-helical teeth, 12 mm bore with keyway", "features": []}
+{"id": "camshaft_019", "family": "camshaft", "tier": 3, "prompt": "a single camshaft lobe with an egg-shaped cam profile on a 10 mm shaft", "features": []}
+{"id": "crankshaft_020", "family": "crankshaft", "tier": 3, "prompt": "a single-throw crankshaft with two counterweights and offset journals, 8 mm mains", "features": []}
+{"id": "vase_021", "family": "vase", "tier": 3, "prompt": "a revolved vase with an organic curved silhouette, 60 mm tall, 3 mm wall", "features": []}
+{"id": "funnel_022", "family": "funnel", "tier": 3, "prompt": "a funnel, 80 mm mouth revolved to a 10 mm spout, smooth blended transition", "features": []}
+{"id": "horn_023", "family": "horn", "tier": 3, "prompt": "a conical acoustic horn with an exponential flare, 30 mm throat to 90 mm mouth", "features": []}
+{"id": "auger_024", "family": "auger", "tier": 3, "prompt": "an Archimedes screw auger, 40 mm diameter, 30 mm pitch, three helical flights on a shaft", "features": []}
+{"id": "spring_025", "family": "spring", "tier": 3, "prompt": "a helical compression spring, 20 mm coil diameter, 4 mm wire, six active coils", "features": []}
+{"id": "fairing_026", "family": "fairing", "tier": 3, "prompt": "a streamlined teardrop fairing over a 20 mm strut, aerodynamic profile", "features": []}
+{"id": "winglet_027", "family": "winglet", "tier": 3, "prompt": "an aircraft winglet with a blended cant and a tapered aerofoil section", "features": []}
+{"id": "socket_028", "family": "socket", "tier": 3, "prompt": "a ball-joint socket capturing a 16 mm sphere, spherical seat with a retaining lip", "features": []}
+{"id": "elbow_029", "family": "elbow", "tier": 3, "prompt": "a swept 90 degree pipe elbow, 25 mm bore, with a flange on each end", "features": []}
+{"id": "bracket_030", "family": "bracket", "tier": 3, "prompt": "a topology-optimized cantilever bracket, organic lightweighted webs, two M6 holes", "features": []}
+{"id": "mouse_031", "family": "mouse", "tier": 3, "prompt": "an ergonomic computer mouse top shell, palm-contoured freeform surface", "features": []}
+{"id": "blade_032", "family": "blade", "tier": 3, "prompt": "a kitchen fan blade set, four twisted aerofoil blades on a 30 mm hub", "features": []}
+{"id": "heat_exchanger_033", "family": "heat_exchanger", "tier": 3, "prompt": "a spiral heat-exchanger channel block with two interleaved swept passages", "features": []}
+{"id": "scroll_034", "family": "scroll", "tier": 3, "prompt": "an involute scroll for a scroll compressor, spiral wrap, 60 mm", "features": []}
+{"id": "drone_arm_035", "family": "drone_arm", "tier": 3, "prompt": "a streamlined quadcopter arm, hollow aerofoil section, motor mount boss at the end", "features": []}

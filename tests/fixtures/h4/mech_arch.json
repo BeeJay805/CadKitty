@@ -1,0 +1,204 @@
+{
+  "object_name": "desktop_humanoid_robot_350",
+  "joints": [
+    {
+      "name": "neck_yaw",
+      "kind": "passive",
+      "axis_dir": "+Z",
+      "station_mm": [
+        0.0,
+        0.0,
+        300.0
+      ],
+      "bearing": "Ø8.0 printed spigot journal on head base in Ø8.40 bore land (10 mm land) in torso top deck, running fit 0.40; 0.8 mm lead-in chamfer both entries",
+      "retention": "M3x10 machine screw + Ø7 washer into brass M3 heat-set insert in spigot end, captured under torso deck; friction washer 0.2 mm PTFE between faces"
+    },
+    {
+      "name": "shoulder_L",
+      "kind": "actuated",
+      "axis_dir": "+X",
+      "station_mm": [
+        60.0,
+        0.0,
+        290.0
+      ],
+      "bearing": "drive side: MG996R output spline + horn at x=48; outboard side: Ø6.0 printed stub journal on upper_arm_L yoke in Ø6.35 bore land (8 mm land) in shoulder dome cap, running fit 0.35; 0.8 mm lead-in chamfers both bore entries; arm centerline plane x=+73 (≥5 mm air to torso and thigh across full swing)",
+      "retention": "horn screwed to upper_arm_L horn boss with 2x M2.5 into horn bore circle + M3 servo center screw; outboard stub retained by push-on domed cap (snap groove, 0.15 interference ridge)"
+    },
+    {
+      "name": "shoulder_R",
+      "kind": "actuated",
+      "axis_dir": "-X",
+      "station_mm": [
+        -60.0,
+        0.0,
+        290.0
+      ],
+      "bearing": "drive side: MG996R output spline + horn at x=-48; outboard side: Ø6.0 printed stub journal on upper_arm_R yoke in Ø6.35 bore land (8 mm land) in shoulder dome cap, running fit 0.35; 0.8 mm lead-in chamfers both bore entries; arm centerline plane x=-73",
+      "retention": "horn screwed to upper_arm_R horn boss with 2x M2.5 + M3 servo center screw; outboard stub retained by push-on domed cap (snap groove, 0.15 interference ridge)"
+    },
+    {
+      "name": "elbow_L",
+      "kind": "passive",
+      "axis_dir": "+X",
+      "station_mm": [
+        73.0,
+        0.0,
+        235.0
+      ],
+      "bearing": "Ø5.0 steel dowel journal in Ø5.35 bore lands (2x 7 mm lands in forearm_L clevis, upper_arm_L tongue between), running fit 0.35 with 0.6 mm lead-in chamfers at all four bore entries",
+      "retention": "dowel head shoulder against outer clevis face + push-on domed elbow cap over inner end (internal snap groove, 0.15 interference)"
+    },
+    {
+      "name": "elbow_R",
+      "kind": "passive",
+      "axis_dir": "-X",
+      "station_mm": [
+        -73.0,
+        0.0,
+        235.0
+      ],
+      "bearing": "Ø5.0 steel dowel journal in Ø5.35 bore lands (2x 7 mm lands in forearm_R clevis, upper_arm_R tongue between), running fit 0.35 with 0.6 mm lead-in chamfers at all four bore entries",
+      "retention": "dowel head shoulder against outer clevis face + push-on domed elbow cap over inner end (internal snap groove, 0.15 interference)"
+    },
+    {
+      "name": "hip_L",
+      "kind": "actuated",
+      "axis_dir": "+X",
+      "station_mm": [
+        44.0,
+        0.0,
+        180.0
+      ],
+      "bearing": "drive side: MG996R output spline + horn at x=46; outboard side: Ø6.0 printed stub journal on thigh_L yoke in Ø6.35 bore land (8 mm land) in hip dome cap, running fit 0.35; 0.8 mm lead-in chamfers both bore entries; thigh centerline plane x=+38, thigh swing corridor keeps ≥5 mm to pelvis shell",
+      "retention": "horn screwed to thigh_L horn boss with 2x M2.5 into horn bore circle + M3 servo center screw; outboard stub retained by push-on domed cap (snap groove, 0.15 interference ridge)"
+    },
+    {
+      "name": "hip_R",
+      "kind": "actuated",
+      "axis_dir": "-X",
+      "station_mm": [
+        -44.0,
+        0.0,
+        180.0
+      ],
+      "bearing": "drive side: MG996R output spline + horn at x=-46; outboard side: Ø6.0 printed stub journal on thigh_R yoke in Ø6.35 bore land (8 mm land) in hip dome cap, running fit 0.35; 0.8 mm lead-in chamfers both bore entries; thigh centerline plane x=-38",
+      "retention": "horn screwed to thigh_R horn boss with 2x M2.5 + M3 servo center screw; outboard stub retained by push-on domed cap (snap groove, 0.15 interference ridge)"
+    },
+    {
+      "name": "knee_L",
+      "kind": "passive",
+      "axis_dir": "+X",
+      "station_mm": [
+        38.0,
+        0.0,
+        105.0
+      ],
+      "bearing": "Ø5.0 steel dowel journal in Ø5.35 bore lands (2x 7 mm lands in shin_L clevis, thigh_L tongue between), running fit 0.35 with 0.6 mm lead-in chamfers at all four bore entries",
+      "retention": "dowel head shoulder against outer clevis face + push-on domed knee cap over inner end (internal snap groove, 0.15 interference)"
+    },
+    {
+      "name": "knee_R",
+      "kind": "passive",
+      "axis_dir": "-X",
+      "station_mm": [
+        -38.0,
+        0.0,
+        105.0
+      ],
+      "bearing": "Ø5.0 steel dowel journal in Ø5.35 bore lands (2x 7 mm lands in shin_R clevis, thigh_R tongue between), running fit 0.35 with 0.6 mm lead-in chamfers at all four bore entries",
+      "retention": "dowel head shoulder against outer clevis face + push-on domed knee cap over inner end (internal snap groove, 0.15 interference)"
+    }
+  ],
+  "actuators": [
+    {
+      "joint": "shoulder_L",
+      "hw_id": "servo_shoulder_L",
+      "kind": "mg996r_servo",
+      "position_mm": [
+        46.0,
+        0.0,
+        290.0
+      ],
+      "shaft_dir": "+X",
+      "horn_link": "upper_arm_L"
+    },
+    {
+      "joint": "shoulder_R",
+      "hw_id": "servo_shoulder_R",
+      "kind": "mg996r_servo",
+      "position_mm": [
+        -46.0,
+        0.0,
+        290.0
+      ],
+      "shaft_dir": "-X",
+      "horn_link": "upper_arm_R"
+    },
+    {
+      "joint": "hip_L",
+      "hw_id": "servo_hip_L",
+      "kind": "mg996r_servo",
+      "position_mm": [
+        44.0,
+        0.0,
+        180.0
+      ],
+      "shaft_dir": "+X",
+      "horn_link": "thigh_L"
+    },
+    {
+      "joint": "hip_R",
+      "hw_id": "servo_hip_R",
+      "kind": "mg996r_servo",
+      "position_mm": [
+        -44.0,
+        0.0,
+        180.0
+      ],
+      "shaft_dir": "-X",
+      "horn_link": "thigh_R"
+    }
+  ],
+  "fastening_system": "M3x10 self-tapping screws into Ø4.5 printed bosses (Ø2.5 pilot, 0.5 mm entry chamfer) for all shell seams and module caps; M4x12 machine screws with hex-nut pockets ONLY at MG996R lug seats on the datasheet 4-hole 49.5 x 10.0 pattern (both shoulder bays and both hip bays, servo drops into pocket from the open bay face with 0.5 mm air per side, 0.15-0.20 insertion fit at lug seats); 2x brass M3 heat-set inserts at the torso main seam top-deck bosses that see repeated service opening.",
+  "seam_strategy": "Torso splits into a convex chest shell and curved back shell on the lateral plane y=0: full-perimeter tongue-and-groove (tongue 1.5 wide x 1.5 deep, location fit 0.15, 0.5 mm lead-in chamfer on the tongue), fastened by 6 M3 bosses (2 at top deck z=298, 2 at pectoral line z=255, 2 at pelvis z=170); back shell is the service door for the electronics bay. Head splits helmet-front (carrying the visor recess) / helmet-rear on the vertical plane behind the visor, same tongue-and-groove + 2 M3 bosses entering from below the neck collar. Each limb segment is one lofted shell closed by its joint-module dome caps; every segment-to-module interface registers on a 1.0 mm annular lip (location fit 0.15, 0.5 mm chamfer) at the crisp panel seam line and screws with 2 M3 into internal bosses. Servo bays open outward through the shoulder/hip module faces so servos drop in before the caps close.",
+  "wiring_route": "Shoulder servo leads exit each bay through a Ø8 grommet hole in the bay inner wall at (±40, -15, 278), drop down twin 8 x 6 printed spine channels moulded into the back shell either side of the spine crease, and enter the electronics bay (lower back, z=190-230) through 10 x 6 slots; hip servo leads exit through Ø8 grommet holes in the pelvis deck at (±30, -12, 192) and rise directly into the same bay; all four terminate at the bus board on the back-shell inner face, serviced by removing the back shell.",
+  "mirrored_pairs": [
+    [
+      "upper_arm_L",
+      "upper_arm_R"
+    ],
+    [
+      "forearm_L",
+      "forearm_R"
+    ],
+    [
+      "thigh_L",
+      "thigh_R"
+    ],
+    [
+      "shin_L",
+      "shin_R"
+    ],
+    [
+      "foot_L",
+      "foot_R"
+    ],
+    [
+      "shoulder_dome_cap_L",
+      "shoulder_dome_cap_R"
+    ],
+    [
+      "hip_dome_cap_L",
+      "hip_dome_cap_R"
+    ],
+    [
+      "elbow_dome_cap_L",
+      "elbow_dome_cap_R"
+    ],
+    [
+      "knee_dome_cap_L",
+      "knee_dome_cap_R"
+    ]
+  ]
+}

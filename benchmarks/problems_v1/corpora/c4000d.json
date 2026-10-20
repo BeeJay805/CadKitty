@@ -1,0 +1,13 @@
+{
+  "note": "CANNED bench fixture, not real product data. '4000D' has no leading-letter token, so the entity is empty; the key matches the playbook's clearance-height query text.",
+  "by_query": {
+    "clearance height": [
+      {
+        "url": "bench://4000d/drives",
+        "title": "Corsair 4000D drive area (bench fixture)",
+        "text": "Corsair 4000D fixture (canned bench corpus; verify against your physical hardware). The area behind the motherboard tray offers a clearance height of 120 mm for drive mounting. The free depth behind the tray is 25 mm.",
+        "fetched_at": "2026-07-06"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "nodes": [
+    {
+      "id": "leafA",
+      "archetype": "knuckled_plate",
+      "params": {
+        "length_x": 40.0,
+        "width_y": 18.0,
+        "thickness": 4.0,
+        "knuckle_outer_r": 5.0,
+        "bore_r": 2.6,
+        "knuckle_width": 8.0,
+        "knuckle_centers_x": [
+          -8.5,
+          8.5
+        ],
+        "clearance_notches_x": [
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "leafB",
+      "archetype": "knuckled_plate",
+      "params": {
+        "length_x": 40.0,
+        "width_y": 18.0,
+        "thickness": 4.0,
+        "knuckle_outer_r": 5.0,
+        "bore_r": 2.6,
+        "knuckle_width": 8.0,
+        "knuckle_centers_x": [
+          0.0
+        ],
+        "clearance_notches_x": [
+          -8.5,
+          8.5
+        ]
+      }
+    },
+    {
+      "id": "pin",
+      "archetype": "rod",
+      "params": {
+        "length_x": 25.0
+      }
+    }
+  ],
+  "joints": [
+    {
+      "type": "coaxial_insert",
+      "a": "leafA.bore",
+      "b": "pin.shaft",
+      "range_deg": null,
+      "clearance_class": "running_fit"
+    },
+    {
+      "type": "revolute",
+      "a": "leafA.bore",
+      "b": "leafB.bore",
+      "range_deg": [
+        0.0,
+        180.0
+      ],
+      "clearance_class": "running_fit"
+    }
+  ],
+  "root": "leafA"
+}

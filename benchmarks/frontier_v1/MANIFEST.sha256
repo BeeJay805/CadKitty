@@ -1,0 +1,4 @@
+# frontier_v1 FROZEN 2026-07-09. Corpus+rubrics authored by claude-fable-5 (the run
+# arm is opus, so the CAD author never grades itself). Any content change is a NEW
+# benchmark version; deltas only count within a version. Hash is CRLF-normalized.
+3101d4ba5dcbff3bdb1c2083b41ba08ca7257a2980283f3821376d0fd525c58b frontier_v1.json

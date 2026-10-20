@@ -1,0 +1,12 @@
+{
+  "pattern": "l_bracket_motor_mount",
+  "name": "nema17_l_bracket",
+  "envelope_mm": { "x": 60.0, "y": 60.0, "z": 40.0 },
+  "material": "PLA",
+  "min_wall_mm": 4.0,
+  "max_overhang_deg": 45.0,
+  "base": { "width_mm": 43.0, "depth_mm": 50.0 },
+  "upright": { "width_mm": 43.0, "height_mm": 30.0 },
+  "nema17": { "name": "motor_face" },
+  "extrusion_2020": { "name": "extrusion_face", "m5_spacing_mm": 20.0 }
+}

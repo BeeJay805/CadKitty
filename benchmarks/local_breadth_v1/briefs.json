@@ -1,0 +1,1396 @@
+[
+ {
+  "label": "right_angle_bracket",
+  "prompt": "a right-angle bracket 40 mm x 40 mm with two M4 clearance holes per leg",
+  "brief": {
+   "object_name": "Right-Angle Bracket",
+   "summary": "A 40mm x 40mm right-angle bracket with two M4 clearance holes per leg.",
+   "visual_description": "A rectangular bracket forming a 90-degree angle between two legs, each 40mm long. The legs are flat and rectangular in cross-section, with rounded inner corners where they meet at the right angle. Each leg has two evenly spaced M4 clearance holes drilled through its thickness, aligned parallel to the bracket's edges. The overall shape is angular and utilitarian, with clean lines and no decorative elements.",
+   "overall_envelope_mm": "40 x 40 x 10",
+   "features": [
+    {
+     "name": "Leg 1",
+     "purpose": "Primary structural leg of the bracket",
+     "approx_dims_mm": "40 x 10 x 10",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Leg 2",
+     "purpose": "Secondary structural leg forming right angle with Leg 1",
+     "approx_dims_mm": "40 x 10 x 10",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "M4 Clearance Hole 1",
+     "purpose": "Mounting hole for fastener in Leg 1",
+     "approx_dims_mm": "4.5 x 10",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M4 clearance holes typically use 4.5mm diameter for M4 bolts to allow for manufacturing tolerance and easy assembly"
+    },
+    {
+     "name": "M4 Clearance Hole 2",
+     "purpose": "Mounting hole for fastener in Leg 1",
+     "approx_dims_mm": "4.5 x 10",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M4 clearance holes typically use 4.5mm diameter for M4 bolts to allow for manufacturing tolerance and easy assembly"
+    },
+    {
+     "name": "M4 Clearance Hole 3",
+     "purpose": "Mounting hole for fastener in Leg 2",
+     "approx_dims_mm": "4.5 x 10",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M4 clearance holes typically use 4.5mm diameter for M4 bolts to allow for manufacturing tolerance and easy assembly"
+    },
+    {
+     "name": "M4 Clearance Hole 4",
+     "purpose": "Mounting hole for fastener in Leg 2",
+     "approx_dims_mm": "4.5 x 10",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M4 clearance holes typically use 4.5mm diameter for M4 bolts to allow for manufacturing tolerance and easy assembly"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the base face (the flat side of the bracket) down to minimize supports needed.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "nema17_plate",
+  "prompt": "a NEMA-17 motor mount plate 5 mm thick with the 31 mm bolt circle and a bore",
+  "brief": {
+   "object_name": "NEMA-17 Motor Mount Plate",
+   "summary": "A thin mounting plate for a NEMA-17 stepper motor with a 31 mm bolt circle and central bore.",
+   "visual_description": "A flat rectangular plate with a central circular hole and four evenly spaced bolt holes arranged in a 31 mm diameter circle. The plate has a clean, geometric silhouette with sharp edges and a smooth surface finish. The central bore is centered and clearly defined, with the bolt holes forming a precise square pattern around it. The overall shape is a flat rectangle with rounded corners, and the thickness is uniform at 5 mm.",
+   "overall_envelope_mm": "100 x 100 x 5",
+   "features": [
+    {
+     "name": "central bore",
+     "purpose": "Mounts the motor shaft or coupling",
+     "approx_dims_mm": "12",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "bolt holes",
+     "purpose": "Mounts to motor base",
+     "approx_dims_mm": "3.5",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "NEMA-17 motor specifications"
+    },
+    {
+     "name": "bolt circle",
+     "purpose": "Defines mounting hole positions",
+     "approx_dims_mm": "31",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "NEMA-17 motor specifications"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat face with the bolt holes should be oriented downward to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "fan_shroud",
+  "prompt": "a 60 mm fan shroud that bolts to a 2020 aluminum extrusion with M5 hardware",
+  "brief": {
+   "object_name": "M5 Bolt-On Fan Shroud for 2020 Aluminum Extrusion",
+   "summary": "A thin, curved fan shroud with M5 mounting holes that fits around a 2020 aluminum extrusion.",
+   "visual_description": "A curved, hollow cylindrical shroud with a diameter of 60 mm and a length of 30 mm. The outer surface is smooth and slightly tapered toward the ends. Four evenly spaced mounting holes are visible along the circumference, each with a circular boss around it. The inner surface is flat and smooth, forming a cylindrical cavity that matches the fan's footprint. The shroud has a thin wall thickness of approximately 2 mm.",
+   "overall_envelope_mm": "60 x 30 x 30",
+   "features": [
+    {
+     "name": "mounting_holes",
+     "purpose": "To secure the shroud to a 2020 aluminum extrusion using M5 bolts",
+     "approx_dims_mm": "5.0 mm diameter",
+     "method": "pocket",
+     "count": 4,
+     "standard": "M5",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "mounting_bosses",
+     "purpose": "To provide structural reinforcement around the mounting holes",
+     "approx_dims_mm": "8.0 mm diameter x 2.0 mm height",
+     "method": "revolve",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "outer_curve",
+     "purpose": "To define the curved outer profile of the shroud",
+     "approx_dims_mm": "60 mm diameter",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "inner_cavity",
+     "purpose": "To accommodate a fan with a 40 mm diameter",
+     "approx_dims_mm": "40 mm diameter x 30 mm depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat inner surface should face down to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "d_shaft_knob",
+  "prompt": "a 25 mm knob with a 6 mm D-shaft bore and a knurled rim",
+  "brief": {
+   "object_name": "25 mm D-shaped shaft knob",
+   "summary": "A small mechanical knob with a D-shaped shaft bore and knurled rim for grip, designed for hand operation.",
+   "visual_description": "A circular knob with a flat D-shaped cutout on one side for shaft insertion, featuring a knurled ridge around its outer perimeter. The knob is roughly 25 mm in diameter with a 6 mm wide D-cutout. The surface has a textured pattern of small parallel ridges forming a circular band around the rim. The body is smooth except for the knurling and the flat D-section. The overall shape is a rounded circle with one flattened side.",
+   "overall_envelope_mm": "25 x 25 x 8",
+   "features": [
+    {
+     "name": "D-shaft bore",
+     "purpose": "To accept a D-shaped shaft for secure attachment and rotation transmission",
+     "approx_dims_mm": "6 x 6 x 8",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "25 mm knob diameter scaled to standard 6 mm D-shaft bore"
+    },
+    {
+     "name": "knurled rim",
+     "purpose": "To provide grip and tactile feedback for hand operation",
+     "approx_dims_mm": "20 x 1.5 x 1.5",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "knurled surface typically 1/4 to 1/3 of total diameter"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the D-cutout facing up to minimize support structures and ensure proper surface finish on the knurling.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "wall_hook",
+  "prompt": "a wall hook that clips over a 12 mm rail with two M3 screw holes in the back plate",
+  "brief": {
+   "object_name": "Rail-Mounted Wall Hook with M3 Screw Back Plate",
+   "summary": "A wall-mounted hook designed to clip onto a 12 mm rail system with a back plate featuring two M3 screw holes for secure attachment.",
+   "visual_description": "A curved, L-shaped hook with a rounded tip that clips over a 12 mm rail. The back plate is flat and rectangular with two countersunk M3 screw holes positioned symmetrically near the top edges. The hook has a smooth, slightly tapered curve from base to tip, with a thin, sharp hook point. The overall profile is clean and minimalistic with no decorative elements.",
+   "overall_envelope_mm": "120 x 40 x 25",
+   "features": [
+    {
+     "name": "rail_clip",
+     "purpose": "Clips over a 12 mm rail system to mount the hook on a wall",
+     "approx_dims_mm": "12 x 8 x 15",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard 12mm rail width"
+    },
+    {
+     "name": "hook_curve",
+     "purpose": "Provides the gripping surface to hold items",
+     "approx_dims_mm": "40 x 15 x 8",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "typical wall hook proportions"
+    },
+    {
+     "name": "back_plate",
+     "purpose": "Mounts the hook to a wall via screws",
+     "approx_dims_mm": "30 x 12 x 2",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M3 screw spacing requirements"
+    },
+    {
+     "name": "m3_screw_hole_1",
+     "purpose": "Mounts the back plate to wall via M3 screw",
+     "approx_dims_mm": "3.4 x 20",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": null
+    },
+    {
+     "name": "m3_screw_hole_2",
+     "purpose": "Mounts the back plate to wall via M3 screw",
+     "approx_dims_mm": "3.4 x 20",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the back plate face down to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "bearing_block",
+  "prompt": "a pillow block that seats a 608 bearing, bolted down with two M5 screws",
+  "brief": {
+   "object_name": "Pillow Block Bearing Mount",
+   "summary": "A robust mounting block for a standard 608 deep groove ball bearing, secured with two M5 bolts.",
+   "visual_description": "A rectangular block with a rounded U-shaped recess in the center that precisely holds a 608 bearing. The block has two countersunk bolt holes on opposite sides near the ends, each with a 5mm diameter and 3mm depth. The overall shape is a solid rectangular prism with a smooth, slightly domed top surface and flat bottom. The bearing recess is deep and rounded, transitioning smoothly from the block walls to the bearing's inner race. The block features a slight taper on the sides near the bearing cavity for easier insertion, and the bolt holes are positioned to allow mounting to a surface while keeping the bearing centered.",
+   "overall_envelope_mm": "60 x 40 x 25",
+   "features": [
+    {
+     "name": "bearing recess",
+     "purpose": "Holds and centers the 608 deep groove ball bearing",
+     "approx_dims_mm": "22 x 16 x 10",
+     "method": "pocket",
+     "count": 1,
+     "standard": "608",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "bolt hole left",
+     "purpose": "Mounts the pillow block to a surface using an M5 screw",
+     "approx_dims_mm": "5 x 3",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "bearing recess"
+    },
+    {
+     "name": "bolt hole right",
+     "purpose": "Mounts the pillow block to a surface using an M5 screw",
+     "approx_dims_mm": "5 x 3",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "bearing recess"
+    },
+    {
+     "name": "top surface",
+     "purpose": "Provides a flat mounting surface for the bearing and ensures even load distribution",
+     "approx_dims_mm": "60 x 40 x 2",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "overall_envelope"
+    },
+    {
+     "name": "bearing cavity taper",
+     "purpose": "Facilitates easy insertion of the bearing into the recess",
+     "approx_dims_mm": "2 x 10",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "bearing recess"
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "The bottom face should be oriented downward to minimize supports and ensure stable printing of the bolt holes.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "spur_gear",
+  "prompt": "a module-2 spur gear with 24 teeth, 6 mm thick, with a 5 mm bore",
+  "brief": {
+   "object_name": "Module-2 Spur Gear",
+   "summary": "A precision-engineered spur gear with 24 teeth, 6 mm thickness, and 5 mm diameter bore.",
+   "visual_description": "A flat circular gear with 24 evenly spaced teeth around the outer rim, a central cylindrical hole (5 mm diameter), and a total thickness of 6 mm. The teeth are straight-sided, pointed at the tips, and have a slight taper toward the root. The gear has a smooth, polished surface finish with sharp, clean edges on the teeth and a perfectly circular outer profile.",
+   "overall_envelope_mm": "50 x 50 x 6",
+   "features": [
+    {
+     "name": "gear_bore",
+     "purpose": "Mounts the gear onto a shaft or axle",
+     "approx_dims_mm": "5.0",
+     "method": "pocket",
+     "count": 1,
+     "standard": "none",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "teeth",
+     "purpose": "Transmits rotational force to mating gear",
+     "approx_dims_mm": "24 teeth, 12 mm pitch diameter, 2.5 mm module",
+     "method": "revolve",
+     "count": 24,
+     "standard": "none",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "root_fillet",
+     "purpose": "Reduces stress concentration at tooth roots",
+     "approx_dims_mm": "0.8 mm radius",
+     "method": "fillet",
+     "count": 1,
+     "standard": "none",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the gear face down to minimize supports and ensure proper tooth alignment.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "enclosure_lid",
+  "prompt": "a 70 mm x 50 mm enclosure lid 3 mm wall with four M3 corner standoffs",
+  "brief": {
+   "object_name": "Electronics Enclosure Lid",
+   "summary": "A thin, rectangular lid for an electronics enclosure with M3 standoff mounting holes.",
+   "visual_description": "A flat rectangular lid measuring 70mm x 50mm x 3mm thick, with four evenly spaced M3 threaded standoffs at each corner. The lid has a clean, flat silhouette with no curves or chamfers, and the standoff bosses are slightly raised cylindrical protrusions that are flush with the lid surface when mounted. The edges are sharp-angled with no fillets.",
+   "overall_envelope_mm": "70 x 50 x 3",
+   "features": [
+    {
+     "name": "lid_base",
+     "purpose": "Main flat surface of the enclosure lid",
+     "approx_dims_mm": "70 x 50 x 3",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "standoff_1",
+     "purpose": "Mounting hole for corner standoff",
+     "approx_dims_mm": "3 mm diameter threaded bore",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M3 threaded hole requirement"
+    },
+    {
+     "name": "standoff_2",
+     "purpose": "Mounting hole for corner standoff",
+     "approx_dims_mm": "3 mm diameter threaded bore",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M3 threaded hole requirement"
+    },
+    {
+     "name": "standoff_3",
+     "purpose": "Mounting hole for corner standoff",
+     "approx_dims_mm": "3 mm diameter threaded bore",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M3 threaded hole requirement"
+    },
+    {
+     "name": "standoff_4",
+     "purpose": "Mounting hole for corner standoff",
+     "approx_dims_mm": "3 mm diameter threaded bore",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M3 threaded hole requirement"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the lid surface facing down to minimize supports and ensure flatness.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "cable_clip",
+  "prompt": "a snap cable clip for an 8 mm cable, screwed down with one M3 screw",
+  "brief": {
+   "object_name": "M3 Screw-On Cable Clip",
+   "summary": "A thin, curved cable clip with a single M3 screw mount that holds an 8 mm diameter cable.",
+   "visual_description": "A thin, curved metal clip with a rounded U-shape that wraps around an 8 mm cable. The clip has a flat mounting surface on one side where an M3 screw is screwed in. The opposite end tapers to a sharp point for easy insertion into tight spaces. The overall profile is smooth and slightly tapered from the mounting end to the cable entry end, with a thin wall thickness of about 1.5 mm.",
+   "overall_envelope_mm": "60 x 20 x 15",
+   "features": [
+    {
+     "name": "cable_retention_slot",
+     "purpose": "Holds the 8 mm diameter cable in place by wrapping around it",
+     "approx_dims_mm": "8.0 x 12.0 x 1.5",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "cable_diameter"
+    },
+    {
+     "name": "mounting_screw_hole",
+     "purpose": "Mounts the clip to a surface using an M3 screw",
+     "approx_dims_mm": "3.0 x 15.0",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "screw_size"
+    },
+    {
+     "name": "cable_entry_taper",
+     "purpose": "Allows easy insertion of the cable into the clip",
+     "approx_dims_mm": "1.5 x 10.0",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "smooth_transition"
+    },
+    {
+     "name": "clip_wall_thickness",
+     "purpose": "Provides structural integrity while maintaining thin profile",
+     "approx_dims_mm": "1.5 x 60.0",
+     "method": "shell",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "printable_minimum"
+    }
+   ],
+   "min_wall_mm": 1.5,
+   "material": "PLA",
+   "print_orientation_note": "The flat mounting surface should face down to minimize supports and ensure good adhesion during printing.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "standoff",
+  "prompt": "an M3 standoff 20 mm tall, threaded both ends",
+  "brief": {
+   "object_name": "M3 Standoff",
+   "summary": "A threaded rod standoff with M3 threads on both ends, 20mm in height.",
+   "visual_description": "A cylindrical rod with two opposing threaded sections, each ending in a flat head. The body is smooth and cylindrical with a consistent diameter of 6mm, transitioning into tapered threaded sections at both ends. The threaded portions are clearly visible as helical grooves extending about 8mm from each end, with the overall length being 20mm.",
+   "overall_envelope_mm": "20 x 6 x 6",
+   "features": [
+    {
+     "name": "body",
+     "purpose": "Main structural support between threaded ends",
+     "approx_dims_mm": "20 x 6 x 6",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "threaded_end_1",
+     "purpose": "First threaded end for mounting to PCB or plate",
+     "approx_dims_mm": "8 x 6",
+     "method": "revolve",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M3 thread standard"
+    },
+    {
+     "name": "threaded_end_2",
+     "purpose": "Second threaded end for mounting to PCB or plate",
+     "approx_dims_mm": "8 x 6",
+     "method": "revolve",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M3 thread standard"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with either threaded end down to minimize support structures needed for the internal threads.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "hinge_leaf",
+  "prompt": "a hinge leaf with three knuckles for a 4 mm pin, 30 mm wide",
+  "brief": {
+   "object_name": "Hinge Leaf with Three Knuckles",
+   "summary": "A hinge leaf with three knuckles designed to accommodate a 4 mm pin, 30 mm wide.",
+   "visual_description": "A flat, rectangular plate measuring 30 mm wide and approximately 25 mm tall, with three curved knuckle sections extending outward from the center. Each knuckle is a semi-circular arc with a 4 mm diameter, evenly spaced along the length of the leaf. The knuckles are positioned symmetrically around the central axis, creating a hinge-like structure that allows for rotational movement. The edges of the leaf are straight and parallel, while the knuckles are smoothly curved and rounded.",
+   "overall_envelope_mm": "30 x 25 x 4",
+   "features": [
+    {
+     "name": "Pin bore",
+     "purpose": "To accept a 4 mm diameter pin that allows rotation of the hinge leaf",
+     "approx_dims_mm": "4",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Knuckle 1",
+     "purpose": "First knuckle section for pin attachment",
+     "approx_dims_mm": "4",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Knuckle 2",
+     "purpose": "Second knuckle section for pin attachment",
+     "approx_dims_mm": "4",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Knuckle 3",
+     "purpose": "Third knuckle section for pin attachment",
+     "approx_dims_mm": "4",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat face of the leaf should be printed downward to minimize supports and ensure structural integrity.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "adapter_plate",
+  "prompt": "an adapter plate from a NEMA-17 face to four M5 holes on a 50 mm square",
+  "brief": {
+   "object_name": "NEMA-17 to M5 Mounting Adapter Plate",
+   "summary": "A flat mounting plate that converts a NEMA-17 stepper motor face to four M5 bolt holes arranged in a 50mm square pattern.",
+   "visual_description": "A rectangular plate measuring approximately 65mm x 65mm with a central circular cutout matching the NEMA-17 motor face diameter of 42mm. Four evenly spaced rectangular mounting holes are positioned at the corners of a 50mm square, each hole 8mm in width and 10mm in height (M5 clearance hole dimensions). The plate has a flat top surface with a slight chamfer on all edges for safety. The central motor face cutout is perfectly centered with a smooth, clean circular edge.",
+   "overall_envelope_mm": "65 x 65 x 4",
+   "features": [
+    {
+     "name": "motor_face_cutout",
+     "purpose": "Provides the mounting interface for a standard NEMA-17 stepper motor face",
+     "approx_dims_mm": "42mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "NEMA-17 standard motor face size"
+    },
+    {
+     "name": "mounting_holes",
+     "purpose": "Secure the adapter plate to a mounting surface using M5 bolts",
+     "approx_dims_mm": "8mm x 10mm (rectangular clearance holes)",
+     "method": "pocket",
+     "count": 4,
+     "standard": "M5",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M5 bolt standard with typical clearance hole dimensions"
+    },
+    {
+     "name": "corner_positions",
+     "purpose": "Define the precise mounting hole locations in a square pattern",
+     "approx_dims_mm": "50mm square spacing",
+     "method": "pocket",
+     "count": 4,
+     "standard": "M5",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "50mm square mounting pattern requirement"
+    },
+    {
+     "name": "edge_chamfer",
+     "purpose": "Provide safe edges and reduce stress concentration",
+     "approx_dims_mm": "1mm chamfer on all edges",
+     "method": "fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "standard mechanical design practice for safety"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat face with motor cutout should be printed facing down to minimize supports and ensure good surface finish.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "bottle_cap",
+  "prompt": "a threaded bottle cap, 30 mm diameter, M28x2 thread, knurled grip",
+  "brief": {
+   "object_name": "Threaded Bottle Cap",
+   "summary": "A threaded bottle cap with a knurled grip surface, designed to seal containers with an M28x2 thread.",
+   "visual_description": "A circular cap with a 30 mm diameter body, featuring a knurled texture pattern on its outer surface. The cap has a smooth, slightly domed top that tapers down to a threaded rim. The knurling creates a series of small, angled ridges forming a diamond pattern across the outer surface. The thread is visible as a continuous helical groove around the inner rim. The overall shape is a flat disk with a raised center and a smooth transition to the threaded edge.",
+   "overall_envelope_mm": "30 x 30 x 8",
+   "features": [
+    {
+     "name": "outer_diameter",
+     "purpose": "Provides the sealing surface and defines the cap's size for fitting into containers",
+     "approx_dims_mm": "30",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard bottle cap reference"
+    },
+    {
+     "name": "knurled_surface",
+     "purpose": "Provides grip for hand tightening and prevents slippage during opening/closing",
+     "approx_dims_mm": "30 x 8",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "hand grip ergonomics"
+    },
+    {
+     "name": "threaded_rim",
+     "purpose": "Creates a secure seal with the container's neck thread",
+     "approx_dims_mm": "28",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M28x2 thread specification"
+    },
+    {
+     "name": "thread_profile",
+     "purpose": "Defines the thread geometry for proper mating with container threads",
+     "approx_dims_mm": "28 x 2",
+     "method": "sweep",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M28x2 thread standard"
+    },
+    {
+     "name": "center_domed_top",
+     "purpose": "Provides structural integrity and a smooth sealing surface",
+     "approx_dims_mm": "28 x 4",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "standard cap design proportions"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat bottom face should be printed down to minimize supports and ensure good adhesion. The knurled surface should face up for optimal print quality.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "herringbone_gear",
+  "prompt": "a herringbone gear, module 1.5, 30 teeth, 8 mm bore with a keyway",
+  "brief": {
+   "object_name": "Herringbone Gear",
+   "summary": "A herringbone gear with 30 teeth, module 1.5, 8 mm bore, and a keyway for shaft attachment.",
+   "visual_description": "A cylindrical gear with a central 8 mm diameter hole, featuring a distinctive herringbone tooth pattern that forms a V-shape (angled teeth pointing in opposite directions) across the gear face. The gear has a smooth, flat outer rim with evenly spaced teeth that taper slightly toward the root. The teeth are angular and sharp at the tips, with a gradual transition to the root circle. The gear face is flat and parallel, with a slight chamfer on the edges. The keyway is a rectangular groove cut into the bore, running axially along the center of the hole.",
+   "overall_envelope_mm": "30 x 30 x 8 mm",
+   "features": [
+    {
+     "name": "Bore",
+     "purpose": "To mount the gear onto a shaft",
+     "approx_dims_mm": "8.0",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Keyway",
+     "purpose": "To secure the gear to a shaft with a key",
+     "approx_dims_mm": "2.0 x 1.0 x 8.0",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "keyway width scaled from standard key size for M8 shaft"
+    },
+    {
+     "name": "Teeth",
+     "purpose": "To transmit rotational motion to mating gear",
+     "approx_dims_mm": "1.5 x 1.2 x 1.0",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "module 1.5 standard for gear design"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the gear face down to minimize supports and ensure good surface finish on the teeth.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "snapfit_base",
+  "prompt": "a snap-fit enclosure base, 60 x 40 x 25 mm, four internal M3 screw bosses",
+  "brief": {
+   "object_name": "Snap-Fit Enclosure Base",
+   "summary": "A rectangular plastic enclosure base with snap-fit walls and internal M3 screw bosses for mounting electronics.",
+   "visual_description": "A flat rectangular base plate measuring 60mm x 40mm x 25mm thick, with four internal screw bosses arranged in a square pattern. The base has a thin wall profile with rounded corners, featuring a series of interlocking snap-fit tabs along the edges that create a secure closure when mating with a matching lid. The surface is smooth with no visible external fasteners or protrusions.",
+   "overall_envelope_mm": "60 x 40 x 25",
+   "features": [
+    {
+     "name": "snap_fit_tabs",
+     "purpose": "Provides secure mating with a matching lid through interlocking mechanical engagement",
+     "approx_dims_mm": "1.5mm thick x 3mm wide x 8mm long",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "internal_m3_screw_bosses",
+     "purpose": "Mounts internal electronics or components with M3 screws",
+     "approx_dims_mm": "6mm diameter x 8mm height",
+     "method": "revolve",
+     "count": 4,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "base_plate",
+     "purpose": "Main structural support for internal components",
+     "approx_dims_mm": "60mm x 40mm x 25mm",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "proportion_rule"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the base face down to minimize supports and ensure flat surface for mating with lid.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "vbelt_pulley",
+  "prompt": "a V-belt pulley, 50 mm OD, 10 mm bore, one M4 set screw",
+  "brief": {
+   "object_name": "V-belt Pulley",
+   "summary": "A cylindrical pulley with a V-groove for belt alignment, mounted on a shaft with a set screw.",
+   "visual_description": "A round, flat disc with a central hole and a single V-shaped groove cut into its surface. The outer rim is smooth and cylindrical, while the groove forms a shallow 'V' that runs around the circumference. The pulley has a flat face on both sides, with a slight chamfer on the edges where the groove meets the rim. The set screw hole is a small countersunk recess on one side of the pulley.",
+   "overall_envelope_mm": "50 x 50 x 10",
+   "features": [
+    {
+     "name": "pulley_body",
+     "purpose": "Main structural component that rotates around the shaft",
+     "approx_dims_mm": "50 OD x 10 thickness",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "shaft_bore",
+     "purpose": "Mounts onto a shaft",
+     "approx_dims_mm": "10 bore diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "v_groove",
+     "purpose": "Guides the V-belt to prevent slippage",
+     "approx_dims_mm": "2.5mm depth x 3mm width",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "set_screw_hole",
+     "purpose": "Secures the pulley to the shaft",
+     "approx_dims_mm": "4mm diameter, 6mm deep",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4 set-screw",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the flat face down to minimize supports and ensure even surface finish.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "pipe_flange",
+  "prompt": "a pipe flange, 60 mm OD, four M6 bolt holes on a 45 mm circle, 25 mm bore",
+  "brief": {
+   "object_name": "Pipe Flange",
+   "summary": "A flat circular metal plate with a central hole and four evenly spaced bolt holes arranged in a square pattern.",
+   "visual_description": "A thin, flat circular disk with a central cylindrical bore that is 25 mm in diameter. Four M6 threaded bolt holes are evenly spaced around a circle of 45 mm diameter, forming a square pattern. The flange has a smooth, flat surface on both sides with no visible curves or tapers except for the bolt hole chamfers and the central bore's cylindrical shape.",
+   "overall_envelope_mm": "60 x 60 x 5",
+   "features": [
+    {
+     "name": "central_bore",
+     "purpose": "Allows a pipe to pass through the flange",
+     "approx_dims_mm": "25",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "bolt_hole_1",
+     "purpose": "Mounts the flange to another component using an M6 bolt",
+     "approx_dims_mm": "6",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M6",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "bolt_hole_2",
+     "purpose": "Mounts the flange to another component using an M6 bolt",
+     "approx_dims_mm": "6",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M6",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "bolt_hole_3",
+     "purpose": "Mounts the flange to another component using an M6 bolt",
+     "approx_dims_mm": "6",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M6",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "bolt_hole_4",
+     "purpose": "Mounts the flange to another component using an M6 bolt",
+     "approx_dims_mm": "6",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M6",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat face with the central bore should be printed facing down to minimize supports and ensure good surface finish.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "strain_relief",
+  "prompt": "a cable strain relief for an 8 mm cable, screw-mounted with two M3 holes",
+  "brief": {
+   "object_name": "Cable Strain Relief with M3 Mounting",
+   "summary": "A plastic strain relief device for 8mm cables, mounted with two M3 screws.",
+   "visual_description": "A rectangular block with a central cylindrical cable opening that tapers slightly toward the rear. Two small rectangular mounting holes are positioned symmetrically near the front edges, each with a countersunk recess. The body has a smooth, slightly tapered exterior with a flat bottom surface and a rounded top edge. The cable entry is a smooth, circular bore with a 8mm diameter, transitioning into a wider internal chamber that tapers toward the rear. The mounting holes are 3mm diameter with 6mm countersink depth.",
+   "overall_envelope_mm": "50 x 20 x 15",
+   "features": [
+    {
+     "name": "cable bore",
+     "purpose": "Provides passage for 8mm cable",
+     "approx_dims_mm": "8.0",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "mounting hole left",
+     "purpose": "Mounts to surface with M3 screw",
+     "approx_dims_mm": "3.0",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "mounting hole right",
+     "purpose": "Mounts to surface with M3 screw",
+     "approx_dims_mm": "3.0",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "countersink left",
+     "purpose": "Allows M3 screw head to sit flush",
+     "approx_dims_mm": "6.0 depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "countersink right",
+     "purpose": "Allows M3 screw head to sit flush",
+     "approx_dims_mm": "6.0 depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the flat bottom face down to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "spacer_stack",
+  "prompt": "a spacer, 10 mm ID, 20 mm OD, 15 mm tall, chamfered ends",
+  "brief": {
+   "object_name": "Circular Spacer",
+   "summary": "A cylindrical spacer with a central hole, chamfered ends, and specific dimensional constraints.",
+   "visual_description": "A solid cylinder with a circular through-hole down its center, 15 mm tall, 20 mm outer diameter, and 10 mm inner diameter. The top and bottom faces each have a 45-degree chamfer that tapers the outer edges inward, creating a smooth beveled transition from the full diameter to the hole's edge. The surface is flat and smooth with no ribs or texture.",
+   "overall_envelope_mm": "20 x 20 x 15 mm",
+   "features": [
+    {
+     "name": "central_hole",
+     "purpose": "Provides clearance for a shaft or fastener passing through the spacer",
+     "approx_dims_mm": "10 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "top_chamfer",
+     "purpose": "Provides smooth edge transition and prevents stress concentration at the top face",
+     "approx_dims_mm": "2 mm chamfer depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "chamfer depth derived from typical manufacturing practice for similar spacers"
+    },
+    {
+     "name": "bottom_chamfer",
+     "purpose": "Provides smooth edge transition and prevents stress concentration at the bottom face",
+     "approx_dims_mm": "2 mm chamfer depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "chamfer depth derived from typical manufacturing practice for similar spacers"
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the flat faces (top and bottom) down to minimize supports and ensure even layer adhesion.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "servo_horn",
+  "prompt": "a servo horn adapter from a 25-tooth spline to a 4 mm D-shaft, two arms",
+  "brief": {
+   "object_name": "Servo Horn Adapter with 25-Tooth Spline to 4mm D-Shaft",
+   "summary": "A two-armed servo horn adapter that mates a 25-tooth spline on one end to a 4mm D-shaped shaft on the other.",
+   "visual_description": "Two symmetrical arms extend outward from a central spline hub, each arm featuring a flat D-shaped slot cut into its outer face. The spline hub is circular with 25 evenly spaced teeth around its perimeter, and the arms are tapered slightly toward their shaft ends. The overall shape is angular and robust, with sharp transitions between the spline hub and the arms.",
+   "overall_envelope_mm": "80 x 40 x 15",
+   "features": [
+    {
+     "name": "spline_hub",
+     "purpose": "Provides mating interface for 25-tooth spline shaft",
+     "approx_dims_mm": "30 dia",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard servo horn spline diameter"
+    },
+    {
+     "name": "spline_teeth",
+     "purpose": "Engages with 25-tooth spline shaft",
+     "approx_dims_mm": "30 dia, 25 teeth",
+     "method": "pocket",
+     "count": 25,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "25-tooth spline specification"
+    },
+    {
+     "name": "arm_1",
+     "purpose": "Connects spline hub to D-shaft",
+     "approx_dims_mm": "30 x 10 x 4",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "visual proportion"
+    },
+    {
+     "name": "arm_2",
+     "purpose": "Connects spline hub to D-shaft",
+     "approx_dims_mm": "30 x 10 x 4",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "visual proportion"
+    },
+    {
+     "name": "d_shaft_slot_1",
+     "purpose": "Mates to 4mm D-shaped shaft",
+     "approx_dims_mm": "4 x 10 x 2",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "4mm D-shaft specification"
+    },
+    {
+     "name": "d_shaft_slot_2",
+     "purpose": "Mates to 4mm D-shaped shaft",
+     "approx_dims_mm": "4 x 10 x 2",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "4mm D-shaft specification"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with spline hub face down to minimize supports and ensure structural integrity of the arms.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "fan_duct",
+  "prompt": "a 40 mm fan cooling duct that necks down to a 20 mm round outlet with two tabs",
+  "brief": {
+   "object_name": "40mm to 20mm Fan Cooling Duct with Two Tabs",
+   "summary": "A conical cooling duct that tapers from 40mm diameter to 20mm round outlet with two tabs for mounting.",
+   "visual_description": "A smooth, tapered plastic duct that transitions from a large circular base (40mm diameter) to a small round outlet (20mm diameter). The body has a conical taper with a smooth transition curve. Two flat rectangular tabs extend perpendicularly from the side of the duct near the smaller end, positioned 180 degrees apart. The overall shape is elongated and streamlined with a thin wall profile.",
+   "overall_envelope_mm": "45 x 25 x 25",
+   "features": [
+    {
+     "name": "large inlet circle",
+     "purpose": "accepts 40mm fan outlet",
+     "approx_dims_mm": "40",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "small outlet circle",
+     "purpose": "connects to 20mm cooling tube",
+     "approx_dims_mm": "20",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "conical transition",
+     "purpose": "tapers from large inlet to small outlet",
+     "approx_dims_mm": "45",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "mounting tab 1",
+     "purpose": "secures duct to mounting surface",
+     "approx_dims_mm": "8 x 20 x 3",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "40mm fan duct reference"
+    },
+    {
+     "name": "mounting tab 2",
+     "purpose": "secures duct to mounting surface",
+     "approx_dims_mm": "8 x 20 x 3",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "40mm fan duct reference"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "print with the larger end down to minimize supports and ensure stable base during printing.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "tslot_nut",
+  "prompt": "a drop-in T-slot nut for 2020 aluminium extrusion, M5 thread",
+  "brief": {
+   "object_name": "T-Slot Nut for 2020 Extrusion with M5 Thread",
+   "summary": "A precision-machined T-slot nut designed to fit into the T-slots of 2020 aluminium extrusion profiles, featuring an M5 threaded hole and a secure locking mechanism.",
+   "visual_description": "A flat, rectangular body with a distinctive T-shaped slot cut into one face, allowing it to slide into the T-slot of aluminium extrusion. The body has a rounded corner profile, with a central threaded hole (M5) that is slightly offset from the centerline. The slot is wide enough to accommodate the 2020 profile's width (~10mm) and deep enough to grip the extrusion securely. The nut has a thin, flat profile with a slight taper on the sides for easy insertion into the T-slot.",
+   "overall_envelope_mm": "35 x 15 x 8",
+   "features": [
+    {
+     "name": "T-slot opening",
+     "purpose": "Allows the nut to slide into and lock within the T-slot of 2020 aluminium extrusion profiles",
+     "approx_dims_mm": "10 x 6 x 8",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "2020 extrusion T-slot dimensions"
+    },
+    {
+     "name": "M5 threaded hole",
+     "purpose": "Provides secure attachment to hardware such as bolts or screws",
+     "approx_dims_mm": "5.0 x 8.0",
+     "method": "threaded pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M5 thread standard"
+    },
+    {
+     "name": "Outer profile fillets",
+     "purpose": "Reduce stress concentration and provide smooth edges for easier handling",
+     "approx_dims_mm": "1.0",
+     "method": "fillet",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "standard mechanical design practice"
+    },
+    {
+     "name": "Insertion taper",
+     "purpose": "Facilitates easy insertion into the T-slot by reducing the width at the top edge",
+     "approx_dims_mm": "3.0 x 8.0",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "T-slot nut insertion requirements"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat face with the T-slot should be oriented downward to minimize support structures needed during printing.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "vented_panel",
+  "prompt": "a 80 x 60 mm vented panel, 3 mm thick, hex ventilation pattern, four corner holes",
+  "brief": {
+   "object_name": "Ventilated Panel with Hexagonal Vent Pattern",
+   "summary": "A thin metal panel with a hexagonal ventilation pattern and corner mounting holes.",
+   "visual_description": "A rectangular panel measuring 80mm x 60mm x 3mm thick, with a uniform hexagonal grid pattern of ventilation holes across its surface. The panel has four corner mounting holes arranged in a square pattern. The surface is flat with evenly spaced hexagonal cutouts that create a vented appearance. The edges are sharp and clean with no fillets or chamfers. The panel appears as a thin, flat sheet with a regular geometric pattern of holes.",
+   "overall_envelope_mm": "80 x 60 x 3",
+   "features": [
+    {
+     "name": "hex_ventilation_pattern",
+     "purpose": "Provides airflow ventilation through the panel",
+     "approx_dims_mm": "4mm diameter hexagonal holes spaced 12mm apart in a grid pattern",
+     "method": "pocket",
+     "count": 80,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard hex vent panel reference"
+    },
+    {
+     "name": "corner_mounting_hole",
+     "purpose": "Provides mounting points for securing the panel to a frame or structure",
+     "approx_dims_mm": "3.5mm diameter hole",
+     "method": "pocket",
+     "count": 4,
+     "standard": "M3",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "panel mounting hole spacing"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat face with ventilation pattern should be printed facing up to minimize supports and maintain the vented appearance.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "desk_grommet",
+  "prompt": "a two-part desk grommet for a 60 mm hole with a removable cover flap",
+  "brief": {
+   "object_name": "Two-Part Desk Grommet with Removable Cover Flap",
+   "summary": "A dual-part grommet system designed to fit a 60 mm diameter hole in desk surfaces, featuring a fixed outer ring and a removable cover flap for access to the hole.",
+   "visual_description": "The grommet consists of two distinct parts: a large circular outer ring (60 mm OD) with a smooth, flat top surface and a slightly domed bottom that sits flush against the desk surface; and a smaller circular cover flap (52 mm OD) that pivots on a thin hinge at the edge of the outer ring. The outer ring has a vertical ribbed texture along its inner edge for grip, and the cover flap features a small tab or lip that aligns with a recess in the outer ring when closed. Both parts are made from a single material color, with clean, precise edges and no visible fasteners.",
+   "overall_envelope_mm": "60 x 60 x 15",
+   "features": [
+    {
+     "name": "outer_ring_outer_diameter",
+     "purpose": "Provides the mounting interface for the grommet in a 60 mm hole",
+     "approx_dims_mm": "60",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard_desk_grommet_size"
+    },
+    {
+     "name": "outer_ring_inner_diameter",
+     "purpose": "Creates the opening for the 60 mm hole",
+     "approx_dims_mm": "52",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "hole_size"
+    },
+    {
+     "name": "outer_ring_thickness",
+     "purpose": "Provides structural support and ensures flush mounting",
+     "approx_dims_mm": "10",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "structural_support"
+    },
+    {
+     "name": "cover_flap_outer_diameter",
+     "purpose": "Defines the size of the removable cover flap that fits over the outer ring",
+     "approx_dims_mm": "52",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "outer_ring_inner_diameter"
+    },
+    {
+     "name": "cover_flap_thickness",
+     "purpose": "Provides structural integrity to the flap while allowing easy removal",
+     "approx_dims_mm": "3",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "removable_access"
+    },
+    {
+     "name": "hinge_slot",
+     "purpose": "Allows the cover flap to pivot freely on the outer ring",
+     "approx_dims_mm": "2 x 10",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "pivot_mechanism"
+    },
+    {
+     "name": "alignment_recess",
+     "purpose": "Provides a recess for the cover flap tab to align and lock when closed",
+     "approx_dims_mm": "5 x 3",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "secure_closure"
+    },
+    {
+     "name": "inner_rib_texture",
+     "purpose": "Provides grip for installation and removal of the grommet",
+     "approx_dims_mm": "4 x 1.5",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "grip_texture_convention"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print the outer ring with its flat top surface facing down to minimize supports and ensure even stress distribution.",
+   "target": "functional"
+  }
+ }
+]

@@ -1,0 +1,44 @@
+name: Core tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      FORGE_FORBID_API_SPEND: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          version: "0.12.5"
+          python-version: "3.11"
+          enable-cache: true
+      - name: Native CAD libraries
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libgl1 libglu1-mesa libxrender1 libxext6 libsm6 libgomp1
+      - name: Locked development dependencies
+        run: uv sync --locked --all-extras
+      - name: Lint
+        run: uv run --locked --all-extras ruff check .
+      - name: Format
+        run: uv run --locked --all-extras ruff format --check .
+      - name: Types
+        run: uv run --locked --all-extras mypy src/forge_mind
+      - name: Offline suite
+        run: uv run --locked --all-extras pytest -n 2 --dist loadfile --tb=short

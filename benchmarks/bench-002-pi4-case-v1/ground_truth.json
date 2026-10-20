@@ -1,0 +1,73 @@
+{
+  "name": "bench-002-pi4-case-v1",
+  "summary": "Raspberry Pi 4 Model B open-top case: floored tray, 4 M2.5 standoffs on a 58x49 rectangle, perimeter walls, port cutouts, ventilation, 2mm walls, PLA, no supports.",
+  "status": "FOUNDATION BUILT — the pi4_mount + pi4_ports validator checkers exist and a hand-authored open-tray reference (tests/fixtures/handwritten/pi4_case_good.partdsl.json) compiles and passes all required_checks. Still pending: the LLM-facing Pi4CaseInterpreter (ADR-0005).",
+  "dimensions": [
+    {
+      "feature": "board_footprint",
+      "spec": "Raspberry Pi 4 Model B PCB",
+      "value_mm": [85.0, 56.0],
+      "tolerance_mm": 0.2
+    },
+    {
+      "feature": "mounting_hole_rectangle",
+      "spec": "4x M2.5 holes on a 58x49 rectangle, 3.5mm inset from board edges",
+      "value_mm": [58.0, 49.0],
+      "tolerance_mm": 0.2
+    },
+    {
+      "feature": "screw_clearance",
+      "spec": "M2.5 clearance hole in each standoff",
+      "value_mm": 2.7,
+      "tolerance_mm": 0.2
+    },
+    {
+      "feature": "standoff_height",
+      "spec": "board sits above the floor to clear underside solder",
+      "value_mm": 4.0,
+      "tolerance_mm": 0.5
+    },
+    {
+      "feature": "board_clearance",
+      "spec": "gap between board edge and inner wall",
+      "value_mm": 0.5,
+      "tolerance_mm": 0.5,
+      "comparator": ">="
+    },
+    {
+      "feature": "wall_thickness",
+      "spec": "minimum wall/floor anywhere",
+      "value_mm": 2.0,
+      "tolerance_mm": 0.0,
+      "comparator": ">="
+    },
+    {
+      "feature": "max_overhang_angle",
+      "spec": "from vertical, printable floor-down without support",
+      "value_deg": 45.0,
+      "comparator": "<="
+    },
+    {
+      "feature": "bounding_box",
+      "spec": "fits within",
+      "value_mm": [95.0, 70.0, 30.0],
+      "comparator": "<="
+    }
+  ],
+  "required_interfaces": [
+    {
+      "type": "pi4_mount",
+      "must_present": "4x M2.5 clearance holes on a 58x49 rectangle, concentric in standoffs"
+    },
+    {
+      "type": "pi4_ports",
+      "must_present": "wall cutouts clearing the USB/Ethernet long edge and the USB-C/micro-HDMI short edge"
+    }
+  ],
+  "hard_constraints": [
+    "mesh manifold, watertight, single shell (the tray)",
+    "printable floor-down on FDM without supports (overhangs <= 45 deg)",
+    "board fits the cavity with >= board_clearance on every side",
+    "standoff screw holes keep a >= min_wall land to the standoff outer edge"
+  ]
+}

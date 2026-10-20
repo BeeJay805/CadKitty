@@ -1,0 +1,138 @@
+{
+  "version": "interaction_v0",
+  "grade": "ITERATION -- deliberately NOT frozen (frontier_v2 freezes only after the founder-deferred adversarial audit runs; this corpus exists to measure the staged-construction A/B)",
+  "authored_by": "claude-fable-5 (corpus + rubric author; the run arm is opus)",
+  "fabrication_mode": "print_3d",
+  "hole_semantics": "penetrations",
+  "bbox_semantics": "sorted",
+  "ab_gate": "PRE-REGISTERED: staged ships iff pass@1 >= monolithic +15pts, OR equal pass@1 with >=30% fewer author LLM calls (declared proxy for tokens on subscription). Kill honored: staged loses -> row written, monolithic stays.",
+  "prompts": [
+    {
+      "id": "dense_junction_box",
+      "class": "enclosure_interaction",
+      "prompt": "Design a single-piece printable electronics junction box body: outer envelope 120 x 90 x 45 mm, walls 2.5 mm, floor 3 mm, open top. Inside: four corner standoffs 8 mm diameter x 8 mm tall each with a 3.4 mm clearance hole through standoff and floor, at the corners of a 100 x 70 mm rectangle; two cable entry holes 16 mm diameter through opposite 90 mm end walls, centered 20 mm above the outer floor; six ventilation slots 30 x 4 mm through the floor between the standoffs; a central boss 12 mm diameter x 6 mm tall with a 5.4 mm clearance hole through boss and floor; and an external mounting flange 10 mm wide x 3 mm thick around the open rim with four 4.4 mm holes at the corners of a 130 x 100 mm rectangle.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [145, 115, 50],
+        "holes": [
+          {"diameter_mm": 3.4, "tol_mm": 0.3, "min_count": 4},
+          {"diameter_mm": 16.0, "tol_mm": 0.5, "min_count": 2},
+          {"diameter_mm": 5.4, "tol_mm": 0.3, "min_count": 1},
+          {"diameter_mm": 4.4, "tol_mm": 0.3, "min_count": 4}
+        ]
+      }
+    },
+    {
+      "id": "dense_motor_plate",
+      "class": "plate_interaction",
+      "prompt": "Design a single-piece printable motor mounting plate: 140 x 100 x 6 mm base; a central 38 mm diameter through-bore; four M4 clearance holes (4.4 mm) on the NEMA17 31 mm square pattern around the bore; four M5 clearance holes (5.4 mm) at the corners of a 120 x 80 mm rectangle; two stiffening ribs 4 mm thick x 12 mm tall running the full 140 mm length along both 100 mm edges; a cable pass-through slot 25 x 8 mm centered 40 mm from the bore center along the long axis; and six 6 mm diameter lightening holes, three per side, on 100 mm bolt-circle arcs between the corner holes.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [150, 110, 20],
+        "holes": [
+          {"diameter_mm": 38.0, "tol_mm": 0.6, "min_count": 1},
+          {"diameter_mm": 4.4, "tol_mm": 0.3, "min_count": 4},
+          {"diameter_mm": 5.4, "tol_mm": 0.3, "min_count": 4},
+          {"diameter_mm": 6.0, "tol_mm": 0.25, "min_count": 6}
+        ]
+      }
+    },
+    {
+      "id": "dense_manifold_block",
+      "class": "block_interaction",
+      "prompt": "Design a single-piece printable pneumatic manifold block: body 100 x 50 x 35 mm; one 10 mm diameter supply bore running the full 100 mm length, centered 12 mm below the top face; four 6 mm diameter outlet bores entering the top face on a single row at 20, 40, 60 and 80 mm along the length, each meeting the supply bore; four M5 clearance mounting holes (5.4 mm) through the 35 mm height at the corners of an 84 x 34 mm rectangle; a 1 mm chamfer on the four vertical body edges; and an identification boss 20 x 10 x 2 mm raised on the front face.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [110, 60, 40],
+        "holes": [
+          {"diameter_mm": 10.0, "tol_mm": 0.4, "min_count": 1},
+          {"diameter_mm": 6.0, "tol_mm": 0.25, "min_count": 4},
+          {"diameter_mm": 5.4, "tol_mm": 0.25, "min_count": 4}
+        ]
+      }
+    },
+    {
+      "id": "dense_gearbox_face",
+      "class": "flange_interaction",
+      "prompt": "Design a single-piece printable gearbox face plate: disc 110 mm diameter x 8 mm thick; central 25 mm diameter bearing bore; a raised concentric bearing boss 40 mm outer diameter x 6 mm tall around the bore; six M4 clearance holes (4.4 mm) on an 88 mm bolt circle; three 8 mm diameter dowel holes on a 60 mm bolt circle; a rectangular sensor window 24 x 10 mm through the plate, its center 30 mm from the disc center; and four stiffening gussets 3 mm thick radiating from the boss to the rim at 45, 135, 225 and 315 degrees.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [120, 120, 20],
+        "holes": [
+          {"diameter_mm": 25.0, "tol_mm": 0.5, "min_count": 1},
+          {"diameter_mm": 4.4, "tol_mm": 0.3, "min_count": 6},
+          {"diameter_mm": 8.0, "tol_mm": 0.3, "min_count": 3}
+        ]
+      }
+    },
+    {
+      "id": "dense_rail_bracket",
+      "class": "bracket_interaction",
+      "prompt": "Design a single-piece printable DIN-rail accessory bracket: an L-shape with a vertical leg 90 x 60 x 5 mm and a horizontal leg 70 x 60 x 5 mm joined along a 60 mm edge with a 4 mm fillet; two triangular gussets 4 mm thick spanning the inner corner at each side; four M4 clearance holes (4.4 mm) in the vertical leg at the corners of a 70 x 40 mm rectangle; two 5.4 mm slots 20 mm long in the horizontal leg running parallel to its 70 mm length, centered 15 mm from each side edge; a 10 mm diameter wire pass hole in the vertical leg centered 25 mm from the top edge; and a 2 mm deep x 8 mm wide label recess across the vertical leg's outer face.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [100, 75, 70],
+        "holes": [
+          {"diameter_mm": 4.4, "tol_mm": 0.3, "min_count": 4},
+          {"diameter_mm": 10.0, "tol_mm": 0.4, "min_count": 1}
+        ]
+      }
+    },
+    {
+      "id": "dense_pump_manifold_flange",
+      "class": "flange_interaction",
+      "prompt": "Design a single-piece printable pump manifold flange: a base flange 95 mm diameter x 10 mm thick with a central 30 mm diameter through-bore; a raised neck 48 mm outer diameter x 25 mm tall concentric with the bore; six M5 clearance holes (5.4 mm) on a 75 mm bolt circle; two 8 mm diameter gauge ports entering the neck wall radially at 90 and 270 degrees, 15 mm above the flange top face, meeting the central bore; a keyway slot 6 mm wide x 3 mm deep running the full height of the bore wall; and four 20 mm long x 4 mm thick stiffening webs from the neck to the flange at 0, 90, 180 and 270 degrees.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [105, 105, 40],
+        "holes": [
+          {"diameter_mm": 30.0, "tol_mm": 0.6, "min_count": 1},
+          {"diameter_mm": 5.4, "tol_mm": 0.3, "min_count": 6},
+          {"diameter_mm": 8.0, "tol_mm": 0.35, "min_count": 2}
+        ]
+      }
+    },
+    {
+      "id": "dense_camera_cage_side",
+      "class": "panel_interaction",
+      "prompt": "Design a single-piece printable camera cage side panel: plate 130 x 85 x 6 mm with 8 mm corner radii; a 3x5 grid of 6 mm diameter accessory holes on 20 mm spacing centered in the plate; two 1/4-inch clearance holes (6.6 mm) on the horizontal centerline 100 mm apart; a cold-shoe rail boss 40 x 16 x 5 mm raised on the top edge face; a 30 x 20 mm rectangular strap slot with 6 mm corner radii near the left edge; and a 15 mm wide x 3 mm deep finger groove recess along the full right edge.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [140, 95, 15],
+        "holes": [
+          {"diameter_mm": 6.0, "tol_mm": 0.25, "min_count": 15},
+          {"diameter_mm": 6.6, "tol_mm": 0.25, "min_count": 2}
+        ]
+      }
+    },
+    {
+      "id": "dense_hinge_leaf",
+      "class": "mechanism_adjacent",
+      "prompt": "Design a single-piece printable heavy hinge leaf: plate 100 x 60 x 6 mm; three knuckle barrels 14 mm outer diameter x 18 mm long along one 100 mm edge with an 8 mm diameter pin bore running through all three coaxially; six countersunk M4 clearance holes (4.4 mm) in two columns of three, columns 20 and 45 mm from the barrel edge, rows on 20 mm spacing; a 3 mm x 45 degree chamfer along the free 100 mm edge; and a 25 x 12 mm rectangular lightening cutout centered between the hole columns.",
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [110, 80, 25],
+        "holes": [
+          {"diameter_mm": 8.0, "tol_mm": 0.35, "min_count": 1},
+          {"diameter_mm": 4.4, "tol_mm": 0.3, "min_count": 6}
+        ]
+      }
+    }
+  ]
+}

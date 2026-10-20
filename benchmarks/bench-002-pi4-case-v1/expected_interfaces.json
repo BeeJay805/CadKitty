@@ -1,0 +1,35 @@
+{
+  "note": "Target interfaces for bench-002. The pi4_mount and pi4_ports checkers do NOT exist yet; they are specified here and in ADR-0005 as the implementation target. Mirrors the role bench-001 folds into ground_truth.required_interfaces.",
+  "interfaces": [
+    {
+      "name": "pi4_mount",
+      "type": "pi4_mount",
+      "facing": "+Z",
+      "geometry": {
+        "hole_count": 4,
+        "hole_pattern": "rectangle",
+        "rect_dx_mm": 58.0,
+        "rect_dy_mm": 49.0,
+        "hole_clearance_mm": 2.7,
+        "hole_clearance_tol_mm": 0.3
+      },
+      "checks": [
+        "interfaces.pi4_mount.mount_holes_present",
+        "interfaces.pi4_mount.hole_rectangle_58x49"
+      ]
+    },
+    {
+      "name": "pi4_ports",
+      "type": "pi4_ports",
+      "facing": "side walls",
+      "geometry": {
+        "long_edge_ports": ["usb_a_x2", "usb3_x2", "ethernet_rj45"],
+        "short_edge_ports": ["usb_c_power", "micro_hdmi_x2", "av_jack"]
+      },
+      "checks": [
+        "interfaces.pi4_ports.long_edge_opening",
+        "interfaces.pi4_ports.short_edge_opening"
+      ]
+    }
+  ]
+}

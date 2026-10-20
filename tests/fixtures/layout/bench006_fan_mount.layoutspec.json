@@ -1,0 +1,13 @@
+{
+  "pattern": "adapter_plate",
+  "name": "fan_60mm_2020_adapter_layoutspec",
+  "envelope_mm": { "x": 108.0, "y": 68.0, "z": 8.0 },
+  "material": "PLA",
+  "min_wall_mm": 4.0,
+  "max_overhang_deg": 45.0,
+  "plate_width_mm": 104.0,
+  "plate_depth_mm": 64.0,
+  "motor_center_x_mm": 20.0,
+  "extrusion_center_x_mm": -30.0,
+  "fan_component_id": "fan_60mm"
+}

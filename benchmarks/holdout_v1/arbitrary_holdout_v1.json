@@ -1,0 +1,336 @@
+{
+  "version": "holdout_v1",
+  "generated_by": "scripts/gen_holdout_problems.py (seeded parametric generator; deterministic)",
+  "seed": 1337,
+  "holdout": "HELD-OUT oracle -- never train or tune against this; measure true generalization only.",
+  "paraphrase_rule": "P1 reorders the clauses of the base prompt without changing any number, unit, or component name. P2 swaps phrasing/register without changing any number, unit, or component name. Each variant runs once; a prompt's score is the MINIMUM across its variants.",
+  "prompts": [
+    {
+      "id": "holdout_bracket_00",
+      "class": "bracket",
+      "prompt": "Design a single-piece flat mounting bar bracket: 160 mm long x 35 mm wide x 6 mm thick; 3 M4 clearance holes (4.4 mm) evenly spaced along the centre line; the two end holes 15 mm from each end.",
+      "paraphrases": [
+        "3 M4 clearance holes (4.4 mm) evenly spaced along the centre line; the two end holes 15 mm from each end; 160 mm long x 35 mm wide x 6 mm thick -- design this as a single-piece flat mounting bar bracket.",
+        "Build me a one-body flat mounting bar bracket: 160 mm long x 35 mm wide x 6 mm thick; 3 M4 clearance holes (4.4 mm) equally spaced along the center line; the two end holes 15 mm from each end."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          180,
+          180,
+          180
+        ],
+        "holes": [
+          {
+            "diameter_mm": 4.4,
+            "tol_mm": 0.5,
+            "min_count": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_plate_01",
+      "class": "plate",
+      "prompt": "Model a single-piece rectangular mounting plate: 60 x 50 x 5 mm; four M4 clearance holes (4.4 mm); one hole 12 mm in from each corner.",
+      "paraphrases": [
+        "four M4 clearance holes (4.4 mm); one hole 12 mm in from each corner; 60 x 50 x 5 mm -- design this as a single-piece rectangular mounting plate.",
+        "Build me a one-body rectangular mounting plate: 60 x 50 x 5 mm; four M4 clearance holes (4.4 mm); one hole 12 mm in from each corner."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          80,
+          80,
+          80
+        ],
+        "holes": [
+          {
+            "diameter_mm": 4.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_mount_02",
+      "class": "mount",
+      "prompt": "Design a single-piece motor mount plate: 56 x 56 x 4 mm; a 16 mm central bore; four M3 clearance holes (3.4 mm) in a 36 x 36 mm square pattern centred on the plate.",
+      "paraphrases": [
+        "a 16 mm central bore; four M3 clearance holes (3.4 mm) in a 36 x 36 mm square pattern centred on the plate; 56 x 56 x 4 mm -- design this as a single-piece motor mount plate.",
+        "Build me a one-body motor mount plate: 56 x 56 x 4 mm; a 16 mm central bore; four M3 clearance holes (3.4 mm) in a 36 x 36 mm square pattern centred on the plate."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          76,
+          76,
+          76
+        ],
+        "holes": [
+          {
+            "diameter_mm": 3.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          },
+          {
+            "diameter_mm": 16.0,
+            "tol_mm": 1.0,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_standoff_03",
+      "class": "standoff",
+      "prompt": "Make a single-piece row of 4 PCB standoffs on a common base bar: a base bar 68 mm long x 16 mm wide x 3 mm thick; 4 cylindrical standoffs each 6 mm in diameter and 10 mm tall, spaced 18 mm apart; an M3 through-hole (3.4 mm) down the centre of every standoff.",
+      "paraphrases": [
+        "4 cylindrical standoffs each 6 mm in diameter and 10 mm tall, spaced 18 mm apart; an M3 through-hole (3.4 mm) down the centre of every standoff; a base bar 68 mm long x 16 mm wide x 3 mm thick -- design this as a single-piece row of 4 PCB standoffs on a common base bar.",
+        "Build me a one-body row of 4 PCB standoffs on a common base bar: a base bar 68 mm long x 16 mm wide x 3 mm thick; 4 cylindrical standoffs each 6 mm in diameter and 10 mm tall, spaced 18 mm apart; an M3 through-hole (3.4 mm) down the centre of every standoff."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          88,
+          88,
+          88
+        ],
+        "holes": [
+          {
+            "diameter_mm": 3.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_bracket_04",
+      "class": "bracket",
+      "prompt": "Design a single-piece flat mounting bar bracket: 120 mm long x 25 mm wide x 5 mm thick; 3 M4 clearance holes (4.4 mm) evenly spaced along the centre line; the two end holes 12 mm from each end.",
+      "paraphrases": [
+        "3 M4 clearance holes (4.4 mm) evenly spaced along the centre line; the two end holes 12 mm from each end; 120 mm long x 25 mm wide x 5 mm thick -- design this as a single-piece flat mounting bar bracket.",
+        "Build me a one-body flat mounting bar bracket: 120 mm long x 25 mm wide x 5 mm thick; 3 M4 clearance holes (4.4 mm) equally spaced along the center line; the two end holes 12 mm from each end."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          140,
+          140,
+          140
+        ],
+        "holes": [
+          {
+            "diameter_mm": 4.4,
+            "tol_mm": 0.5,
+            "min_count": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_plate_05",
+      "class": "plate",
+      "prompt": "Model a single-piece rectangular mounting plate: 50 x 50 x 6 mm; four M5 clearance holes (5.4 mm); one hole 12 mm in from each corner.",
+      "paraphrases": [
+        "four M5 clearance holes (5.4 mm); one hole 12 mm in from each corner; 50 x 50 x 6 mm -- design this as a single-piece rectangular mounting plate.",
+        "Build me a one-body rectangular mounting plate: 50 x 50 x 6 mm; four M5 clearance holes (5.4 mm); one hole 12 mm in from each corner."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          70,
+          70,
+          70
+        ],
+        "holes": [
+          {
+            "diameter_mm": 5.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_mount_06",
+      "class": "mount",
+      "prompt": "Design a single-piece motor mount plate: 56 x 56 x 4 mm; a 22 mm central bore; four M3 clearance holes (3.4 mm) in a 44 x 44 mm square pattern centred on the plate.",
+      "paraphrases": [
+        "a 22 mm central bore; four M3 clearance holes (3.4 mm) in a 44 x 44 mm square pattern centred on the plate; 56 x 56 x 4 mm -- design this as a single-piece motor mount plate.",
+        "Build me a one-body motor mount plate: 56 x 56 x 4 mm; a 22 mm central bore; four M3 clearance holes (3.4 mm) in a 44 x 44 mm square pattern centred on the plate."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          76,
+          76,
+          76
+        ],
+        "holes": [
+          {
+            "diameter_mm": 3.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          },
+          {
+            "diameter_mm": 22.0,
+            "tol_mm": 1.0,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_standoff_07",
+      "class": "standoff",
+      "prompt": "Make a single-piece row of 5 PCB standoffs on a common base bar: a base bar 76 mm long x 16 mm wide x 3 mm thick; 5 cylindrical standoffs each 8 mm in diameter and 6 mm tall, spaced 15 mm apart; an M3 through-hole (3.4 mm) down the centre of every standoff.",
+      "paraphrases": [
+        "5 cylindrical standoffs each 8 mm in diameter and 6 mm tall, spaced 15 mm apart; an M3 through-hole (3.4 mm) down the centre of every standoff; a base bar 76 mm long x 16 mm wide x 3 mm thick -- design this as a single-piece row of 5 PCB standoffs on a common base bar.",
+        "Build me a one-body row of 5 PCB standoffs on a common base bar: a base bar 76 mm long x 16 mm wide x 3 mm thick; 5 cylindrical standoffs each 8 mm in diameter and 6 mm tall, spaced 15 mm apart; an M3 through-hole (3.4 mm) down the centre of every standoff."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          96,
+          96,
+          96
+        ],
+        "holes": [
+          {
+            "diameter_mm": 3.4,
+            "tol_mm": 0.5,
+            "min_count": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_bracket_08",
+      "class": "bracket",
+      "prompt": "Design a single-piece flat mounting bar bracket: 160 mm long x 25 mm wide x 6 mm thick; 4 M4 clearance holes (4.4 mm) evenly spaced along the centre line; the two end holes 12 mm from each end.",
+      "paraphrases": [
+        "4 M4 clearance holes (4.4 mm) evenly spaced along the centre line; the two end holes 12 mm from each end; 160 mm long x 25 mm wide x 6 mm thick -- design this as a single-piece flat mounting bar bracket.",
+        "Build me a one-body flat mounting bar bracket: 160 mm long x 25 mm wide x 6 mm thick; 4 M4 clearance holes (4.4 mm) equally spaced along the center line; the two end holes 12 mm from each end."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          180,
+          180,
+          180
+        ],
+        "holes": [
+          {
+            "diameter_mm": 4.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_plate_09",
+      "class": "plate",
+      "prompt": "Model a single-piece rectangular mounting plate: 50 x 40 x 5 mm; four M4 clearance holes (4.4 mm); one hole 10 mm in from each corner.",
+      "paraphrases": [
+        "four M4 clearance holes (4.4 mm); one hole 10 mm in from each corner; 50 x 40 x 5 mm -- design this as a single-piece rectangular mounting plate.",
+        "Build me a one-body rectangular mounting plate: 50 x 40 x 5 mm; four M4 clearance holes (4.4 mm); one hole 10 mm in from each corner."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          70,
+          70,
+          70
+        ],
+        "holes": [
+          {
+            "diameter_mm": 4.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_mount_10",
+      "class": "mount",
+      "prompt": "Design a single-piece motor mount plate: 56 x 56 x 4 mm; a 22 mm central bore; four M3 clearance holes (3.4 mm) in a 40 x 40 mm square pattern centred on the plate.",
+      "paraphrases": [
+        "a 22 mm central bore; four M3 clearance holes (3.4 mm) in a 40 x 40 mm square pattern centred on the plate; 56 x 56 x 4 mm -- design this as a single-piece motor mount plate.",
+        "Build me a one-body motor mount plate: 56 x 56 x 4 mm; a 22 mm central bore; four M3 clearance holes (3.4 mm) in a 40 x 40 mm square pattern centred on the plate."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          76,
+          76,
+          76
+        ],
+        "holes": [
+          {
+            "diameter_mm": 3.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          },
+          {
+            "diameter_mm": 22.0,
+            "tol_mm": 1.0,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "holdout_standoff_11",
+      "class": "standoff",
+      "prompt": "Make a single-piece row of 4 PCB standoffs on a common base bar: a base bar 76 mm long x 14 mm wide x 3 mm thick; 4 cylindrical standoffs each 8 mm in diameter and 8 mm tall, spaced 20 mm apart; an M3 through-hole (3.4 mm) down the centre of every standoff.",
+      "paraphrases": [
+        "4 cylindrical standoffs each 8 mm in diameter and 8 mm tall, spaced 20 mm apart; an M3 through-hole (3.4 mm) down the centre of every standoff; a base bar 76 mm long x 14 mm wide x 3 mm thick -- design this as a single-piece row of 4 PCB standoffs on a common base bar.",
+        "Build me a one-body row of 4 PCB standoffs on a common base bar: a base bar 76 mm long x 14 mm wide x 3 mm thick; 4 cylindrical standoffs each 8 mm in diameter and 8 mm tall, spaced 20 mm apart; an M3 through-hole (3.4 mm) down the centre of every standoff."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          96,
+          96,
+          96
+        ],
+        "holes": [
+          {
+            "diameter_mm": 3.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# holdout_v1 -- HELD-OUT problem oracle, GENERATED (not authored). Do NOT train/tune against it.
+# regenerate byte-identically: uv run python scripts/gen_holdout_problems.py --seed 1337 --out benchmarks/holdout_v1
+# seed: 1337
+e216f59b91aee1ac38705e906b8e0da4a8070df15c33bb4a5697fb5ef7030919  arbitrary_holdout_v1.json
+2d65f629c253c7bd1d40ebd1a471e49aa14ed6f97d737deb1c1776bca15a2977  problems.json

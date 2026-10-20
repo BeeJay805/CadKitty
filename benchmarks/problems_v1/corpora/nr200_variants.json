@@ -1,0 +1,19 @@
+{
+  "note": "CANNED bench fixture for the ambiguous-variant class (P2): two docs whose titles carry distinct variant tokens sharing the entity stem.",
+  "by_query": {
+    "nr200": [
+      {
+        "url": "bench://nr200/spec",
+        "title": "Cooler Master NR200 specifications (bench fixture)",
+        "text": "Cooler Master NR200 layout fixture (canned bench corpus; verify against your physical hardware). The area behind the front panel offers a clearance height of 92 mm for drive mounting. The usable width beside the drive tray is 110 mm.",
+        "fetched_at": "2026-07-06"
+      },
+      {
+        "url": "bench://nr200p/spec",
+        "title": "Cooler Master NR200P specifications (bench fixture)",
+        "text": "Cooler Master NR200P layout fixture (canned bench corpus). The NR200P variant offers a clearance height of 92 mm for drive mounting behind the front panel.",
+        "fetched_at": "2026-07-06"
+      }
+    ]
+  }
+}

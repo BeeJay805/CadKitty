@@ -1,0 +1,11 @@
+{
+  "pattern": "pi4_case",
+  "name": "generic_tray_via_component",
+  "board_component_id": "generic_rect_pcb",
+  "envelope_mm": { "x": 85.0, "y": 65.0, "z": 25.0 },
+  "material": "PLA",
+  "min_wall_mm": 2.0,
+  "clearance_mm": 2.0,
+  "ventilation": "none",
+  "lid": "none"
+}

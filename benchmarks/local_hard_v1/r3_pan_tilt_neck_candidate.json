@@ -1,0 +1,372 @@
+[
+ {
+  "_meta": "R3 v1 CANDIDATE (NOT FROZEN): the pan-tilt neck -- the humanoid ladder's first assembly rung, per docs/research/2026-07-22-r3-harness-design.md. TWO registry-MAPPED MG996R servos (bought, never generated; dims cited from src/forge_mind/assembly/servo.py -- local frame: origin=shaft exit at case top, +Z=shaft axis, horn plane z=+7.6, flange underside z=-14.3, tab holes 4x d4.0-4.8 on 49.5x10.0). The frozen plan isolates the R3 question: can the author interface KNOWN servos -- decomposition is deliberately NOT measured (FORGE_REUSE_PLAN loads this plan verbatim). Teacher roster (Sonnet, L74) first; the harness iteration validates ports/joints against _plan_topology_issues before any run. HORN-BC RESOLVED: 14.0 physically verified by founder caliper 2026-07-22 (registry corrected)."
+ },
+ {
+  "label": "pan_platform_v2",
+  "rung": "R3a",
+  "prompt": "A servo pan platform: a base cradle bolts an MG996R upright by its flange, and a rotating platform bracket rides the servo horn -- the bracket must clear the servo entirely through a full +/-90 degree pan sweep. The servo is a bought part; model only the two printed parts around its cited interfaces.",
+  "_scope_note": "L81 scoped retry: ONE mapped servo, TWO parts -- the pure mapped-servo-chain existence proof. The 2-servo pan-tilt (row below) is DEFERRED behind the hardware-kinematic-attachment lever (the sweep models hardware as static, so a servo riding a moving link falsely collides).",
+  "assembly": {
+   "servos": [
+    {
+     "id": "pan_servo",
+     "kind": "mg996r_servo",
+     "pose": {
+      "origin": [
+       0,
+       0,
+       0
+      ],
+      "z_axis": [
+       0,
+       0,
+       1
+      ],
+      "x_axis": [
+       1,
+       0,
+       0
+      ]
+     },
+     "pose_note": "Upright at the shared origin: shaft +Z, case top z=0, body z in [-42.9,0], flange underside z=-14.3, horn plane z=+7.6."
+    }
+   ],
+   "plan": {
+    "object_name": "servo pan platform (one MG996R)",
+    "assembly_note": "base_cradle bolts the servo flange from below; platform_bracket screws onto the horn above -- the bracket sweeps freely over the cradle and servo.",
+    "parts": [
+     {
+      "name": "base_cradle",
+      "prompt": "The base cradle as ONE solid in the shared origin frame, built as a SIMPLE TABLE: (1) a flat rectangular SEAT PLATE 80 x 50 x 2.5 mm whose TOP face is exactly at z=-14.3 (so the plate spans z=-16.8 to z=-14.3); (2) cut a rectangular through-window 41.3 x 20.3 mm in the plate, centered at x=-10.2, y=0 (the servo body drops through it); (3) drill four clearance holes d4.5 through the plate on a 49.5 x 10.0 mm rectangle centered at x=-10.2, y=0 (the servo flange screw pattern -- these four holes surround the window); (4) four square posts 8 x 8 x 17.2 mm, one under each corner of the plate, running from the plate underside (z=-16.8) down to z=-34; (5) a base foot pad 12 x 12 x 2 mm under each post at z=-34 to z=-36, each with one M3 clearance hole d3.4. Nothing above z=-14.3. One connected solid; walls >= 2.5 mm.",
+      "ports": [
+       {
+        "name": "pan_mount",
+        "origin": {
+         "x": -10.2,
+         "y": 0.0,
+         "z": -14.3
+        },
+        "axis": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 1.0
+        },
+        "normal": {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        }
+       },
+       {
+        "name": "frame_base",
+        "origin": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": -34.0
+        },
+        "axis": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": -1.0
+        },
+        "normal": {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        }
+       }
+      ]
+     },
+     {
+      "name": "platform_bracket",
+      "prompt": "The rotating platform as ONE solid in the shared origin frame: a horn hub disc d26 x 4 mm whose UNDERSIDE is exactly at z=+7.6 (the horn mating plane), with a center bore d8.1 through and four horn screw holes d2.2 on a 14.0 mm bolt circle (physically verified); above the hub, a flat platform plate 60 x 40 x 4 mm whose underside is at z=+11.6 (directly on the hub top), centered on the pan axis, with four corner payload holes d3.4 and one cable slot 8 x 5 mm near an edge. ABSOLUTELY NO material below z=+7.6 anywhere, and no material outside the plate/hub other than optional stiffening ribs on TOP of the plate -- the bracket must sweep +/-90 degrees without approaching the servo case (which spans up to 54.4 mm across below the horn plane). Walls >= 2.5 mm.",
+      "ports": [
+       {
+        "name": "hub",
+        "origin": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 7.6
+        },
+        "axis": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 1.0
+        },
+        "normal": {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        },
+        "diameter_mm": 8.1
+       }
+      ]
+     }
+    ],
+    "joints": [
+     {
+      "type": "fixed",
+      "a": "base_cradle.pan_mount",
+      "b": "pan_servo.mount"
+     },
+     {
+      "type": "revolute",
+      "a": "pan_servo.horn",
+      "b": "platform_bracket.hub",
+      "range_deg": [
+       -90,
+       90
+      ]
+     }
+    ]
+   }
+  },
+  "brief": {
+   "object_name": "servo pan platform (one MG996R)",
+   "summary": "A table-style base cradle seats an MG996R by its flange over a drop-through window; a flat rotating platform rides the servo horn above.",
+   "visual_description": "TWO printed parts around a bought servo. (1) The base cradle is a SIMPLE TABLE, deliberately not a U-channel: a flat rectangular seat plate 80 x 50 mm standing on four square corner posts with small foot pads; the plate has a rectangular drop-through window near its center (the servo body hangs through it) surrounded by four small flange screw holes. No tall side walls, no enclosing channel, no lightening windows -- a clean four-legged table with a windowed top. (2) The rotating platform is a flat plate 60 x 40 mm on a short round horn hub boss with four corner payload holes and a small cable slot; it hovers above the cradle with the servo (a plain rectangular block) between them. Everything squared-off and functional.",
+   "overall_envelope_mm": "80 x 50 x 48 assembled -- the table cradle below, the servo block through its window, the platform hovering above the horn.",
+   "features": [
+    {
+     "name": "seat_plate_window",
+     "purpose": "the servo body drops through; the flange seats on the plate",
+     "approx_dims_mm": "41.3 x 20.3",
+     "method": "pocket",
+     "count": 1
+    },
+    {
+     "name": "flange_screw_holes",
+     "purpose": "the cited MG996R tab pattern",
+     "approx_dims_mm": "d4.5, pattern 49.5 x 10.0",
+     "method": "bolt_holes",
+     "count": 4
+    },
+    {
+     "name": "corner_post",
+     "purpose": "the table legs",
+     "approx_dims_mm": "8 x 8 x 17.2",
+     "method": "box",
+     "count": 4
+    },
+    {
+     "name": "horn_hub_boss",
+     "purpose": "rides the servo horn",
+     "approx_dims_mm": "d26 x 4",
+     "method": "revolve",
+     "count": 1
+    },
+    {
+     "name": "platform_plate",
+     "purpose": "the rotating payload deck",
+     "approx_dims_mm": "60 x 40 x 4",
+     "method": "box",
+     "count": 1
+    }
+   ],
+   "min_wall_mm": 2.5,
+   "material": "PLA",
+   "print_orientation_note": "Cradle: seat plate down. Platform: plate down, hub boss up.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "pan_tilt_neck",
+  "rung": "R3",
+  "prompt": "A pan-tilt neck for a humanoid robot using two MG996R servos: a base cradle bolts the pan servo upright; a pan bracket rides the pan horn and carries the tilt servo on its side; a tilt head plate rides the tilt horn. The servos are bought parts -- model only the three printed parts around their cited interfaces.",
+  "assembly": {
+   "servos": [
+    {
+     "id": "pan_servo",
+     "kind": "mg996r_servo",
+     "pose": {
+      "origin": [
+       0,
+       0,
+       0
+      ],
+      "z_axis": [
+       0,
+       0,
+       1
+      ],
+      "x_axis": [
+       1,
+       0,
+       0
+      ]
+     },
+     "pose_note": "Upright at the shared origin: shaft axis +Z, shaft exit (case top) at z=0, body hanging below (z in [-42.9, 0]), case front toward +X (shaft offset 10.2 from body center per the cited local frame)."
+    },
+    {
+     "id": "tilt_servo",
+     "kind": "mg996r_servo",
+     "pose": {
+      "origin": [
+       0,
+       12,
+       46
+      ],
+      "z_axis": [
+       0,
+       1,
+       0
+      ],
+      "x_axis": [
+       1,
+       0,
+       0
+      ]
+     },
+     "pose_note": "Lying on its side above the pan axis: shaft axis +Y, shaft exit plane at y=+12 (horn toward +Y), shaft axis height z=+46; carried BY pan_bracket, so it rotates with the pan joint."
+    }
+   ],
+   "plan": {
+    "object_name": "pan-tilt neck (two MG996R servos)",
+    "assembly_note": "base_cradle bolts pan_servo's flange from below; pan_bracket screws onto pan_servo's horn and bolts tilt_servo's flange on its side; tilt_head screws onto tilt_servo's horn -- pan sweeps the whole upper stack, tilt nods the head plate.",
+    "parts": [
+     {
+      "name": "base_cradle",
+      "prompt": "The neck's base cradle as ONE solid in the shared origin frame: a flat base plate 70 x 40 x 4 mm centered under the pan servo with four M3 frame holes (d3.4) at its corners, and a raised flange seat whose top face sits at z=-14.3 (the pan servo's flange underside): the seat carries the servo tab pattern -- four clearance holes d4.5 on a 49.5 x 10.0 mm rectangle centered on the servo body center at x=-10.2 (the cited shaft offset). A rectangular window 41.3 x 20.3 mm through the seat clears the servo body. Walls >= 2.5 mm.",
+      "ports": [
+       {
+        "name": "pan_mount",
+        "origin": {
+         "x": -10.2,
+         "y": 0.0,
+         "z": -14.3
+        },
+        "axis": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 1.0
+        },
+        "normal": {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        }
+       },
+       {
+        "name": "frame_base",
+        "origin": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": -26.3
+        },
+        "axis": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": -1.0
+        },
+        "normal": {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        }
+       }
+      ]
+     },
+     {
+      "name": "pan_bracket",
+      "prompt": "The pan bracket as ONE solid in the shared origin frame: a horn hub disc d26 x 4 mm whose underside sits at z=+7.6 (the pan horn plane), with center bore d8.1 and four horn screw holes d2.2 on a 14.0 mm bolt circle (physically verified); from the hub a vertical arm 4 mm thick rises to a side platform whose face lies in the y=+12 plane at shaft-axis height z=+46: that face carries the tilt servo's tab pattern -- four clearance holes d4.5 on a 49.5 x 10.0 mm rectangle centered on the tilt servo body center (which sits at y=+12-14.3 flange drop geometry mirrored for the sideways servo). A cable slot 6 x 12 mm passes through the arm. Walls >= 3.0 mm (this bracket carries the whole head).",
+      "ports": [
+       {
+        "name": "hub",
+        "origin": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 7.6
+        },
+        "axis": {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 1.0
+        },
+        "normal": {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        },
+        "diameter_mm": 8.1
+       },
+       {
+        "name": "tilt_mount",
+        "origin": {
+         "x": -10.2,
+         "y": -2.3,
+         "z": 46.0
+        },
+        "axis": {
+         "x": 0.0,
+         "y": 1.0,
+         "z": 0.0
+        },
+        "normal": {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        }
+       }
+      ]
+     },
+     {
+      "name": "tilt_head",
+      "prompt": "The tilt head plate as ONE solid in the shared origin frame: a rounded plate 62 x 42 x 4 mm whose horn-hub face lies in the y=+12+7.6 plane (the tilt horn plane, horn toward +Y), centered on the tilt shaft axis at z=+46: center bore d8.1 and four horn screw holes d2.2 on a 14.0 mm bolt circle (physically verified); forward of the hub two camera-board holes d3.4 at 30 mm spacing and a cable slot 10 x 4 mm. Walls >= 2.5 mm.",
+      "ports": [
+       {
+        "name": "hub",
+        "origin": {
+         "x": 0.0,
+         "y": 19.6,
+         "z": 46.0
+        },
+        "axis": {
+         "x": 0.0,
+         "y": 1.0,
+         "z": 0.0
+        },
+        "normal": {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        },
+        "diameter_mm": 8.1
+       }
+      ]
+     }
+    ],
+    "joints": [
+     {
+      "type": "fixed",
+      "a": "base_cradle.pan_mount",
+      "b": "pan_servo.mount"
+     },
+     {
+      "type": "revolute",
+      "a": "pan_servo.horn",
+      "b": "pan_bracket.hub",
+      "range_deg": [
+       -90,
+       90
+      ]
+     },
+     {
+      "type": "fixed",
+      "a": "pan_bracket.tilt_mount",
+      "b": "tilt_servo.mount"
+     },
+     {
+      "type": "revolute",
+      "a": "tilt_servo.horn",
+      "b": "tilt_head.hub",
+      "range_deg": [
+       -60,
+       60
+      ]
+     }
+    ]
+   }
+  }
+ }
+]

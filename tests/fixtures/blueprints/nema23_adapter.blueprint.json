@@ -1,0 +1,31 @@
+{
+  "name": "nema23_adapter",
+  "summary": "Flat adapter plate: a NEMA 23 stepper motor mounts on top and the plate bolts down to a 3030 aluminium T-slot extrusion underneath. Flat plate only, no upright, no gusset.",
+  "envelope_mm": { "x": 150.0, "y": 90.0, "z": 12.0 },
+  "print_orientation": { "x": 0.0, "y": 0.0, "z": 1.0 },
+  "material": "PLA",
+  "min_wall_mm": 4.0,
+  "max_overhang_deg": 45.0,
+  "features": [
+    {
+      "name": "plate",
+      "kind": "plate",
+      "purpose": "Flat plate: carries the NEMA 23 motor face on top (+Z) and the 3030 extrusion T-nut pair underneath (-Z).",
+      "approx_size_mm": { "x": 120.0, "y": 70.0, "z": 4.0 }
+    }
+  ],
+  "required_interfaces": [
+    {
+      "name": "motor_face",
+      "interface_type": "nema17_face",
+      "on_feature": "plate",
+      "facing": "+Z"
+    },
+    {
+      "name": "extrusion_face",
+      "interface_type": "extrusion_2020_slot",
+      "on_feature": "plate",
+      "facing": "-Z"
+    }
+  ]
+}

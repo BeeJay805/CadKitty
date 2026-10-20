@@ -1,0 +1,27 @@
+{
+  "origin": "scripted_tool_fixture",
+  "model_calls": 0,
+  "source_script": "scripts/workspace_mcp_demo.py",
+  "source_script_sha256": "8daf1ec0a87cac7e3357e18d01288ee7ff464567d19116d629b3345a7a5902be",
+  "smoke_receipt_sha256": "e4e9c8a756a349d9eb07e2246fa6f2e91d82f737943a147352e83483a3a40c5d",
+  "demo_report_sha256": "a9694090c86bb661fbebd02ad63eeeb4c0edc9a453d8c1b838fd832ac9fd5c11",
+  "occurrences": 42,
+  "initial_opening_mm": 60,
+  "edited_opening_mm": 80,
+  "edited_pad_width_mm": 48,
+  "projected_pair": {
+    "status": "pass",
+    "scope": "Nominal saved boundary separation and midpoint only",
+    "qualification_status": "unverified"
+  },
+  "motion": {
+    "status": "unverified",
+    "coverage": "discrete_only",
+    "completed_pairs": 6888,
+    "total_pairs": 6888,
+    "collision_count": 0
+  },
+  "full_task_success": null,
+  "physical_readiness": "unverified",
+  "accepted": false
+}

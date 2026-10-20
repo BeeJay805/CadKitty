@@ -1,0 +1,681 @@
+{
+  "source": "Copy this 50 by 30 mm rectangular plate, 5 mm thick. Both visible holes go straight through.",
+  "raw_attempts": [
+    {
+      "canonical_requirements": [],
+      "coverage_notes": [
+        "The source designates a rectangular plate and requests a copy of the supplied reference.",
+        "Hole diameters and centers are not stated. The reference can guide derived estimates; pixels do not establish owner dimensional facts.",
+        "The source states no world-axis orientation, body origin or dimensional allowances. The image-plane frame is a conditional CAD interpretation.",
+        "Server delivery policy remains separate metadata. It supplies no owner quotes, nominal acceptance authority or owner-requested digital requirements."
+      ],
+      "digital_requirements": [],
+      "fact_groups": [
+        {
+          "candidate_subject_ids": [],
+          "quote_ref": "q1",
+          "requirement_ids": [
+            "r3"
+          ],
+          "subject_id": "s1",
+          "unit": "mm",
+          "values": [
+            {
+              "id": "f1",
+              "property": "in_plane_dimension_u",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "candidate_subject_ids": [],
+          "quote_ref": "q1",
+          "requirement_ids": [
+            "r4"
+          ],
+          "subject_id": "s1",
+          "unit": "mm",
+          "values": [
+            {
+              "id": "f2",
+              "property": "in_plane_dimension_v",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "candidate_subject_ids": [],
+          "quote_ref": "q1",
+          "requirement_ids": [
+            "r5"
+          ],
+          "subject_id": "s1",
+          "unit": "mm",
+          "values": [
+            {
+              "id": "f3",
+              "property": "thickness",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "candidate_subject_ids": [],
+          "quote_ref": "q2",
+          "requirement_ids": [
+            "r6",
+            "r7"
+          ],
+          "subject_id": "s1",
+          "unit": "holes",
+          "values": [
+            {
+              "id": "f4",
+              "property": "visible_hole_count",
+              "value": 2.0
+            }
+          ]
+        }
+      ],
+      "fact_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "issues": [],
+      "nominal_delivery_scope": [],
+      "nominal_perforated_box": [],
+      "nominal_subject_inventory": [],
+      "nominal_targets": [],
+      "nominal_through_hole_pattern": [],
+      "photo_nominal_claims": [
+        {
+          "claims": [
+            "visible_profile"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r1",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "rectangular_outline"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r2",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "extent_u"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r3",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "extent_v"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r4",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "thickness"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r5",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "opening_count"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r6",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "straight_through"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r7",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        }
+      ],
+      "photo_reference": {
+        "role": "copy",
+        "source_quote": "Copy this 50 by 30 mm rectangular plate, 5 mm thick."
+      },
+      "quotes": [
+        {
+          "id": "q1",
+          "text": "Copy this 50 by 30 mm rectangular plate, 5 mm thick."
+        },
+        {
+          "id": "q2",
+          "text": "Both visible holes go straight through."
+        }
+      ],
+      "requirement_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "requirements": [
+        {
+          "critical": true,
+          "id": "r1",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "Copy the plate shown in the supplied reference, including its visible profile and hole arrangement.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r2",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must have a rectangular outline.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r3",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must have a 50 mm in-plane dimension.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r4",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must have a 30 mm in-plane dimension.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r5",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must be 5 mm thick.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r6",
+          "quote_ref": "q2",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must retain both visible holes.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r7",
+          "quote_ref": "q2",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "Both visible holes must go straight through the plate.",
+          "verification_id": null
+        }
+      ],
+      "subjects": [
+        {
+          "id": "s1",
+          "label": "Rectangular plate copied from the supplied reference",
+          "quote_ref": "q1",
+          "role": "designed"
+        },
+        {
+          "id": "s2",
+          "label": "Plate shown in the supplied visual reference",
+          "quote_ref": "q1",
+          "role": "reference"
+        }
+      ]
+    },
+    {
+      "canonical_requirements": [],
+      "coverage_notes": [
+        "The source designates a rectangular plate and requests a copy of the supplied reference.",
+        "Hole diameters and centers are not stated. The reference can guide derived estimates; pixels do not establish owner dimensional facts.",
+        "The source states no world-axis orientation, body origin or dimensional allowances. The image-plane frame is a conditional CAD interpretation.",
+        "Server delivery policy remains separate metadata. It supplies no owner quotes, nominal acceptance authority or owner-requested digital requirements."
+      ],
+      "digital_requirements": [],
+      "fact_groups": [
+        {
+          "candidate_subject_ids": [],
+          "quote_ref": "q1",
+          "requirement_ids": [
+            "r3"
+          ],
+          "subject_id": "s1",
+          "unit": "mm",
+          "values": [
+            {
+              "id": "f1",
+              "property": "in_plane_dimension_u",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "candidate_subject_ids": [],
+          "quote_ref": "q1",
+          "requirement_ids": [
+            "r4"
+          ],
+          "subject_id": "s1",
+          "unit": "mm",
+          "values": [
+            {
+              "id": "f2",
+              "property": "in_plane_dimension_v",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "candidate_subject_ids": [],
+          "quote_ref": "q1",
+          "requirement_ids": [
+            "r5"
+          ],
+          "subject_id": "s1",
+          "unit": "mm",
+          "values": [
+            {
+              "id": "f3",
+              "property": "thickness",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "candidate_subject_ids": [],
+          "quote_ref": "q2",
+          "requirement_ids": [
+            "r6",
+            "r7"
+          ],
+          "subject_id": "s1",
+          "unit": "holes",
+          "values": [
+            {
+              "id": "f4",
+              "property": "visible_hole_count",
+              "value": 2.0
+            }
+          ]
+        }
+      ],
+      "fact_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "issues": [],
+      "nominal_delivery_scope": [],
+      "nominal_perforated_box": [],
+      "nominal_subject_inventory": [],
+      "nominal_targets": [],
+      "nominal_through_hole_pattern": [],
+      "photo_nominal_claims": [
+        {
+          "claims": [
+            "visible_profile",
+            "rectangular_outline",
+            "extent_u",
+            "extent_v",
+            "thickness"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r1",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "visible_profile",
+            "rectangular_outline",
+            "extent_u",
+            "extent_v",
+            "thickness"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r2",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "visible_profile",
+            "rectangular_outline",
+            "extent_u",
+            "extent_v",
+            "thickness"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r3",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "visible_profile",
+            "rectangular_outline",
+            "extent_u",
+            "extent_v",
+            "thickness"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r4",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "visible_profile",
+            "rectangular_outline",
+            "extent_u",
+            "extent_v",
+            "thickness"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r5",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "opening_count",
+            "straight_through"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r6",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        },
+        {
+          "claims": [
+            "opening_count",
+            "straight_through"
+          ],
+          "frame_policy": "image_plane_xy",
+          "hole_count_fact_id": "f4",
+          "requirement_id": "r7",
+          "size_fact_ids": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "subject_id": "s1",
+          "unsupported_reason": null
+        }
+      ],
+      "photo_reference": {
+        "role": "copy",
+        "source_quote": "Copy this 50 by 30 mm rectangular plate, 5 mm thick."
+      },
+      "quotes": [
+        {
+          "id": "q1",
+          "text": "Copy this 50 by 30 mm rectangular plate, 5 mm thick."
+        },
+        {
+          "id": "q2",
+          "text": "Both visible holes go straight through."
+        }
+      ],
+      "requirement_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "requirements": [
+        {
+          "critical": true,
+          "id": "r1",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "Copy the plate shown in the supplied reference, including its visible profile and hole arrangement.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r2",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must have a rectangular outline.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r3",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must have a 50 mm in-plane dimension.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r4",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must have a 30 mm in-plane dimension.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r5",
+          "quote_ref": "q1",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must be 5 mm thick.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r6",
+          "quote_ref": "q2",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "The plate must retain both visible holes.",
+          "verification_id": null
+        },
+        {
+          "critical": true,
+          "id": "r7",
+          "quote_ref": "q2",
+          "scalar": null,
+          "source": "request",
+          "subject_ids": [
+            "s1"
+          ],
+          "text": "Both visible holes must go straight through the plate.",
+          "verification_id": null
+        }
+      ],
+      "subjects": [
+        {
+          "id": "s1",
+          "label": "Rectangular plate copied from the supplied reference",
+          "quote_ref": "q1",
+          "role": "designed"
+        },
+        {
+          "id": "s2",
+          "label": "Plate shown in the supplied visual reference",
+          "quote_ref": "q1",
+          "role": "reference"
+        }
+      ]
+    }
+  ],
+  "diagnostics": [
+    [
+      {
+        "code": "invalid_source_lowering",
+        "field": "nominal_targets",
+        "message": "Unrepresented source clause/operator remains outside the closed photo nominal scope"
+      }
+    ],
+    [
+      {
+        "code": "invalid_source_lowering",
+        "field": "nominal_targets",
+        "message": "Unrepresented source clause/operator remains outside the closed photo nominal scope"
+      }
+    ]
+  ]
+}

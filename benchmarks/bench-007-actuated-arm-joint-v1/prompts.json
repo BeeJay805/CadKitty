@@ -1,0 +1,3 @@
+{
+  "arm_joint": "Design a single actuated robot-arm joint driven by a NEMA 17 stepper motor. A base bracket holds the motor by its bolt face. An output arm couples to the motor's shaft and rotates about the shaft axis, cantilevered (no far-end bearing). The arm grips the shaft with a hub bore and a radial M3 set screw. Everything 3D-printable in PLA without supports; the printed parts (bracket + arm) print flat. The motor is a standard NEMA 17; it is not printed."
+}

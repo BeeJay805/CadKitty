@@ -1,0 +1,78 @@
+{
+  "scope": "Internal visibility selection of exact saved CAD, not a complete assembly view or motion proof.",
+  "source_assembly_step_sha256": "6f3569289d2a6ba45fb610f4b576588815895f62005488f2aa6999868e7e74b2",
+  "source_document_sha256": "3f8a8d851b36bc735cbbecab56803f3f19c77ef396da30f3275736a10b3d5c7b",
+  "included_occurrences": [
+    "crank",
+    "cam",
+    "main_bush_left",
+    "main_bush_right",
+    "cam_bush_left",
+    "cam_bush_right",
+    "piston_1",
+    "piston_2",
+    "piston_3",
+    "piston_4",
+    "wrist_pin_1",
+    "wrist_pin_2",
+    "wrist_pin_3",
+    "wrist_pin_4",
+    "rod_1",
+    "rod_2",
+    "rod_3",
+    "rod_4"
+  ],
+  "excluded_occurrences": [
+    "block",
+    "crankcase_cover",
+    "camshaft_cover",
+    "bottom_cover_screw_1",
+    "bottom_cover_screw_2",
+    "bottom_cover_screw_3",
+    "bottom_cover_screw_4",
+    "bottom_cover_screw_5",
+    "bottom_cover_screw_6",
+    "cam_cover_screw_1",
+    "cam_cover_screw_2",
+    "cam_cover_screw_3",
+    "cam_cover_screw_4"
+  ],
+  "included_count": 18,
+  "excluded_count": 13,
+  "display_transform": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "saved_world_poses_unchanged": true,
+  "exploded": false,
+  "invented_geometry": false,
+  "missing_geometry_restored": false,
+  "physical_readiness": "unverified",
+  "mesh_sha256": "ba2f1cf5afc552534d195b3848942355f0d3ade391675f31e0786d1ee2325a3e",
+  "image_sha256": "f8c107a246f5ddcd5b57d4bab6c00d6f0d1c5e0b3723920adcbb88a7f4d49cc0",
+  "renderer_receipt_sha256": "9a501c43aef0e38494a6e137280ed349dd2ed384a0674c8f0a44e304693e1063",
+  "source_files_unchanged": true,
+  "label": "Selected internals in their saved poses; block, both covers and their screws hidden."
+}

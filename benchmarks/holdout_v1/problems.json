@@ -1,0 +1,43 @@
+{
+  "version": "holdout_v1",
+  "description": "HELD-OUT invention-lifecycle problems (LifecycleProblem shape) for true-generalization measurement. GENERATED + seeded (deterministic). Never train or tune against it.",
+  "seed": 1337,
+  "problems": [
+    {
+      "id": "holdout_inv_00",
+      "tier": "easy",
+      "problem": "My travel cup keeps sliding around on my sloped drafting table. I want a 3D-printable way to stop it from sliding off without clamping anything to the surface or leaving adhesive residue.",
+      "min_concepts": 2
+    },
+    {
+      "id": "holdout_inv_01",
+      "tier": "normal",
+      "problem": "A tangle of three charger cables hangs behind my monitor and slips down behind the desk. I need a 3D-printable way to gather and route them up to the desktop with no screws or adhesive.",
+      "min_concepts": 2
+    },
+    {
+      "id": "holdout_inv_02",
+      "tier": "normal",
+      "problem": "I follow recipes and guides on a tablet at my kitchen counter and want it held at a readable angle, raised off the surface so spills run under it, and wipeable -- 3D-printable with no hardware.",
+      "min_concepts": 2
+    },
+    {
+      "id": "holdout_inv_03",
+      "tier": "easy",
+      "problem": "My mechanical keyboard creeps across the desk while I type. I want a 3D-printable way to keep it from sliding that grips the desk without screws and leaves no residue when removed.",
+      "min_concepts": 2
+    },
+    {
+      "id": "holdout_inv_04",
+      "tier": "normal",
+      "problem": "I need somewhere to air-dry freshly washed 3D-printed parts on my desk so they don't touch each other or the surface, drips are caught, and it folds flat when not in use -- 3D-printable, no hardware.",
+      "min_concepts": 3
+    },
+    {
+      "id": "holdout_inv_05",
+      "tier": "easy",
+      "problem": "My screwdriver bits roll around loose in a drawer and I can never find the size I want. I want a 3D-printable desk organizer that holds them upright, sorted by size, with no hardware.",
+      "min_concepts": 2
+    }
+  ]
+}

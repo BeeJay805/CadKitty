@@ -1,0 +1,2799 @@
+{
+  "object_name": "horizontally-opposed (boxer) six-cylinder hand-turned display engine",
+  "parts": [
+    {
+      "name": "crankcase_bottom",
+      "prompt": "Model ONE solid: the lower half of a boxer-six crankcase, aluminium-look, printed split-face-DOWN. SHARED FRAME: the crank axis is the line x=0, z=35 along Y; this part spans z=10 to the split plane z=35, y=-70..+70, x=-33..+33. A rounded lobed shell: three lobed bulges at y=-44.5..-35.5, -4.5..+4.5, +35.5..+44.5 where the internal half-pocket is radius 22.0 about the crank axis (crank web swing radius 14.0, rod big-end swing radius 8.0+7.5=15.5, so 22.0-15.5=6.5 mm air at every crank angle); elsewhere the half-pocket is radius 19.0. Four bulkheads at y=-60,-20,+20,+60, each with a HALF main-bearing land on the split face: semicircular groove radius 5.3 (ø10.6 over the ø10.0 journal, 0.30 radial running clearance), 5.0 wide. Bulkheads at y=-60 and +60 carry a 0.8 mm raised annular thrust pad ø18/ø11 on their inboard faces (0.5 total end float). Split face z=35 flat, with a continuous 1.8 wide x 1.3 deep register groove round the rim and two ø4.2 x 6.5 blind dowel holes at (12,-66,35) and (-12,+66,35). Eight M3 pilot bosses (ø6.0 OD, ø2.5x10 blind, axis vertical) opening UP on ear lugs spanning x=20..32, bolt centres x=+/-26: +x flank at y=-68,-24.5,+15.5,+68; -x flank at y=-68,-15.5,+24.5,+68. Flank pads at |x|=18 carry, centred on the six cylinder axes (x=+18 at y=-44.5,-4.5,+35.5; x=-18 at y=-35.5,+4.5,+44.5), a HALF counterbore radius 13.1 x 1.5 deep and a HALF cylinder mouth radius 11.0 opening into the pocket. Flat foot pad at z=10 with two ø3.4 through-holes at (0,-50,10) and (0,+50,10); a 6.0 x 4.0 chamfered drain trough along the interior floor at z=22 running the full length and exiting an 8.0 x 5.0 slot at y=-70; shallow 2 mm lightening pockets on the outer flanks. Break free outer edges 0.6 mm; never chamfer or texture the bearing lands, split face, groove, dowel holes or cylinder counterbores.",
+      "ports": [
+        {
+          "name": "main_1",
+          "origin": {
+            "x": 0.0,
+            "y": -60.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 10.6
+        },
+        {
+          "name": "main_2",
+          "origin": {
+            "x": 0.0,
+            "y": -20.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 10.6
+        },
+        {
+          "name": "main_3",
+          "origin": {
+            "x": 0.0,
+            "y": 20.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 10.6
+        },
+        {
+          "name": "main_4",
+          "origin": {
+            "x": 0.0,
+            "y": 60.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 10.6
+        },
+        {
+          "name": "split",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "base",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "dowel_A",
+          "origin": {
+            "x": 12.0,
+            "y": -66.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.2
+        },
+        {
+          "name": "dowel_B",
+          "origin": {
+            "x": -12.0,
+            "y": 66.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.2
+        }
+      ]
+    },
+    {
+      "name": "crankcase_top",
+      "prompt": "Model ONE solid: the upper half of a boxer-six crankcase, mirror partner of the lower half about z=35, printed split-face-DOWN. SHARED FRAME: the crank axis is the line x=0, z=35 along Y; this part spans z=35..60, y=-70..+70, x=-33..+33 and RECEIVES the six barrels. Rounded lobed shell: internal half-pocket radius 22.0 at the three lobed bulges (y=-44.5..-35.5, -4.5..+4.5, +35.5..+44.5), radius 19.0 elsewhere; 22.0-15.5=6.5 mm clear of the rod big-end swing. Four bulkheads at y=-60,-20,+20,+60 with HALF main-bearing lands on the split face: semicircular groove radius 5.3, 5.0 wide; the y=-60 and y=+60 bulkheads carry a 0.8 raised annular thrust pad ø18/ø11 inboard, and the y=+60 land continues outboard as a half bore radius 4.3 (ø8.6 over the ø8.0 knob stub) to a flat ø20 boss face at y=+66. Split face z=35 flat, carrying a continuous 1.6 wide x 1.2 tall register TONGUE round the rim (0.2 clearance per side in the mating groove) and two ø4.2 x 6.5 blind dowel holes at (12,-66,35) and (-12,+66,35). Eight ø3.4 through-holes with 0.5x45 chamfered ø6.5 x 2.5 counterbores opening UP on ear lugs x=20..32, bolt centres x=+/-26, at +x flank y=-68,-24.5,+15.5,+68 and -x flank y=-68,-15.5,+24.5,+68. Six barrel pads: flat faces at x=+18 (cylinder axes y=-44.5,-4.5,+35.5) and x=-18 (y=-35.5,+4.5,+44.5), each with a HALF counterbore radius 13.1 x 1.5 deep, a HALF mouth radius 11.0 into the pocket, and one M3 pilot boss ø6.0/ø2.5x10 at the +z point of a ø30 bolt circle. Shallow 2 mm lightening pockets on the flanks; 0.6 mm chamfer on free edges only.",
+      "ports": [
+        {
+          "name": "split",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "barrel_R1",
+          "origin": {
+            "x": 18.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.2
+        },
+        {
+          "name": "barrel_R2",
+          "origin": {
+            "x": 18.0,
+            "y": -4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.2
+        },
+        {
+          "name": "barrel_R3",
+          "origin": {
+            "x": 18.0,
+            "y": 35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.2
+        },
+        {
+          "name": "barrel_L1",
+          "origin": {
+            "x": -18.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.2
+        },
+        {
+          "name": "barrel_L2",
+          "origin": {
+            "x": -18.0,
+            "y": 4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.2
+        },
+        {
+          "name": "barrel_L3",
+          "origin": {
+            "x": -18.0,
+            "y": 44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.2
+        }
+      ]
+    },
+    {
+      "name": "crankshaft",
+      "prompt": "Model ONE solid: a slender one-piece boxer-six crankshaft, six crankpins in three stations 120 degrees apart, printed lying on its side. SHARED FRAME: the rotation axis is the line x=0, z=35 along Y. Along Y: end face y=-64 (1.0 chamfer); MAIN 1 ø10.0 y=-62.5..-57.5; ø8 shaft; WEB y=-50.5..-47.5 (3.0 thick round disc radius 13.0 with a counterweight lobe to radius 14.0 opposite its pin); CRANKPIN R1 ø9.0 y=-47.5..-41.5 on the axis through x=+8.0, z=35.0 (throw 8.0, phase 0 deg); CENTRE WEB y=-41.5..-38.5; CRANKPIN L1 ø9.0 y=-38.5..-32.5 through x=-8.0, z=35.0 (phase 180 deg, so station 1's opposed pistons move outward together as a boxer does); WEB y=-32.5..-29.5; ø8 shaft; MAIN 2 ø10.0 y=-22.5..-17.5; ø8 shaft; WEB y=-10.5..-7.5; CRANKPIN R2 ø9.0 y=-7.5..-1.5 through x=-4.000, z=41.930 (phase 120: 8cos120=-4.000, 35+8sin120=41.930); CENTRE WEB y=-1.5..+1.5; CRANKPIN L2 ø9.0 y=+1.5..+7.5 through x=+4.000, z=28.070 (phase 300); WEB y=+7.5..+10.5; ø8 shaft; MAIN 3 ø10.0 y=+17.5..+22.5; ø8 shaft; WEB y=+29.5..+32.5; CRANKPIN R3 ø9.0 y=+32.5..+38.5 through x=-4.000, z=28.070 (phase 240); CENTRE WEB y=+38.5..+41.5; CRANKPIN L3 ø9.0 y=+41.5..+47.5 through x=+4.000, z=41.930 (phase 60); WEB y=+47.5..+50.5; ø8 shaft; MAIN 4 ø10.0 y=+57.5..+62.5; then a plain ø8.0 STUB y=+62.5..+82.0 with a 1.0 deep flat milled on its +z side over y=+66..+82, a 1.0x45 lead-in chamfer at the y=+82 end and a ø2.5 x 10 axial pilot hole up the end for the knob screw. All six webs are round counterweighted discs, max swing radius 14.0. Keep every journal and crankpin an exact plain cylinder (no fillet, no texture); break only free web edges 0.5 mm.",
+      "ports": [
+        {
+          "name": "main_1",
+          "origin": {
+            "x": 0.0,
+            "y": -60.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 10.0
+        },
+        {
+          "name": "main_2",
+          "origin": {
+            "x": 0.0,
+            "y": -20.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 10.0
+        },
+        {
+          "name": "main_3",
+          "origin": {
+            "x": 0.0,
+            "y": 20.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 10.0
+        },
+        {
+          "name": "main_4",
+          "origin": {
+            "x": 0.0,
+            "y": 60.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 10.0
+        },
+        {
+          "name": "pin_R1",
+          "origin": {
+            "x": 8.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.0
+        },
+        {
+          "name": "pin_L1",
+          "origin": {
+            "x": -8.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.0
+        },
+        {
+          "name": "pin_R2",
+          "origin": {
+            "x": -4.0,
+            "y": -4.5,
+            "z": 41.93
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.0
+        },
+        {
+          "name": "pin_L2",
+          "origin": {
+            "x": 4.0,
+            "y": 4.5,
+            "z": 28.07
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.0
+        },
+        {
+          "name": "pin_R3",
+          "origin": {
+            "x": -4.0,
+            "y": 35.5,
+            "z": 28.07
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.0
+        },
+        {
+          "name": "pin_L3",
+          "origin": {
+            "x": 4.0,
+            "y": 44.5,
+            "z": 41.93
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.0
+        },
+        {
+          "name": "stub",
+          "origin": {
+            "x": 0.0,
+            "y": 74.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 8.0
+        }
+      ]
+    },
+    {
+      "name": "knob_hand",
+      "prompt": "Model ONE solid: a round hand-turning knob, the only obviously grippable feature on the engine. SHARED FRAME: its axis is the line x=0, z=35 along Y; the body spans y=+67.0 to +82.0, its inboard shoulder face at y=+67.0 leaving 1.0 mm air to the crankcase boss face at y=+66.0. A ø28.0 disc 15.0 long whose rim carries 24 straight KNURL ribs 1.2 wide x 1.0 deep running along Y so it grips the hand (never a smooth cylinder); outboard face at y=+82 slightly domed, rim broken 1.0x45; inboard shoulder flat, rim broken 0.8. Bore: a ø8.2 D-bore (1.0 deep flat on the +z side) from y=+67 to +79, 0.20 slip fit on the ø8.0 crank stub, with a 1.0x45 lead-in chamfer at the mouth so it starts by hand. A ø3.4 hole on the axis from the outboard face into the bore with a 0.5x45 chamfered ø6.5 x 2.5 counterbore opening OUTWARD at y=+82 for the M3x12 retaining screw. Keep the D-bore exact; knurl and chamfer free surfaces only.",
+      "ports": [
+        {
+          "name": "bore",
+          "origin": {
+            "x": 0.0,
+            "y": 74.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 8.2
+        }
+      ]
+    },
+    {
+      "name": "dowel_pin_A",
+      "prompt": "Model ONE solid: a plain cylindrical alignment dowel ø4.0 x 12.0 long with a 0.6x45 lead-in chamfer at each end. SHARED FRAME: its axis is vertical (Z) through x=+12.0, y=-66.0, centred on z=35.0, so it spans z=29.0..41.0 — the lower half seats in the ø4.2 blind hole in crankcase_bottom, the upper half in crankcase_top (0.10 radial snug locating fit). No texture or fillet on the cylindrical body.",
+      "ports": [
+        {
+          "name": "pin",
+          "origin": {
+            "x": 12.0,
+            "y": -66.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "dowel_pin_B",
+      "prompt": "Model ONE solid: a plain cylindrical alignment dowel ø4.0 x 12.0 long with a 0.6x45 lead-in chamfer at each end. SHARED FRAME: its axis is vertical (Z) through x=-12.0, y=+66.0, centred on z=35.0, spanning z=29.0..41.0 — lower half in the ø4.2 blind hole in crankcase_bottom, upper half in crankcase_top (0.10 radial snug fit). No texture or fillet on the body.",
+      "ports": [
+        {
+          "name": "pin",
+          "origin": {
+            "x": -12.0,
+            "y": 66.0,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "barrel_R1",
+      "prompt": "Model ONE solid: a slim air-cooled cylinder barrel — a THIN-WALLED finned tube, not a solid block — printed flange-down, head-up, no support. SHARED FRAME: its bore axis is the line y=-44.5, z=35.0 along +X; the flange face sits at x=+18.0 against the crankcase flank and the barrel runs OUTWARD to a closed domed tip at x=+90.0. Features: ø26.0 x 1.5 spigot from x=16.5 to 18.0 registering in the ø26.2 case counterbore (0.2); ø36.0 flange 4.0 thick (x=18..22) with two ø3.4 bolt holes on a ø30.0 circle at the +z and -z points, each with a 0.5x45 chamfered ø6.5 x 2.0 counterbore facing +x; finned column x=22..78 on a ø25.0 core tube — a stack of thin annular fins 1.5 thick with 3.0 gaps (4.5 pitch), fin OD tapering evenly ø34.0 to ø28.0, every fin edge broken 0.5; closed DOMED head x=78..90, wall 2.5, a 1.0x45 chamfered crown lip and one ø5.0 axial vent hole at the tip so no sealed void prints. BORE: plain ø20.5 from x=16.5 to a domed ceiling at x=62.0 (0.25 radial running clearance on the ø20.0 piston), 1.0x45 lead-in at the x=16.5 mouth only; above x=62 the interior necks to ø16.0. Arithmetic: wrist travel x=26.0 (BDC) to 42.0 (TDC = throw 8 + rod 34); crown 9.0 above the pin reaches x=51.0 at TDC, 11.0 below the ceiling; skirt end 8.0 below the pin reaches x=18.0 at BDC, still inside the bore. The ø20.5 bore wall stays exactly plain — no chamfer, fillet or texture.",
+      "ports": [
+        {
+          "name": "flange",
+          "origin": {
+            "x": 18.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.0
+        },
+        {
+          "name": "bore",
+          "origin": {
+            "x": 42.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.5
+        }
+      ]
+    },
+    {
+      "name": "barrel_R2",
+      "prompt": "Model ONE solid: a slim air-cooled cylinder barrel, a THIN-WALLED finned tube, printed flange-down head-up. SHARED FRAME: its bore axis is the line y=-4.5, z=35.0 along +X; the flange face sits at x=+18.0 against the crankcase flank, the barrel running outward to a closed domed tip at x=+90.0. ø26.0 x 1.5 spigot x=16.5..18.0 into the ø26.2 case counterbore; ø36.0 flange 4.0 thick (x=18..22) with two ø3.4 holes on a ø30.0 circle at +z and -z, 0.5x45 chamfered ø6.5 x 2.0 counterbores facing +x; finned column x=22..78 on a ø25.0 core tube, annular fins 1.5 thick with 3.0 gaps, fin OD tapering ø34.0 to ø28.0, edges broken 0.5; closed domed head x=78..90, wall 2.5, 1.0x45 crown lip, ø5.0 axial vent at the tip. BORE: plain ø20.5 from x=16.5 to a domed ceiling at x=62.0 (0.25 radial running clearance), 1.0x45 lead-in at the mouth only; above x=62 the interior necks to ø16.0. Arithmetic: wrist travel 26.0..42.0; TDC crown x=51.0, 11.0 under the ceiling; BDC skirt end x=18.0, inside the bore. Bore wall exactly plain.",
+      "ports": [
+        {
+          "name": "flange",
+          "origin": {
+            "x": 18.0,
+            "y": -4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.0
+        },
+        {
+          "name": "bore",
+          "origin": {
+            "x": 29.287,
+            "y": -4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.5
+        }
+      ]
+    },
+    {
+      "name": "barrel_R3",
+      "prompt": "Model ONE solid: a slim air-cooled cylinder barrel, a THIN-WALLED finned tube, printed flange-down head-up. SHARED FRAME: its bore axis is the line y=+35.5, z=35.0 along +X; the flange face sits at x=+18.0 on the crankcase flank, the barrel running outward to a closed domed tip at x=+90.0. ø26.0 x 1.5 spigot x=16.5..18.0 into the ø26.2 case counterbore; ø36.0 flange 4.0 thick (x=18..22), two ø3.4 holes on a ø30.0 circle at +z and -z with 0.5x45 chamfered ø6.5 x 2.0 counterbores facing +x; finned column x=22..78 on a ø25.0 core tube, annular fins 1.5 thick, 3.0 gaps, fin OD tapering ø34.0 to ø28.0, edges broken 0.5; closed domed head x=78..90, wall 2.5, 1.0x45 crown lip, ø5.0 axial vent at the tip. BORE: plain ø20.5 from x=16.5 to a domed ceiling at x=62.0 (0.25 radial running clearance), 1.0x45 lead-in at the mouth only; above x=62 the interior necks to ø16.0. Arithmetic: TDC crown x=51.0 vs ceiling 62.0 (11.0 clear); BDC skirt end x=18.0, inside the bore. Bore wall exactly plain.",
+      "ports": [
+        {
+          "name": "flange",
+          "origin": {
+            "x": 18.0,
+            "y": 35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.0
+        },
+        {
+          "name": "bore",
+          "origin": {
+            "x": 29.287,
+            "y": 35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.5
+        }
+      ]
+    },
+    {
+      "name": "barrel_L1",
+      "prompt": "Model ONE solid: a slim air-cooled cylinder barrel, exact sagittal mirror of the right-bank barrel, a THIN-WALLED finned tube printed flange-down head-up. SHARED FRAME: its bore axis is the line y=-35.5, z=35.0 along -X; the flange face sits at x=-18.0 on the crankcase left flank and the barrel runs outward to a closed domed tip at x=-90.0. ø26.0 x 1.5 spigot x=-16.5..-18.0 into the ø26.2 case counterbore; ø36.0 flange 4.0 thick (x=-18..-22) with two ø3.4 holes on a ø30.0 circle at +z and -z, 0.5x45 chamfered ø6.5 x 2.0 counterbores facing -x; finned column x=-22..-78 on a ø25.0 core tube, annular fins 1.5 thick with 3.0 gaps, fin OD tapering ø34.0 to ø28.0, edges broken 0.5; closed domed head x=-78..-90, wall 2.5, 1.0x45 crown lip, ø5.0 axial vent at the tip. BORE: plain ø20.5 from x=-16.5 to a domed ceiling at x=-62.0 (0.25 radial running clearance), 1.0x45 lead-in at the x=-16.5 mouth only; beyond x=-62 the interior necks to ø16.0. Arithmetic: wrist travel x=-26.0 (BDC) to -42.0 (TDC); TDC crown x=-51.0, 11.0 short of the ceiling; BDC skirt end x=-18.0, still in the bore. Bore wall exactly plain.",
+      "ports": [
+        {
+          "name": "flange",
+          "origin": {
+            "x": -18.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.0
+        },
+        {
+          "name": "bore",
+          "origin": {
+            "x": -42.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.5
+        }
+      ]
+    },
+    {
+      "name": "barrel_L2",
+      "prompt": "Model ONE solid: a slim air-cooled cylinder barrel, sagittal mirror of the right-bank barrel, THIN-WALLED and finned, printed flange-down head-up. SHARED FRAME: its bore axis is the line y=+4.5, z=35.0 along -X; the flange face sits at x=-18.0 on the crankcase left flank, the barrel running outward to a closed domed tip at x=-90.0. ø26.0 x 1.5 spigot x=-16.5..-18.0 into the ø26.2 case counterbore; ø36.0 flange 4.0 thick (x=-18..-22), two ø3.4 holes on a ø30.0 circle at +z and -z with 0.5x45 chamfered ø6.5 x 2.0 counterbores facing -x; finned column x=-22..-78 on a ø25.0 core tube, fins 1.5 thick with 3.0 gaps, fin OD ø34.0 tapering to ø28.0, edges broken 0.5; closed domed head x=-78..-90, wall 2.5, 1.0x45 crown lip, ø5.0 axial vent at the tip. BORE: plain ø20.5 from x=-16.5 to a domed ceiling at x=-62.0 (0.25 radial running clearance), lead-in 1.0x45 at the mouth only; beyond x=-62 necks to ø16.0. Arithmetic: TDC crown x=-51.0 vs ceiling -62.0 (11.0 clear); BDC skirt end x=-18.0, inside the bore. Bore wall exactly plain.",
+      "ports": [
+        {
+          "name": "flange",
+          "origin": {
+            "x": -18.0,
+            "y": 4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.0
+        },
+        {
+          "name": "bore",
+          "origin": {
+            "x": -29.287,
+            "y": 4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.5
+        }
+      ]
+    },
+    {
+      "name": "barrel_L3",
+      "prompt": "Model ONE solid: a slim air-cooled cylinder barrel, sagittal mirror of the right-bank barrel, THIN-WALLED and finned, printed flange-down head-up. SHARED FRAME: its bore axis is the line y=+44.5, z=35.0 along -X; the flange face sits at x=-18.0 on the crankcase left flank, the barrel running outward to a closed domed tip at x=-90.0. ø26.0 x 1.5 spigot x=-16.5..-18.0 into the ø26.2 case counterbore; ø36.0 flange 4.0 thick (x=-18..-22), two ø3.4 holes on a ø30.0 circle at +z and -z with 0.5x45 chamfered ø6.5 x 2.0 counterbores facing -x; finned column x=-22..-78 on a ø25.0 core tube, fins 1.5 thick with 3.0 gaps, fin OD ø34.0 to ø28.0, edges broken 0.5; closed domed head x=-78..-90, wall 2.5, 1.0x45 crown lip, ø5.0 axial vent at the tip. BORE: plain ø20.5 from x=-16.5 to a domed ceiling at x=-62.0 (0.25 radial running clearance), 1.0x45 lead-in at the mouth only; beyond x=-62 necks to ø16.0. Arithmetic: TDC crown x=-51.0, ceiling -62.0, 11.0 clear; BDC skirt end x=-18.0, inside the bore. Bore wall exactly plain.",
+      "ports": [
+        {
+          "name": "flange",
+          "origin": {
+            "x": -18.0,
+            "y": 44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 26.0
+        },
+        {
+          "name": "bore",
+          "origin": {
+            "x": -29.287,
+            "y": 44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.5
+        }
+      ]
+    },
+    {
+      "name": "piston_R1",
+      "prompt": "Model ONE solid: a short open-bottom piston cup with a thin skirt, printed crown-down. SHARED FRAME: its sliding axis is the line y=-44.5, z=35.0 along +X, and it is built at its home station with the wrist-pin centre at (42.0, -44.5, 35.0); the pin-bore axis is the line through that point parallel to Y. Body: a ø20.0 cylinder (running in a ø20.5 bore, 0.25 radial clearance) spanning x=34.0 to x=51.0 — 9.0 above the pin, 8.0 below. Crown at x=51.0: a 3.0 thick slightly domed disc, its outer edge broken 0.8. Two shallow decorative ring grooves 1.6 wide x 1.0 deep at x=48.0 and x=45.0. Below them a thin open skirt, wall 2.0, hollow inside and fully open at the x=34.0 end (edge broken 0.5, no fillet on the outer sliding face). Two internal pin bosses inside the skirt, each 4.0 long along Y, bored ø4.15 on the pin axis (0.15 slip fit on the ø4.0 wrist pin) with a 0.5x45 lead-in; the bosses sit at y=-54.5..-50.5 and y=-38.5..-34.5, leaving a 12.0 wide central gap for the 5.0 wide rod small end. The +Y boss outer mouth has a ø5.7 x 1.3 counterbore for the wrist-pin head; the -Y boss outer mouth a ø4.3 x 1.6 counterbore for the plug end. Keep the ø20.0 outer skirt and the ø4.15 pin bores exact — no texture, fillet or chamfer on those working surfaces.",
+      "ports": [
+        {
+          "name": "pinbore",
+          "origin": {
+            "x": 42.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.15
+        },
+        {
+          "name": "slide",
+          "origin": {
+            "x": 42.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.0
+        }
+      ]
+    },
+    {
+      "name": "piston_R2",
+      "prompt": "Model ONE solid: a short open-bottom piston cup with a thin skirt, printed crown-down. SHARED FRAME: its sliding axis is the line y=-4.5, z=35.0 along +X, built at its home station with the wrist-pin centre at (29.287, -4.5, 35.0); the pin-bore axis runs through that point parallel to Y. Body: ø20.0 outside (0.25 radial clearance in the ø20.5 bore) spanning x=21.287 to x=38.287 — 9.0 above the pin, 8.0 below. Crown at the +x end: 3.0 thick, slightly domed, edge broken 0.8. Two decorative ring grooves 1.6 wide x 1.0 deep at 3.0 and 6.0 below the crown face. Thin open skirt, wall 2.0, hollow and fully open at the -x end (edge broken 0.5). Two internal pin bosses 4.0 long along Y bored ø4.15 on the pin axis (0.15 slip fit on the ø4.0 pin) with 0.5x45 lead-ins, at y=-14.5..-10.5 and y=+1.5..+5.5, leaving a 12.0 central gap for the 5.0 wide rod small end. ø5.7 x 1.3 counterbore at the +Y boss mouth for the pin head; ø4.3 x 1.6 at the -Y mouth for the plug end. Keep the ø20.0 skirt OD and ø4.15 bores exact and untextured.",
+      "ports": [
+        {
+          "name": "pinbore",
+          "origin": {
+            "x": 29.287,
+            "y": -4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.15
+        },
+        {
+          "name": "slide",
+          "origin": {
+            "x": 29.287,
+            "y": -4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.0
+        }
+      ]
+    },
+    {
+      "name": "piston_R3",
+      "prompt": "Model ONE solid: a short open-bottom piston cup with a thin skirt, printed crown-down. SHARED FRAME: its sliding axis is the line y=+35.5, z=35.0 along +X, built at its home station with the wrist-pin centre at (29.287, +35.5, 35.0); the pin-bore axis runs through that point parallel to Y. Body: ø20.0 outside (0.25 radial clearance in the ø20.5 bore) spanning x=21.287 to x=38.287 — 9.0 above the pin, 8.0 below. Crown at the +x end, 3.0 thick, slightly domed, edge broken 0.8; two decorative ring grooves 1.6 x 1.0 deep at 3.0 and 6.0 below the crown face; thin open skirt, wall 2.0, fully open at the -x end, edge broken 0.5. Two internal pin bosses 4.0 long along Y bored ø4.15 on the pin axis (0.15 slip fit) with 0.5x45 lead-ins, at y=+25.5..+29.5 and y=+41.5..+45.5, leaving a 12.0 central gap for the 5.0 wide rod small end. ø5.7 x 1.3 counterbore at the +Y boss mouth, ø4.3 x 1.6 at the -Y mouth. Keep the ø20.0 skirt OD and ø4.15 bores exact and untextured.",
+      "ports": [
+        {
+          "name": "pinbore",
+          "origin": {
+            "x": 29.287,
+            "y": 35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.15
+        },
+        {
+          "name": "slide",
+          "origin": {
+            "x": 29.287,
+            "y": 35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.0
+        }
+      ]
+    },
+    {
+      "name": "piston_L1",
+      "prompt": "Model ONE solid: a short open-bottom piston cup with a thin skirt, sagittal mirror of the right-bank piston, printed crown-down. SHARED FRAME: its sliding axis is the line y=-35.5, z=35.0 along -X, built at its home station with the wrist-pin centre at (-42.0, -35.5, 35.0); the pin-bore axis runs through that point parallel to Y. Body: ø20.0 outside (0.25 radial clearance in the ø20.5 bore) spanning x=-34.0 to x=-51.0 — 9.0 outboard of the pin, 8.0 inboard. Crown at x=-51.0, 3.0 thick, slightly domed, edge broken 0.8; two decorative ring grooves 1.6 x 1.0 deep at x=-48.0 and x=-45.0; thin open skirt, wall 2.0, hollow and fully open at the x=-34.0 end, edge broken 0.5. Two internal pin bosses 4.0 long along Y bored ø4.15 on the pin axis (0.15 slip fit on the ø4.0 pin) with 0.5x45 lead-ins, at y=-45.5..-41.5 and y=-29.5..-25.5, leaving a 12.0 central gap for the 5.0 wide rod small end. ø5.7 x 1.3 counterbore at the +Y boss mouth for the pin head, ø4.3 x 1.6 at the -Y mouth. Keep the ø20.0 skirt OD and the ø4.15 bores exact and untextured.",
+      "ports": [
+        {
+          "name": "pinbore",
+          "origin": {
+            "x": -42.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.15
+        },
+        {
+          "name": "slide",
+          "origin": {
+            "x": -42.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.0
+        }
+      ]
+    },
+    {
+      "name": "piston_L2",
+      "prompt": "Model ONE solid: a short open-bottom piston cup with a thin skirt, sagittal mirror of the right-bank piston, printed crown-down. SHARED FRAME: its sliding axis is the line y=+4.5, z=35.0 along -X, built at its home station with the wrist-pin centre at (-29.287, +4.5, 35.0); the pin-bore axis runs through that point parallel to Y. Body: ø20.0 outside (0.25 radial clearance in the ø20.5 bore) spanning x=-21.287 to x=-38.287 — 9.0 outboard of the pin, 8.0 inboard. Crown at the -x end, 3.0 thick, slightly domed, edge broken 0.8; two decorative ring grooves 1.6 x 1.0 deep at 3.0 and 6.0 inboard of the crown face; thin open skirt, wall 2.0, fully open at the +x end, edge broken 0.5. Two internal pin bosses 4.0 long along Y bored ø4.15 on the pin axis (0.15 slip fit) with 0.5x45 lead-ins, at y=-5.5..-1.5 and y=+10.5..+14.5, leaving a 12.0 central gap for the 5.0 wide rod small end. ø5.7 x 1.3 counterbore at the +Y boss mouth, ø4.3 x 1.6 at the -Y mouth. Keep the ø20.0 skirt OD and ø4.15 bores exact and untextured.",
+      "ports": [
+        {
+          "name": "pinbore",
+          "origin": {
+            "x": -29.287,
+            "y": 4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.15
+        },
+        {
+          "name": "slide",
+          "origin": {
+            "x": -29.287,
+            "y": 4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.0
+        }
+      ]
+    },
+    {
+      "name": "piston_L3",
+      "prompt": "Model ONE solid: a short open-bottom piston cup with a thin skirt, sagittal mirror of the right-bank piston, printed crown-down. SHARED FRAME: its sliding axis is the line y=+44.5, z=35.0 along -X, built at its home station with the wrist-pin centre at (-29.287, +44.5, 35.0); the pin-bore axis runs through that point parallel to Y. Body: ø20.0 outside (0.25 radial clearance in the ø20.5 bore) spanning x=-21.287 to x=-38.287 — 9.0 outboard of the pin, 8.0 inboard. Crown at the -x end, 3.0 thick, slightly domed, edge broken 0.8; two decorative ring grooves 1.6 x 1.0 deep at 3.0 and 6.0 inboard of the crown; thin open skirt, wall 2.0, fully open at the +x end, edge broken 0.5. Two internal pin bosses 4.0 long along Y bored ø4.15 on the pin axis (0.15 slip fit) with 0.5x45 lead-ins, at y=+34.5..+38.5 and y=+50.5..+54.5, leaving a 12.0 central gap for the 5.0 wide rod small end. ø5.7 x 1.3 counterbore at the +Y boss mouth, ø4.3 x 1.6 at the -Y mouth. Keep the ø20.0 skirt OD and ø4.15 bores exact and untextured.",
+      "ports": [
+        {
+          "name": "pinbore",
+          "origin": {
+            "x": -29.287,
+            "y": 44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.15
+        },
+        {
+          "name": "slide",
+          "origin": {
+            "x": -29.287,
+            "y": 44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 20.0
+        }
+      ]
+    },
+    {
+      "name": "wristpin_R1",
+      "prompt": "Model ONE solid: a printed wrist pin — a plain ø4.0 x 25.0 cylinder with an integral ø5.6 x 1.2 head at its +Y end and a 0.5x45 lead-in chamfer at the -Y end so it starts by hand. SHARED FRAME: its axis is the line x=42.0, z=35.0 parallel to Y, and the pin body spans y=-55.5 to y=-30.5 with the head on the +Y end (y=-30.5..-29.3). It passes through the piston's two ø4.15 bosses (0.15 slip) and carries the rod small-end ø4.4 eye at the centre (0.40 running clearance). Keep the ø4.0 body an exact plain cylinder — no texture, no fillet.",
+      "ports": [
+        {
+          "name": "pin_rod",
+          "origin": {
+            "x": 42.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        },
+        {
+          "name": "pin_piston",
+          "origin": {
+            "x": 42.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "wristpin_R2",
+      "prompt": "Model ONE solid: a printed wrist pin — a plain ø4.0 x 25.0 cylinder with an integral ø5.6 x 1.2 head at its +Y end and a 0.5x45 lead-in at the -Y end. SHARED FRAME: its axis is the line x=29.287, z=35.0 parallel to Y; the body spans y=-15.5 to y=+9.5 with the head on the +Y end (y=+9.5..+10.7). It passes through the piston's ø4.15 bosses (0.15 slip) and carries the rod small-end ø4.4 eye at the centre (0.40 running clearance). The ø4.0 body stays an exact plain cylinder.",
+      "ports": [
+        {
+          "name": "pin_rod",
+          "origin": {
+            "x": 29.287,
+            "y": -4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        },
+        {
+          "name": "pin_piston",
+          "origin": {
+            "x": 29.287,
+            "y": -4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "wristpin_R3",
+      "prompt": "Model ONE solid: a printed wrist pin — a plain ø4.0 x 25.0 cylinder with an integral ø5.6 x 1.2 head at its +Y end and a 0.5x45 lead-in at the -Y end. SHARED FRAME: its axis is the line x=29.287, z=35.0 parallel to Y; the body spans y=+24.5 to y=+49.5 with the head on the +Y end (y=+49.5..+50.7). It passes through the piston's ø4.15 bosses (0.15 slip) and carries the rod small-end ø4.4 eye at the centre (0.40 running clearance). The ø4.0 body stays an exact plain cylinder.",
+      "ports": [
+        {
+          "name": "pin_rod",
+          "origin": {
+            "x": 29.287,
+            "y": 35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        },
+        {
+          "name": "pin_piston",
+          "origin": {
+            "x": 29.287,
+            "y": 35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "wristpin_L1",
+      "prompt": "Model ONE solid: a printed wrist pin — a plain ø4.0 x 25.0 cylinder with an integral ø5.6 x 1.2 head at its +Y end and a 0.5x45 lead-in at the -Y end. SHARED FRAME: its axis is the line x=-42.0, z=35.0 parallel to Y; the body spans y=-46.5 to y=-21.5 with the head on the +Y end (y=-21.5..-20.3). It passes through the piston's ø4.15 bosses (0.15 slip) and carries the rod small-end ø4.4 eye at the centre (0.40 running clearance). The ø4.0 body stays an exact plain cylinder, no texture or fillet.",
+      "ports": [
+        {
+          "name": "pin_rod",
+          "origin": {
+            "x": -42.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        },
+        {
+          "name": "pin_piston",
+          "origin": {
+            "x": -42.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "wristpin_L2",
+      "prompt": "Model ONE solid: a printed wrist pin — a plain ø4.0 x 25.0 cylinder with an integral ø5.6 x 1.2 head at its +Y end and a 0.5x45 lead-in at the -Y end. SHARED FRAME: its axis is the line x=-29.287, z=35.0 parallel to Y; the body spans y=-6.5 to y=+18.5 with the head on the +Y end (y=+18.5..+19.7). It passes through the piston's ø4.15 bosses (0.15 slip) and carries the rod small-end ø4.4 eye at the centre (0.40 running clearance). The ø4.0 body stays an exact plain cylinder.",
+      "ports": [
+        {
+          "name": "pin_rod",
+          "origin": {
+            "x": -29.287,
+            "y": 4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        },
+        {
+          "name": "pin_piston",
+          "origin": {
+            "x": -29.287,
+            "y": 4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "wristpin_L3",
+      "prompt": "Model ONE solid: a printed wrist pin — a plain ø4.0 x 25.0 cylinder with an integral ø5.6 x 1.2 head at its +Y end and a 0.5x45 lead-in at the -Y end. SHARED FRAME: its axis is the line x=-29.287, z=35.0 parallel to Y; the body spans y=+33.5 to y=+58.5 with the head on the +Y end (y=+58.5..+59.7). It passes through the piston's ø4.15 bosses (0.15 slip) and carries the rod small-end ø4.4 eye at the centre (0.40 running clearance). The ø4.0 body stays an exact plain cylinder.",
+      "ports": [
+        {
+          "name": "pin_rod",
+          "origin": {
+            "x": -29.287,
+            "y": 44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        },
+        {
+          "name": "pin_piston",
+          "origin": {
+            "x": -29.287,
+            "y": 44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.0
+        }
+      ]
+    },
+    {
+      "name": "conrod_R1",
+      "prompt": "Model ONE solid: the BODY of a slender connecting rod (the rod half of a two-piece big end), printed flat on its side. SHARED FRAME: the big-end bore axis is the line x=+8.0, z=35.0 parallel to Y at y=-44.5; the small-end bore axis is the line x=+42.0, z=35.0 parallel to Y at y=-44.5; centre distance 34.0. The rod is 5.0 thick in Y, centred on y=-44.5 (so it spans y=-47.0..-42.0, leaving 0.5 side clearance to each crank web). Small end: a ring of ø8.0 outside, ø4.4 bore (0.40 running clearance on the ø4.0 wrist pin), 5.0 wide. Big end: a ring of ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), 5.0 wide, but CUT AWAY on the far side of the pin from the stem — the rod body keeps only the半 nearer the stem, ending in two flat seam faces lying in the plane through the big-end axis perpendicular to the rod centre line (seam normal pointing along -X). Each seam face carries a 0.8 tall x 2.0 wide tongue for the cap groove, and a ø1.6 x 9 deep pilot hole for an M2x8 self-tapper, the two pilots 12.0 apart straddling the bore. Stem: a waisted I-beam 5.0 wide with 1.5 thick flanges and a 1.6 web, waisting from 9.0 deep at the big end to 6.5 deep at the small end, blended into both rings with 1.5 fillets. Break free edges 0.5. Keep both bores exact — no chamfer, fillet or texture inside them or on the seam faces.",
+      "ports": [
+        {
+          "name": "bigend",
+          "origin": {
+            "x": 8.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.5
+        },
+        {
+          "name": "smallend",
+          "origin": {
+            "x": 42.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.4
+        },
+        {
+          "name": "cap",
+          "origin": {
+            "x": 8.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "conrod_R2",
+      "prompt": "Model ONE solid: the BODY of a slender connecting rod (rod half of a two-piece big end), printed flat on its side. SHARED FRAME: the big-end bore axis is the line x=-4.000, z=41.930 parallel to Y at y=-4.5; the small-end bore axis is the line x=+29.287, z=35.000 parallel to Y at y=-4.5; centre distance 34.0. The rod is 5.0 thick in Y centred on y=-4.5 (spans y=-7.0..-2.0, 0.5 side clearance to each crank web). Small end: ring ø8.0 outside, ø4.4 bore (0.40 running clearance on the ø4.0 wrist pin), 5.0 wide. Big end: ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), 5.0 wide, cut away on the far side of the pin from the stem, ending in two flat seam faces in the plane through the big-end axis perpendicular to the rod centre line (seam normal along the unit direction (-0.979, 0, +0.204)). Each seam face carries a 0.8 x 2.0 tongue and a ø1.6 x 9 pilot hole for an M2x8 self-tapper, the pilots 12.0 apart straddling the bore. Stem: waisted I-beam 5.0 wide, 1.5 flanges, 1.6 web, tapering 9.0 deep at the big end to 6.5 at the small end, blended with 1.5 fillets. Free edges broken 0.5; both bores and the seam faces stay exact and untextured.",
+      "ports": [
+        {
+          "name": "bigend",
+          "origin": {
+            "x": -4.0,
+            "y": -4.5,
+            "z": 41.93
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.5
+        },
+        {
+          "name": "smallend",
+          "origin": {
+            "x": 29.287,
+            "y": -4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.4
+        },
+        {
+          "name": "cap",
+          "origin": {
+            "x": -4.0,
+            "y": -4.5,
+            "z": 41.93
+          },
+          "axis": {
+            "x": -0.979,
+            "y": 0.0,
+            "z": 0.204
+          },
+          "normal": {
+            "x": 0.204,
+            "y": 0.0,
+            "z": 0.979
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "conrod_R3",
+      "prompt": "Model ONE solid: the BODY of a slender connecting rod (rod half of a two-piece big end), printed flat on its side. SHARED FRAME: the big-end bore axis is the line x=-4.000, z=28.070 parallel to Y at y=+35.5; the small-end bore axis is the line x=+29.287, z=35.000 parallel to Y at y=+35.5; centre distance 34.0. The rod is 5.0 thick in Y centred on y=+35.5 (spans y=+33.0..+38.0, 0.5 side clearance to each crank web). Small end: ring ø8.0 outside, ø4.4 bore (0.40 running clearance on the ø4.0 wrist pin), 5.0 wide. Big end: ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), 5.0 wide, cut away on the far side of the pin from the stem into two flat seam faces in the plane through the big-end axis perpendicular to the rod centre line (seam normal along the unit direction (-0.979, 0, -0.204)). Each seam face carries a 0.8 x 2.0 tongue and a ø1.6 x 9 pilot hole for an M2x8 self-tapper, pilots 12.0 apart straddling the bore. Stem: waisted I-beam 5.0 wide, 1.5 flanges, 1.6 web, 9.0 deep at the big end tapering to 6.5 at the small end, blended with 1.5 fillets. Free edges broken 0.5; bores and seam faces exact and untextured.",
+      "ports": [
+        {
+          "name": "bigend",
+          "origin": {
+            "x": -4.0,
+            "y": 35.5,
+            "z": 28.07
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.5
+        },
+        {
+          "name": "smallend",
+          "origin": {
+            "x": 29.287,
+            "y": 35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.4
+        },
+        {
+          "name": "cap",
+          "origin": {
+            "x": -4.0,
+            "y": 35.5,
+            "z": 28.07
+          },
+          "axis": {
+            "x": -0.979,
+            "y": 0.0,
+            "z": -0.204
+          },
+          "normal": {
+            "x": -0.204,
+            "y": 0.0,
+            "z": 0.979
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "conrod_L1",
+      "prompt": "Model ONE solid: the BODY of a slender connecting rod, sagittal mirror of the right-bank rod, printed flat on its side. SHARED FRAME: the big-end bore axis is the line x=-8.0, z=35.0 parallel to Y at y=-35.5; the small-end bore axis is the line x=-42.0, z=35.0 parallel to Y at y=-35.5; centre distance 34.0. The rod is 5.0 thick in Y centred on y=-35.5 (spans y=-38.0..-33.0, 0.5 side clearance to each crank web). Small end: ring ø8.0 outside, ø4.4 bore (0.40 running clearance on the ø4.0 wrist pin), 5.0 wide. Big end: ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), 5.0 wide, cut away on the far side of the pin from the stem into two flat seam faces in the plane through the big-end axis perpendicular to the rod centre line (seam normal along +X). Each seam face carries a 0.8 x 2.0 tongue and a ø1.6 x 9 pilot hole for an M2x8 self-tapper, pilots 12.0 apart straddling the bore. Stem: waisted I-beam 5.0 wide, 1.5 flanges, 1.6 web, 9.0 deep at the big end to 6.5 at the small end, blended with 1.5 fillets. Free edges broken 0.5; bores and seam faces exact and untextured.",
+      "ports": [
+        {
+          "name": "bigend",
+          "origin": {
+            "x": -8.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.5
+        },
+        {
+          "name": "smallend",
+          "origin": {
+            "x": -42.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.4
+        },
+        {
+          "name": "cap",
+          "origin": {
+            "x": -8.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "conrod_L2",
+      "prompt": "Model ONE solid: the BODY of a slender connecting rod, sagittal mirror of the right-bank rod, printed flat on its side. SHARED FRAME: the big-end bore axis is the line x=+4.000, z=28.070 parallel to Y at y=+4.5; the small-end bore axis is the line x=-29.287, z=35.000 parallel to Y at y=+4.5; centre distance 34.0. The rod is 5.0 thick in Y centred on y=+4.5 (spans y=+2.0..+7.0, 0.5 side clearance to each crank web). Small end: ring ø8.0 outside, ø4.4 bore (0.40 running clearance on the ø4.0 wrist pin), 5.0 wide. Big end: ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), 5.0 wide, cut away on the far side of the pin from the stem into two flat seam faces in the plane through the big-end axis perpendicular to the rod centre line (seam normal along the unit direction (+0.979, 0, -0.204)). Each seam face carries a 0.8 x 2.0 tongue and a ø1.6 x 9 pilot hole for an M2x8 self-tapper, pilots 12.0 apart straddling the bore. Stem: waisted I-beam 5.0 wide, 1.5 flanges, 1.6 web, 9.0 deep at the big end to 6.5 at the small end, blended with 1.5 fillets. Free edges broken 0.5; bores and seam faces exact and untextured.",
+      "ports": [
+        {
+          "name": "bigend",
+          "origin": {
+            "x": 4.0,
+            "y": 4.5,
+            "z": 28.07
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.5
+        },
+        {
+          "name": "smallend",
+          "origin": {
+            "x": -29.287,
+            "y": 4.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.4
+        },
+        {
+          "name": "cap",
+          "origin": {
+            "x": 4.0,
+            "y": 4.5,
+            "z": 28.07
+          },
+          "axis": {
+            "x": 0.979,
+            "y": 0.0,
+            "z": -0.204
+          },
+          "normal": {
+            "x": 0.204,
+            "y": 0.0,
+            "z": 0.979
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "conrod_L3",
+      "prompt": "Model ONE solid: the BODY of a slender connecting rod, sagittal mirror of the right-bank rod, printed flat on its side. SHARED FRAME: the big-end bore axis is the line x=+4.000, z=41.930 parallel to Y at y=+44.5; the small-end bore axis is the line x=-29.287, z=35.000 parallel to Y at y=+44.5; centre distance 34.0. The rod is 5.0 thick in Y centred on y=+44.5 (spans y=+42.0..+47.0, 0.5 side clearance to each crank web). Small end: ring ø8.0 outside, ø4.4 bore (0.40 running clearance on the ø4.0 wrist pin), 5.0 wide. Big end: ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), 5.0 wide, cut away on the far side of the pin from the stem into two flat seam faces in the plane through the big-end axis perpendicular to the rod centre line (seam normal along the unit direction (+0.979, 0, +0.204)). Each seam face carries a 0.8 x 2.0 tongue and a ø1.6 x 9 pilot hole for an M2x8 self-tapper, pilots 12.0 apart straddling the bore. Stem: waisted I-beam 5.0 wide, 1.5 flanges, 1.6 web, 9.0 deep at the big end to 6.5 at the small end, blended with 1.5 fillets. Free edges broken 0.5; bores and seam faces exact and untextured.",
+      "ports": [
+        {
+          "name": "bigend",
+          "origin": {
+            "x": 4.0,
+            "y": 44.5,
+            "z": 41.93
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 9.5
+        },
+        {
+          "name": "smallend",
+          "origin": {
+            "x": -29.287,
+            "y": 44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 4.4
+        },
+        {
+          "name": "cap",
+          "origin": {
+            "x": 4.0,
+            "y": 44.5,
+            "z": 41.93
+          },
+          "axis": {
+            "x": 0.979,
+            "y": 0.0,
+            "z": 0.204
+          },
+          "normal": {
+            "x": -0.204,
+            "y": 0.0,
+            "z": 0.979
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "bigend_cap_R1",
+      "prompt": "Model ONE solid: a connecting-rod BIG-END CAP — the removable half-ring that closes the rod around its crankpin, printed flat face down. SHARED FRAME: the bore axis is the line x=+8.0, z=35.0 parallel to Y at y=-44.5; the cap is 5.0 thick in Y centred on y=-44.5 and occupies only the -X side of the plane through that axis normal to (-1,0,0). Shape: a half ring, ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), its two flat seam faces lying in that plane. Each seam face has a 1.0 deep x 2.2 wide groove receiving the rod body's 0.8 x 2.0 tongue (0.2 clearance per side), and a ø2.3 through-hole with a 0.5x45 chamfered ø4.2 x 1.5 counterbore opening OUTWARD (away from the bore) for an M2x8 self-tapper; the two holes are 12.0 apart straddling the bore. Break the free outer edges 0.5. Keep the ø9.5 bore and both seam faces exact — no chamfer, fillet or texture there.",
+      "ports": [
+        {
+          "name": "seam",
+          "origin": {
+            "x": 8.0,
+            "y": -44.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "bigend_cap_R2",
+      "prompt": "Model ONE solid: a connecting-rod BIG-END CAP, printed flat face down. SHARED FRAME: the bore axis is the line x=-4.000, z=41.930 parallel to Y at y=-4.5; the cap is 5.0 thick in Y centred on y=-4.5 and occupies only the side of the plane through that axis in the direction (-0.979, 0, +0.204). Shape: a half ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), its two flat seam faces in that plane. Each seam face has a 1.0 deep x 2.2 wide groove receiving the rod body's 0.8 x 2.0 tongue (0.2 per side) and a ø2.3 through-hole with a 0.5x45 chamfered ø4.2 x 1.5 counterbore opening OUTWARD for an M2x8 self-tapper; holes 12.0 apart straddling the bore. Free outer edges broken 0.5; the bore and seam faces stay exact and untextured.",
+      "ports": [
+        {
+          "name": "seam",
+          "origin": {
+            "x": -4.0,
+            "y": -4.5,
+            "z": 41.93
+          },
+          "axis": {
+            "x": -0.979,
+            "y": 0.0,
+            "z": 0.204
+          },
+          "normal": {
+            "x": 0.204,
+            "y": 0.0,
+            "z": 0.979
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "bigend_cap_R3",
+      "prompt": "Model ONE solid: a connecting-rod BIG-END CAP, printed flat face down. SHARED FRAME: the bore axis is the line x=-4.000, z=28.070 parallel to Y at y=+35.5; the cap is 5.0 thick in Y centred on y=+35.5 and occupies only the side of the plane through that axis in the direction (-0.979, 0, -0.204). Shape: a half ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), two flat seam faces in that plane. Each seam face has a 1.0 deep x 2.2 wide groove for the rod body's 0.8 x 2.0 tongue (0.2 per side) and a ø2.3 through-hole with a 0.5x45 chamfered ø4.2 x 1.5 counterbore opening OUTWARD for an M2x8 self-tapper; holes 12.0 apart straddling the bore. Free outer edges broken 0.5; bore and seam faces exact and untextured.",
+      "ports": [
+        {
+          "name": "seam",
+          "origin": {
+            "x": -4.0,
+            "y": 35.5,
+            "z": 28.07
+          },
+          "axis": {
+            "x": -0.979,
+            "y": 0.0,
+            "z": -0.204
+          },
+          "normal": {
+            "x": -0.204,
+            "y": 0.0,
+            "z": 0.979
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "bigend_cap_L1",
+      "prompt": "Model ONE solid: a connecting-rod BIG-END CAP, sagittal mirror of the right-bank cap, printed flat face down. SHARED FRAME: the bore axis is the line x=-8.0, z=35.0 parallel to Y at y=-35.5; the cap is 5.0 thick in Y centred on y=-35.5 and occupies only the +X side of the plane through that axis normal to (+1,0,0). Shape: a half ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), two flat seam faces in that plane. Each seam face has a 1.0 deep x 2.2 wide groove for the rod body's 0.8 x 2.0 tongue (0.2 per side) and a ø2.3 through-hole with a 0.5x45 chamfered ø4.2 x 1.5 counterbore opening OUTWARD for an M2x8 self-tapper; holes 12.0 apart straddling the bore. Free outer edges broken 0.5; bore and seam faces exact and untextured.",
+      "ports": [
+        {
+          "name": "seam",
+          "origin": {
+            "x": -8.0,
+            "y": -35.5,
+            "z": 35.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "bigend_cap_L2",
+      "prompt": "Model ONE solid: a connecting-rod BIG-END CAP, sagittal mirror of the right-bank cap, printed flat face down. SHARED FRAME: the bore axis is the line x=+4.000, z=28.070 parallel to Y at y=+4.5; the cap is 5.0 thick in Y centred on y=+4.5 and occupies only the side of the plane through that axis in the direction (+0.979, 0, -0.204). Shape: a half ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), two flat seam faces in that plane. Each seam face has a 1.0 deep x 2.2 wide groove for the rod body's 0.8 x 2.0 tongue (0.2 per side) and a ø2.3 through-hole with a 0.5x45 chamfered ø4.2 x 1.5 counterbore opening OUTWARD for an M2x8 self-tapper; holes 12.0 apart straddling the bore. Free outer edges broken 0.5; bore and seam faces exact and untextured.",
+      "ports": [
+        {
+          "name": "seam",
+          "origin": {
+            "x": 4.0,
+            "y": 4.5,
+            "z": 28.07
+          },
+          "axis": {
+            "x": 0.979,
+            "y": 0.0,
+            "z": -0.204
+          },
+          "normal": {
+            "x": 0.204,
+            "y": 0.0,
+            "z": 0.979
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "bigend_cap_L3",
+      "prompt": "Model ONE solid: a connecting-rod BIG-END CAP, sagittal mirror of the right-bank cap, printed flat face down. SHARED FRAME: the bore axis is the line x=+4.000, z=41.930 parallel to Y at y=+44.5; the cap is 5.0 thick in Y centred on y=+44.5 and occupies only the side of the plane through that axis in the direction (+0.979, 0, +0.204). Shape: a half ring ø15.0 outside, ø9.5 bore (0.50 running clearance on the ø9.0 crankpin), two flat seam faces in that plane. Each seam face has a 1.0 deep x 2.2 wide groove for the rod body's 0.8 x 2.0 tongue (0.2 per side) and a ø2.3 through-hole with a 0.5x45 chamfered ø4.2 x 1.5 counterbore opening OUTWARD for an M2x8 self-tapper; holes 12.0 apart straddling the bore. Free outer edges broken 0.5; bore and seam faces exact and untextured.",
+      "ports": [
+        {
+          "name": "seam",
+          "origin": {
+            "x": 4.0,
+            "y": 44.5,
+            "z": 41.93
+          },
+          "axis": {
+            "x": 0.979,
+            "y": 0.0,
+            "z": 0.204
+          },
+          "normal": {
+            "x": -0.204,
+            "y": 0.0,
+            "z": 0.979
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "base_plate",
+      "prompt": "Model ONE solid: a flat display base plate for the engine, printed face down. SHARED FRAME: it is a 170 (X) x 90 (Y) x 6 plate centred on x=0, y=0, spanning z=4.0 to z=10.0, its TOP face at z=10.0 where the crankcase belly pad lands. Top face: two ø4.4 through-holes at (0,-50,10) and (0,+50,10) with 0.5x45 chamfered ø8.0 x 2.0 counterbores opening DOWNWARD through the underside for the two M4x16 case bolts; two register slots 5.2 wide x 1.2 deep running along Y at x=-30.0 and x=+30.0, each 100 long centred on y=0, taking the 5.0 x 1.0 tongues of the two cradle ribs (0.1 clearance per side). Outer edges rounded R3 in plan and broken 0.8 on both faces; a shallow 1.0 deep recessed border 4 mm in from the rim gives it a machined look. Underside: four 1.0 tall x 12 diameter feet at the corners. No texture on the two rib slots or the bolt counterbores.",
+      "ports": [
+        {
+          "name": "case",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "rib_L",
+          "origin": {
+            "x": -30.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "rib_R",
+          "origin": {
+            "x": 30.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "cradle_rib_L",
+      "prompt": "Model ONE solid: an upright display cradle rib that flanks the left side of the crankcase, printed on its side. SHARED FRAME: it is a plate 6.0 thick in X centred on x=-30.0, running along Y from y=-50.0 to y=+50.0, rising from its foot at z=10.0 to a top edge at z=24.0. On its underside a 5.0 wide x 1.0 tall tongue runs the full length on the plate centre line, seating in the base plate's 5.2 x 1.2 slot at x=-30.0 (0.1 clearance per side). Its inboard face (facing +X) is relieved 0.5 so it never touches the crankcase flank; its top edge follows a shallow concave curve of radius 40 in the Y-Z plane, dipping to z=20.0 at mid-length. Three ø8.0 lightening holes through the plate at y=-30, 0, +30, z=16.0, edges broken 0.6, and one ø3.4 hole with a 0.5x45 chamfered ø6.5 x 2.0 counterbore opening OUTWARD (-X) at (x=-30, y=0, z=13.0) for the M3 rib bolt. All free edges broken 0.6; the tongue faces stay exact and untextured.",
+      "ports": [
+        {
+          "name": "foot",
+          "origin": {
+            "x": -30.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "cradle_rib_R",
+      "prompt": "Model ONE solid: an upright display cradle rib, exact sagittal mirror of the left rib, printed on its side. SHARED FRAME: it is a plate 6.0 thick in X centred on x=+30.0, running along Y from y=-50.0 to y=+50.0, rising from its foot at z=10.0 to a top edge at z=24.0. On its underside a 5.0 wide x 1.0 tall tongue runs the full length on the plate centre line, seating in the base plate's 5.2 x 1.2 slot at x=+30.0 (0.1 clearance per side). Its inboard face (facing -X) is relieved 0.5 so it never touches the crankcase flank; the top edge follows a shallow concave curve of radius 40 in the Y-Z plane, dipping to z=20.0 at mid-length. Three ø8.0 lightening holes at y=-30, 0, +30, z=16.0, edges broken 0.6, and one ø3.4 hole with a 0.5x45 chamfered ø6.5 x 2.0 counterbore opening OUTWARD (+X) at (x=+30, y=0, z=13.0) for the M3 rib bolt. Free edges broken 0.6; tongue faces exact and untextured.",
+      "ports": [
+        {
+          "name": "foot",
+          "origin": {
+            "x": 30.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    }
+  ],
+  "assembly_note": "The one-piece crank lays into crankcase_bottom, two dowels and crankcase_top close over it on the z=35 split (8 M3 bolts); each of six rods (body + bolted big-end cap) rides a crankpin, a wrist pin links it to its piston, each piston slides in its own bolt-on finned barrel; the knob presses on the +Y crank stub and the case bolts to the base plate between two cradle ribs.",
+  "joints": [
+    {
+      "type": "revolute",
+      "a": "crankcase_bottom.main_1",
+      "b": "crankshaft.main_1",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "crankcase_bottom.main_2",
+      "b": "crankshaft.main_2",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "crankcase_bottom.main_3",
+      "b": "crankshaft.main_3",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "crankcase_bottom.main_4",
+      "b": "crankshaft.main_4",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "crankcase_bottom.split",
+      "b": "crankcase_top.split",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "crankcase_bottom.dowel_A",
+      "b": "dowel_pin_A.pin",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "crankcase_bottom.dowel_B",
+      "b": "dowel_pin_B.pin",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "crankcase_top.barrel_R1",
+      "b": "barrel_R1.flange",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "crankcase_top.barrel_R2",
+      "b": "barrel_R2.flange",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "crankcase_top.barrel_R3",
+      "b": "barrel_R3.flange",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "crankcase_top.barrel_L1",
+      "b": "barrel_L1.flange",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "crankcase_top.barrel_L2",
+      "b": "barrel_L2.flange",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "crankcase_top.barrel_L3",
+      "b": "barrel_L3.flange",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "crankshaft.pin_R1",
+      "b": "conrod_R1.bigend",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "crankshaft.pin_R2",
+      "b": "conrod_R2.bigend",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "crankshaft.pin_R3",
+      "b": "conrod_R3.bigend",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "crankshaft.pin_L1",
+      "b": "conrod_L1.bigend",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "crankshaft.pin_L2",
+      "b": "conrod_L2.bigend",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "crankshaft.pin_L3",
+      "b": "conrod_L3.bigend",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "conrod_R1.cap",
+      "b": "bigend_cap_R1.seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "conrod_R2.cap",
+      "b": "bigend_cap_R2.seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "conrod_R3.cap",
+      "b": "bigend_cap_R3.seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "conrod_L1.cap",
+      "b": "bigend_cap_L1.seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "conrod_L2.cap",
+      "b": "bigend_cap_L2.seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "conrod_L3.cap",
+      "b": "bigend_cap_L3.seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "conrod_R1.smallend",
+      "b": "wristpin_R1.pin_rod",
+      "range_deg": [
+        -25.0,
+        25.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "conrod_R2.smallend",
+      "b": "wristpin_R2.pin_rod",
+      "range_deg": [
+        -25.0,
+        25.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "conrod_R3.smallend",
+      "b": "wristpin_R3.pin_rod",
+      "range_deg": [
+        -25.0,
+        25.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "conrod_L1.smallend",
+      "b": "wristpin_L1.pin_rod",
+      "range_deg": [
+        -25.0,
+        25.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "conrod_L2.smallend",
+      "b": "wristpin_L2.pin_rod",
+      "range_deg": [
+        -25.0,
+        25.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "conrod_L3.smallend",
+      "b": "wristpin_L3.pin_rod",
+      "range_deg": [
+        -25.0,
+        25.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "piston_R1.pinbore",
+      "b": "wristpin_R1.pin_piston",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "piston_R2.pinbore",
+      "b": "wristpin_R2.pin_piston",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "piston_R3.pinbore",
+      "b": "wristpin_R3.pin_piston",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "piston_L1.pinbore",
+      "b": "wristpin_L1.pin_piston",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "piston_L2.pinbore",
+      "b": "wristpin_L2.pin_piston",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "piston_L3.pinbore",
+      "b": "wristpin_L3.pin_piston",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "prismatic",
+      "a": "barrel_R1.bore",
+      "b": "piston_R1.slide",
+      "range_deg": null,
+      "range_mm": [
+        -16.0,
+        0.0
+      ],
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "prismatic",
+      "a": "barrel_R2.bore",
+      "b": "piston_R2.slide",
+      "range_deg": null,
+      "range_mm": [
+        -3.287,
+        12.713
+      ],
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "prismatic",
+      "a": "barrel_R3.bore",
+      "b": "piston_R3.slide",
+      "range_deg": null,
+      "range_mm": [
+        -3.287,
+        12.713
+      ],
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "prismatic",
+      "a": "barrel_L1.bore",
+      "b": "piston_L1.slide",
+      "range_deg": null,
+      "range_mm": [
+        -16.0,
+        0.0
+      ],
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "prismatic",
+      "a": "barrel_L2.bore",
+      "b": "piston_L2.slide",
+      "range_deg": null,
+      "range_mm": [
+        -3.287,
+        12.713
+      ],
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "prismatic",
+      "a": "barrel_L3.bore",
+      "b": "piston_L3.slide",
+      "range_deg": null,
+      "range_mm": [
+        -3.287,
+        12.713
+      ],
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "knob_hand.bore",
+      "b": "crankshaft.stub",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "base_plate.case",
+      "b": "crankcase_bottom.base",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "base_plate.rib_L",
+      "b": "cradle_rib_L.foot",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "base_plate.rib_R",
+      "b": "cradle_rib_R.foot",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "snug_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    }
+  ]
+}

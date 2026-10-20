@@ -1,0 +1,213 @@
+[project]
+name = "forge-mind"
+version = "0.0.2"
+description = "AI-native CAD: intent -> blueprint -> PartDSL -> compiler -> validator -> revision"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Brennen Johnson" }]
+
+dependencies = [
+    # CAD backend
+    "build123d>=0.7.0",
+    # Mesh inspection / printability
+    "trimesh>=4.4.0",
+    "numpy>=1.26.0",
+    # Spatial index backing trimesh ray casting (wall-thickness measurement)
+    "rtree>=1.3.0",
+    # Headless part rendering (STL -> PNG) for visual inspection
+    "matplotlib>=3.8.0",
+    # Typed schemas (DSL, Blueprint, IntentSpec, ValidationReport)
+    "pydantic>=2.8.0",
+    # LLM client
+    "anthropic>=0.69.0",
+    # Load ANTHROPIC_API_KEY from .env
+    "python-dotenv>=1.0.1",
+    # CLI
+    "typer>=0.12.0",
+    # Structured logging / telemetry
+    "structlog>=24.4.0",
+    # YAML for benchmark pass_criteria
+    "pyyaml>=6.0.2",
+    # Process + memory watchdog for the agentic code-execution sandbox (agentic/sandbox.py).
+    # Required at runtime once the agentic engine is the /generate path; previously undeclared.
+    "psutil>=5.9",
+    # Marching-cubes mesher for the implicit/voxel (SDF) geometry lane (ADR-0026). Pure pip wheels,
+    # no system libs; only the implicit path imports it (lazy import in implicit/field.py).
+    "scikit-image>=0.22",
+    # trimesh's native boolean engine -- the gear-mesh kinematic certification measures
+    # tooth-interference volumes through it (agentic/gears.py). Previously a stray local
+    # install: CI/Fly had NO boolean backend and the check silently read zero interference
+    # (incident 2026-06-11; the check now also fails CLOSED without it). MIT, pure wheels.
+    "manifold3d>=3.0",
+    "bd-warehouse>=0.2.0",
+    "cadquery>=2.7.0",
+]
+
+[project.optional-dependencies]
+source_pdf = [
+    # Optional captured-source page worker. May use an isolated FORGE_PDF_PYTHON runtime.
+    "pypdfium2==5.13.0",
+    "pillow>=12.2,<13",
+]
+viewer = [
+    # Optional CAD viewer for local inspection of build123d output
+    "ocp-vscode>=2.5.0",
+]
+ui = [
+    # Minimal local web UI (single-file Streamlit app) over the existing pipeline.
+    # Launch: uv run --extra ui streamlit run src/forge_mind/ui/streamlit_app.py
+    "streamlit>=1.40,<2",
+]
+mcp = [
+    # Official MCP SDK for local tools and the private authenticated staging service.
+    "mcp>=2,<3",
+    "httpx>=0.27",
+    "PyJWT[crypto]>=2.10,<3",
+]
+server = [
+    # HTTP API for the web frontend (deployed to Fly.io). A thin FastAPI wrapper over
+    # run_pipeline; see src/forge_mind/server/app.py and docs/DEPLOY.md.
+    "fastapi>=0.115,<1",
+    "uvicorn[standard]>=0.30,<1",
+    "httpx>=0.27",
+    "stripe>=10,<13",
+    # FastAPI needs python-multipart to parse multipart/form-data: /validate-upload takes an
+    # UploadFile (app.py) and the route raises at import time without it. It previously rode in
+    # transitively via the FEA deps; #22 moved those to [fea], so the lean `.[server]` Fly image
+    # lost it and crash-looped on boot (/health dead, issue #21 follow-on, 2026-06-25). Declared
+    # explicitly so the deployed image always has it.
+    "python-multipart>=0.0.18",
+]
+# ILLUSTRATIVE FEA stress lens (ADR-0058): linear-elastic solve (scikit-fem, BSD) on a tetrahedralized
+# upload (pytetwild, MPL-2.0). physics/fea.py LAZY-imports these and returns NO-RESULT if absent.
+# DEPLOY INCIDENT (2026-06-25): these were in [server], but pytetwild pulls pyvista/vtk (~100 MB) and the
+# resulting Fly image would not boot -- /health dead, backend down (issue #21). Moved OUT of [server] so
+# the deployed image (`.[server]`) stays light and boots; FEA degrades to NO-RESULT in prod until the
+# Dockerfile (guard-protected -- a human edit) installs `.[server,fea]` with the system libs vtk needs.
+# CI still tests FEA via `--all-extras`.
+fea = [
+    "scikit-fem>=10",
+    "pytetwild>=0.1",
+    "pyvista>=0.44",
+]
+# Optional private CAD-aware meshing. Distribution requires a Gmsh licensing review.
+cad_analysis = ["gmsh==4.15.2"]
+
+[project.scripts]
+forge-mind = "forge_mind.cli.main:app"
+cadkitty-mcp = "forge_mind.workspace.mcp_server:main"
+cadkitty-remote = "forge_mind.workspace.remote_runtime:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-cov>=5.0.0",
+    "pytest-xdist>=3.6.0",
+    "ruff>=0.15,<0.16",
+    "mypy>=1.11.0",
+    "types-pyyaml>=6.0.12",
+]
+
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/forge_mind"]
+
+# ----------------------------------------------------------------------------
+# Tooling
+# ----------------------------------------------------------------------------
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests", "benchmarks", "examples", "scripts"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # bugbear
+    "SIM", # simplify
+    "RUF", # ruff-specific
+    "N",   # pep8-naming
+    "C4",  # comprehensions
+]
+ignore = [
+    "E501",  # line too long (formatter handles)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["B011"]  # allow assert in tests
+"examples/**/*.py" = ["E402"]  # allow late imports in examples
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_return_any = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+no_implicit_optional = true
+files = ["src/forge_mind"]
+
+# Looser rules for fast-moving stages until prompts/schemas stabilize.
+[[tool.mypy.overrides]]
+module = ["forge_mind.intent.*", "forge_mind.blueprint.*", "forge_mind.revision.*"]
+disallow_untyped_defs = false
+
+# Third-party libs without complete type stubs.
+[[tool.mypy.overrides]]
+module = ["build123d.*", "trimesh.*", "ocp_vscode.*", "matplotlib.*", "mpl_toolkits.*", "streamlit.*", "stripe.*", "psutil", "psutil.*", "bd_warehouse", "bd_warehouse.*", "OCP", "OCP.*", "skfem.*", "pytetwild", "pytetwild.*", "scipy", "scipy.*", "pyvista", "pyvista.*"]
+ignore_missing_imports = true
+
+# scikit-image (the implicit-lane mesher) and its transitive tifffile use a Python 3.12 `type`
+# statement mypy can't parse under our py311 target. Don't follow into their source -- only the
+# implicit lane imports them, and it treats the result as Any.
+[[tool.mypy.overrides]]
+module = ["skimage", "skimage.*", "tifffile", "tifffile.*", "gmsh"]
+ignore_missing_imports = true
+follow_imports = "skip"
+
+# The optional native extension does not re-export its symbols for strict mypy.
+# Its runtime API is exercised by the FEA integration tests when this extra is installed.
+[[tool.mypy.overrides]]
+module = ["pytetwild", "pytetwild.*"]
+follow_imports = "skip"
+
+# Non-deployed legacy module: imports the (undeclared) supabase SDK and is not on the deploy
+# path (the live server uses server/billing.py via httpx). Ignore its type errors until it is
+# either wired in (and `supabase` declared) or removed.
+[[tool.mypy.overrides]]
+module = ["forge_mind.api.supa"]
+ignore_errors = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "src"]
+python_files = ["test_*.py"]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    # api/ and server/ intentionally contain a same-named test module; importlib
+    # mode gives each path an independent module identity during full collection.
+    "--import-mode=importlib",
+    # The DEFAULT suite is the cheap, safe one: bare `pytest` skips real-API (llm)
+    # tests, so a stray run never spends money against the live key in .env. Opt into
+    # spend explicitly with `-m llm` (a CLI -m overrides this one). The full geometry
+    # gate is `-m "not llm"`; the sub-30s inner loop is `-m "not slow and not llm"`.
+    "-m",
+    "not llm",
+]
+markers = [
+    "slow: tests that take more than a second",
+    "benchmark: full benchmark trials (requires API keys, costs money)",
+    "smoke: minimal smoke variant of a benchmark (1 trial, no baseline)",
+    "llm: makes real Anthropic API calls (costs money; skipped without a key)",
+]

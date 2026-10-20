@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "files": {
+    "cases.json": "9c2cdf353b4b47b1aad729a5169cd6f5b1319e7efb07db0952b2ab99f41cc90f",
+    "ATTRIBUTION.json": "d4d9dcb2e5f939bd9b5afeafbfb8a32b81066d8229ff9ea16d214df1f31a994f",
+    "references/plain-washer.jpg": "e5375de99c2f35129e5a2333e907e7045034a36e352c89f5c3254aba80d25dfe"
+  }
+}

@@ -1,0 +1,1036 @@
+{
+  "provenance": {
+    "trial": "E:\\ForgeMind\\scratch\\initial-interpretation-latency-20261016\\pilot\\nominal-motor-plate\\ordinary-auto\\trial003",
+    "calls_sha256": "8a394854ba268881df3dfb98222a3d362e6e71876a7ec3eac7c7fc9a24c7e979",
+    "session_sha256": "d6b0f75e405b836a101e476c6e3b8b604620723010d6cc252ccecc3212962990"
+  },
+  "source": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole. I need nominal CAD and digital files only. Give me editable native CAD, STEP, STL and a prepared print package.",
+  "legacy_raw": {
+    "quotes": [
+      {
+        "id": "q1",
+        "text": "Make one nominal CAD rectangular motor adapter plate named motor_plate."
+      },
+      {
+        "id": "q2",
+        "text": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole."
+      },
+      {
+        "id": "q3",
+        "text": "It must be one solid."
+      },
+      {
+        "id": "q4",
+        "text": "I need nominal CAD and digital files only."
+      },
+      {
+        "id": "q5",
+        "text": "editable native CAD"
+      },
+      {
+        "id": "q6",
+        "text": "STEP"
+      },
+      {
+        "id": "q7",
+        "text": "STL"
+      },
+      {
+        "id": "q8",
+        "text": "a prepared print package"
+      }
+    ],
+    "requirements": [
+      {
+        "id": "r1",
+        "source": "request",
+        "critical": true,
+        "text": "Provide one designed plate with the saved name motor_plate.",
+        "quote_ref": "q1",
+        "subject_ids": [
+          "s1"
+        ],
+        "verification_id": "v1",
+        "scalar": null
+      },
+      {
+        "id": "r2",
+        "source": "request",
+        "critical": true,
+        "text": "Make a nominal rectangular CAD plate, 80 × 60 × 6 mm in local XYZ, with its outer body centered at the local origin. Include exactly five uniform cylindrical through-holes parallel to local Z: diameter 22 mm at local XY (0, 0), and diameter 5.2 mm at (-30, -20), (-30, 20), (30, -20), and (30, 20) mm. Each hole has a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm.",
+        "quote_ref": "q2",
+        "subject_ids": [
+          "s1"
+        ],
+        "verification_id": "v2",
+        "scalar": null
+      },
+      {
+        "id": "r3",
+        "source": "request",
+        "critical": true,
+        "text": "The plate must be one solid.",
+        "quote_ref": "q3",
+        "subject_ids": [
+          "s1"
+        ],
+        "verification_id": null,
+        "scalar": {
+          "metric": "solid_count",
+          "comparator": "eq",
+          "value": 1.0,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05
+        }
+      },
+      {
+        "id": "r4",
+        "source": "request",
+        "critical": true,
+        "text": "Limit delivery to nominal CAD and digital files.",
+        "quote_ref": "q4",
+        "subject_ids": [
+          "s1"
+        ],
+        "verification_id": "v3",
+        "scalar": null
+      },
+      {
+        "id": "r5",
+        "source": "request",
+        "critical": true,
+        "text": "Deliver editable native CAD for the plate.",
+        "quote_ref": "q5",
+        "subject_ids": [
+          "s1"
+        ],
+        "verification_id": "v4",
+        "scalar": null
+      },
+      {
+        "id": "r6",
+        "source": "request",
+        "critical": true,
+        "text": "Deliver STEP for the plate.",
+        "quote_ref": "q6",
+        "subject_ids": [
+          "s1"
+        ],
+        "verification_id": "v5",
+        "scalar": null
+      },
+      {
+        "id": "r7",
+        "source": "request",
+        "critical": true,
+        "text": "Deliver STL for the plate.",
+        "quote_ref": "q7",
+        "subject_ids": [
+          "s1"
+        ],
+        "verification_id": "v6",
+        "scalar": null
+      },
+      {
+        "id": "r8",
+        "source": "request",
+        "critical": true,
+        "text": "Deliver a prepared print package for the plate.",
+        "quote_ref": "q8",
+        "subject_ids": [
+          "s1"
+        ],
+        "verification_id": "v7",
+        "scalar": null
+      }
+    ],
+    "canonical_requirements": [],
+    "requirement_order": [
+      "r1",
+      "r2",
+      "r3",
+      "r4",
+      "r5",
+      "r6",
+      "r7",
+      "r8"
+    ],
+    "subjects": [
+      {
+        "id": "s1",
+        "label": "Nominal CAD rectangular motor adapter plate named motor_plate",
+        "role": "designed",
+        "quote_ref": "q1"
+      }
+    ],
+    "fact_groups": [
+      {
+        "subject_id": "s1",
+        "candidate_subject_ids": [],
+        "unit": "plate",
+        "requirement_ids": [
+          "r1"
+        ],
+        "quote_ref": "q1",
+        "values": [
+          {
+            "id": "f1",
+            "property": "plate quantity",
+            "value": 1.0
+          }
+        ]
+      },
+      {
+        "subject_id": "s1",
+        "candidate_subject_ids": [],
+        "unit": "mm",
+        "requirement_ids": [
+          "r2"
+        ],
+        "quote_ref": "q2",
+        "values": [
+          {
+            "id": "f2",
+            "property": "local X size",
+            "value": 80.0
+          },
+          {
+            "id": "f3",
+            "property": "local Y size",
+            "value": 60.0
+          },
+          {
+            "id": "f4",
+            "property": "local Z size",
+            "value": 6.0
+          },
+          {
+            "id": "f8",
+            "property": "central hole diameter",
+            "value": 22.0
+          },
+          {
+            "id": "f9",
+            "property": "central hole local X",
+            "value": 0.0
+          },
+          {
+            "id": "f10",
+            "property": "central hole local Y",
+            "value": 0.0
+          },
+          {
+            "id": "f12",
+            "property": "four-hole diameter",
+            "value": 5.2
+          },
+          {
+            "id": "f13",
+            "property": "small hole 1 local X",
+            "value": -30.0
+          },
+          {
+            "id": "f14",
+            "property": "small hole 1 local Y",
+            "value": -20.0
+          },
+          {
+            "id": "f15",
+            "property": "small hole 2 local X",
+            "value": -30.0
+          },
+          {
+            "id": "f16",
+            "property": "small hole 2 local Y",
+            "value": 20.0
+          },
+          {
+            "id": "f17",
+            "property": "small hole 3 local X",
+            "value": 30.0
+          },
+          {
+            "id": "f18",
+            "property": "small hole 3 local Y",
+            "value": -20.0
+          },
+          {
+            "id": "f19",
+            "property": "small hole 4 local X",
+            "value": 30.0
+          },
+          {
+            "id": "f20",
+            "property": "small hole 4 local Y",
+            "value": 20.0
+          },
+          {
+            "id": "f21",
+            "property": "each hole symmetric diameter tolerance",
+            "value": 0.05
+          },
+          {
+            "id": "f22",
+            "property": "each hole radial position tolerance",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "subject_id": "s1",
+        "candidate_subject_ids": [],
+        "unit": "solid",
+        "requirement_ids": [
+          "r3"
+        ],
+        "quote_ref": "q3",
+        "values": [
+          {
+            "id": "f5",
+            "property": "solid count",
+            "value": 1.0
+          }
+        ]
+      },
+      {
+        "subject_id": "s1",
+        "candidate_subject_ids": [],
+        "unit": "holes",
+        "requirement_ids": [
+          "r2"
+        ],
+        "quote_ref": "q2",
+        "values": [
+          {
+            "id": "f6",
+            "property": "total through-hole count",
+            "value": 5.0
+          },
+          {
+            "id": "f7",
+            "property": "22 mm hole count",
+            "value": 1.0
+          },
+          {
+            "id": "f11",
+            "property": "5.2 mm hole count",
+            "value": 4.0
+          }
+        ]
+      }
+    ],
+    "fact_order": [
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5",
+      "f6",
+      "f7",
+      "f8",
+      "f9",
+      "f10",
+      "f11",
+      "f12",
+      "f13",
+      "f14",
+      "f15",
+      "f16",
+      "f17",
+      "f18",
+      "f19",
+      "f20",
+      "f21",
+      "f22"
+    ],
+    "issues": [],
+    "coverage_notes": [
+      "Motor adapter plate is the source-backed product designation. The request specifies no motor interface or physical operating duty.",
+      "motor_plate is the requested saved name, not an explicitly supplied part ID."
+    ],
+    "nominal_through_hole_pattern": [],
+    "nominal_perforated_box": [
+      {
+        "subject_id": "s1",
+        "axis": "z",
+        "holes": [
+          {
+            "center_mm": [
+              0.0,
+              0.0
+            ],
+            "diameter_mm": 22.0,
+            "diameter_tolerance_mm": 0.05,
+            "position_tolerance_mm": 0.05
+          },
+          {
+            "center_mm": [
+              -30.0,
+              -20.0
+            ],
+            "diameter_mm": 5.2,
+            "diameter_tolerance_mm": 0.05,
+            "position_tolerance_mm": 0.05
+          },
+          {
+            "center_mm": [
+              -30.0,
+              20.0
+            ],
+            "diameter_mm": 5.2,
+            "diameter_tolerance_mm": 0.05,
+            "position_tolerance_mm": 0.05
+          },
+          {
+            "center_mm": [
+              30.0,
+              -20.0
+            ],
+            "diameter_mm": 5.2,
+            "diameter_tolerance_mm": 0.05,
+            "position_tolerance_mm": 0.05
+          },
+          {
+            "center_mm": [
+              30.0,
+              20.0
+            ],
+            "diameter_mm": 5.2,
+            "diameter_tolerance_mm": 0.05,
+            "position_tolerance_mm": 0.05
+          }
+        ],
+        "size_mm": [
+          80.0,
+          60.0,
+          6.0
+        ],
+        "center_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "id": "v2",
+        "quote_ref": "q2"
+      }
+    ],
+    "digital_delivery": [
+      {
+        "deliverable": "editable_native",
+        "id": "v4",
+        "quote_ref": "q5"
+      },
+      {
+        "deliverable": "project_step",
+        "id": "v5",
+        "quote_ref": "q6"
+      },
+      {
+        "deliverable": "project_stl",
+        "id": "v6",
+        "quote_ref": "q7"
+      },
+      {
+        "deliverable": "prepared_print_package",
+        "id": "v7",
+        "quote_ref": "q8"
+      }
+    ],
+    "nominal_subject_inventory": [
+      {
+        "items": [
+          {
+            "subject_id": "s1",
+            "subject_role": "designed",
+            "required_name": "motor_plate",
+            "quantity": 1
+          }
+        ],
+        "id": "v1",
+        "quote_ref": "q1"
+      }
+    ],
+    "nominal_delivery_scope": [
+      {
+        "id": "v3",
+        "quote_ref": "q4"
+      }
+    ]
+  },
+  "legacy_repair_raw": {
+    "repair_0": {
+      "requirement_id": "r8",
+      "unverified_reason": null,
+      "nominal_through_hole_pattern": null,
+      "nominal_perforated_box": null,
+      "digital_delivery": {
+        "version": 1,
+        "kind": "digital_delivery",
+        "scope": "digital_artifacts",
+        "deliverable": "prepared_print_package",
+        "coverage": "all_made",
+        "source_quote": "a prepared print package"
+      },
+      "nominal_subject_inventory": null,
+      "nominal_delivery_scope": null
+    }
+  },
+  "canonical_initial": {
+    "contract": {
+      "requirements": [
+        {
+          "id": "r1",
+          "text": "Provide one designed plate with the saved name motor_plate.",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate.",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.1,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "nominal_subject_inventory",
+            "scope": "nominal_cad",
+            "coverage": "all_made",
+            "items": [
+              {
+                "subject_id": "s1",
+                "subject_role": "designed",
+                "required_name": "motor_plate",
+                "quantity": 1
+              }
+            ],
+            "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate."
+          }
+        },
+        {
+          "id": "r2",
+          "text": "Make a nominal rectangular CAD plate, 80 × 60 × 6 mm in local XYZ, with its outer body centered at the local origin. Include exactly five uniform cylindrical through-holes parallel to local Z: diameter 22 mm at local XY (0, 0), and diameter 5.2 mm at (-30, -20), (-30, 20), (30, -20), and (30, 20) mm. Each hole has a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm.",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.1,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "scope": "nominal_cad",
+            "subject_id": "s1",
+            "subject_role": "designed",
+            "frame": "definition_local",
+            "axis": "z",
+            "count_policy": "exact",
+            "holes": [
+              {
+                "center_mm": [
+                  0.0,
+                  0.0
+                ],
+                "diameter_mm": 22.0,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              },
+              {
+                "center_mm": [
+                  -30.0,
+                  -20.0
+                ],
+                "diameter_mm": 5.2,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              },
+              {
+                "center_mm": [
+                  -30.0,
+                  20.0
+                ],
+                "diameter_mm": 5.2,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              },
+              {
+                "center_mm": [
+                  30.0,
+                  -20.0
+                ],
+                "diameter_mm": 5.2,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              },
+              {
+                "center_mm": [
+                  30.0,
+                  20.0
+                ],
+                "diameter_mm": 5.2,
+                "diameter_tolerance_mm": 0.05,
+                "position_tolerance_mm": 0.05
+              }
+            ],
+            "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+            "kind": "nominal_perforated_box",
+            "size_mm": [
+              80.0,
+              60.0,
+              6.0
+            ],
+            "center_mm": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "id": "r3",
+          "text": "The plate must be one solid.",
+          "source_quote": "It must be one solid.",
+          "source": "request",
+          "metric": "solid_count",
+          "comparator": "eq",
+          "value": 1.0,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.05,
+          "critical": true
+        },
+        {
+          "id": "r4",
+          "text": "Limit delivery to nominal CAD and digital files.",
+          "source_quote": "I need nominal CAD and digital files only.",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.1,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "nominal_delivery_scope",
+            "scope": "software_policy",
+            "policy": "nominal_cad_and_digital_only",
+            "source_quote": "I need nominal CAD and digital files only."
+          }
+        },
+        {
+          "id": "r5",
+          "text": "Deliver editable native CAD for the plate.",
+          "source_quote": "editable native CAD",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.1,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "digital_delivery",
+            "scope": "digital_artifacts",
+            "deliverable": "editable_native",
+            "coverage": "all_made",
+            "source_quote": "editable native CAD"
+          }
+        },
+        {
+          "id": "r6",
+          "text": "Deliver STEP for the plate.",
+          "source_quote": "STEP",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.1,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "digital_delivery",
+            "scope": "digital_artifacts",
+            "deliverable": "project_step",
+            "coverage": "all_made",
+            "source_quote": "STEP"
+          }
+        },
+        {
+          "id": "r7",
+          "text": "Deliver STL for the plate.",
+          "source_quote": "STL",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.1,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "digital_delivery",
+            "scope": "digital_artifacts",
+            "deliverable": "project_stl",
+            "coverage": "all_made",
+            "source_quote": "STL"
+          }
+        },
+        {
+          "id": "r8",
+          "text": "Deliver a prepared print package for the plate.",
+          "source_quote": "a prepared print package",
+          "source": "request",
+          "metric": "unmeasured",
+          "comparator": "eq",
+          "value": null,
+          "tolerance": 0.0,
+          "part_id": null,
+          "axis": "z",
+          "center": null,
+          "position_tolerance": 0.1,
+          "critical": true,
+          "verification": {
+            "version": 1,
+            "kind": "digital_delivery",
+            "scope": "digital_artifacts",
+            "deliverable": "prepared_print_package",
+            "coverage": "all_made",
+            "source_quote": "a prepared print package"
+          }
+        }
+      ],
+      "coverage_notes": [
+        "Motor adapter plate is the source-backed product designation. The request specifies no motor interface or physical operating duty.",
+        "motor_plate is the requested saved name, not an explicitly supplied part ID."
+      ]
+    },
+    "attribution": {
+      "subjects": [
+        {
+          "id": "s1",
+          "label": "Nominal CAD rectangular motor adapter plate named motor_plate",
+          "role": "designed",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate."
+        }
+      ],
+      "facts": [
+        {
+          "id": "f1",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "plate quantity",
+          "value": 1.0,
+          "unit": "plate",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate.",
+          "requirement_ids": [
+            "r1"
+          ]
+        },
+        {
+          "id": "f2",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "local X size",
+          "value": 80.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f3",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "local Y size",
+          "value": 60.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f4",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "local Z size",
+          "value": 6.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f5",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "solid count",
+          "value": 1.0,
+          "unit": "solid",
+          "source_quote": "It must be one solid.",
+          "requirement_ids": [
+            "r3"
+          ]
+        },
+        {
+          "id": "f6",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "total through-hole count",
+          "value": 5.0,
+          "unit": "holes",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f7",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "22 mm hole count",
+          "value": 1.0,
+          "unit": "holes",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f8",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "central hole diameter",
+          "value": 22.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f9",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "central hole local X",
+          "value": 0.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f10",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "central hole local Y",
+          "value": 0.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f11",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "5.2 mm hole count",
+          "value": 4.0,
+          "unit": "holes",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f12",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "four-hole diameter",
+          "value": 5.2,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f13",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "small hole 1 local X",
+          "value": -30.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f14",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "small hole 1 local Y",
+          "value": -20.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f15",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "small hole 2 local X",
+          "value": -30.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f16",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "small hole 2 local Y",
+          "value": 20.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f17",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "small hole 3 local X",
+          "value": 30.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f18",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "small hole 3 local Y",
+          "value": -20.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f19",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "small hole 4 local X",
+          "value": 30.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f20",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "small hole 4 local Y",
+          "value": 20.0,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f21",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "each hole symmetric diameter tolerance",
+          "value": 0.05,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        },
+        {
+          "id": "f22",
+          "subject_id": "s1",
+          "candidate_subject_ids": [],
+          "property": "each hole radial position tolerance",
+          "value": 0.05,
+          "unit": "mm",
+          "source_quote": "Make one nominal CAD rectangular motor adapter plate named motor_plate. Its overall size is 80 mm in local X, 60 mm in local Y and 6 mm in local Z, centered on the local origin. It must be one solid. It has exactly five uniform cylindrical through-holes parallel to local Z: one 22 mm diameter hole at local XY (0, 0), and four 5.2 mm diameter holes at (-30, -20), (-30, 20), (30, -20) and (30, 20) mm. Use a symmetric diameter tolerance of 0.05 mm and a radial position tolerance of 0.05 mm for each hole.",
+          "requirement_ids": [
+            "r2"
+          ]
+        }
+      ],
+      "requirement_subjects": {
+        "r1": [
+          "s1"
+        ],
+        "r2": [
+          "s1"
+        ],
+        "r3": [
+          "s1"
+        ],
+        "r4": [
+          "s1"
+        ],
+        "r5": [
+          "s1"
+        ],
+        "r6": [
+          "s1"
+        ],
+        "r7": [
+          "s1"
+        ],
+        "r8": [
+          "s1"
+        ]
+      },
+      "issues": []
+    }
+  }
+}

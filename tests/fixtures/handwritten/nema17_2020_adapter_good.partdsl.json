@@ -1,0 +1,193 @@
+{
+  "version": "0.1",
+  "metadata": {
+    "name": "nema17_2020_adapter_reference",
+    "units": "mm",
+    "print_orientation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 1.0
+    },
+    "description": "bench-003 deterministic reference: flat NEMA17 -> 2020 adapter plate (ADR-0008). Two known interfaces composed on one plate, both checks reused from bench-001."
+  },
+  "operations": [
+    {
+      "op_id": "plate",
+      "mode": "add",
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "box",
+      "width": 65.0,
+      "depth": 45.0,
+      "height": 4.0
+    },
+    {
+      "op_id": "motor_bolt_nw",
+      "mode": "subtract",
+      "position": {
+        "x": -4.5,
+        "y": 15.5,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "motor_bolt_ne",
+      "mode": "subtract",
+      "position": {
+        "x": 26.5,
+        "y": 15.5,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "motor_bolt_sw",
+      "mode": "subtract",
+      "position": {
+        "x": -4.5,
+        "y": -15.5,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "motor_bolt_se",
+      "mode": "subtract",
+      "position": {
+        "x": 26.5,
+        "y": -15.5,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "shaft_clearance",
+      "mode": "subtract",
+      "position": {
+        "x": 11.0,
+        "y": 0.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 11.0,
+      "height": 4.0
+    },
+    {
+      "op_id": "ext_bolt_back",
+      "mode": "subtract",
+      "position": {
+        "x": -22.0,
+        "y": -10.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 2.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "ext_bolt_front",
+      "mode": "subtract",
+      "position": {
+        "x": -22.0,
+        "y": 10.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 2.6,
+      "height": 4.0
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "motor_face",
+      "interface_type": "nema17_face",
+      "location": {
+        "x": 11.0,
+        "y": 0.0,
+        "z": 4.0
+      },
+      "normal": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "params": {}
+    },
+    {
+      "name": "extrusion_face",
+      "interface_type": "extrusion_2020_slot",
+      "location": {
+        "x": -22.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "normal": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": -1.0
+      },
+      "params": {}
+    }
+  ],
+  "constraints": {
+    "min_wall_thickness": 4.0,
+    "max_overhang_deg": 45.0,
+    "max_bbox": {
+      "x": 70.0,
+      "y": 50.0,
+      "z": 8.0
+    }
+  }
+}

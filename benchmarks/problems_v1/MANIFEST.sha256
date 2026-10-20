@@ -1,0 +1,10 @@
+# problems_v1 FROZEN 2026-07-06 (amended pre-merge after the run-1/run-2 shakedowns; frozen at
+# PR merge). Content authored by claude-fable-5 (bench author); the runtime decompose/research
+# brain (BRAIN_MODEL, Opus default) never sees these files. Corpus values are CANNED fixtures
+# (bench:// URLs), not product claims. Any post-merge content change is a NEW benchmark version.
+# Hashes are over LF-normalized bytes (checkout-flavor independent).
+ef08cc1286a7ecb32875c1013e50bf99d351ca661bf0fab409086b02e3440736 *problems_v1.json
+d0f043e228c03e69a49d68558761376bb3cd1e4007530680c52e735527f91dc6 *corpora/c4000d.json
+dd61b9bc767a2a03f5c8d595268fc4737c3dfba6cb9aec0e3a4b52d6e3e40e5a *corpora/meshify.json
+7d4338c3910431287f57e444aacc929675c20e03fbc1e7e67526e97ea08c8e82 *corpora/nr200.json
+c0d63acb6126901582af1250b33769c66bad881ec1fc4eaf2a573dfdd6730825 *corpora/nr200_variants.json

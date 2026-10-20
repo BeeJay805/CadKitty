@@ -1,0 +1,27 @@
+{
+  "name": "bench-007-actuated-arm-joint-v1",
+  "summary": "Single actuated NEMA 17 arm joint: a bracket holds the motor by its face; an output arm grips the 5mm shaft (running-fit hub bore + radial M3 set screw) and rotates about the shaft axis (revolute), cantilevered. The motor is a non-printed hardware node. Tier 1 is STATIC: coupling correct + revolute coaxial with the real shaft + per-body shells. Powered sweep (arm vs motor body) is OUT of scope (deferred: needs a motor collision mesh).",
+  "components": [
+    { "id": "nema17_motor", "printed": false, "facts": "NEMA 17: 42mm body, 5mm shaft, ~24mm usable length; ports face + shaft coaxial by fact" }
+  ],
+  "dimensions": [
+    { "feature": "shaft_coupling_bore", "spec": "grips the 5mm shaft with a running fit", "value_mm": 2.7, "tolerance_mm": 0.35 },
+    { "feature": "set_screw", "spec": "1x radial M3 set screw into the hub bore", "value_mm": 1.6, "tolerance_mm": 0.35 },
+    { "feature": "max_overhang_angle", "spec": "printed parts print flat without support", "value_deg": 45.0, "comparator": "<=" }
+  ],
+  "required_interfaces": [
+    { "type": "shaft_coupling", "must_present": "arm hub: 5mm running-fit grip bore + radial M3 set-screw boss, coaxial with the shaft" }
+  ],
+  "joints": [
+    { "type": "coaxial_insert", "a": "motor.shaft", "b": "output_arm.hub" },
+    { "type": "revolute", "a": "motor.shaft", "b": "output_arm.hub", "range_deg": [0.0, 360.0] },
+    { "type": "fixed", "a": "motor.face", "b": "mount.pivot_a" }
+  ],
+  "hard_constraints": [
+    "each printed body manifold, watertight, single shell",
+    "the revolute axis is coaxial with the motor shaft (the actuation axis)",
+    "the hub bore grips the 5mm shaft (running fit) with a set-screw boss",
+    "printed parts print flat without supports (overhangs <= 45 deg)",
+    "OUT OF SCOPE (tier 1): arm-clears-motor-body through the powered sweep -- the revolute is hardware-anchored, so range_of_motion WARNs (no motor mesh to sweep); accepted as a known-deferral, not graded"
+  ]
+}

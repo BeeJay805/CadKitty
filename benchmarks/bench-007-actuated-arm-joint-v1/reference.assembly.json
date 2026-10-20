@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": "motor",
+      "archetype": "hardware",
+      "params": {
+        "hardware": "nema17_motor"
+      },
+      "printed": false
+    },
+    {
+      "id": "output_arm",
+      "archetype": "output_arm",
+      "params": {
+        "length_x": 60.0,
+        "width_y": 12.0,
+        "thickness": 5.0,
+        "hub_outer_r": 7.0,
+        "hub_height": 12.0
+      },
+      "printed": true
+    },
+    {
+      "id": "mount",
+      "archetype": "flat_link",
+      "params": {
+        "length_x": 50.0,
+        "width_y": 20.0,
+        "thickness": 4.0,
+        "bore_r": 2.6
+      },
+      "printed": true
+    }
+  ],
+  "joints": [
+    {
+      "type": "coaxial_insert",
+      "a": "motor.shaft",
+      "b": "output_arm.hub",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose"
+    },
+    {
+      "type": "revolute",
+      "a": "motor.shaft",
+      "b": "output_arm.hub",
+      "range_deg": [
+        0.0,
+        360.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose"
+    },
+    {
+      "type": "fixed",
+      "a": "motor.face",
+      "b": "mount.pivot_a",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose"
+    }
+  ],
+  "root": "motor"
+}

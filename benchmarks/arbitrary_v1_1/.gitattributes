@@ -1,0 +1,4 @@
+# FROZEN content: checkout must reproduce the exact blob bytes the MANIFEST pins
+# (see arbitrary_v1/.gitattributes for the CRLF incident history).
+arbitrary_v1_1.json -text
+MANIFEST.sha256 -text

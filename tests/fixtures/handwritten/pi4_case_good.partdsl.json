@@ -1,0 +1,264 @@
+{
+  "version": "0.1",
+  "metadata": {
+    "name": "pi4_case_reference",
+    "units": "mm",
+    "print_orientation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 1.0
+    },
+    "description": null
+  },
+  "operations": [
+    {
+      "op_id": "outer",
+      "mode": "add",
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 8.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "box",
+      "width": 93.0,
+      "depth": 64.0,
+      "height": 16.0
+    },
+    {
+      "op_id": "cavity",
+      "mode": "subtract",
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 9.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "box",
+      "width": 89.0,
+      "depth": 60.0,
+      "height": 14.0
+    },
+    {
+      "op_id": "standoff_nw",
+      "mode": "add",
+      "position": {
+        "x": -29.0,
+        "y": 24.5,
+        "z": 4.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 3.5,
+      "height": 4.0
+    },
+    {
+      "op_id": "standoff_ne",
+      "mode": "add",
+      "position": {
+        "x": 29.0,
+        "y": 24.5,
+        "z": 4.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 3.5,
+      "height": 4.0
+    },
+    {
+      "op_id": "standoff_sw",
+      "mode": "add",
+      "position": {
+        "x": -29.0,
+        "y": -24.5,
+        "z": 4.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 3.5,
+      "height": 4.0
+    },
+    {
+      "op_id": "standoff_se",
+      "mode": "add",
+      "position": {
+        "x": 29.0,
+        "y": -24.5,
+        "z": 4.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 3.5,
+      "height": 4.0
+    },
+    {
+      "op_id": "screw_nw",
+      "mode": "subtract",
+      "position": {
+        "x": -29.0,
+        "y": 24.5,
+        "z": 4.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.35,
+      "height": 5.0
+    },
+    {
+      "op_id": "screw_ne",
+      "mode": "subtract",
+      "position": {
+        "x": 29.0,
+        "y": 24.5,
+        "z": 4.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.35,
+      "height": 5.0
+    },
+    {
+      "op_id": "screw_sw",
+      "mode": "subtract",
+      "position": {
+        "x": -29.0,
+        "y": -24.5,
+        "z": 4.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.35,
+      "height": 5.0
+    },
+    {
+      "op_id": "screw_se",
+      "mode": "subtract",
+      "position": {
+        "x": 29.0,
+        "y": -24.5,
+        "z": 4.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "cylinder",
+      "radius": 1.35,
+      "height": 5.0
+    },
+    {
+      "op_id": "port_long",
+      "mode": "subtract",
+      "position": {
+        "x": 0.0,
+        "y": 31.0,
+        "z": 11.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "box",
+      "width": 50.0,
+      "depth": 4.0,
+      "height": 14.0
+    },
+    {
+      "op_id": "port_short",
+      "mode": "subtract",
+      "position": {
+        "x": -45.5,
+        "y": 0.0,
+        "z": 11.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "op": "box",
+      "width": 4.0,
+      "depth": 44.0,
+      "height": 14.0
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "pi4_mount",
+      "interface_type": "pi4_mount",
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 6.0
+      },
+      "normal": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "params": {}
+    },
+    {
+      "name": "pi4_ports",
+      "interface_type": "pi4_ports",
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 8.0
+      },
+      "normal": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 0.0
+      },
+      "params": {}
+    }
+  ],
+  "constraints": {
+    "min_wall_thickness": 2.0,
+    "max_overhang_deg": 45.0,
+    "max_bbox": {
+      "x": 95.0,
+      "y": 70.0,
+      "z": 30.0
+    }
+  }
+}

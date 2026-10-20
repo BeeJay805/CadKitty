@@ -1,0 +1,12 @@
+{
+  "name": "Self-centering repair fixture from a natural-language brief",
+  "prompt": "Design a compact adjustable two-jaw fixture to center rectangular parts for repair and inspection without moving the centerline. Usable clear opening must vary from 20 to 100 mm, with an 80 mm demonstration setting. Use opposing jaws on two guide rods and one hand-driven shaft with left- and right-hand lead screws or another explicit mechanically coupled solution. Include replaceable soft contact pads, guide bushings, shaft supports, axial retention, travel stops, a handwheel with rotating grip, reachable purchased fasteners, and a guard over exposed transmission. Build an editable assembly with at least 30 meaningful placed components, not decorative duplicates. Keep the envelope below 400 x 180 x 120 mm. Use realistic machined metal, polymer pads, and purchased hardware roles. Trace dimension dependencies, show coupled motion, check pairwise interferences through the full opening range, and measure the two pad faces and midpoint from the exported geometry at 80 mm opening. Nominal purchased-hardware clearance envelopes are acceptable only if clearly marked. Do not claim actual thread engagement, clamp force, manufacturability, procurement readiness or physical safety without supporting evidence. Preserve missing qualifications as unverified. Produce a substantial demonstrable CAD assembly and run deterministic checks before finishing. This trial starts with this brief alone; no preauthored document is provided.",
+  "acceptance": {
+    "minimum_meaningful_occurrences": 30,
+    "maximum_envelope_mm": [400, 180, 120],
+    "opening_range_mm": [20, 100],
+    "demonstration_opening_mm": 80,
+    "pad_midpoint_x_mm": 0,
+    "continuous_physical_validation": "not established by sampled CAD motion"
+  }
+}

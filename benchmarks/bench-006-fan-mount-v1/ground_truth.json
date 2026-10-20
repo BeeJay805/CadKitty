@@ -1,0 +1,23 @@
+{
+  "name": "bench-006-fan-mount-v1",
+  "summary": "Flat 60mm-fan-to-2020 adapter plate: fan 50mm bolt square (4x M3) + central airflow bore on +Z face, 2x M5 T-nut clearance through the plate to the extrusion slot below, 4mm plate, PLA, prints flat without supports.",
+  "dimensions": [
+    { "feature": "fan_bolt_pattern", "spec": "50mm square, 4x M3 clearance (3.4mm holes)", "value_mm": 50.0, "tolerance_mm": 0.5 },
+    { "feature": "airflow_bore", "spec": "central open bore so the fan is not occluded", "value_mm": 56.0, "tolerance_mm": 2.0, "comparator": ">=" },
+    { "feature": "extrusion_mount_holes", "spec": "2x M5 clearance (5.2mm), spaced for the 2020 slot", "value_mm": 20.0, "tolerance_mm": 0.2 },
+    { "feature": "plate_thickness", "spec": "single flat plate, minimum anywhere", "value_mm": 4.0, "tolerance_mm": 0.0, "comparator": ">=" },
+    { "feature": "max_overhang_angle", "spec": "from vertical, printable flat-on-build-plate without support", "value_deg": 45.0, "comparator": "<=" },
+    { "feature": "bounding_box", "spec": "fits within", "value_mm": [108.0, 68.0, 8.0], "comparator": "<=" }
+  ],
+  "required_interfaces": [
+    { "type": "fan_face", "must_present": "4x M3 in 50mm square + central airflow bore (>=56mm), +Z face" },
+    { "type": "extrusion_2020_slot", "must_present": "2x M5 clearance spaced ~20mm for T-nuts, drilled through the plate (-Z face)" }
+  ],
+  "hard_constraints": [
+    "mesh manifold, watertight, single shell",
+    "single flat plate (no upright, no shroud, no walls)",
+    "printable flat on FDM without supports (overhangs <= 45 deg)",
+    "fan bolts and T-nut bolts each keep >= min_wall land to the nearest plate edge",
+    "airflow bore keeps >= min_wall to the corner bolts"
+  ]
+}

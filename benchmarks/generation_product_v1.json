@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "status": "Prospective development cases. No model generation has been run on these cases. Not a held-out generalization score or physical qualification.",
+  "frozen_before_generation": true,
+  "case_selection": "Dimensions and feature requirements chosen independently of retained construction recipes. Recipes are techniques, not target answers.",
+  "cases": [
+    {
+      "id": "development_twisted_impeller",
+      "prompt": "Create one connected twisted impeller for a geometry development study, axis Z, bottom Z=0 and top Z=24 mm. It has eight identical blades evenly spaced by 45 degrees, a central hub OD24 mm, and a coaxial through shaft bore diameter 8 mm. Each blade joins the hub, reaches a 45 mm tip radius, and has nominal 3 mm tangential section thickness at radius 32 mm. Sweep or loft each blade smoothly so its top section rotates +30 degrees about Z relative to its bottom section. Keep the assembled envelope X90 Y90 Z24 mm centered in XY. Do not add an outer rim, flat spoke substitution, cap over the bore, detached blades or unnecessary decorative solids. Use smooth curved blade surfaces and readable editable named dimensions. This request concerns real editable CAD geometry only; do not claim aerodynamic, strength, balance qualification or safe operating speed.",
+      "extents": [
+        90,
+        90,
+        24
+      ],
+      "solids": 1,
+      "bores": [
+        {
+          "axis": "z",
+          "center": [
+            0,
+            0
+          ],
+          "diameter": 8
+        }
+      ],
+      "independent_post_export_checks": {
+        "artifact": "Reimport final STEP; verify its retained SHA256 before measurement.",
+        "topology": "Exactly one valid positive-volume connected solid; actual B-spline blade faces exist.",
+        "bore": "Analytic coaxial Z-cylinder radius 4 mm spanning Z0..24; sampled axis remains void throughout.",
+        "blade_pattern": "At radius 32 mm, sample exact solid occupancy every 0.25 degree in planes Z0.1, Z12 and Z23.9. Require eight occupied angular intervals, 45 degree spacing within 1 degree, and nominal section width 3 mm within 0.35 mm sampling allowance.",
+        "twist": "Eightfold angular phase changes approximately +29.75 degrees from Z0.1 to Z23.9, within 1 degree. This tests retained geometry, not the source's claimed twist variable.",
+        "hub_and_tip": "Analytic hub radius 12 exists; full 90x90x24 export bounds and Z0 datum. Sample radius43.5 occupancy to reject a continuous outer rim.",
+        "editability": "Inspect retained named dimensions and source/feature bindings; separately report whether parameter regeneration was actually exercised.",
+        "limits": "Angular and bore occupancy are explicitly sampled. Full blade thickness coverage, aerodynamics, strength, dynamic balance, process and physical performance remain unverified. Visual review must reject malformed or absent blades even if the envelope passes.",
+        "radial_envelope": "Subtract a coaxial radius45 cylinder from the reimported STEP across its full height. Require residual positive-solid volume below 1e-5 mm3. A 90x90 bounding box alone cannot exclude diagonal radial overshoot."
+      }
+    },
+    {
+      "id": "development_enclosure_assembly",
+      "prompt": "Create an editable reusable enclosure assembly with stable part IDs base, lid and pcb_reference. The base and lid are separate made parts with declared PETG additive-production intent; the PCB is a nonphysical reference envelope excluded from manufacturing exports. The base is open at its top, centered in XY, outside X108 Y76 mm, Z0..36 mm, rounded external vertical corners R8, with nominal 3 mm walls and a 3 mm bottom. Put four OD10 mm lid screw posts at XY (+/-44,+/-28), joined to the bottom and reaching Z36. Their coaxial blind pilot holes are diameter2.5 mm, open at Z36, depth8 mm, with solid floors below Z28. The separate lid is X108 Y76, 4 mm thick, matching rounded R8 footprint, seated at Z36.4..40.4 to leave an explicit nominal 0.4 mm separation. It has four through clearance holes diameter3.4 mm at the same screw centers. Add four OD8 mm PCB standoffs at XY(+/-36,+/-20), from Z3 to Z15, with diameter2.8 mm blind pilots open at Z15 and depth8 mm. Put a centered 84x48x1.6 mm PCB reference at Z15..16.6. On the +Y wall put a real rectangular cable opening X-8..8 and Z6..16 through the wall. On the +X wall put eight real 2 mm-wide by12 mm-high vertical ventilation openings centered at Y -21,-15,-9,-3,3,9,15,21, spanning Z21..33, through the wall. Keep the manufactured pieces connected individually and retain the cavity, hole floors, bottom and ventilation webs. No purchased screw geometry is required. Preserve stable definitions, occurrence paths, named shared dimensions and production roles. Assembly envelope is X108 Y76 Z40.4 mm and has three displayed solids including the reference board. Report nominal geometric clearances and unverified physical/process/fastener fit; do not call the assembly ready for manufacture or load qualified.",
+      "extents": [
+        108,
+        76,
+        40.4
+      ],
+      "solids": 3,
+      "independent_post_export_checks": {
+        "artifact": "Reimport final STEP and independently identify three solids by their geometric bounds, not source-order body numbers.",
+        "roles": "Inspect retained document for base/lid role=make, material PETG and process=additive; pcb_reference role=reference. Verify manufacturing manifest excludes PCB without treating declaration as physical material evidence.",
+        "base_and_lid": "Base Z0..36, lid Z36.4..40.4, reference Z15..16.6; base/lid are individually valid single solids. Pairwise exact intersection volume is zero; top-level bounds are 108x76x40.4.",
+        "cavity_and_floor": "Base center is solid at Z1.5 and void at sampled Z4,18,34. Analytic/profile evidence and section sampling check nominal 3 mm side walls and preserved floor.",
+        "fastener_stack": "Four lid holes at (+/-44,+/-28), actual diameter3.4 and full Z36.4..40.4 void. Base pilot axes have actual diameter2.5; points at Z28.1 and35.9 are void, and Z27.5 remains solid. Preserve OD10 post annuli.",
+        "PCB_seating": "Reference board has exact 84x48x1.6 bounds centered XY. Four standoff pads are at Z15; pilots diameter2.8 are void at Z7.1..14.9 and solid below Z7. The board rests nominally at the pad plane without entering the floor or lid.",
+        "cable_and_vents": "At Y36.5, verify requested cable void rectangle and adjacent material; at X52.5, verify all eight requested vent windows and the intervening solid webs by independent point/section measurements.",
+        "editability": "Inspect stable definitions, occurrence paths and shared named input bindings. Report parameter regeneration separately; do not count a source variable declaration as exercised editing.",
+        "limits": "Sampled cavity/port checks do not prove complete surface coverage. Process capability, real printed pilot fit, screw retention, PCB mounting compatibility, thermal performance, cable bend/service access and physical qualification remain unverified."
+      }
+    },
+    {
+      "id": "repair_filleted_block",
+      "trial_kind": "controlled_actual_model_repair",
+      "prompt": "Create one connected solid block centered on the origin, X40 Y30 Z8 mm, with the four exterior vertical corners rounded to R2. Keep flat top and bottom. Use editable named float dimensions. This is a controlled repair study: retained failed construction is supplied separately. Deliver useful real CAD and report unverified physical scope.",
+      "extents": [
+        40,
+        30,
+        8
+      ],
+      "solids": 1,
+      "repair_seed_code": "from build123d import Box, Axis, fillet\nPARAMS={'width':40.0,'depth':30.0,'height':8.0,'corner_radius':20.0}\nblank=Box(PARAMS['width'],PARAMS['depth'],PARAMS['height'])\nresult=fillet(blank.edges().filter_by(Axis.Z),radius=PARAMS['corner_radius'])\n",
+      "independent_post_export_checks": {
+        "seed": "Before model authoring, the supplied radius20 fillet must fail actual construction under the same frozen contract. Record it separately; do not include it in model-generated first-build or build counts.",
+        "repair": "Reimport model output STEP; require one valid solid, centered40x30x8 bounds and four actual radius2 vertical corner-cylinder surfaces at (+/-18,+/-13). Compare complete profile volume and retained editable dimensions.",
+        "limits": "This measures model repair of a supplied construction failure, not first-shot generation. No scripted model responses or physical qualification."
+      }
+    }
+  ]
+}

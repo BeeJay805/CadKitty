@@ -1,0 +1,37 @@
+{
+  "name": "nema17_mount",
+  "summary": "L-bracket: motor flange carries the NEMA 17; extrusion flange bolts to a 2020 rail.",
+  "envelope_mm": { "x": 60.0, "y": 60.0, "z": 40.0 },
+  "print_orientation": { "x": 0.0, "y": 0.0, "z": 1.0 },
+  "material": "PLA",
+  "min_wall_mm": 4.0,
+  "max_overhang_deg": 45.0,
+  "features": [
+    {
+      "name": "motor_flange",
+      "kind": "plate",
+      "purpose": "Carries the NEMA 17 motor; holds the bolt pattern and shaft bore.",
+      "approx_size_mm": { "x": 43.0, "y": 50.0, "z": 4.0 }
+    },
+    {
+      "name": "extrusion_flange",
+      "kind": "plate",
+      "purpose": "Bolts to the 2020 extrusion via two M5 T-nuts.",
+      "approx_size_mm": { "x": 43.0, "y": 4.0, "z": 30.0 }
+    }
+  ],
+  "required_interfaces": [
+    {
+      "name": "motor_face",
+      "interface_type": "nema17_face",
+      "on_feature": "motor_flange",
+      "facing": "+Z"
+    },
+    {
+      "name": "extrusion_face",
+      "interface_type": "extrusion_2020_slot",
+      "on_feature": "extrusion_flange",
+      "facing": "+Y"
+    }
+  ]
+}

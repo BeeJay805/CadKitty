@@ -1,0 +1,57 @@
+{
+  "name": "bench-001-nema17-mount-v1",
+  "summary": "NEMA 17 motor mount to 2020 extrusion via M5 T-nuts, 4mm walls, PLA, no supports.",
+  "dimensions": [
+    {
+      "feature": "motor_face_bolt_pattern",
+      "spec": "31mm square, 4x M3 clearance (3.2mm holes)",
+      "value_mm": 31.0,
+      "tolerance_mm": 0.1
+    },
+    {
+      "feature": "shaft_clearance_bore",
+      "spec": "central clearance for shaft + boss",
+      "value_mm": 22.0,
+      "tolerance_mm": 0.2
+    },
+    {
+      "feature": "extrusion_mount_holes",
+      "spec": "2x M5 clearance (5.2mm), spaced for the 2020 slot",
+      "value_mm": 20.0,
+      "tolerance_mm": 0.2
+    },
+    {
+      "feature": "wall_thickness",
+      "spec": "minimum anywhere",
+      "value_mm": 4.0,
+      "tolerance_mm": 0.0,
+      "comparator": ">="
+    },
+    {
+      "feature": "max_overhang_angle",
+      "spec": "from vertical, printable without support",
+      "value_deg": 45.0,
+      "comparator": "<="
+    },
+    {
+      "feature": "bounding_box",
+      "spec": "fits within",
+      "value_mm": [60.0, 60.0, 40.0],
+      "comparator": "<="
+    }
+  ],
+  "required_interfaces": [
+    {
+      "type": "nema17_face",
+      "must_present": "4x M3 in 31mm square + central shaft bore"
+    },
+    {
+      "type": "extrusion_2020_slot",
+      "must_present": "2x M5 clearance spaced ~20mm for T-nuts"
+    }
+  ],
+  "hard_constraints": [
+    "mesh manifold, watertight, single shell",
+    "printable on FDM without supports (overhangs <= 45 deg)"
+  ]
+}

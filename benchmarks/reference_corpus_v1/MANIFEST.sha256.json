@@ -1,0 +1,85 @@
+{
+  "version": 3,
+  "parts": [
+    {
+      "id": "arm",
+      "archetype": "output_arm",
+      "tier": "L4_hub_and_arm",
+      "params": {
+        "length_x": 35.0,
+        "width_y": 12.0,
+        "thickness": 4.0,
+        "hub_outer_r": 7.0,
+        "hub_height": 8.0,
+        "bore_r": 2.6,
+        "far_hole_r": 2.6
+      },
+      "spec_sha256": "df66a30efb3ddf8ccda15f1a8bd7ecd731e1e3a8e975140822e665e7d4cba883",
+      "program_sha256": "1d984779373c5c5b7aaddf774987eb340f98302b7db733bd0fb3969c61cf59d5",
+      "geometry_sha256": "bcafef52507ad1ca888c1a2f00832e22a54803751fcc15e3561e7bfac8f20138"
+    },
+    {
+      "id": "bushing",
+      "archetype": "tube",
+      "tier": "L1_primitive",
+      "params": {
+        "length_x": 8.0,
+        "outer_r": 4.0,
+        "bore_r": 2.6
+      },
+      "spec_sha256": "34aa751edea3dbf5fa4fe014c2447ee95597cbcfa6a0e1741c4be69c9de1c83b",
+      "program_sha256": "81c9ed6c1779f7d7d25ed263afaa484aaa5cba2182f7a01528889ceff8d564d3",
+      "geometry_sha256": "7bb7d07cc1ec01826995b94a26c855678e42056d8cb71b6abd61dfb63a7b637d"
+    },
+    {
+      "id": "hinge_leaf",
+      "archetype": "knuckled_plate",
+      "tier": "L3_interleaved_features",
+      "params": {
+        "length_x": 40.0,
+        "width_y": 18.0,
+        "thickness": 4.0,
+        "knuckle_centers_x": [
+          -8.5,
+          8.5
+        ],
+        "knuckle_outer_r": 5.0,
+        "bore_r": 2.6,
+        "knuckle_width": 8.0,
+        "clearance_notches_x": [
+          0.0
+        ]
+      },
+      "spec_sha256": "06ac698f87fcfaa41b968dd55e54d3432730b278296f9edbf226f6cec421379b",
+      "program_sha256": "45e1e0375ad28b8742367de5ce655234d479e3601baee212d42815beddafc955",
+      "geometry_sha256": "787ab556444276f6da23118b4f2756547747b805b0bf780cf561f1a4c728b6da"
+    },
+    {
+      "id": "link",
+      "archetype": "flat_link",
+      "tier": "L2_plate_with_holes",
+      "params": {
+        "length_x": 40.0,
+        "width_y": 12.0,
+        "thickness": 4.0,
+        "bore_r": 2.6,
+        "end_margin": 4.0
+      },
+      "spec_sha256": "acc3508e2c87ad4c62794dd7cf307a4c3e9d148459cee9ae4fc7c3c67ef04ce2",
+      "program_sha256": "042e566f99c187e68d39d974017e994ceb9a23c9b80813673868de376e7c8813",
+      "geometry_sha256": "4a5cac791f9e91a5172304f583704df1626169eaf35b26f3a8870f7dc6b846c7"
+    },
+    {
+      "id": "pin",
+      "archetype": "rod",
+      "tier": "L1_primitive",
+      "params": {
+        "length_x": 25.0,
+        "radius": 2.5
+      },
+      "spec_sha256": "75d38916180752690b06e7c56ea59f256033859d2f576a8e999ced898237abb6",
+      "program_sha256": "64ce1e0787fafc0933988cdc2a857c3850880ee84cf234346de5623707ebb8a9",
+      "geometry_sha256": "927a8e5e362d5daffbd40809f6407226fc3db47e27585faa16ac0f9df315a0b6"
+    }
+  ]
+}

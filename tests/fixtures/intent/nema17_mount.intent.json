@@ -1,0 +1,20 @@
+{
+  "part_family": "motor_mount",
+  "summary": "Bracket mounting a NEMA 17 stepper motor to a 2020 aluminum extrusion via two M5 T-nuts.",
+  "mating_interfaces": [
+    {
+      "interface_type": "nema17_face",
+      "target": "NEMA 17 stepper motor"
+    },
+    {
+      "interface_type": "extrusion_2020_slot",
+      "target": "2020 aluminum extrusion via two M5 T-nuts"
+    }
+  ],
+  "constraints": {
+    "min_wall_mm": 4.0,
+    "material": "PLA",
+    "max_envelope_mm": [60.0, 60.0, 40.0]
+  },
+  "orientation_notes": "Motor shaft faces away from the extrusion."
+}

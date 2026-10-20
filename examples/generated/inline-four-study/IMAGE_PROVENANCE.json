@@ -1,0 +1,81 @@
+{
+  "origin": "Actual Astra generation, incomplete saved candidate assembly",
+  "model_identity_scope": "Configured Codex CLI model and returned usage, not independent provider attestation.",
+  "cad_license": "MIT; see LICENSE. No source photograph or third-party artwork used.",
+  "image_license": "MIT; see LICENSE. Procedural studio lighting and material appearance.",
+  "scope": "Appearance only. Uniform metal appearance does not establish materials, manufacturing or function.",
+  "renderer_source_sha256": "6930cc1cb972a7952a55da5a805d764bc6379c22b041189faf1371f9f74cb7c1",
+  "geometry_modified_for_display": false,
+  "source_assembly_step_sha256": "6f3569289d2a6ba45fb610f4b576588815895f62005488f2aa6999868e7e74b2",
+  "source_package_sha256": "ee793bf424a1ae20dad8f64c3cb85c373a77db8f94564885c8824ccfe831e10f",
+  "images": [
+    {
+      "path": "previews/assembly-standard.png",
+      "sha256": "513811f3a099145cf7ef89274f36ef20d95a4af9c9286de4b50bd08bac83bc6a",
+      "mesh_sha256": "1f89ade1f745466b6d503e53b4ca4b1d912df4ad564f315703d3ecdbd763e59b",
+      "view": "standard",
+      "origin": "Appearance render of the complete saved assembly STL, including bought geometry."
+    },
+    {
+      "path": "previews/assembly-opposed_upper.png",
+      "sha256": "19f231dce5bed2ae528906c49ca2e79c03d8a49cbb5203a4d52c66ba93e32ead",
+      "mesh_sha256": "1f89ade1f745466b6d503e53b4ca4b1d912df4ad564f315703d3ecdbd763e59b",
+      "view": "opposed_upper",
+      "origin": "Appearance render of the complete saved assembly STL, including bought geometry."
+    },
+    {
+      "path": "previews/engine_block.png",
+      "sha256": "868c6a0ab73489493755563438910253d2121d248422625a539d0a8c6e668122",
+      "step_path": "cad/make/definition_engine_block.step",
+      "step_sha256": "ed89a4f22db39a02ce0c0970fecb28e8c62ae3039c969bc55730c422e06d87d4",
+      "mesh_sha256": "ec5b1626a7977b2217eb54cf73184525383705d68aed9777de4074ecf1f1f360",
+      "view": "standard",
+      "origin": "Display tessellation of the exact captured generated component STEP."
+    },
+    {
+      "path": "previews/crankshaft.png",
+      "sha256": "ba5c00cbcc05414b853ac517a4ba99eee368fb37ce67607314ca267f00e81a76",
+      "step_path": "cad/make/definition_crankshaft.step",
+      "step_sha256": "067fa19786a3900a30b725c45afc8e395f38feacd4646a32c8fbd95a4d0aa984",
+      "mesh_sha256": "45e4f674257a060b5b3b8ce4522411d72db553809c5cee7f3964738b034b64f4",
+      "view": "standard",
+      "origin": "Display tessellation of the exact captured generated component STEP."
+    },
+    {
+      "path": "previews/camshaft.png",
+      "sha256": "c74a63d998991608172590f714a02821c84d0e44cfbae11840b81be0e4de3d16",
+      "step_path": "cad/make/definition_camshaft.step",
+      "step_sha256": "253e98c344beba71f7d7969343fef9b80ddd4b4f14f80b6f02d75fe7c755770a",
+      "mesh_sha256": "be72220917b489e8a235635c8daed59ce74b18fbbd42ad449b0976e912be1308",
+      "view": "standard",
+      "origin": "Display tessellation of the exact captured generated component STEP."
+    },
+    {
+      "path": "previews/connecting_rod.png",
+      "sha256": "7254b0e1d44f6c2fb77f8c5f0e752abcb08e28e477de07aa180129d0c3bae29d",
+      "step_path": "cad/make/definition_connecting_rod.step",
+      "step_sha256": "970e2bf4c8b61fdbff212ba3620d1d341f7b0f10bebf1a210f3c255fbce43019",
+      "mesh_sha256": "6c9a78f339aaf51ce65959ce2c0658dda4cd48297ce0539b67e17e0a1abfe321",
+      "view": "standard",
+      "origin": "Display tessellation of the exact captured generated component STEP."
+    },
+    {
+      "path": "previews/piston.png",
+      "sha256": "c6007563a6383ed5226a1dd8646a0261e856f6757c46ff885fabb2be943c0c93",
+      "step_path": "cad/make/definition_piston.step",
+      "step_sha256": "02b5ba7fdaa3b0b9f0d970ec2a491a841ed9f1cf01cd20fcb5351190dcc73a9e",
+      "mesh_sha256": "d8298610fcb621689146eb64eeb2ce6c7407cd0642e8ddc0edfdd8d79726b706",
+      "view": "standard",
+      "origin": "Display tessellation of the exact captured generated component STEP."
+    },
+    {
+      "path": "previews/camshaft_service_cover.png",
+      "sha256": "a2e8a226d4ba856e5d0052383814142773227e0fc1643d748e4e1aabb7368254",
+      "step_path": "cad/make/definition_camshaft_service_cover.step",
+      "step_sha256": "42ebf2750815566e8afdc6c3dcb98845744856bc25df71396f8c4192b8b88816",
+      "mesh_sha256": "5401c453f4c8eefdc9a4f6e6b80d716ba9b8d845e39faa0a06271d91072b3ae6",
+      "view": "standard",
+      "origin": "Display tessellation of the exact captured generated component STEP."
+    }
+  ]
+}

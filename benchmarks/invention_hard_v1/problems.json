@@ -1,0 +1,24 @@
+{
+  "version": "invention_hard_v1",
+  "description": "Hard-tier lifecycle problems (ADR-0048): MECHATRONIC, multi-part assemblies with motion and real hobby hardware (servos, bearings, fasteners) -- the master-spec 'hard = a desktop robot arm' tier. A frozen set that EXTENDS benchmarks/invention_v1. Scored by forge_mind.invention.rubric.score_lifecycle. min_concepts=3: each problem genuinely warrants exploring >=3 distinct mechanism families (all expressible in the closed forge_mind.invention.concept.Mechanism vocabulary), so a live 2-concept plan registers a concept-stage gap. NOTE: the OFFLINE bench stub (forge_mind.invention.bench) always returns a fixed 2-concept plan, so running THIS set offline reports a 'concept' stage failure BY DESIGN -- that exercises the failure-attribution path end to end; the real measurement is the LIVE run (the Fable front door), per RUNBOOK_WHEN_FABLE_RETURNS.md. The hard tier's PHYSICAL acceptance waits for print access (master spec section 6); the problems are frozen now. FROZEN: an edit is a new version (invention_hard_v2), never an in-place change.",
+  "problems": [
+    {
+      "id": "desktop_robot_arm",
+      "tier": "hard",
+      "problem": "I want a small desktop robot arm I can 3D print and drive with hobby servos to move light objects around my desk -- about 3 to 4 joints, a reach of roughly 25 cm, and enough strength to pick up and place a 50 g object. The printed links should be stiff enough not to flex under the load, the joints should use commonly available servos and fasteners, and it should sit stably on the desk while it moves.",
+      "min_concepts": 3
+    },
+    {
+      "id": "pan_tilt_camera_mount",
+      "tier": "hard",
+      "problem": "I want to aim a small webcam around my desk under motor control. I need a 3D-printable two-axis pan-and-tilt mount driven by two hobby servos that pans and tilts smoothly, holds its position against the camera's weight without drifting, routes the camera cable without snagging as it moves, and bolts to the desk or a tripod.",
+      "min_concepts": 3
+    },
+    {
+      "id": "single_servo_gripper",
+      "tier": "hard",
+      "problem": "I need a 3D-printable two-finger gripper for the end of a small robot arm, actuated by a single hobby servo, that can pick up objects from about 5 mm to 50 mm across without crushing them or letting them slip. It should mount to a standard servo-horn flange and use minimal extra hardware beyond the one servo.",
+      "min_concepts": 3
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# Python environments and caches
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build products
+build/
+dist/
+*.whl
+
+# Private configuration and tool state
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+.codex/
+.claude/
+.swarm/
+.ruflo/
+.hive-mind/
+.mcp.json
+
+# Local example and benchmark outputs
+/local-output/
+examples/*.stl
+examples/*.step
+examples/*.brep
+benchmarks/results/*
+!benchmarks/results/.gitkeep
+benchmarks/runs/*.jsonl
+*.log
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+

@@ -1,0 +1,75 @@
+{
+  "version": "product-proof-v1",
+  "scope": "New internal qualification jobs, not unseen customer evidence or a human labor benchmark. Frozen before authoring; retain all failures.",
+  "human_baseline_minutes": null,
+  "labor_savings": null,
+  "physical_validation": "unverified",
+  "cases": [
+    {
+      "id": "pcb_assembly_fixture",
+      "brief": "pcb_assembly_fixture.txt",
+      "sha256": "7723837ba51f4d7cbdebfc88692a49445475db331f941074e693e13b6f9fb97b",
+      "acceptance": [
+        "All requested obligations retained",
+        "Editable geometry and complete declared assembly",
+        "Purchased/reference bodies excluded from make exports",
+        "Current revision and source-bound evidence",
+        "Explicit unresolved engineering and manufacturing gates"
+      ],
+      "measurement_scope": "Score each obligation with actual retained evidence. A software PASS is scoped; no physical or customer-labor PASS."
+    },
+    {
+      "id": "slotted_sensor_mount",
+      "brief": "slotted_sensor_mount.txt",
+      "sha256": "e0690bdcb35568b4164a684933cca6e4aa4197da28136d6c42c8f7cad3059708",
+      "acceptance": [
+        "All requested obligations retained",
+        "Editable geometry and complete declared assembly",
+        "Purchased/reference bodies excluded from make exports",
+        "Current revision and source-bound evidence",
+        "Explicit unresolved engineering and manufacturing gates"
+      ],
+      "measurement_scope": "Score each obligation with actual retained evidence. A software PASS is scoped; no physical or customer-labor PASS."
+    },
+    {
+      "id": "guarded_handwheel_carriage",
+      "brief": "guarded_handwheel_carriage.txt",
+      "sha256": "608d6f537c6a6d8e0d41e56e784d0a34714688eeb59b6e7cb4ec8e1e52f961e5",
+      "acceptance": [
+        "All requested obligations retained",
+        "Editable geometry and complete declared assembly",
+        "Purchased/reference bodies excluded from make exports",
+        "Current revision and source-bound evidence",
+        "Explicit unresolved engineering and manufacturing gates"
+      ],
+      "measurement_scope": "Score each obligation with actual retained evidence. A software PASS is scoped; no physical or customer-labor PASS."
+    },
+    {
+      "id": "service_access_panel",
+      "brief": "service_access_panel.txt",
+      "sha256": "1c6330989bd2a662972274293255400d936780ada70b862faa8bbd0912bf5486",
+      "acceptance": [
+        "All requested obligations retained",
+        "Editable geometry and complete declared assembly",
+        "Purchased/reference bodies excluded from make exports",
+        "Current revision and source-bound evidence",
+        "Explicit unresolved engineering and manufacturing gates"
+      ],
+      "measurement_scope": "Score each obligation with actual retained evidence. A software PASS is scoped; no physical or customer-labor PASS."
+    },
+    {
+      "id": "interchangeable_drill_guide",
+      "brief": "interchangeable_drill_guide.txt",
+      "sha256": "7257bd545fe16c165f33e3929f569087ec5330e4d3ea19aa167a7f72b6bedc01",
+      "acceptance": [
+        "All requested obligations retained",
+        "Editable geometry and complete declared assembly",
+        "Purchased/reference bodies excluded from make exports",
+        "Current revision and source-bound evidence",
+        "Explicit unresolved engineering and manufacturing gates"
+      ],
+      "measurement_scope": "Score each obligation with actual retained evidence. A software PASS is scoped; no physical or customer-labor PASS."
+    }
+  ],
+  "hash_basis": "UTF-8 decoded text with CRLF/CR normalized to LF, matching the benchmark runner"
+}

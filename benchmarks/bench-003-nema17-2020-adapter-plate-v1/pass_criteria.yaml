@@ -1,0 +1,33 @@
+# Pass criteria for bench-003 (NEMA17 -> 2020 adapter plate, ADR-0008).
+#
+# The interface CHECK ids reuse bench-001's nema17_face + extrusion_2020_slot
+# checkers exactly (no new validator code). The new mechanical/architectural
+# axis this bench tests is interface composition on a single flat element --
+# see ADR-0008.
+#
+# Phase: deterministic reference only. The reference DSL below MUST pass these
+# checks; an untuned LLM A/B is a separate later phase, the bar then is the
+# first measured number, not a tuned target.
+
+trials: 10
+min_passing_trials: 9
+max_iterations_per_trial: 3
+max_wall_seconds: 60
+max_cost_usd_per_trial: 0.30
+
+# Validator check ids that MUST pass for a trial to count as a success.
+# All ids already exist in the validator (bench-001 carryover).
+required_checks:
+  - mesh.watertight
+  - mesh.single_body
+  - mesh.bbox_within_max
+  - features.min_wall_thickness
+  - printability.overhang_max_angle
+  - interfaces.motor_face.bolt_holes_present
+  - interfaces.motor_face.bolt_pattern_31mm_square
+  - interfaces.motor_face.shaft_bore_present
+  - interfaces.extrusion_face.two_m5_holes
+  - interfaces.extrusion_face.m5_spacing
+
+# Hand-authored reference PartProgram for the --use-handwritten bypass.
+reference_dsl: tests/fixtures/handwritten/nema17_2020_adapter_good.partdsl.json

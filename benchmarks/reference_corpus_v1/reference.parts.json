@@ -1,0 +1,66 @@
+{
+  "corpus": "reference_corpus_v1",
+  "authored": "2026-07-25",
+  "units": "mm",
+  "rationale": "A dimensionally COHERENT family around a single 5.0 mm pin, ordered by feature count so a score can show WHERE accuracy falls off rather than collapsing to one average. Every bore is 2.6 mm radius against the 2.5 mm pin: 0.1 mm radial = 0.2 mm diametral clearance, the low edge of the repo's 0.20-0.40 mm PLA slip-fit band, and the same bore_r the archived bench-004 hinge reference used. Authored BEFORE and INDEPENDENTLY of any generation, which is what makes it an acceptance criterion rather than a description of whatever the engine happened to build.",
+  "nodes": [
+    {
+      "id": "pin",
+      "archetype": "rod",
+      "tier": "L1_primitive",
+      "note": "One cylinder. The floor: any engine that misses this is broken.",
+      "params": { "length_x": 25.0, "radius": 2.5 }
+    },
+    {
+      "id": "bushing",
+      "archetype": "tube",
+      "tier": "L1_primitive",
+      "note": "Hollow cylinder; running fit on the pin. Tests that a bore is subtracted, not painted.",
+      "params": { "length_x": 8.0, "outer_r": 4.0, "bore_r": 2.6 }
+    },
+    {
+      "id": "link",
+      "archetype": "flat_link",
+      "tier": "L2_plate_with_holes",
+      "note": "Plate with two end bores at a set margin -- the commonest real part shape.",
+      "params": {
+        "length_x": 40.0,
+        "width_y": 12.0,
+        "thickness": 4.0,
+        "bore_r": 2.6,
+        "end_margin": 4.0
+      }
+    },
+    {
+      "id": "hinge_leaf",
+      "archetype": "knuckled_plate",
+      "tier": "L3_interleaved_features",
+      "note": "Two knuckles plus a clearance notch that must interleave with its mirror leaf. The first tier where feature POSITION matters as much as size.",
+      "params": {
+        "length_x": 40.0,
+        "width_y": 18.0,
+        "thickness": 4.0,
+        "knuckle_centers_x": [-8.5, 8.5],
+        "knuckle_outer_r": 5.0,
+        "bore_r": 2.6,
+        "knuckle_width": 8.0,
+        "clearance_notches_x": [0.0]
+      }
+    },
+    {
+      "id": "arm",
+      "archetype": "output_arm",
+      "tier": "L4_hub_and_arm",
+      "note": "A raised hub with a bore plus an arm with a far hole -- two features at different Z, the case where a flat-plate approximation scores well on IoU and is still wrong.",
+      "params": {
+        "length_x": 35.0,
+        "width_y": 12.0,
+        "thickness": 4.0,
+        "hub_outer_r": 7.0,
+        "hub_height": 8.0,
+        "bore_r": 2.6,
+        "far_hole_r": 2.6
+      }
+    }
+  ]
+}

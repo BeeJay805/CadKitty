@@ -1,0 +1,1976 @@
+{
+  "object_name": "desktop humanoid robot (350 mm, servo-driven shoulders and hips)",
+  "parts": [
+    {
+      "name": "chest_shell",
+      "prompt": "Front torso shell of a 350 mm desktop humanoid. Shared frame: Z up from the sole, +Y forward, origin on the centerline. ONE PLA solid, shelled to 2.4 mm wall with internal ribs (smallest bbox dim far exceeds 5x wall). Lofted capsule half occupying y>=0: gently convex chest plate swelling at the pectoral line z=255, width 105 at the shoulders (z=290) tapering to 88 at the waist (z=210) and 96 at the pelvis (z=170); torso spans z=170..300, full torso depth 55 (this half 27.5). Every face crowned/curved, all edges filleted R3 - no flat slab faces. Seam: full-perimeter tongue 1.5 wide x 1.5 deep on the y=0 parting face (location fit 0.15, 0.5 mm lead-in chamfer on the tongue) mating the back shell's groove; 6 M3 bosses Ø4.5 (Ø2.5 pilot, 0.5 mm entry chamfer) at (+/-20,0,298), (+/-30,0,255), (+/-25,0,170); the two z=298 top-deck bosses take brass M3 heat-set inserts (repeated service). Top deck at z=300 carries the neck bearing: Ø8.40 bore, 10 mm land, axis Z through (0,0,300), 0.8 mm lead-in chamfer BOTH entries, with an under-deck pocket capturing the M3x10 retention screw + Ø7 washer and a seat for a 0.2 mm PTFE friction washer on the deck face. Shoulder modules: half-cylinders Ø34 (completed by the back shell), axis X through (+/-x,0,290), extending laterally to open mouths at x=+/-58; each mouth has an external snap groove (0.15 mm interference ridge) for a push-on dome cap. Hip modules: half-cylinders Ø34, axis X through (+/-x,0,180), mouths at x=+/-50 with the same snap groove. MG996R servo bays behind the module mouths: pocket = 40.7 x 19.7 x 42.9 mm body + 0.5 mm air per side, lug seats on the datasheet 49.5 x 10.0 four-hole pattern with M4x12 machine screws into hex-nut pockets (insertion fit 0.15-0.20 at lug seats), shoulder bay local origins (+/-46,0,290) shaft along +/-X, hip bay local origins (+/-44,0,180) shaft along +/-X; each servo drops in outward through its open module mouth before the cap closes. Home-pose swing corridors: nothing of this shell within 5 mm of the arm plane x=+/-73 (z=230..300 band) or the thigh corridor about x=+/-38.",
+      "ports": [
+        {
+          "name": "torso_seam",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "neck_bore",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 300.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 8.4
+        },
+        {
+          "name": "sbay_L",
+          "origin": {
+            "x": 46.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "sbay_R",
+          "origin": {
+            "x": -46.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "hbay_L",
+          "origin": {
+            "x": 44.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "hbay_R",
+          "origin": {
+            "x": -44.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "scap_seat_L",
+          "origin": {
+            "x": 58.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "scap_seat_R",
+          "origin": {
+            "x": -58.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "hcap_seat_L",
+          "origin": {
+            "x": 50.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "hcap_seat_R",
+          "origin": {
+            "x": -50.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "back_shell",
+      "prompt": "Rear torso shell (service door) of the 350 mm humanoid, y<=0 half, ONE PLA solid, 2.4 mm wall. Mirrors the chest loft: curved back plate spanning z=170..300, width 105 at shoulders -> 88 at waist -> 96 at pelvis, half depth 27.5, with a subtle vertical spine crease (a 3 mm deep, R8 cove) down the centerline; all edges filleted R3, no flat faces. Seam: full-perimeter groove 1.5 wide x 1.5 deep on the y=0 face (location fit 0.15) receiving the chest shell's tongue; through-clearance holes Ø3.4 with countersinks at the 6 boss stations (+/-20,0,298), (+/-30,0,255), (+/-25,0,170) so M3x10 screws enter from the back - removing this shell opens the electronics bay. Completes the y<0 halves of the four Ø34 joint-module cylinders at (+/-x,0,290) and (+/-x,0,180). Wiring per route: Ø8 grommet holes through the shoulder-bay inner walls at (+/-40,-15,278); twin 8 x 6 mm printed spine channels moulded inside either side of the spine crease running z=278 down to z=230; 10 x 6 mm slots at z=230 entering the electronics bay (lower back, z=190..230, an inner-face pocket with a bus-board mount: 4x Ø4.5 bosses on a 40 x 30 pattern); Ø8 grommet holes in the pelvis deck at (+/-30,-12,192) for the hip servo leads rising into the same bay.",
+      "ports": [
+        {
+          "name": "torso_seam",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "helmet_front",
+      "prompt": "Front half of the head for the 350 mm humanoid: a smooth rounded helmet form, wider than deep (50 wide x 45 deep x 50 tall, z=300..350), this part the y>=8 slice. ONE PLA solid, 2.0 mm shell, soft crown blending with R10+ fillets everywhere - no square edges. Face carries the shallow rectangular VISOR RECESS: 34 wide x 12 tall x 2.0 deep, centered at (0, front face, z=330), corners filleted R2, rim chamfered 0.5 mm. Mating face on plane y=8: full-perimeter groove 1.5 wide x 1.5 deep (location fit 0.15) receiving the helmet-rear tongue; 2x M3 boss Ø4.5 (Ø2.5 pilot, 0.5 mm entry chamfer) at (+/-12, 10, 303), screws entering upward from below the neck collar.",
+      "ports": [
+        {
+          "name": "head_seam",
+          "origin": {
+            "x": 0.0,
+            "y": 8.0,
+            "z": 325.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "helmet_rear",
+      "prompt": "Rear half of the head (y<=8 slice of the 50 x 45 x 50 helmet spanning z=300..350) for the 350 mm humanoid. ONE PLA solid, 2.0 mm shell, smoothly domed crown and nape, all blends R10+. Mating face on plane y=8: full-perimeter tongue 1.5 wide x 1.5 deep with 0.5 mm lead-in chamfer (location fit 0.15); 2x Ø3.4 through-holes at (+/-12, 10, 303) aligned to the front half's bosses, entered from below the neck collar. Underside: a short neck collar Ø18 blending from the helmet base at z=305 down to z=300, then the neck-yaw spigot: Ø8.0 printed journal, 10 mm long (z=300 down to z=290), axis Z through (0,0,300), 0.8 mm lead-in chamfer at the tip, running fit 0.35-0.40 in the torso deck's Ø8.40 bore; spigot end carries a brass M3 heat-set insert socket (Ø4.0 x 6 deep) for the M3x10 + Ø7 washer retention screw captured under the torso deck; collar underside faced flat for the 0.2 mm PTFE friction washer.",
+      "ports": [
+        {
+          "name": "neck_spigot",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 300.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": 8.0
+        },
+        {
+          "name": "head_seam",
+          "origin": {
+            "x": 0.0,
+            "y": 8.0,
+            "z": 325.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "servo_shoulder_L",
+      "prompt": "MG996R hobby servo (BOUGHT part, registry mg996r_servo) driving the left shoulder. Model the datasheet envelope as one solid: body 40.7 x 19.7 x 42.9 mm, mounting flange with 4x Ø4.4 lug holes on the 49.5 x 10.0 pattern, output spline boss Ø5.9 with horn. Shared frame placement: local origin (46,0,290), output shaft along +X, horn face at x=48 on the shoulder axis (axis X through y=0, z=290). The horn couples to upper_arm_L's drive disc (2x M2.5 on the horn bore circle + M3 center screw); the case is lug-mounted in the chest shell bay - never friction-coupled.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": 46.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "horn",
+          "origin": {
+            "x": 48.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.9
+        }
+      ]
+    },
+    {
+      "name": "servo_shoulder_R",
+      "prompt": "MG996R hobby servo (BOUGHT part, registry mg996r_servo) driving the right shoulder; exact mirror of servo_shoulder_L about the sagittal plane. Datasheet envelope: body 40.7 x 19.7 x 42.9 mm, 4x Ø4.4 lug holes on the 49.5 x 10.0 pattern, output spline Ø5.9 with horn. Shared frame: local origin (-46,0,290), shaft along -X, horn face at x=-48 on the shoulder axis (axis X through y=0, z=290). Horn couples to upper_arm_R's drive disc (2x M2.5 + M3 center screw); case lug-mounted in the chest shell bay.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": -46.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "horn",
+          "origin": {
+            "x": -48.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.9
+        }
+      ]
+    },
+    {
+      "name": "servo_hip_L",
+      "prompt": "MG996R hobby servo (BOUGHT part, registry mg996r_servo) driving the left hip. Datasheet envelope as one solid: body 40.7 x 19.7 x 42.9 mm, 4x Ø4.4 lug holes on the 49.5 x 10.0 pattern, output spline Ø5.9 with horn. Shared frame: local origin (44,0,180), shaft along +X, horn face at x=46 on the hip axis (axis X through y=0, z=180). Horn couples to thigh_L's drive disc (2x M2.5 on the horn bore circle + M3 center screw); case lug-mounted in the chest shell hip bay.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": 44.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "horn",
+          "origin": {
+            "x": 46.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.9
+        }
+      ]
+    },
+    {
+      "name": "servo_hip_R",
+      "prompt": "MG996R hobby servo (BOUGHT part, registry mg996r_servo) driving the right hip; exact mirror of servo_hip_L. Envelope: body 40.7 x 19.7 x 42.9 mm, 4x Ø4.4 lugs on 49.5 x 10.0, output spline Ø5.9 with horn. Shared frame: local origin (-44,0,180), shaft along -X, horn face at x=-46 on the hip axis (axis X through y=0, z=180). Horn couples to thigh_R's drive disc (2x M2.5 + M3 center screw); case lug-mounted in the chest shell hip bay.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": -44.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "horn",
+          "origin": {
+            "x": -46.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.9
+        }
+      ]
+    },
+    {
+      "name": "upper_arm_L",
+      "prompt": "Left upper arm of the 350 mm humanoid, ONE PLA solid. Shoulder axis = X through (y=0, z=290). Drive end, inboard to outboard along that axis: a drive disc Ø20 x 4 at x=48 that screws to the MG996R horn (2x M2.5 clearance holes Ø2.9 on the Ø14 horn bore circle + central Ø3.4 hole for the M3 servo center screw; central locating counterbore Ø6.25 x 2 seating over the horn hub, 0.5 mm chamfer); a hub barrel Ø12 from x=52 to x=58; then the outboard stub journal Ø6.0 spanning x=58..67 (0.8 mm lead-in chamfer at the tip) that runs in the shoulder dome cap's Ø6.35 x 8 mm bore land, running fit 0.35 - the snapped-on cap traps the drive disc inside the module and is the arm's axial retention. From the hub, a curved yoke arm (elliptical section 12 x 8, swept, R4 blends) sweeps outboard and down to the shell. Shell: tapered lofted ELLIPTICAL shell (never a box), 2.0 mm wall, cross-section 26 wide -> 20 root-to-tip, centerline plane x=+73, spanning z=266 down to z=237, top ring at least 22 mm from the shoulder axis so it clears the Ø34 module by >=5 mm through the full +/-45 deg swing; crisp 1.0 mm annular panel-seam lip at the top (location fit 0.15, 0.5 mm chamfer, 2x internal M3 bosses). Distal end: elbow TONGUE 6 mm thick centered on plane x=73 (x=70..76), rounded profile R10, with a Ø5.35 bore on axis X through (73,0,235), 0.6 mm lead-in chamfer both entries (running fit 0.35 over the Ø5.0 elbow dowel). Home pose: hanging straight down, >=5 mm air to the torso everywhere.",
+      "ports": [
+        {
+          "name": "horn_boss",
+          "origin": {
+            "x": 48.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.25
+        },
+        {
+          "name": "outboard_stub",
+          "origin": {
+            "x": 62.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        },
+        {
+          "name": "elbow_tongue",
+          "origin": {
+            "x": 73.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        }
+      ]
+    },
+    {
+      "name": "upper_arm_R",
+      "prompt": "Right upper arm - EXACT sagittal mirror of upper_arm_L, identical dimensions with x negated. Drive disc Ø20 x 4 at x=-48 (2x M2.5 on Ø14 circle + M3 center, counterbore Ø6.25 x 2, 0.5 mm chamfer); hub barrel Ø12 x=-52..-58; outboard stub journal Ø6.0 spanning x=-58..-67, 0.8 mm lead-in chamfer, running fit 0.35 in the dome cap's Ø6.35 bore (cap = axial retention); curved yoke to a tapered lofted elliptical shell 26 -> 20, 2.0 mm wall, centerline plane x=-73, z=266..237, top ring >=22 mm from the shoulder axis (axis X through y=0, z=290); 1.0 mm panel-seam lip + 2x M3 bosses; elbow tongue 6 mm thick centered x=-73 (x=-70..-76) with Ø5.35 bore on axis X through (-73,0,235), 0.6 mm chamfers both entries.",
+      "ports": [
+        {
+          "name": "horn_boss",
+          "origin": {
+            "x": -48.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.25
+        },
+        {
+          "name": "outboard_stub",
+          "origin": {
+            "x": -62.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        },
+        {
+          "name": "elbow_tongue",
+          "origin": {
+            "x": -73.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        }
+      ]
+    },
+    {
+      "name": "forearm_L",
+      "prompt": "Left forearm of the 350 mm humanoid, ONE PLA solid. Elbow axis = X through (73,0,235). Proximal end: a CLEVIS straddling the upper arm's 6 mm tongue (tongue occupies x=70..76): two 7 mm bore lands at x=62..69 (inner leaf) and x=77..84 (outer leaf), leaving 1.0 mm axial air each side of the tongue; both leaves carry Ø5.35 bores on the elbow axis, 0.6 mm lead-in chamfer at all four entries, running fit 0.35 over the Ø5.0 steel dowel. The clevis is dressed as a cylindrical elbow joint module Ø26 about the axis; the INNER leaf's outer face (at x=62) carries a raised boss with an external snap groove (0.15 mm interference) for the push-on domed elbow cap that covers the dowel's inner end. Shell: tapered lofted ELLIPTICAL shell, 2.0 mm wall, cross-section 24 -> 18 root-to-tip, centerline plane x=+73, spanning z=230 down to a rounded closed wrist at z=180 (hanging hand ends near the hip line); crisp 1.0 mm annular seam lip where shell meets the joint module (location 0.15, 0.5 mm chamfer, 2x internal M3 bosses). All blends R3+, no boxes. At elbow angle 0 the forearm hangs straight down with >=1 mm axial air to the tongue and no face contact anywhere except pin-in-bore.",
+      "ports": [
+        {
+          "name": "elbow_clevis",
+          "origin": {
+            "x": 73.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        },
+        {
+          "name": "capseat_elbow",
+          "origin": {
+            "x": 60.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "forearm_R",
+      "prompt": "Right forearm - EXACT sagittal mirror of forearm_L, identical dimensions with x negated. Elbow axis X through (-73,0,235). Clevis: 7 mm lands at x=-62..-69 and x=-77..-84 (1.0 mm axial air each side of the tongue at x=-70..-76), Ø5.35 bores, 0.6 mm lead-in chamfers at all four entries, running fit 0.35 over the Ø5.0 dowel; Ø26 cylindrical elbow module dressing; inner-leaf boss (face at x=-62) with external snap groove (0.15 interference) for the push-on domed elbow cap covering the dowel's inner end. Tapered lofted elliptical shell 24 -> 18, 2.0 mm wall, centerline x=-73, z=230..180, rounded wrist; 1.0 mm seam lip + 2x M3 bosses; R3+ blends throughout.",
+      "ports": [
+        {
+          "name": "elbow_clevis",
+          "origin": {
+            "x": -73.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        },
+        {
+          "name": "capseat_elbow",
+          "origin": {
+            "x": -60.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "elbow_pin_L",
+      "prompt": "Left elbow dowel pin: a plain Ø5.0 x 24 mm cylindrical steel-spec pin, axis along X, shank spanning x=60..84 centered on the elbow axis through (73,0,235), with a Ø8.0 x 2 mm head at the outer end (x=84..86) whose shoulder seats against the forearm clevis's outer face at x=84; 0.6 mm chamfer on the inner tip. Runs with 0.35 mm running fit in the Ø5.35 clevis and tongue bores. AXIAL RETENTION (named): the head shoulder stops outward walk; the push-on domed elbow cap snapped over the forearm's inner clevis boss covers the inner end and stops inward walk.",
+      "ports": [
+        {
+          "name": "tongue_journal",
+          "origin": {
+            "x": 73.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        },
+        {
+          "name": "clevis_journal",
+          "origin": {
+            "x": 66.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        }
+      ]
+    },
+    {
+      "name": "elbow_pin_R",
+      "prompt": "Right elbow dowel pin - exact mirror of elbow_pin_L: Ø5.0 x 24 mm pin, axis X, shank x=-60..-84 on the elbow axis through (-73,0,235), Ø8.0 x 2 head at x=-84..-86 with its shoulder seating against the forearm_R outer clevis face at x=-84; 0.6 mm chamfer on the inner tip; 0.35 running fit in the Ø5.35 bores. AXIAL RETENTION (named): head shoulder against the outer clevis face stops outward walk; the push-on domed elbow cap snapped over forearm_R's inner clevis boss (0.15 mm interference groove) covers the inner end and stops inward walk-out.",
+      "ports": [
+        {
+          "name": "tongue_journal",
+          "origin": {
+            "x": -73.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        },
+        {
+          "name": "clevis_journal",
+          "origin": {
+            "x": -66.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        }
+      ]
+    },
+    {
+      "name": "thigh_L",
+      "prompt": "Left thigh of the 350 mm humanoid, ONE PLA solid. Hip axis = X through (y=0, z=180). Drive end along that axis: drive disc Ø20 x 4 at x=46 coupling the MG996R horn (2x M2.5 clearance holes Ø2.9 on the Ø14 horn bore circle + Ø3.4 central hole for the M3 servo center screw, locating counterbore Ø6.25 x 2, 0.5 mm chamfer); short hub Ø12 x=48..50; outboard stub journal Ø6.0 spanning x=50..59 (0.8 mm lead-in chamfer at the tip) running in the hip dome cap's Ø6.35 x 8 mm bore land, running fit 0.35 - the snapped-on cap is the axial retention. A curved yoke arm (elliptical 14 x 9 section, R4 blends) sweeps from the hub inboard and down to the shell. Shell: tapered lofted ELLIPTICAL shell, 2.0 mm wall, cross-section 34 -> 26 root-to-tip, centerline plane x=+38, spanning z=158 down to z=110, top ring at least 22 mm from the hip axis so it clears the Ø34 module by >=5 mm and keeps >=5 mm to the pelvis shell through the full +/-30 deg swing; 1.0 mm annular seam lip at top (location 0.15, 0.5 mm chamfer, 2x internal M3 bosses). Distal end: knee TONGUE 6 mm thick centered on plane x=38 (x=35..41), rounded R10, Ø5.35 bore on axis X through (38,0,105), 0.6 mm lead-in chamfers both entries (running fit 0.35 over the Ø5.0 knee dowel).",
+      "ports": [
+        {
+          "name": "horn_boss",
+          "origin": {
+            "x": 46.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.25
+        },
+        {
+          "name": "outboard_stub",
+          "origin": {
+            "x": 54.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        },
+        {
+          "name": "knee_tongue",
+          "origin": {
+            "x": 38.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        }
+      ]
+    },
+    {
+      "name": "thigh_R",
+      "prompt": "Right thigh - EXACT sagittal mirror of thigh_L, identical dimensions with x negated. Hip axis X through (y=0, z=180): drive disc Ø20 x 4 at x=-46 (2x M2.5 on Ø14 circle + M3 center, counterbore Ø6.25 x 2); hub Ø12 x=-48..-50; outboard stub Ø6.0 x=-50..-59, 0.8 mm lead-in chamfer, running fit 0.35 in the hip dome cap Ø6.35 bore (cap = axial retention); curved yoke to a tapered lofted elliptical shell 34 -> 26, 2.0 mm wall, centerline x=-38, z=158..110, top ring >=22 mm from the hip axis; 1.0 mm seam lip + 2x M3 bosses; knee tongue 6 mm thick centered x=-38 (x=-35..-41), Ø5.35 bore on axis X through (-38,0,105), 0.6 mm chamfers both entries.",
+      "ports": [
+        {
+          "name": "horn_boss",
+          "origin": {
+            "x": -46.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.25
+        },
+        {
+          "name": "outboard_stub",
+          "origin": {
+            "x": -54.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.0
+        },
+        {
+          "name": "knee_tongue",
+          "origin": {
+            "x": -38.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        }
+      ]
+    },
+    {
+      "name": "shin_L",
+      "prompt": "Left shin of the 350 mm humanoid, ONE PLA solid. Knee axis = X through (38,0,105). Proximal end: a CLEVIS straddling the thigh's 6 mm tongue (tongue at x=35..41): two 7 mm bore lands at x=27..34 (inner leaf) and x=42..49 (outer leaf), 1.0 mm axial air each side of the tongue; Ø5.35 bores on the knee axis, 0.6 mm lead-in chamfer at all four entries, running fit 0.35 over the Ø5.0 steel dowel. Clevis dressed as a cylindrical knee module Ø26; the inner leaf's outer face (x=27) carries a boss with an external snap groove (0.15 interference) for the push-on domed knee cap covering the dowel's inner end. Shell: tapered lofted ELLIPTICAL shell, 2.0 mm wall, cross-section 28 -> 22 root-to-tip, centerline plane x=+38, spanning z=100 down to z=30, blending into an ankle boss; 1.0 mm annular seam lip at the knee module (location 0.15, 0.5 mm chamfer, 2x internal M3 bosses). Ankle interface at (38,0,20): a Ø16 x 4 locating spigot ring (location fit 0.15, 0.5 mm lead-in chamfer) plus 2x Ø2.5-pilot bosses receiving M3x10 self-tapping screws entered from the foot's sole counterbores. All blends R3+; at knee angle 0 the shin hangs straight with no face contact except pin-in-bore.",
+      "ports": [
+        {
+          "name": "knee_clevis",
+          "origin": {
+            "x": 38.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        },
+        {
+          "name": "capseat_knee",
+          "origin": {
+            "x": 25.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "ankle",
+          "origin": {
+            "x": 38.0,
+            "y": 0.0,
+            "z": 20.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "shin_R",
+      "prompt": "Right shin - EXACT sagittal mirror of shin_L, identical dimensions with x negated. Knee axis X through (-38,0,105): clevis lands 7 mm at x=-27..-34 and x=-42..-49 (1.0 mm axial air each side of the tongue at x=-35..-41), Ø5.35 bores, 0.6 mm chamfers at all four entries, running fit 0.35; Ø26 knee module dressing; inner-leaf boss (face x=-27) with snap groove (0.15 interference) for the push-on domed knee cap. Tapered lofted elliptical shell 28 -> 22, 2.0 mm wall, centerline x=-38, z=100..30; 1.0 mm seam lip + 2x M3 bosses; ankle interface at (-38,0,20): Ø16 x 4 locating spigot ring (location 0.15, 0.5 mm chamfer) + 2x Ø2.5-pilot bosses for M3x10 self-tappers from the foot sole.",
+      "ports": [
+        {
+          "name": "knee_clevis",
+          "origin": {
+            "x": -38.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.35
+        },
+        {
+          "name": "capseat_knee",
+          "origin": {
+            "x": -25.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        },
+        {
+          "name": "ankle",
+          "origin": {
+            "x": -38.0,
+            "y": 0.0,
+            "z": 20.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "foot_L",
+      "prompt": "Left foot of the 350 mm humanoid: a low ROUNDED-TOE pad, ONE PLA solid. 60 long (y=-22..+38, toe forward +Y) x 30 wide x 20 tall (z=0..20), centered laterally on x=+38, gently crowned top surface, toe and heel fully rounded (R10 toe, R8 heel), all edges filleted R4 - flat only on the sole so the figure stands freestanding. Top at (38,0,20) carries the ankle interface: a Ø16.3 recess ring receiving the shin's Ø16 locating spigot (location fit 0.15, 0.5 mm entry chamfer) and 2x Ø3.4 through-holes with Ø7 sole counterbores for M3x10 self-tapping screws driving up into the shin bosses.",
+      "ports": [
+        {
+          "name": "ankle",
+          "origin": {
+            "x": 38.0,
+            "y": 0.0,
+            "z": 20.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "foot_R",
+      "prompt": "Right foot - EXACT sagittal mirror of foot_L, identical dimensions with x negated: rounded-toe pad 60 long x 30 wide x 20 tall centered on x=-38 (toe forward +Y), crowned top, R10 toe / R8 heel / R4 edge fillets, flat sole. Ankle interface at (-38,0,20): Ø16.3 recess ring (location fit 0.15, 0.5 mm chamfer) + 2x Ø3.4 through-holes with Ø7 sole counterbores for M3x10 self-tappers into the shin.",
+      "ports": [
+        {
+          "name": "ankle",
+          "origin": {
+            "x": -38.0,
+            "y": 0.0,
+            "z": 20.0
+          },
+          "axis": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "knee_pin_L",
+      "prompt": "Left knee dowel pin: a plain Ø5.0 x 24 mm cylindrical steel-spec pin, axis X, shank spanning x=25..49 on the knee axis through (38,0,105), with a Ø8.0 x 2 mm head at the outer end (x=49..51) whose shoulder seats against the shin clevis's outer face at x=49; 0.6 mm chamfer on the inner tip; 0.35 running fit in the Ø5.35 clevis and tongue bores. AXIAL RETENTION (named): head shoulder stops outward walk; the push-on domed knee cap snapped over the shin's inner clevis boss covers the inner end and stops inward walk.",
+      "ports": [
+        {
+          "name": "tongue_journal",
+          "origin": {
+            "x": 38.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        },
+        {
+          "name": "clevis_journal",
+          "origin": {
+            "x": 31.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        }
+      ]
+    },
+    {
+      "name": "knee_pin_R",
+      "prompt": "Right knee dowel pin - exact mirror of knee_pin_L: Ø5.0 x 24 mm pin, axis X, shank x=-25..-49 on the knee axis through (-38,0,105), Ø8.0 x 2 head at x=-49..-51 with its shoulder seating against shin_R's outer clevis face at x=-49; 0.6 mm chamfer on the inner tip; 0.35 running fit in the Ø5.35 bores. AXIAL RETENTION (named): head shoulder against the outer clevis face stops outward walk; the push-on domed knee cap snapped over shin_R's inner clevis boss (0.15 mm interference groove) covers the inner end and stops inward walk-out.",
+      "ports": [
+        {
+          "name": "tongue_journal",
+          "origin": {
+            "x": -38.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        },
+        {
+          "name": "clevis_journal",
+          "origin": {
+            "x": -31.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 5.0
+        }
+      ]
+    },
+    {
+      "name": "shoulder_dome_cap_L",
+      "prompt": "Left shoulder dome cap: a push-on domed bearing cap closing the left shoulder module of the 350 mm humanoid, ONE PLA solid. A sphere-capped dome Ø34 whose skirt (2.0 mm wall, 6 mm deep) pushes over the torso module mouth at x=58 (axis X through y=0, z=290), gripping via an internal snap ridge engaging the module's groove at 0.15 mm interference. Central bearing boss: Ø6.35 bore, 8 mm land spanning x=58..66, 0.8 mm lead-in chamfer at BOTH entries, running fit 0.35 over the upper arm's Ø6.0 outboard stub journal; the cap traps the arm's drive disc inside the module (this cap IS the shoulder's axial retention). Smooth dome, edge blend R2, no square edges.",
+      "ports": [
+        {
+          "name": "stub_bore",
+          "origin": {
+            "x": 62.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.35
+        },
+        {
+          "name": "mount",
+          "origin": {
+            "x": 58.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "shoulder_dome_cap_R",
+      "prompt": "Right shoulder dome cap - EXACT sagittal mirror of shoulder_dome_cap_L: Ø34 sphere-capped dome, 2.0 mm skirt pushing over the module mouth at x=-58 (axis X through y=0, z=290), internal snap ridge at 0.15 mm interference; central Ø6.35 bore, 8 mm land x=-58..-66, 0.8 mm lead-in chamfers both entries, running fit 0.35 over upper_arm_R's Ø6.0 stub; retains the arm axially. R2 edge blends, no square edges.",
+      "ports": [
+        {
+          "name": "stub_bore",
+          "origin": {
+            "x": -62.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.35
+        },
+        {
+          "name": "mount",
+          "origin": {
+            "x": -58.0,
+            "y": 0.0,
+            "z": 290.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "hip_dome_cap_L",
+      "prompt": "Left hip dome cap: a push-on domed bearing cap closing the left hip module, ONE PLA solid. Sphere-capped dome Ø34, skirt 2.0 mm wall x 6 deep pushing over the torso hip module mouth at x=50 (axis X through y=0, z=180), internal snap ridge at 0.15 mm interference engaging the module groove. Central bearing boss: Ø6.35 bore, 8 mm land spanning x=50..58, 0.8 mm lead-in chamfer at BOTH entries, running fit 0.35 over the thigh's Ø6.0 outboard stub journal; the cap traps the thigh drive disc inside the module (this cap IS the hip's axial retention). Smooth dome, R2 blends.",
+      "ports": [
+        {
+          "name": "stub_bore",
+          "origin": {
+            "x": 54.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.35
+        },
+        {
+          "name": "mount",
+          "origin": {
+            "x": 50.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "hip_dome_cap_R",
+      "prompt": "Right hip dome cap - EXACT sagittal mirror of hip_dome_cap_L: Ø34 sphere-capped dome, 2.0 mm skirt over the module mouth at x=-50 (axis X through y=0, z=180), 0.15 mm interference snap ridge; central Ø6.35 bore, 8 mm land x=-50..-58, 0.8 mm lead-in chamfers both entries, running fit 0.35 over thigh_R's Ø6.0 stub; retains the thigh axially. R2 blends.",
+      "ports": [
+        {
+          "name": "stub_bore",
+          "origin": {
+            "x": -54.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": 6.35
+        },
+        {
+          "name": "mount",
+          "origin": {
+            "x": -50.0,
+            "y": 0.0,
+            "z": 180.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "elbow_dome_cap_L",
+      "prompt": "Left elbow dome cap: a small push-on domed cap, ONE PLA solid - a sphere-capped dome Ø26 with a 2.0 mm wall x 4 deep skirt that pushes over the forearm_L inner clevis boss (boss face at x=62 on the elbow axis X through y=0, z=235), gripping via an internal snap groove at 0.15 mm interference. It covers the elbow dowel's inner end (named axial retention for the pin) and completes the dome-capped cylindrical elbow joint module. Smooth dome, R2 edge blend, 0.5 mm lead-in on the skirt mouth.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": 60.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "elbow_dome_cap_R",
+      "prompt": "Right elbow dome cap - EXACT sagittal mirror of elbow_dome_cap_L: Ø26 sphere-capped dome, 2.0 mm x 4 deep skirt pushing over forearm_R's inner clevis boss (face at x=-62, elbow axis X through y=0, z=235), internal snap groove 0.15 mm interference, covering the dowel's inner end (axial retention). R2 blend, 0.5 mm skirt lead-in.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": -60.0,
+            "y": 0.0,
+            "z": 235.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "knee_dome_cap_L",
+      "prompt": "Left knee dome cap: a small push-on domed cap, ONE PLA solid - a sphere-capped dome Ø26 with a 2.0 mm wall x 4 deep skirt pushing over the shin_L inner clevis boss (boss face at x=27 on the knee axis X through y=0, z=105), internal snap groove at 0.15 mm interference. Covers the knee dowel's inner end (named axial retention for the pin) and completes the dome-capped cylindrical knee joint module. Smooth dome, R2 blend, 0.5 mm skirt lead-in.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": 25.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    },
+    {
+      "name": "knee_dome_cap_R",
+      "prompt": "Right knee dome cap - EXACT sagittal mirror of knee_dome_cap_L: Ø26 sphere-capped dome, 2.0 mm x 4 deep skirt over shin_R's inner clevis boss (face at x=-27, knee axis X through y=0, z=105), internal snap groove 0.15 mm interference, covering the dowel's inner end (axial retention). R2 blend, 0.5 mm skirt lead-in.",
+      "ports": [
+        {
+          "name": "mount",
+          "origin": {
+            "x": -25.0,
+            "y": 0.0,
+            "z": 105.0
+          },
+          "axis": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "diameter_mm": null
+        }
+      ]
+    }
+  ],
+  "assembly_note": "Overlay all parts at the shared origin: torso shells close on y=0 around the four MG996R servos; each arm/thigh drive disc enters its module mouth to screw onto the servo horn, the dome cap snaps on over the outboard stub to bear and retain it; elbows and knees pin tongue-into-clevis with headed Ø5 dowels covered by push-on domed caps; head spigot drops into the torso deck; feet screw up into the shins.",
+  "joints": [
+    {
+      "type": "fixed",
+      "a": "chest_shell.torso_seam",
+      "b": "back_shell.torso_seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "chest_shell.neck_bore",
+      "b": "helmet_rear.neck_spigot",
+      "range_deg": [
+        -60.0,
+        60.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "helmet_rear.head_seam",
+      "b": "helmet_front.head_seam",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "chest_shell.sbay_L",
+      "b": "servo_shoulder_L.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "servo_shoulder_L.horn",
+      "b": "upper_arm_L.horn_boss",
+      "range_deg": [
+        -45.0,
+        45.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "shoulder_dome_cap_L.stub_bore",
+      "b": "upper_arm_L.outboard_stub",
+      "range_deg": [
+        -45.0,
+        45.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "chest_shell.scap_seat_L",
+      "b": "shoulder_dome_cap_L.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "chest_shell.sbay_R",
+      "b": "servo_shoulder_R.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "servo_shoulder_R.horn",
+      "b": "upper_arm_R.horn_boss",
+      "range_deg": [
+        -45.0,
+        45.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "shoulder_dome_cap_R.stub_bore",
+      "b": "upper_arm_R.outboard_stub",
+      "range_deg": [
+        -45.0,
+        45.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "chest_shell.scap_seat_R",
+      "b": "shoulder_dome_cap_R.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "upper_arm_L.elbow_tongue",
+      "b": "elbow_pin_L.tongue_journal",
+      "range_deg": [
+        0.0,
+        120.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "forearm_L.elbow_clevis",
+      "b": "elbow_pin_L.clevis_journal",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "forearm_L.capseat_elbow",
+      "b": "elbow_dome_cap_L.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "upper_arm_R.elbow_tongue",
+      "b": "elbow_pin_R.tongue_journal",
+      "range_deg": [
+        0.0,
+        120.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "forearm_R.elbow_clevis",
+      "b": "elbow_pin_R.clevis_journal",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "forearm_R.capseat_elbow",
+      "b": "elbow_dome_cap_R.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "chest_shell.hbay_L",
+      "b": "servo_hip_L.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "servo_hip_L.horn",
+      "b": "thigh_L.horn_boss",
+      "range_deg": [
+        -30.0,
+        30.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "hip_dome_cap_L.stub_bore",
+      "b": "thigh_L.outboard_stub",
+      "range_deg": [
+        -30.0,
+        30.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "chest_shell.hcap_seat_L",
+      "b": "hip_dome_cap_L.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "chest_shell.hbay_R",
+      "b": "servo_hip_R.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "servo_hip_R.horn",
+      "b": "thigh_R.horn_boss",
+      "range_deg": [
+        -30.0,
+        30.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "hip_dome_cap_R.stub_bore",
+      "b": "thigh_R.outboard_stub",
+      "range_deg": [
+        -30.0,
+        30.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "chest_shell.hcap_seat_R",
+      "b": "hip_dome_cap_R.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "thigh_L.knee_tongue",
+      "b": "knee_pin_L.tongue_journal",
+      "range_deg": [
+        0.0,
+        120.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "shin_L.knee_clevis",
+      "b": "knee_pin_L.clevis_journal",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "shin_L.capseat_knee",
+      "b": "knee_dome_cap_L.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "shin_L.ankle",
+      "b": "foot_L.ankle",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "revolute",
+      "a": "thigh_R.knee_tongue",
+      "b": "knee_pin_R.tongue_journal",
+      "range_deg": [
+        0.0,
+        120.0
+      ],
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "coaxial_insert",
+      "a": "shin_R.knee_clevis",
+      "b": "knee_pin_R.clevis_journal",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "shin_R.capseat_knee",
+      "b": "knee_dome_cap_R.mount",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    },
+    {
+      "type": "fixed",
+      "a": "shin_R.ankle",
+      "b": "foot_R.ankle",
+      "range_deg": null,
+      "range_mm": null,
+      "clearance_class": "running_fit",
+      "mate": "oppose",
+      "module": null,
+      "teeth_a": null,
+      "teeth_b": null,
+      "clock_a_deg": 0.0,
+      "clock_b_deg": null,
+      "internal": false
+    }
+  ]
+}

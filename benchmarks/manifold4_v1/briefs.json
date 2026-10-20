@@ -1,0 +1,98 @@
+[
+ {
+  "label": "exhaust_manifold_4to1",
+  "prompt": "a display-scale 4-into-1 exhaust manifold, printable in PLA: a flat head flange 150 x 45 x 8 mm with four 19 mm round exhaust ports on 34 mm centers and eight M6 bolt holes flanking the ports; four curved runner tubes, 24 mm outer diameter with 2.5 mm walls, sweeping from the ports and converging into a single collector; the collector a 40 mm outer-diameter tube ending in a 60 mm round outlet flange with four M6 holes on a 48 mm bolt circle; minimum wall 2 mm; print head-flange face down",
+  "brief": {
+   "object_name": "4-into-1 exhaust manifold (display-scale header)",
+   "summary": "Display-scale 4-into-1 motorcycle-style exhaust header: flat head flange with four ports, four curved runner tubes converging into a single collector with a round outlet flange.",
+   "visual_description": "A flat rectangular head flange (150 x 45 mm plate, 8 mm thick) with four round port openings in a row and eight small bolt holes flanking them. From each port a slender curved tube (24 mm OD) sweeps up and away from the flange face, the four tubes bending in smooth arcs of differing lengths so they converge symmetrically into one point, merging into a single fatter collector tube (40 mm OD) that runs straight and ends in a round 60 mm outlet flange with four bolt holes. The whole part is dominated by thin-walled round tube; the only flat elements are the rectangular head flange and the round outlet disc. Tube walls are visibly thin (2.5 mm) at every open end; the ports and outlet are open through-bores, not capped. Silhouette resembles a set of organ pipes bending together into one trumpet.",
+   "overall_envelope_mm": "Approx 150 L x 120 W x 180 H: flange width 150 mm sets L, the runner sweep depth ~120 mm sets W, and runner arcs rising to the collector plus outlet flange set ~180 mm H (display scale, roughly 1:2 of a real 600cc-class header).",
+   "features": [
+    {
+     "name": "head flange plate",
+     "purpose": "Flat mounting plate that mates against the cylinder head face and anchors the four runners.",
+     "approx_dims_mm": "150 x 45 x 8 plate, lightly filleted corners (r ~5)",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "dimensions stated in the request (150 x 45 x 8)"
+    },
+    {
+     "name": "exhaust ports",
+     "purpose": "Round through-openings in the head flange where exhaust gas enters the runners; stated 19 mm diameter is exact, no fastener standard.",
+     "approx_dims_mm": "19 dia through-bores, 4 in a row on 34 mm centers, centered on the flange",
+     "method": "pocket (through-hole pattern)",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "stated 19 mm port diameter on 34 mm centers"
+    },
+    {
+     "name": "head-flange bolt holes",
+     "purpose": "Clearance holes for M6 studs/bolts clamping the flange to the head, flanking the ports.",
+     "approx_dims_mm": "M6 clearance through-holes, 8 total: one between/outboard of each port pair, spaced along the 150 mm length, ~10 mm in from the long edges",
+     "method": "bolt_holes",
+     "count": 8,
+     "standard": "M6",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "runner tubes",
+     "purpose": "Curved primary tubes carrying exhaust from each port toward the merge; each sweeps a different arc so all four converge at one collector inlet.",
+     "approx_dims_mm": "24 OD x 2.5 wall (19 ID matching the ports), each sweeping ~90-120 degrees over a ~100-140 mm path from flange to merge point",
+     "method": "sweep (hollow circular profile along a spline path per runner)",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "stated 24 OD / 2.5 wall; arc lengths scaled from a 600cc-class inline-4 header at roughly 1:2"
+    },
+    {
+     "name": "4-into-1 merge collector",
+     "purpose": "Convergence zone where the four runners blend into the single collector tube; the organic transition from four 24 mm circles to one 40 mm circle.",
+     "approx_dims_mm": "transition ~40-50 long, from a 2x2 cluster of runner ends into a 40 OD circle, walls kept >= 2",
+     "method": "loft (four runner-end sections lofted to the single collector section)",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "must smoothly join four 24 OD tubes into the stated 40 OD collector without walls below 2 mm"
+    },
+    {
+     "name": "collector tube",
+     "purpose": "Single outlet tube carrying merged flow to the outlet flange.",
+     "approx_dims_mm": "40 OD x 2.5 wall (35 ID), ~60-80 long straight run from merge to outlet flange",
+     "method": "sweep (hollow circular profile, straight or gently curved path)",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "stated 40 OD; length proportioned from typical header collector stub before the muffler joint"
+    },
+    {
+     "name": "outlet flange",
+     "purpose": "Round disc terminating the collector for bolting to a downstream pipe; collector bore passes through it.",
+     "approx_dims_mm": "60 dia x 8 thick disc, concentric 35 dia through-bore continuing the collector ID",
+     "method": "revolve (disc) + pocket (through-bore)",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "stated 60 mm flange diameter; thickness matched to the 8 mm head flange"
+    },
+    {
+     "name": "outlet-flange bolt holes",
+     "purpose": "Clearance holes for M6 bolts joining the outlet flange to the downstream pipe flange.",
+     "approx_dims_mm": "M6 clearance holes, 4 equally spaced on a 48 mm bolt circle",
+     "method": "bolt_holes",
+     "count": 4,
+     "standard": "M6",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the flat head-flange face down (as requested): the 150 x 45 flange is a stable base, the runners rise as gradually curving tubes largely self-supporting; only the collector merge and outlet flange overhangs may need light supports.",
+   "target": "cosmetic"
+  }
+ }
+]

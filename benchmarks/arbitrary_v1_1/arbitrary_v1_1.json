@@ -1,0 +1,807 @@
+{
+  "version": "arbitrary_v1.1",
+  "authored_by": "claude-sonnet-4-6 (independent rubric author; never the CAD author model)",
+  "paraphrase_rule": "P1 reorders the clauses of the base prompt without changing any number, unit, or component name. P2 swaps phrasing/synonyms and register (e.g. 'build me' vs 'design') without changing any number, unit, or component name. All three variants are run once each; a prompt's score is the MINIMUM across its variants.",
+  "prompts": [
+    {
+      "id": "bracket_shelf_l",
+      "class": "bracket",
+      "prompt": "Design a single-piece L-shaped shelf bracket: vertical leg 80 mm tall x 40 mm wide x 5 mm thick, horizontal leg 120 mm long x 40 mm wide x 5 mm thick, 3 mm fillet at the inner corner. Vertical leg has two M5 clearance holes 20 mm from each end, horizontally centered. Horizontal leg has two M5 clearance holes 20 mm from the free end, horizontally centered.",
+      "paraphrases": [
+        "Vertical leg 80 mm tall x 40 mm wide x 5 mm thick with two M5 clearance holes 20 mm from each end horizontally centered; horizontal leg 120 mm long x 40 mm wide x 5 mm thick with two M5 clearance holes 20 mm from the free end horizontally centered; 3 mm fillet at the inner corner — design this as a single-piece L-shaped shelf bracket.",
+        "Build me a one-body L-bracket for a shelf: the upright is 80 mm x 40 mm x 5 mm and carries two M5 holes 20 mm from each end on its center line; the shelf arm is 120 mm x 40 mm x 5 mm with two M5 holes 20 mm back from the tip on the center line; blend the inner corner with a 3 mm fillet."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          200,
+          65,
+          130
+        ],
+        "holes": [
+          {
+            "diameter_mm": 5.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "bracket_angle_gusset",
+      "class": "bracket",
+      "prompt": "Model a single-piece gusseted angle bracket: two flanges each 60 x 50 x 4 mm at 90 degrees, triangular gusset plate 50 x 50 x 4 mm filling the inner corner. Overall outer envelope 64 x 64 x 50 mm.",
+      "paraphrases": [
+        "Two flanges each 60 x 50 x 4 mm at 90 degrees and a 50 x 50 x 4 mm triangular gusset filling the inner corner, overall outer envelope 64 x 64 x 50 mm — model this as a single-piece gusseted angle bracket.",
+        "Create a one-body angle bracket with gusset: both flanges are 60 x 50 x 4 mm and meet at 90 deg, the interior is stiffened by a 50 x 50 x 4 mm triangle; the complete part fits in 64 x 64 x 50 mm."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          100,
+          100,
+          80
+        ]
+      }
+    },
+    {
+      "id": "bracket_pipe_clamp_single",
+      "class": "bracket",
+      "prompt": "Design a single-piece pipe clamp bracket for a 25 mm OD pipe: semi-circular saddle 13 mm inner radius x 20 mm wide, two M5 bolt ears each 30 x 15 x 5 mm extending from the saddle ends, M5 clearance hole centered in each ear. Flat back face 60 x 20 mm with two M4 clearance holes 20 mm apart for wall mounting.",
+      "paraphrases": [
+        "Semi-circular saddle 13 mm inner radius x 20 mm wide, two 30 x 15 x 5 mm M5 bolt ears each with an M5 clearance hole, flat back face 60 x 20 mm with two M4 clearance holes 20 mm apart — design this as a single-piece pipe clamp bracket for a 25 mm OD pipe.",
+        "Build me a one-body wall-mount saddle clamp for a 25 mm OD pipe: the saddle is a half-cylinder of 13 mm inner radius and 20 mm depth; two ears (30 x 15 x 5 mm) project from the saddle ends, each with an M5 hole; the mounting back is 60 x 20 mm flat with two M4 holes 20 mm apart."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          100,
+          60,
+          55
+        ],
+        "holes": [
+          {
+            "diameter_mm": 5.4,
+            "tol_mm": 0.5,
+            "min_count": 2
+          },
+          {
+            "diameter_mm": 4.4,
+            "tol_mm": 0.5,
+            "min_count": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "enclosure_shallow_tray",
+      "class": "enclosure",
+      "prompt": "Model a single-piece shallow electronics tray 150 x 100 x 20 mm with 2 mm uniform wall, open top. Four corner bosses inside the tray, each 8 mm outer diameter x 15 mm tall with a 3.2 mm through-bore for M3 standoffs. One 30 x 10 mm rectangular cutout centered on each 150 mm side wall for cable routing.",
+      "paraphrases": [
+        "Open-top tray 150 x 100 x 20 mm with 2 mm wall, four internal corner bosses 8 mm OD x 15 mm tall with 3.2 mm bores, one 30 x 10 mm rectangular cutout centered on each 150 mm side wall — model this as a single piece.",
+        "Create a one-body electronics tray: outer footprint 150 x 100 mm, height 20 mm, 2 mm walls, no lid; inside fit four bosses (8 mm outer, 15 mm tall, 3.2 mm bore) at the corners; punch a 30 x 10 mm notch centered on each of the two long side walls."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          240,
+          160,
+          32
+        ],
+        "holes": [
+          {
+            "diameter_mm": 3.2,
+            "tol_mm": 0.4,
+            "min_count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "enclosure_hinged_lid",
+      "class": "enclosure",
+      "prompt": "Design a single-piece snap-fit enclosure lid 100 x 70 x 8 mm with 1.5 mm wall: flat top panel, four snap cantilever tabs 3 mm wide x 6 mm long x 1.5 mm thick on the outer skirt angled 10 degrees outward.",
+      "paraphrases": [
+        "Flat top panel, outer skirt with four 3 mm wide x 6 mm long x 1.5 mm thick snap cantilever tabs angled 10 degrees outward, 100 x 70 x 8 mm overall, 1.5 mm wall — design this as a single-piece snap-fit lid.",
+        "Build me a one-body press-fit lid 100 x 70 x 8 mm, 1.5 mm wall: the skirt carries four snap tabs (3 x 6 x 1.5 mm, 10 deg outward angle); the top face is solid."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          160,
+          112,
+          13
+        ]
+      }
+    },
+    {
+      "id": "enclosure_din_rail_box",
+      "class": "enclosure",
+      "prompt": "Model a single-piece DIN rail mount enclosure body 90 x 60 x 40 mm with 2 mm wall, open front face. Two 6 mm wide x 3 mm deep horizontal slots on the back face for DIN rail clips, spaced 40 mm apart vertically. Four M3 clearance holes on the front rim 5 mm from each corner. Internal ribbing: two 1.5 mm x 38 mm vertical ribs spaced 30 mm apart on the back wall.",
+      "paraphrases": [
+        "Open-front body 90 x 60 x 40 mm, 2 mm wall, two 6 x 3 mm DIN rail slots on the back face 40 mm apart vertically, four M3 clearance holes on the front rim 5 mm from each corner, two internal 1.5 x 38 mm vertical ribs 30 mm apart on the back wall — model this as a single-piece DIN rail enclosure body.",
+        "Create a one-body DIN rail box: outer size 90 x 60 x 40 mm, 2 mm walls, no front face; back has two 6 mm x 3 mm horizontal rail-clip slots 40 mm apart; front rim gets four M3 holes 5 mm from each corner; inside, two 1.5 x 38 mm vertical ribs 30 mm apart."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          144,
+          96,
+          64
+        ],
+        "holes": [
+          {
+            "diameter_mm": 3.4,
+            "tol_mm": 0.4,
+            "min_count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "knob_d_shaft_40mm",
+      "class": "knob",
+      "prompt": "Design a single-piece thumbwheel knob: outer diameter 40 mm, height 20 mm, 12 axial knurl ridges on the outer surface 1.5 mm tall x 1.5 mm wide, flat top face with a recessed brand circle 20 mm diameter x 1 mm deep, center bore 6 mm diameter D-flat shaft hole (D flat 4.6 mm chord), M3 set-screw radial hole 5 mm deep at mid-height.",
+      "paraphrases": [
+        "Outer diameter 40 mm, height 20 mm, 12 axial knurl ridges 1.5 mm tall x 1.5 mm wide, recessed brand circle 20 mm diameter x 1 mm deep on the flat top, 6 mm D-flat bore (4.6 mm chord), M3 radial set-screw hole 5 mm deep at mid-height — design this as a single-piece thumbwheel knob.",
+        "Build me a one-body thumbwheel knob, 40 mm OD x 20 mm tall: 12 axial grip ridges (1.5 x 1.5 mm) around the circumference; top face has a 20 mm diameter x 1 mm deep recess; central bore is a 6 mm D-flat for a 4.6 mm chord flat shaft; one radial M3 set-screw hole 5 mm deep at mid-height."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          64,
+          64,
+          32
+        ],
+        "holes": [
+          {
+            "diameter_mm": 6.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          },
+          {
+            "diameter_mm": 3.4,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "knob_handwheel_spoked",
+      "class": "knob",
+      "prompt": "Model a single-piece spoked handwheel: rim outer diameter 80 mm, rim cross-section 8 mm wide x 8 mm tall, four spokes each 6 mm wide x 6 mm thick, central hub 20 mm outer diameter x 15 mm tall, hub bore 10 mm diameter.",
+      "paraphrases": [
+        "Rim outer diameter 80 mm, rim section 8 x 8 mm, four spokes 6 x 6 mm, central hub 20 mm OD x 15 mm tall with 10 mm bore — model this as a single-piece spoked handwheel.",
+        "Create a one-body spoked handwheel: 80 mm OD rim with 8 x 8 mm rectangular cross-section; four 6 x 6 mm spokes connect it to a 20 mm OD x 15 mm hub; hub bore is 10 mm."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          128,
+          128,
+          24
+        ],
+        "holes": [
+          {
+            "diameter_mm": 10.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "clip_spring_pcb",
+      "class": "clip",
+      "prompt": "Design a single-piece spring clip for retaining a PCB 1.6 mm thick: clip body 30 mm long x 8 mm wide x 2 mm wall, U-channel section 6 mm inner height, two 1 mm x 8 mm flex slits cut 10 mm from the open end to create spring fingers. Closed base end is solid.",
+      "paraphrases": [
+        "U-channel body 30 mm long x 8 mm wide x 2 mm wall, 6 mm inner height, two 1 x 8 mm flex slits 10 mm from the open end for spring fingers, solid closed base — design this as a single-piece spring clip for a 1.6 mm thick PCB.",
+        "Build me a one-body PCB spring retainer: 30 mm long U-section, 8 mm outer width, 2 mm walls, 6 mm internal height; cut two 1 mm x 8 mm slits 10 mm back from the open mouth to form spring fingers; the closed end is solid."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          48,
+          13,
+          16
+        ]
+      }
+    },
+    {
+      "id": "clip_tube_saddle_clamp",
+      "class": "clip",
+      "prompt": "Model a single-piece saddle tube clamp for a 20 mm OD tube: full-circle clamp 22 mm inner diameter x 15 mm wide, split with a 1 mm gap at the top, two split ears each 12 x 10 x 5 mm, flat mounting plate 60 x 20 x 4 mm extending from the bottom.",
+      "paraphrases": [
+        "Full-circle 22 mm inner diameter x 15 mm wide clamp, 1 mm top split, two ears each 12 x 10 x 5 mm, 60 x 20 x 4 mm flat base plate extending from the bottom — model this as a single-piece saddle tube clamp for a 20 mm OD tube.",
+        "Create a one-body tube saddle clamp for 20 mm OD: bore is 22 mm diameter, 15 mm wide; a 1 mm top slit gives two ears (12 x 10 x 5 mm each); a 60 x 20 x 4 mm flat plate hangs off the bottom."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          100,
+          45,
+          55
+        ]
+      }
+    },
+    {
+      "id": "hook_coat_double",
+      "class": "hook",
+      "prompt": "Design a single-piece double coat hook: back plate 80 x 40 x 4 mm, two hooks extending forward 50 mm each at 30 degrees upward angle, hook tip diameter 10 mm, hook shaft diameter 6 mm, hooks spaced 40 mm apart on the back plate.",
+      "paraphrases": [
+        "Back plate 80 x 40 x 4 mm, two 50 mm hooks angled 30 degrees upward with 6 mm shaft and 10 mm tip diameter, hooks 40 mm apart — design this as a single-piece double coat hook.",
+        "Build me a one-body double coat hook: mounting plate 80 x 40 x 4 mm; two hooks project 50 mm forward at 30 deg upward, each with 6 mm shaft and 10 mm ball tip, spaced 40 mm apart on the plate."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          128,
+          64,
+          75
+        ]
+      }
+    },
+    {
+      "id": "hook_j_utility_wall",
+      "class": "hook",
+      "prompt": "Model a single-piece J-hook for wall tools: back plate 30 x 50 x 4 mm, J-curve hook radius 15 mm, hook horizontal reach 40 mm, hook diameter 8 mm round cross-section, hook up-leg 30 mm tall above the plate.",
+      "paraphrases": [
+        "Back plate 30 x 50 x 4 mm, J-curve radius 15 mm, horizontal reach 40 mm, 8 mm round hook cross-section, up-leg 30 mm above the plate — model this as a single-piece J-hook for wall tools.",
+        "Create a one-body J-hook tool hanger: 30 x 50 x 4 mm mounting plate; the J-hook has an 8 mm round section, 15 mm bend radius, 40 mm horizontal reach, and rises 30 mm above the plate."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          128,
+          48,
+          65
+        ]
+      }
+    },
+    {
+      "id": "spacer_flanged_bushing",
+      "class": "spacer",
+      "prompt": "Design a single-piece flanged bushing: inner bore 8 mm diameter, outer barrel 12 mm diameter x 20 mm long, flange 20 mm outer diameter x 2 mm thick at one end, overall length 22 mm including flange. Barrel outer surface has a 0.5 mm chamfer at the non-flanged end.",
+      "paraphrases": [
+        "Inner bore 8 mm, barrel 12 mm OD x 20 mm long, flange 20 mm OD x 2 mm thick at one end, 22 mm total length, 0.5 mm chamfer on the barrel's free end — design this as a single-piece flanged bushing.",
+        "Build me a one-body flanged bushing: 8 mm through-bore, 12 mm outer cylinder 20 mm long, a 20 mm OD x 2 mm flange at one end, 22 mm overall length; add a 0.5 mm chamfer at the far barrel end."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          32,
+          32,
+          36
+        ],
+        "holes": [
+          {
+            "diameter_mm": 8.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "spacer_hex_standoff_m4",
+      "class": "spacer",
+      "prompt": "Model a single-piece hex standoff: hex across-flats 7 mm, hex length 20 mm, 1 mm chamfer on both end faces, central through-bore 4 mm diameter.",
+      "paraphrases": [
+        "Hex across-flats 7 mm, 20 mm hex length, 1 mm chamfers on both ends, central through-bore 4 mm diameter — model this as a single-piece hex standoff.",
+        "Create a one-body hex standoff: 7 mm across-flats hexagonal prism, 20 mm tall, 4 mm through-bore, 1 mm chamfer at both ends."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          12,
+          12,
+          32
+        ],
+        "holes": [
+          {
+            "diameter_mm": 4.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "duct_inline_reducer_60to30",
+      "class": "duct",
+      "prompt": "Design a single-piece inline circular duct reducer: inlet diameter 60 mm, outlet diameter 30 mm, transition length 80 mm, wall thickness 2 mm, smooth conical taper, 10 mm straight inlet collar, 10 mm straight outlet collar. Inlet has a mounting flange 70 mm outer diameter x 3 mm thick.",
+      "paraphrases": [
+        "Inlet diameter 60 mm, outlet diameter 30 mm, 80 mm transition, 2 mm wall, smooth conical taper, 10 mm straight collars at each end, 70 mm OD x 3 mm inlet mounting flange — design this as a single-piece inline circular duct reducer.",
+        "Build me a one-body conical duct reducer: 60 mm inlet with a 70 mm OD x 3 mm mounting flange, a 10 mm straight section, an 80 mm smooth taper, another 10 mm straight section, and a 30 mm outlet; 2 mm wall throughout."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          112,
+          112,
+          160
+        ]
+      }
+    },
+    {
+      "id": "duct_rectangular_nozzle_slot",
+      "class": "duct",
+      "prompt": "Model a single-piece rectangular slot nozzle: inlet 40 x 40 mm square, outlet slot 80 x 4 mm, transition length 60 mm, 1.5 mm wall, smooth internal transition from square to slot.",
+      "paraphrases": [
+        "Inlet 40 x 40 mm square, outlet 80 x 4 mm slot, 60 mm transition, 1.5 mm wall, smooth internal square-to-slot transition — model this as a single-piece rectangular slot nozzle.",
+        "Create a one-body slot nozzle: square 40 x 40 mm inlet, 60 mm smooth transition, 80 x 4 mm outlet slot, 1.5 mm walls."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          130,
+          65,
+          96
+        ]
+      }
+    },
+    {
+      "id": "handle_t_bar_grip",
+      "class": "handle",
+      "prompt": "Design a single-piece T-bar handle: horizontal grip 120 mm long x 20 mm diameter round, vertical stem 60 mm long x 14 mm diameter round, M8 threaded bore 8 mm diameter x 25 mm deep in the stem bottom, 3 mm fillet at the T-junction.",
+      "paraphrases": [
+        "Horizontal grip 120 mm long x 20 mm OD, vertical stem 60 mm long x 14 mm OD, M8 threaded bore 8 mm diameter x 25 mm deep in the stem bottom, 3 mm fillet at the T-junction — design this as a single-piece T-bar handle.",
+        "Build me a one-body T-bar handle: a 120 mm x 20 mm cylindrical crossbar, a 60 mm x 14 mm cylindrical stem, an 8 mm bore 25 mm deep at the stem base, and a 3 mm fillet where they meet."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          192,
+          32,
+          96
+        ],
+        "holes": [
+          {
+            "diameter_mm": 8.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "handle_fold_lever_100mm",
+      "class": "handle",
+      "prompt": "Model a single-piece fold-down lever handle: main arm 100 mm long x 10 mm wide x 8 mm thick, pivot boss at one end 20 mm outer diameter x 10 mm wide with 6 mm through-bore, ergonomic palm swell in the middle of the arm 16 mm wide x 6 mm raised.",
+      "paraphrases": [
+        "Main arm 100 mm long x 10 mm wide x 8 mm thick, pivot boss 20 mm OD x 10 mm wide with 6 mm bore, palm swell 16 mm wide x 6 mm raised at arm mid-span — model this as a single-piece fold-down lever handle.",
+        "Create a one-body lever handle: 100 x 10 x 8 mm arm with a 20 mm OD x 10 mm deep pivot boss (6 mm bore) at one end and a 16 x 6 mm ergonomic palm swell at mid-length."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          160,
+          36,
+          26
+        ],
+        "holes": [
+          {
+            "diameter_mm": 6.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "pulley_v_groove_60mm",
+      "class": "pulley",
+      "prompt": "Design a single-piece V-groove pulley: outer diameter 60 mm, V-groove angle 40 degrees, groove depth 6 mm, rim width 20 mm, hub diameter 22 mm x 20 mm tall, hub bore 10 mm diameter, two radial M4 set-screw holes 6 mm deep at 90 degrees in the hub, 1 mm chamfer on both rim edges.",
+      "paraphrases": [
+        "Outer diameter 60 mm, V-groove angle 40 degrees, groove depth 6 mm, rim width 20 mm, hub 22 mm OD x 20 mm tall, 10 mm bore, two radial M4 set-screw holes 6 mm deep at 90 degrees, 1 mm rim edge chamfers — design this as a single-piece V-groove pulley.",
+        "Build me a one-body V-belt pulley: 60 mm OD, 40 deg V-groove 6 mm deep, 20 mm wide rim; central hub 22 mm OD x 20 mm tall with 10 mm bore; two M4 radial set-screw holes 6 mm deep at 90 deg spacing; 1 mm chamfer on each rim edge."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          96,
+          96,
+          32
+        ],
+        "holes": [
+          {
+            "diameter_mm": 10.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          },
+          {
+            "diameter_mm": 4.4,
+            "tol_mm": 0.5,
+            "min_count": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "pulley_idler_roller_40mm",
+      "class": "pulley",
+      "prompt": "Model a single-piece idler roller: outer diameter 40 mm, barrel length 30 mm, central bore 8 mm diameter with 1 mm chamfer both ends, two 3 mm wide x 1.5 mm deep circumferential grooves at 8 mm from each end for retaining clips.",
+      "paraphrases": [
+        "Outer diameter 40 mm, barrel 30 mm long, 8 mm bore with 1 mm chamfers both ends, two 3 x 1.5 mm circumferential clip grooves 8 mm from each end — model this as a single-piece idler roller.",
+        "Create a one-body idler roller: 40 mm OD, 30 mm long, 8 mm through-bore chamfered 1 mm at each end; two retaining-clip grooves (3 mm wide, 1.5 mm deep) each 8 mm from the respective end face."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          64,
+          64,
+          48
+        ],
+        "holes": [
+          {
+            "diameter_mm": 8.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cam_heart_shaped_plate",
+      "class": "cam",
+      "prompt": "Design a single-piece heart-shaped cam plate: bounding circle 80 mm diameter, plate thickness 10 mm, the cam profile is a symmetric cardioid-approximation with minimum radius 20 mm and maximum radius 40 mm from the center. Central drive bore 12 mm diameter.",
+      "paraphrases": [
+        "Bounding circle 80 mm diameter, thickness 10 mm, symmetric cardioid profile with minimum radius 20 mm and maximum radius 40 mm, central bore 12 mm diameter — design this as a single-piece heart-shaped cam plate.",
+        "Build me a one-body heart cam: 80 mm bounding circle, 10 mm thick, cardioid-approximation profile (20 mm min radius, 40 mm max radius from center), 12 mm central bore."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          128,
+          128,
+          16
+        ],
+        "holes": [
+          {
+            "diameter_mm": 12.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cam_indexing_template_plate",
+      "class": "cam",
+      "prompt": "Model a single-piece indexing template plate 120 x 80 x 6 mm: eight evenly-spaced 5 mm diameter detent holes on a 90 mm diameter bolt circle centered on the plate, one 20 mm diameter central bore, four M4 clearance holes at the plate corners 8 mm from each edge.",
+      "paraphrases": [
+        "Plate 120 x 80 x 6 mm, eight evenly-spaced 5 mm detent holes on a 90 mm diameter bolt circle, one 20 mm central bore, four M4 clearance holes 8 mm from each corner — model this as a single-piece indexing template plate.",
+        "Create a one-body indexing plate: 120 x 80 x 6 mm rectangular, eight 5 mm holes equally spaced on a 90 mm pitch circle centered on the plate, 20 mm center bore, four M4 holes 8 mm from each corner."
+      ],
+      "expect": {
+        "expect_refusal": true
+      }
+    },
+    {
+      "id": "housing_bearing_pillow_block",
+      "class": "housing",
+      "prompt": "Design a single-piece pillow block bearing housing: base 80 x 40 x 10 mm with four M5 clearance holes 10 mm from each corner, bearing bore 22 mm diameter centered 35 mm above the base, housing body 50 mm wide x 45 mm tall x 30 mm deep, 2 mm chamfer on the top outer edges, bore depth 30 mm.",
+      "paraphrases": [
+        "Base 80 x 40 x 10 mm with four M5 clearance holes 10 mm from each corner, 22 mm bearing bore centered 35 mm above base, housing body 50 x 45 x 30 mm, 2 mm chamfer on top outer edges, bore depth 30 mm — design this as a single-piece pillow block bearing housing.",
+        "Build me a one-body pillow block: 80 x 40 x 10 mm foot with four M5 holes 10 mm from corners; housing block rises 50 mm wide x 45 mm tall x 30 mm deep; 22 mm bore through the block 35 mm up from the base; 2 mm chamfer on upper outer edges."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          128,
+          80,
+          72
+        ],
+        "holes": [
+          {
+            "diameter_mm": 22.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          },
+          {
+            "diameter_mm": 5.4,
+            "tol_mm": 0.5,
+            "min_count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "housing_push_cap_snap",
+      "class": "housing",
+      "prompt": "Model a single-piece push-in snap cap for a 30 mm diameter hole: cap outer flange 38 mm diameter x 2 mm thick, cylindrical plug 28.5 mm outer diameter x 10 mm long with four 1 mm x 8 mm snap barbs at 90 degree spacing, plug wall 1.5 mm, closed top face.",
+      "paraphrases": [
+        "Cap flange 38 mm diameter x 2 mm thick, cylindrical plug 28.5 mm OD x 10 mm long, four 1 x 8 mm snap barbs at 90 degrees, 1.5 mm plug wall, closed top — model this as a single-piece push-in snap cap for a 30 mm diameter hole.",
+        "Create a one-body push-in cap to fill a 30 mm hole: a 38 mm OD x 2 mm flange, a 28.5 mm OD x 10 mm plug with 1.5 mm walls and four snap barbs (1 mm wide x 8 mm long) at 90 deg intervals, closed at the top."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          61,
+          61,
+          16
+        ]
+      }
+    },
+    {
+      "id": "guide_linear_rail_foot",
+      "class": "guide",
+      "prompt": "Design a single-piece linear guide rail foot: base plate 60 x 20 x 5 mm, upright rail tab 10 x 50 x 4 mm perpendicular to the base, 2 mm fillet at base-to-upright junction.",
+      "paraphrases": [
+        "Base plate 60 x 20 x 5 mm, upright rail tab 10 x 50 x 4 mm perpendicular to the base, 2 mm fillet at the junction — design this as a single-piece linear guide rail foot.",
+        "Build me a one-body guide rail foot: 60 x 20 x 5 mm base; a perpendicular 10 x 50 x 4 mm upright tab; 2 mm fillet where upright meets base."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          96,
+          32,
+          62
+        ]
+      }
+    },
+    {
+      "id": "guide_rubber_bumper_foot",
+      "class": "guide",
+      "prompt": "Model a single-piece equipment bumper foot: dome outer diameter 25 mm, dome height 12 mm, flat base flange 30 mm diameter x 3 mm thick, central M4 through-bore 4 mm diameter with 1 mm countersink 8 mm diameter on the base face.",
+      "paraphrases": [
+        "Dome 25 mm OD x 12 mm tall, flat base flange 30 mm OD x 3 mm thick, central M4 through-bore 4 mm with 8 mm x 1 mm countersink on the base face — model this as a single-piece equipment bumper foot.",
+        "Create a one-body bumper foot: 25 mm diameter dome 12 mm tall atop a 30 mm diameter x 3 mm flat base; 4 mm through-bore with an 8 mm diameter x 1 mm countersink recessed into the base face."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          48,
+          48,
+          24
+        ],
+        "holes": [
+          {
+            "diameter_mm": 4.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "organizer_pen_cup_hex",
+      "class": "organizer",
+      "prompt": "Design a single-piece hexagonal pen cup organizer: regular hexagon outer across-flats 70 mm, height 100 mm, wall thickness 3 mm, open top, flat bottom 3 mm thick, six equally-spaced 10 mm diameter circular drain holes on the bottom face.",
+      "paraphrases": [
+        "Regular hexagon across-flats 70 mm, height 100 mm, 3 mm wall, open top, flat bottom 3 mm thick with six equally-spaced 10 mm diameter drain holes — design this as a single-piece hexagonal pen cup organizer.",
+        "Build me a one-body hex pen cup: 70 mm across-flats regular hexagon, 100 mm tall, 3 mm walls, open top; 3 mm thick floor with six 10 mm holes equally spaced."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          112,
+          112,
+          160
+        ],
+        "holes": [
+          {
+            "diameter_mm": 10.0,
+            "tol_mm": 0.4,
+            "min_count": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "organizer_sd_card_holder",
+      "class": "organizer",
+      "prompt": "Model a single-piece SD card holder for four cards: body 60 x 36 x 12 mm, four SD card slots each 24 x 2.5 x 32 mm deep, slot-to-slot pitch 14 mm, 2 mm walls between slots, open front face. Back face is solid.",
+      "paraphrases": [
+        "Body 60 x 36 x 12 mm, four SD card slots each 24 x 2.5 x 32 mm deep, 14 mm slot pitch, 2 mm inter-slot walls, open front face, solid back face — model this as a single-piece SD card holder.",
+        "Create a one-body SD card holder for four cards: 60 x 36 x 12 mm outer body with four 24 x 2.5 x 32 mm deep slots at 14 mm pitch and 2 mm dividing walls; open front; solid back."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          96,
+          58,
+          19
+        ]
+      }
+    },
+    {
+      "id": "mech_detent_wheel_12pos",
+      "class": "mechanical",
+      "prompt": "Design a single-piece detent wheel for 12 positions: outer diameter 50 mm, 12 equally-spaced detent notches 3 mm wide x 2 mm deep with a 1.5 mm fillet at the base of each notch, plate thickness 8 mm, central bore 6 mm diameter, hub 12 mm outer diameter x 8 mm tall, two M3 set-screw radial holes 5 mm deep at 180 degrees in the hub.",
+      "paraphrases": [
+        "Outer diameter 50 mm, 12 equally-spaced 3 x 2 mm detent notches with 1.5 mm base fillet, plate 8 mm thick, 6 mm central bore, hub 12 mm OD x 8 mm tall, two M3 radial set-screw holes 5 mm deep at 180 degrees — design this as a single-piece detent wheel.",
+        "Build me a one-body 12-position detent wheel: 50 mm OD, 8 mm thick, 12 evenly-distributed 3 mm wide x 2 mm deep notches (1.5 mm fillet at base); 6 mm center bore; 12 mm OD x 8 mm hub with two M3 radial holes 5 mm deep at 180 deg."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          80,
+          80,
+          26
+        ],
+        "holes": [
+          {
+            "diameter_mm": 6.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          },
+          {
+            "diameter_mm": 3.4,
+            "tol_mm": 0.4,
+            "min_count": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "mech_star_coupling_6lobe",
+      "class": "mechanical",
+      "prompt": "Model a single-piece star coupling spider: 6 lobes equally spaced, outer diameter 60 mm across the lobe tips, each lobe 12 mm wide x 10 mm tall x 15 mm radial depth, central hub 24 mm outer diameter x 20 mm long, hub bore 10 mm diameter, two M4 radial set-screw holes 6 mm deep at 180 degrees.",
+      "paraphrases": [
+        "Six equally-spaced lobes each 12 mm wide x 10 mm tall x 15 mm radial depth, outer diameter 60 mm across the tips, central hub 24 mm OD x 20 mm long, 10 mm bore, two M4 radial set-screw holes 6 mm deep at 180 degrees — model this as a single-piece star coupling spider.",
+        "Create a one-body star coupling spider: 60 mm tip-to-tip OD, 6 lobes (12 x 10 x 15 mm each), 24 mm OD x 20 mm long hub, 10 mm through-bore, two M4 set-screw holes 6 mm deep diametrically opposed in the hub."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          96,
+          96,
+          32
+        ],
+        "holes": [
+          {
+            "diameter_mm": 10.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          },
+          {
+            "diameter_mm": 4.4,
+            "tol_mm": 0.5,
+            "min_count": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "mech_ratchet_pawl_plate",
+      "class": "mechanical",
+      "prompt": "Design a single-piece ratchet pawl plate 80 x 30 x 5 mm: pivot bore 6 mm diameter centered 10 mm from one end, engagement nose 8 mm long x 5 mm wide angled 30 degrees at the opposing end, return spring tab 3 mm wide x 20 mm long x 2 mm thick integral at the pivot end.",
+      "paraphrases": [
+        "Plate 80 x 30 x 5 mm, pivot bore 6 mm diameter 10 mm from one end, engagement nose 8 x 5 mm angled 30 degrees at the other end, integral return spring tab 3 x 20 x 2 mm at the pivot end — design this as a single-piece ratchet pawl plate.",
+        "Build me a one-body ratchet pawl: 80 x 30 x 5 mm body, 6 mm pivot hole 10 mm from one end, 30-degree angled nose (8 x 5 mm) at the far end, integral 3 x 20 x 2 mm spring tab at the pivot end."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          128,
+          48,
+          8
+        ],
+        "holes": [
+          {
+            "diameter_mm": 6.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "impeller_axial_5blade",
+      "class": "impeller",
+      "prompt": "Design a single-piece axial-flow impeller: hub diameter 25 mm, hub height 20 mm, outer swept diameter 90 mm, 5 blades each with 15 degree pitch angle, blade chord 25 mm, blade thickness 2.5 mm, blade root fillet 1.5 mm, top shroud disk 3 mm thick x 90 mm diameter, central bore 10 mm diameter through the hub.",
+      "paraphrases": [
+        "Hub 25 mm diameter x 20 mm tall, outer swept diameter 90 mm, 5 blades at 15 degree pitch each 25 mm chord x 2.5 mm thick with 1.5 mm root fillet, 3 mm shroud disk 90 mm diameter, 10 mm center bore — design this as a single-piece axial-flow impeller.",
+        "Build me a one-body axial impeller: 25 mm OD x 20 mm hub, 90 mm swept OD, 5 blades (15 deg pitch, 25 mm chord, 2.5 mm thick, 1.5 mm root fillet), 90 mm x 3 mm shroud disk on top, 10 mm central through-bore."
+      ],
+      "expect": {
+        "min_parts": 1,
+        "watertight": true,
+        "named_step": true,
+        "bbox_max_mm": [
+          144,
+          144,
+          40
+        ],
+        "holes": [
+          {
+            "diameter_mm": 10.0,
+            "tol_mm": 0.4,
+            "min_count": 1
+          }
+        ]
+      }
+    }
+  ],
+  "hole_count_semantics": "penetrations",
+  "bbox_semantics": "sorted",
+  "errata_from_v1": [
+    {
+      "id": "mech_detent_wheel_12pos",
+      "change": "bbox_max_mm Z cap 13 -> 26",
+      "why": "arithmetic: the prompt states plate thickness 8 mm AND a hub 8 mm tall -> 16 mm stacked nominal; the v1 cap applied the rubric's ~1.6x margin to 8 alone (1.625*8=13), making the prompt's own geometry unpassable. 1.625*16=26."
+    },
+    {
+      "id": "hook_j_utility_wall",
+      "change": "bbox_max_mm height cap 85 -> 128",
+      "why": "founder ruling 2026-07-04: 'up-leg 30 mm tall above the plate' reads STACKED (leg tip 30 mm above the plate's top edge; both independent author arms parsed it that way) -> 50+30=80 mm nominal height, and a faithful build tops out ~88 with the 8 mm rod. 1.6*80=128."
+    },
+    {
+      "id": "cam_indexing_template_plate",
+      "change": "geometric expect replaced by expect_refusal",
+      "why": "the spec is mathematically infeasible (8 stations on a 90 mm circle cannot fit a 120x80 plate at any rotation: an exact 0.5-degree sweep proves >=2 stations always land off-plate); the CORRECT engine behavior is a refusal naming the arithmetic (ADR-0084), so this prompt becomes the intentional infeasibility probe. v1 expect kept here for the record: bbox [192,128,10]; holes 5.4x8, 20.0x1, 4.4x4."
+    },
+    {
+      "id": "*",
+      "change": "hole_count_semantics: stacks -> penetrations",
+      "why": "counting convention: a coaxial pair of real opposed holes (e.g. two set-screws at 180 degrees) is ONE stack but TWO penetrations; v1's stack count made 'min_count: 2' unsatisfiable-by-construction on mech_star/mech_detent even when both holes exist. v1.1 counts penetrations (CylinderStack.segments)."
+    },
+    {
+      "id": "*",
+      "change": "bbox_semantics: per-world-axis -> sorted (orientation-agnostic)",
+      "why": "convention: an envelope cap tests SIZE, not pose, but v1 compared per WORLD axis, so the verdict depended on which way the author happened to orient the build -- measured on real artifacts: hook_j's prompt-exact 80 mm stacked height landed on the 65-cap axis, and bracket_shelf_l's prompt-stated 120 mm leg landed on the 65-cap width axis; both prompt-faithful parts failed. v1.1 compares sorted extents to sorted caps (the same orientation-agnostic rule the engine's stated-dim envelope judge uses); sweep over all 32 row-32 artifacts shows exactly these two verdicts change and none loosen falsely."
+    }
+  ]
+}

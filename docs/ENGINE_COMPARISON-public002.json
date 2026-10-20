@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "title": "Incomplete inline-four CAD studies: baseline004 and candidate001",
+  "date": "2026-10-20",
+  "experiment": {
+    "runs_per_condition": 1,
+    "same_prompt": true,
+    "prompt": "Design a small machinable inline-four engine assembly with a hand-turnable crankshaft, camshaft, pistons, rods, bearings, lubrication paths and removable service covers. Keep the assembled envelope within X 200, Y 120, Z 160 mm, with cylinders in a row along X and their axes along Z. Use a machinable aluminum block and steel shafts with replaceable bronze bushings; choose the remaining dimensions for a desktop mechanical prototype. Use conventional milling, turning and drilling. No combustion qualification is requested.",
+    "prompt_utf8_sha256": "4d8b82f22578949e1110bbffb487c1559783649481dfda572e3490878c951dfb",
+    "shared_request_controls": {
+      "max_seconds": 1800,
+      "max_actions": 60,
+      "approval_required": false,
+      "printable": false
+    },
+    "fresh_interpretation_each_run": true,
+    "same_frozen_contract": false,
+    "comparison_scope": "Matched prompt and request controls; different software and fresh stochastic interpretations. Descriptive observations only, not a causal speed or reliability estimate."
+  },
+  "runs": {
+    "baseline004": {
+      "source_role": "earlier immutable baseline",
+      "model_requested": "gpt-6-astra",
+      "model_reported": "gpt-6-astra",
+      "executor": "docker",
+      "authoring_mode": "native_operations",
+      "solid_occurrences": 16,
+      "made_part_definitions": 8,
+      "all_part_definitions": 8,
+      "geometry_valid_recorded": true,
+      "assembly_extents_mm": [
+        168.0,
+        84.0000001,
+        104.0000001
+      ],
+      "passing_nominal_mates": 12,
+      "nominal_mate_count": 12,
+      "model_calls": 23,
+      "summed_model_call_seconds": 1290.094,
+      "adapter_observation_seconds": 1545.593,
+      "benchmark_wall_seconds": 1550.422,
+      "first_valid_saved_CAD_after_project_creation_seconds": 354.805,
+      "state": "needs_review",
+      "accepted": false,
+      "current_instructions_and_verified_files_delivered": true,
+      "frozen_requirements": 20,
+      "build_time_findings": {
+        "unverified": 20
+      },
+      "original_final_proof_status": "unverified",
+      "original_final_proof_result_count": 20,
+      "full_task_success": null,
+      "main_oracle": "unassessed",
+      "physical_readiness": "unverified",
+      "assembly_STEP_sha256": "949221b674b0b3b0bd71a97f2c2b6b4bf9459dbc630d2877af195a0a7ec513c9",
+      "project_creation_to_attempt_finished_seconds": 1491.138
+    },
+    "candidate001": {
+      "source_role": "later immutable software candidate; not the subsequent reporting repair",
+      "model_requested": "gpt-6-astra",
+      "model_reported": "gpt-6-astra",
+      "executor": "docker",
+      "authoring_mode": "native_operations",
+      "solid_occurrences": 31,
+      "made_part_definitions": 9,
+      "all_part_definitions": 11,
+      "geometry_valid_recorded": true,
+      "assembly_extents_mm": [
+        172.0,
+        83.0000001,
+        95.0
+      ],
+      "passing_nominal_mates": 16,
+      "nominal_mate_count": 16,
+      "model_calls": 18,
+      "summed_model_call_seconds": 1296.111,
+      "adapter_observation_seconds": 1543.063,
+      "benchmark_wall_seconds": 1548.094,
+      "first_valid_saved_CAD_after_project_creation_seconds": 441.201,
+      "state": "needs_review",
+      "accepted": false,
+      "current_instructions_and_verified_files_delivered": true,
+      "frozen_requirements": 21,
+      "build_time_findings": {
+        "unverified": 18,
+        "pass": 3
+      },
+      "original_final_proof_status": "unavailable",
+      "original_final_proof_result_count": 0,
+      "full_task_success": null,
+      "main_oracle": "unassessed",
+      "physical_readiness": "unverified",
+      "assembly_STEP_sha256": "6f3569289d2a6ba45fb610f4b576588815895f62005488f2aa6999868e7e74b2",
+      "project_creation_to_attempt_finished_seconds": 1484.563
+    }
+  },
+  "timing_scope": {
+    "project_elapsed": "Project creation to attempt_finished journal timestamp. Both runs use the same boundary definition, including final readback and journal-tail work after first observed terminal state; pre-project qualification is excluded.",
+    "model_time": "Sum of recorded model-call durations; distinct from total project elapsed.",
+    "other_clocks": "Adapter observation and benchmark wall values have separate start/stop boundaries. Do not subtract unlike clocks as exact overhead.",
+    "candidate_clock_clarification": "First valid CAD was saved 441.201 seconds after project creation. Adapter first-CAD observation 499.922 seconds and attempt-journal first-CAD 504.775 seconds use different origins.",
+    "speed_claim": "None. One observed run per condition cannot attribute speed differences to the repairs; summed model time increased despite fewer calls."
+  },
+  "remaining_engineering_gaps": [
+    "Matching connecting-rod caps and cap fasteners remain absent in the candidate audit.",
+    "Positive shaft/wrist-pin retention and bushing anti-rotation are not fully modeled or proved.",
+    "A modeled crankshaft-to-camshaft timing connection remains missing.",
+    "No exact-revision coupled mechanism solve or required multi-pose cycle evidence is present.",
+    "Lubrication continuity, practical machining, tolerance stacks, assembly access and service removal remain unverified.",
+    "Physical hand-turnability, strength, durability, lubrication adequacy and manufacture are not qualified."
+  ],
+  "reporting_repair_scope": "The original candidate proof endpoint was unavailable because its 18 unsupported + 3 scalar contract missed the final-status gate. A later regression-tested repair produces a complete 21-result report in saved-byte fixtures, retaining 18 unknowns. It does not retroactively change either original run or prove missing engineering duties.",
+  "evidence_scope": "Saved-byte audits verified delivered package/selected-artifact identities and recorded measurements. This comparison performs no new native measurement or model call. No full-task PASS is established in either run."
+}

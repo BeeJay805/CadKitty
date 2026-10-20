@@ -1,0 +1,30 @@
+{
+  "version": "invention_v1",
+  "description": "Lifecycle-level benchmark (ADR-0048): a physical PROBLEM in -> a coherent, honestly-labelled InventionPackage out. Scored by forge_mind.invention.rubric.score_lifecycle. Producing outputs needs Fable (the front door); the scoring is deterministic. Frozen: edit = a new version, not an in-place change.",
+  "problems": [
+    {
+      "id": "cable_clip",
+      "tier": "easy",
+      "problem": "Cables keep falling off my desk edge. I need a 3D-printable way to route two USB-C cables along the front edge of my desk without screwing anything into the desk or leaving adhesive residue.",
+      "min_concepts": 2
+    },
+    {
+      "id": "phone_stand",
+      "tier": "easy",
+      "problem": "I want a 3D-printable stand that holds my phone at a comfortable viewing angle on my desk and works in both portrait and landscape, with no hardware.",
+      "min_concepts": 2
+    },
+    {
+      "id": "headphone_hook",
+      "tier": "easy",
+      "problem": "I need somewhere to hang my headphones at my desk. A printable hook that clamps onto the underside of a desktop without tools or screws and does not mark the surface.",
+      "min_concepts": 2
+    },
+    {
+      "id": "vibration_isolator",
+      "tier": "normal",
+      "problem": "My desktop FDM 3D printer sits on a normal desk and shakes the whole desk during fast moves. Reduce the vibration transferred into the desk without making the printer unstable or permanently mounting it.",
+      "min_concepts": 2
+    }
+  ]
+}

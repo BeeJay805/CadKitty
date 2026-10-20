@@ -1,0 +1,2096 @@
+[
+ {
+  "label": "bracket_shelf_l",
+  "prompt": "Design a single-piece L-shaped shelf bracket: vertical leg 80 mm tall x 40 mm wide x 5 mm thick, horizontal leg 120 mm long x 40 mm wide x 5 mm thick, 3 mm fillet at the inner corner. Vertical leg has two M5 clearance holes 20 mm from each end, horizontally centered. Horizontal leg has two M5 clearance holes 20 mm from the free end, horizontally centered.",
+  "class": "bracket",
+  "brief": {
+   "object_name": "L-shaped shelf bracket",
+   "summary": "A single-piece L-shaped bracket with vertical and horizontal legs, filleted corner, and clearance holes for mounting.",
+   "visual_description": "An L-shaped bracket with a vertical leg that is 80 mm tall, 40 mm wide, and 5 mm thick, and a horizontal leg that is 120 mm long, 40 mm wide, and 5 mm thick. The inner corner where the legs meet has a 3 mm fillet radius. The bracket has two M5 clearance holes in each leg: one 20 mm from the top and bottom ends of the vertical leg, and one 20 mm from the free end of the horizontal leg. All surfaces are flat with no curves except for the rounded inner corner.",
+   "overall_envelope_mm": "120 x 40 x 80",
+   "features": [
+    {
+     "name": "vertical_leg",
+     "purpose": "Provides structural support in the vertical direction",
+     "approx_dims_mm": "80 x 40 x 5",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "horizontal_leg",
+     "purpose": "Provides structural support in the horizontal direction",
+     "approx_dims_mm": "120 x 40 x 5",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "inner_corner_fillet",
+     "purpose": "Rounds the inner corner to reduce stress concentration and improve aesthetics",
+     "approx_dims_mm": "3 mm radius",
+     "method": "fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "vertical_leg_clearance_hole_top",
+     "purpose": "Mounts the bracket to a wall or shelf support at the top end",
+     "approx_dims_mm": "5 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "functional_requirement"
+    },
+    {
+     "name": "vertical_leg_clearance_hole_bottom",
+     "purpose": "Mounts the bracket to a wall or shelf support at the bottom end",
+     "approx_dims_mm": "5 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "functional_requirement"
+    },
+    {
+     "name": "horizontal_leg_clearance_hole_free_end",
+     "purpose": "Mounts the bracket to a wall or shelf support at the free end",
+     "approx_dims_mm": "5 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "functional_requirement"
+    },
+    {
+     "name": "horizontal_leg_clearance_hole_near_end",
+     "purpose": "Mounts the bracket to a wall or shelf support at the near end",
+     "approx_dims_mm": "5 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "functional_requirement"
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "The horizontal leg should be placed flat on the build platform to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "bracket_angle_gusset",
+  "prompt": "Model a single-piece gusseted angle bracket: two flanges each 60 x 50 x 4 mm at 90 degrees, triangular gusset plate 50 x 50 x 4 mm filling the inner corner. Overall outer envelope 64 x 64 x 50 mm.",
+  "class": "bracket",
+  "brief": {
+   "object_name": "Gusseted Angle Bracket",
+   "summary": "A right-angled bracket with triangular gusset plate reinforcement connecting two flanges.",
+   "visual_description": "A 90-degree corner bracket with two rectangular flanges extending perpendicularly from a shared edge. Each flange is 60mm long, 50mm wide, and 4mm thick. The inner corner is filled with a triangular gusset plate that tapers from 50mm base to 50mm apex, also 4mm thick. The overall shape forms a square silhouette (64mm x 64mm) with the flanges extending outward from the corner. All edges are sharp, and the gusset plate creates a triangular reinforcement in the inner angle.",
+   "overall_envelope_mm": "64 x 64 x 50",
+   "features": [
+    {
+     "name": "flange_1",
+     "purpose": "Primary mounting flange extending horizontally from corner",
+     "approx_dims_mm": "60 x 50 x 4",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "flange_2",
+     "purpose": "Secondary mounting flange extending vertically from corner",
+     "approx_dims_mm": "60 x 50 x 4",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "gusset_plate",
+     "purpose": "Triangular reinforcement plate filling inner corner",
+     "approx_dims_mm": "50 x 50 x 4",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the gusset plate facing down to minimize supports and ensure proper material flow for the triangular reinforcement.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "bracket_pipe_clamp_single",
+  "prompt": "Design a single-piece pipe clamp bracket for a 25 mm OD pipe: semi-circular saddle 13 mm inner radius x 20 mm wide, two M5 bolt ears each 30 x 15 x 5 mm extending from the saddle ends, M5 clearance hole centered in each ear. Flat back face 60 x 20 mm with two M4 clearance holes 20 mm apart for wall mounting.",
+  "class": "bracket",
+  "brief": {
+   "object_name": "Pipe Clamp Bracket",
+   "summary": "A semi-circular pipe clamp bracket with bolt ears and mounting holes for securing a 25 mm OD pipe to a wall.",
+   "visual_description": "A curved saddle shape with 13 mm inner radius and 20 mm width, forming a semi-circle around the pipe. Two rectangular bolt ears extend outward from each end of the saddle, each 30 mm long, 15 mm wide, and 5 mm thick. The back face is flat and rectangular, 60 mm long by 20 mm wide, with two M4 clearance holes spaced 20 mm apart along the length.",
+   "overall_envelope_mm": "60 x 20 x 20",
+   "features": [
+    {
+     "name": "pipe_saddle",
+     "purpose": "Holds and clamps the pipe in place",
+     "approx_dims_mm": "13 mm inner radius, 20 mm width",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "functional_requirement"
+    },
+    {
+     "name": "bolt_ear_left",
+     "purpose": "Mounts to the pipe with an M5 bolt",
+     "approx_dims_mm": "30 x 15 x 5 mm",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "anchor_scaled"
+    },
+    {
+     "name": "bolt_ear_right",
+     "purpose": "Mounts to the pipe with an M5 bolt",
+     "approx_dims_mm": "30 x 15 x 5 mm",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "anchor_scaled"
+    },
+    {
+     "name": "m5_clearance_hole_left",
+     "purpose": "Allows M5 bolt to pass through the left ear",
+     "approx_dims_mm": "5 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "default_guess"
+    },
+    {
+     "name": "m5_clearance_hole_right",
+     "purpose": "Allows M5 bolt to pass through the right ear",
+     "approx_dims_mm": "5 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "default_guess"
+    },
+    {
+     "name": "mounting_back_face",
+     "purpose": "Provides flat surface for wall mounting",
+     "approx_dims_mm": "60 x 20 mm",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "anchor_scaled"
+    },
+    {
+     "name": "m4_clearance_hole_1",
+     "purpose": "Mounts bracket to wall with M4 bolt",
+     "approx_dims_mm": "4 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "default_guess"
+    },
+    {
+     "name": "m4_clearance_hole_2",
+     "purpose": "Mounts bracket to wall with M4 bolt",
+     "approx_dims_mm": "4 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "default_guess"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the flat back face down to minimize supports and ensure good surface finish for mounting.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "enclosure_shallow_tray",
+  "prompt": "Model a single-piece shallow electronics tray 150 x 100 x 20 mm with 2 mm uniform wall, open top. Four corner bosses inside the tray, each 8 mm outer diameter x 15 mm tall with a 3.2 mm through-bore for M3 standoffs. One 30 x 10 mm rectangular cutout centered on each 150 mm side wall for cable routing.",
+  "class": "enclosure",
+  "brief": {
+   "object_name": "Electronics Tray",
+   "summary": "A shallow rectangular electronics tray with uniform walls, internal bosses for standoff mounting, and cable routing cutouts.",
+   "visual_description": "A flat rectangular tray with a 150 mm length, 100 mm width, and 20 mm height. The tray has a thin 2 mm wall thickness throughout, with no top surface (open top). Four cylindrical bosses are positioned at each corner inside the tray, each 8 mm in diameter and 15 mm tall with a central 3.2 mm hole for M3 standoffs. Two rectangular cutouts, 30 mm wide by 10 mm tall, are centered on each of the longer side walls (150 mm sides) for cable routing.",
+   "overall_envelope_mm": "150 x 100 x 20",
+   "features": [
+    {
+     "name": "tray_outer_box",
+     "purpose": "Main tray body with uniform wall thickness",
+     "approx_dims_mm": "150 x 100 x 20",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "tray_inner_pocket",
+     "purpose": "Inner cavity for electronics",
+     "approx_dims_mm": "144 x 96 x 18",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "corner_boss_1",
+     "purpose": "Internal mounting boss for M3 standoff",
+     "approx_dims_mm": "8 mm dia x 15 mm ht",
+     "method": "revolve",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "corner_boss_2",
+     "purpose": "Internal mounting boss for M3 standoff",
+     "approx_dims_mm": "8 mm dia x 15 mm ht",
+     "method": "revolve",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "corner_boss_3",
+     "purpose": "Internal mounting boss for M3 standoff",
+     "approx_dims_mm": "8 mm dia x 15 mm ht",
+     "method": "revolve",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "corner_boss_4",
+     "purpose": "Internal mounting boss for M3 standoff",
+     "approx_dims_mm": "8 mm dia x 15 mm ht",
+     "method": "revolve",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "boss_through_bore_1",
+     "purpose": "M3 standoff clearance hole",
+     "approx_dims_mm": "3.2 mm dia",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "boss_through_bore_2",
+     "purpose": "M3 standoff clearance hole",
+     "approx_dims_mm": "3.2 mm dia",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "boss_through_bore_3",
+     "purpose": "M3 standoff clearance hole",
+     "approx_dims_mm": "3.2 mm dia",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "boss_through_bore_4",
+     "purpose": "M3 standoff clearance hole",
+     "approx_dims_mm": "3.2 mm dia",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "cable_cutout_1",
+     "purpose": "Cable routing opening on side wall",
+     "approx_dims_mm": "30 x 10 mm",
+     "method": "pocket",
+     "count": 2,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    },
+    {
+     "name": "cable_cutout_2",
+     "purpose": "Cable routing opening on side wall",
+     "approx_dims_mm": "30 x 10 mm",
+     "method": "pocket",
+     "count": 2,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "none"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the bottom face (150 x 100 mm) down to minimize supports and ensure even wall thickness.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "enclosure_hinged_lid",
+  "prompt": "Design a single-piece snap-fit enclosure lid 100 x 70 x 8 mm with 1.5 mm wall: flat top panel, four snap cantilever tabs 3 mm wide x 6 mm long x 1.5 mm thick on the outer skirt angled 10 degrees outward.",
+  "class": "enclosure",
+  "brief": {
+   "object_name": "Snap-fit Enclosure Lid",
+   "summary": "A flat-top lid with four angled cantilever snap tabs for secure enclosure closure.",
+   "visual_description": "A rectangular lid measuring 100mm x 70mm x 8mm thick, with a flat top surface and four thin, outward-angled tabs along the perimeter. The tabs are 3mm wide, 6mm long, and 1.5mm thick, each angled 10 degrees from the vertical plane of the lid. The lid has a smooth, flat exterior with no curves or protrusions except for the snap tabs.",
+   "overall_envelope_mm": "100 x 70 x 8",
+   "features": [
+    {
+     "name": "top_panel",
+     "purpose": "Provides the main sealing surface and mounting area for the lid",
+     "approx_dims_mm": "100 x 70 x 8",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "snap_tab_1",
+     "purpose": "Creates a cantilever snap fit with the enclosure body",
+     "approx_dims_mm": "3 x 6 x 1.5",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "snap_tab_2",
+     "purpose": "Creates a cantilever snap fit with the enclosure body",
+     "approx_dims_mm": "3 x 6 x 1.5",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "snap_tab_3",
+     "purpose": "Creates a cantilever snap fit with the enclosure body",
+     "approx_dims_mm": "3 x 6 x 1.5",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "snap_tab_4",
+     "purpose": "Creates a cantilever snap fit with the enclosure body",
+     "approx_dims_mm": "3 x 6 x 1.5",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 1.5,
+   "material": "PLA",
+   "print_orientation_note": "The flat top surface should be oriented downward to minimize supports and ensure good layer adhesion during printing.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "enclosure_din_rail_box",
+  "prompt": "Model a single-piece DIN rail mount enclosure body 90 x 60 x 40 mm with 2 mm wall, open front face. Two 6 mm wide x 3 mm deep horizontal slots on the back face for DIN rail clips, spaced 40 mm apart vertically. Four M3 clearance holes on the front rim 5 mm from each corner. Internal ribbing: two 1.5 mm x 38 mm vertical ribs spaced 30 mm apart on the back wall.",
+  "class": "enclosure",
+  "brief": {
+   "object_name": "DIN Rail Mount Enclosure Body",
+   "summary": "A compact, single-piece enclosure body designed to mount on DIN rails with clearance holes and internal structural ribs.",
+   "visual_description": "A rectangular box-like enclosure with a flat front face that is open, and a back face with two horizontal slots cut into it. The sides are thin-walled (2 mm) with a clean, geometric silhouette. The front rim has four evenly spaced circular clearance holes. Internal vertical ribs run along the back wall to provide structural support without adding significant weight. The overall shape is a solid rectangular block with strategic cutouts and internal features.",
+   "overall_envelope_mm": "90 x 60 x 40",
+   "features": [
+    {
+     "name": "front_opening",
+     "purpose": "Provides access to the interior of the enclosure",
+     "approx_dims_mm": "90 x 60 x 2",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "dual_rail_slots",
+     "purpose": "Allows mounting on DIN rail clips",
+     "approx_dims_mm": "6 x 3",
+     "method": "pocket",
+     "count": 2,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "DIN rail clip spacing standard"
+    },
+    {
+     "name": "front_rim_clearance_holes",
+     "purpose": "Mounting holes for screws or fasteners on the front rim",
+     "approx_dims_mm": "3",
+     "method": "pocket",
+     "count": 4,
+     "standard": "M3",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "internal_vertical_ribs",
+     "purpose": "Provides structural support inside the enclosure",
+     "approx_dims_mm": "1.5 x 38",
+     "method": "pocket",
+     "count": 2,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "wall thickness and internal space constraints"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The front face should be printed facing up to minimize supports needed for the internal ribs and slots.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "knob_d_shaft_40mm",
+  "prompt": "Design a single-piece thumbwheel knob: outer diameter 40 mm, height 20 mm, 12 axial knurl ridges on the outer surface 1.5 mm tall x 1.5 mm wide, flat top face with a recessed brand circle 20 mm diameter x 1 mm deep, center bore 6 mm diameter D-flat shaft hole (D flat 4.6 mm chord), M3 set-screw radial hole 5 mm deep at mid-height.",
+  "class": "knob",
+  "brief": {
+   "object_name": "Thumbwheel Knob",
+   "summary": "A single-piece plastic or metal thumbwheel knob with knurled ridges, brand logo recess, and mounting features.",
+   "visual_description": "A cylindrical thumbwheel 40 mm in diameter and 20 mm tall, with 12 evenly spaced axial ridges that create a knurled texture on the outer surface. The top face is flat with a circular recessed area (20 mm diameter, 1 mm deep) for branding or labeling. A central hole with a D-flat cross-section (6 mm diameter, 4.6 mm chord) runs through the center, and a radial set-screw hole (M3) is drilled 5 mm deep at mid-height (10 mm from top). The overall shape is smooth and ergonomic with a tactile knurled surface.",
+   "overall_envelope_mm": "40 x 40 x 20",
+   "features": [
+    {
+     "name": "Outer cylindrical surface",
+     "purpose": "Main gripping surface with knurled texture",
+     "approx_dims_mm": "40 mm diameter x 20 mm height",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Axial knurl ridges",
+     "purpose": "Provide grip and tactile feedback",
+     "approx_dims_mm": "12 pieces, 1.5 mm tall x 1.5 mm wide",
+     "method": "pocket",
+     "count": 12,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Top flat face",
+     "purpose": "Provide mounting surface and branding area",
+     "approx_dims_mm": "Flat top surface",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Branding recess",
+     "purpose": "Holds brand logo or identification",
+     "approx_dims_mm": "20 mm diameter x 1 mm deep",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Center shaft hole",
+     "purpose": "Mounts onto a shaft or spindle",
+     "approx_dims_mm": "6 mm diameter D-flat (4.6 mm chord)",
+     "method": "revolve",
+     "count": 1,
+     "standard": "D-flat",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Radial set-screw hole",
+     "purpose": "Secures the knob to a shaft or mechanism",
+     "approx_dims_mm": "M3 threaded bore, 5 mm deep",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M3",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the flat top face down to minimize supports and ensure good surface finish.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "knob_handwheel_spoked",
+  "prompt": "Model a single-piece spoked handwheel: rim outer diameter 80 mm, rim cross-section 8 mm wide x 8 mm tall, four spokes each 6 mm wide x 6 mm thick, central hub 20 mm outer diameter x 15 mm tall, hub bore 10 mm diameter.",
+  "class": "knob",
+  "brief": {
+   "object_name": "Spoked Handwheel",
+   "summary": "A single-piece spoked handwheel with a circular rim, four spokes, and central hub.",
+   "visual_description": "A circular wheel with a flat rim 80 mm in diameter, 8 mm wide and tall, with four evenly spaced rectangular spokes 6 mm wide and thick extending from the rim to the central hub. The hub is a cylinder 20 mm in diameter and 15 mm tall, with a central cylindrical bore 10 mm in diameter. The overall shape is a flat disc with radial spokes, resembling a bicycle wheel hub but with solid spokes.",
+   "overall_envelope_mm": "80 x 80 x 15",
+   "features": [
+    {
+     "name": "rim",
+     "purpose": "The outer circular rim that provides grip and structural support for the handwheel.",
+     "approx_dims_mm": "80 mm OD, 8 mm width, 8 mm height",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard handwheel reference"
+    },
+    {
+     "name": "spoke",
+     "purpose": "Structural support connecting the rim to the central hub.",
+     "approx_dims_mm": "6 mm width, 6 mm thickness, length from rim to hub",
+     "method": "box+fillet",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "load distribution and structural integrity"
+    },
+    {
+     "name": "hub",
+     "purpose": "Central mounting point for the handwheel, providing attachment to a shaft or axle.",
+     "approx_dims_mm": "20 mm OD, 15 mm height",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard handwheel reference"
+    },
+    {
+     "name": "hub_bore",
+     "purpose": "Central hole for mounting onto a shaft or axle.",
+     "approx_dims_mm": "10 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "typical small shaft bore"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat rim should be printed face-down to minimize supports and ensure good surface finish.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "clip_spring_pcb",
+  "prompt": "Design a single-piece spring clip for retaining a PCB 1.6 mm thick: clip body 30 mm long x 8 mm wide x 2 mm wall, U-channel section 6 mm inner height, two 1 mm x 8 mm flex slits cut 10 mm from the open end to create spring fingers. Closed base end is solid.",
+  "class": "clip",
+  "brief": {
+   "object_name": "PCB Retention Spring Clip",
+   "summary": "A thin, spring-loaded U-channel clip for securing a 1.6 mm thick PCB with two flex fingers at one end.",
+   "visual_description": "A flat, rectangular spring clip with a U-shaped cross-section, 30 mm long and 8 mm wide, with a 2 mm wall thickness. The open end has two parallel 1 mm wide slits cut 10 mm from the edge, creating flexible fingers that flex outward to grip the PCB. The closed base is solid, and the clip tapers slightly toward the open end for easy insertion.",
+   "overall_envelope_mm": "30 x 8 x 2",
+   "features": [
+    {
+     "name": "clip_body",
+     "purpose": "Main structural body of the clip with U-channel cross-section",
+     "approx_dims_mm": "30 x 8 x 2",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "u_channel_section",
+     "purpose": "U-shaped cross-section for PCB retention",
+     "approx_dims_mm": "6 inner height, 2 wall thickness",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "flex_slits",
+     "purpose": "Cutouts that create spring fingers for PCB gripping",
+     "approx_dims_mm": "1 mm width x 8 mm length",
+     "method": "pocket",
+     "count": 2,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the U-channel opening facing up to minimize supports and ensure proper spring action.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "clip_tube_saddle_clamp",
+  "prompt": "Model a single-piece saddle tube clamp for a 20 mm OD tube: full-circle clamp 22 mm inner diameter x 15 mm wide, split with a 1 mm gap at the top, two split ears each 12 x 10 x 5 mm, flat mounting plate 60 x 20 x 4 mm extending from the bottom.",
+  "class": "clip",
+  "brief": {
+   "object_name": "Saddle Tube Clamp",
+   "summary": "A full-circle tube clamp with split ears and flat mounting plate for securing a 20 mm OD tube.",
+   "visual_description": "A circular metal band with a 22 mm inner diameter and 15 mm width, split at the top with a 1 mm gap. Two rectangular ears (12 x 10 x 5 mm) extend from the bottom, each with a flat mounting surface. The clamp has a smooth, curved outer profile with sharp edges on the split surfaces and flat mounting plate.",
+   "overall_envelope_mm": "60 x 20 x 15",
+   "features": [
+    {
+     "name": "clamp_body",
+     "purpose": "Holds the tube in place by encircling it",
+     "approx_dims_mm": "22 inner diameter x 15 width x 4 height",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "split_gap",
+     "purpose": "Allows the clamp to be opened for tube insertion",
+     "approx_dims_mm": "1 mm gap at top",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "mounting_ears",
+     "purpose": "Provides attachment points for mounting the clamp",
+     "approx_dims_mm": "12 x 10 x 5 mm each",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "saddle_clamp_proportions"
+    },
+    {
+     "name": "mounting_plate",
+     "purpose": "Provides flat surface for mounting clamp to a structure",
+     "approx_dims_mm": "60 x 20 x 4 mm",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "mounting_surface_area"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat mounting plate should face down to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "hook_coat_double",
+  "prompt": "Design a single-piece double coat hook: back plate 80 x 40 x 4 mm, two hooks extending forward 50 mm each at 30 degrees upward angle, hook tip diameter 10 mm, hook shaft diameter 6 mm, hooks spaced 40 mm apart on the back plate.",
+  "class": "hook",
+  "brief": {
+   "object_name": "Double Coat Hook",
+   "summary": "A single-piece coat hook assembly with two curved hooks mounted on a flat back plate.",
+   "visual_description": "A rectangular back plate measuring 80mm long by 40mm wide by 4mm thick, with two identical hooks extending forward at 30-degree upward angles. Each hook has a 6mm diameter shaft and a 10mm diameter tip, forming a smooth curved profile. The hooks are positioned 40mm apart on the plate's surface, creating a symmetrical mounting arrangement.",
+   "overall_envelope_mm": "80 x 40 x 4 mm",
+   "features": [
+    {
+     "name": "back_plate",
+     "purpose": "Mounting base for the hooks",
+     "approx_dims_mm": "80 x 40 x 4",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "hook_1",
+     "purpose": "First coat hook for hanging garments",
+     "approx_dims_mm": "50mm length, 6mm shaft diameter, 10mm tip diameter",
+     "method": "sweep",
+     "count": 2,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "hook_2",
+     "purpose": "Second coat hook for hanging garments",
+     "approx_dims_mm": "50mm length, 6mm shaft diameter, 10mm tip diameter",
+     "method": "sweep",
+     "count": 2,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the back plate face down to minimize supports and ensure good adhesion.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "hook_j_utility_wall",
+  "prompt": "Model a single-piece J-hook for wall tools: back plate 30 x 50 x 4 mm, J-curve hook radius 15 mm, hook horizontal reach 40 mm, hook diameter 8 mm round cross-section, hook up-leg 30 mm tall above the plate.",
+  "class": "hook",
+  "brief": {
+   "object_name": "J-hook",
+   "summary": "A single-piece wall-mounted J-hook with a flat back plate and curved J-shaped hook.",
+   "visual_description": "A rectangular back plate measuring 30mm wide by 50mm long by 4mm thick, with a J-shaped hook extending upward from the top edge. The hook has a 15mm radius curve, extends 40mm horizontally outward, and rises 30mm vertically above the plate. The hook is an 8mm diameter round rod that appears as a smooth curved tube with consistent circular cross-section throughout its length.",
+   "overall_envelope_mm": "50 x 30 x 34 mm",
+   "features": [
+    {
+     "name": "back_plate",
+     "purpose": "Mounts to the wall surface",
+     "approx_dims_mm": "30 x 50 x 4",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "hook_curve",
+     "purpose": "Provides curved gripping surface for tools",
+     "approx_dims_mm": "15mm radius, 8mm diameter",
+     "method": "sweep",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "hook_horizontal_reach",
+     "purpose": "Determines how far the hook extends from the wall",
+     "approx_dims_mm": "40mm horizontal distance",
+     "method": "sweep",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "hook_vertical_leg",
+     "purpose": "Provides vertical support and height for tool placement",
+     "approx_dims_mm": "30mm height above plate",
+     "method": "sweep",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the back plate face down to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "spacer_flanged_bushing",
+  "prompt": "Design a single-piece flanged bushing: inner bore 8 mm diameter, outer barrel 12 mm diameter x 20 mm long, flange 20 mm outer diameter x 2 mm thick at one end, overall length 22 mm including flange. Barrel outer surface has a 0.5 mm chamfer at the non-flanged end.",
+  "class": "spacer",
+  "brief": {
+   "object_name": "Single-piece Flanged Bushing",
+   "summary": "A bushing with an inner bore, outer barrel, and flange for mounting applications.",
+   "visual_description": "A cylindrical barrel with a 12 mm outer diameter and 20 mm length, featuring a 2 mm thick flange at one end that extends outward to form a 20 mm outer diameter. The barrel has a chamfered edge at the non-flanged end. The inner bore is centered and runs the full length of the barrel.",
+   "overall_envelope_mm": "22 mm x 12 mm x 12 mm",
+   "features": [
+    {
+     "name": "Inner bore",
+     "purpose": "Provides a smooth, precise fit for a shaft or rod",
+     "approx_dims_mm": "8 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "none",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Outer barrel",
+     "purpose": "Provides structural support and outer surface for mounting",
+     "approx_dims_mm": "12 mm diameter x 20 mm length",
+     "method": "box",
+     "count": 1,
+     "standard": "none",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Flange",
+     "purpose": "Provides a mounting surface and prevents axial movement",
+     "approx_dims_mm": "20 mm outer diameter x 2 mm thickness",
+     "method": "revolve",
+     "count": 1,
+     "standard": "none",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Chamfer",
+     "purpose": "Provides a clean edge and removes sharp corners",
+     "approx_dims_mm": "0.5 mm x 45 degrees",
+     "method": "pocket",
+     "count": 1,
+     "standard": "none",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flange should be printed facing down to minimize supports and ensure good adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "spacer_hex_standoff_m4",
+  "prompt": "Model a single-piece hex standoff: hex across-flats 7 mm, hex length 20 mm, 1 mm chamfer on both end faces, central through-bore 4 mm diameter.",
+  "class": "spacer",
+  "brief": {
+   "object_name": "Hex Standoff",
+   "summary": "A hexagonal standoff with 7mm across-flats, 20mm length, 1mm chamfers on both ends, and a central 4mm through-bore.",
+   "visual_description": "A short hexagonal prism with flat sides (7mm across-flats), 20mm long, with 1mm beveled edges on both ends. The center is hollowed out with a 4mm diameter cylindrical hole running straight through the middle. The overall shape is a thin, symmetrical hexagon with sharp, clean edges and a central void.",
+   "overall_envelope_mm": "20 x 20 x 1 mm",
+   "features": [
+    {
+     "name": "hexagonal body",
+     "purpose": "Provides structural support and mounting interface with 6 flat sides",
+     "approx_dims_mm": "7mm across-flats, 20mm length",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "through-bore",
+     "purpose": "Allows fastener passage through the standoff",
+     "approx_dims_mm": "4mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "end chamfers",
+     "purpose": "Provides clean edge transition and prevents stress concentration",
+     "approx_dims_mm": "1mm chamfer on both end faces",
+     "method": "pocket",
+     "count": 2,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the hexagonal faces horizontal to minimize supports and ensure good surface finish on the flat sides.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "duct_inline_reducer_60to30",
+  "prompt": "Design a single-piece inline circular duct reducer: inlet diameter 60 mm, outlet diameter 30 mm, transition length 80 mm, wall thickness 2 mm, smooth conical taper, 10 mm straight inlet collar, 10 mm straight outlet collar. Inlet has a mounting flange 70 mm outer diameter x 3 mm thick.",
+  "class": "duct",
+  "brief": {
+   "object_name": "Inline Circular Duct Reducer",
+   "summary": "A conical duct reducer with straight collars and mounting flange, transitioning from 60mm to 30mm diameter over 80mm length.",
+   "visual_description": "A smooth conical transition tube with a 60mm diameter inlet and 30mm diameter outlet, 80mm long, with 2mm thick walls. The inlet has a 10mm straight collar extending outward, the outlet has a 10mm straight collar extending outward, and there's a 70mm outer diameter mounting flange at the inlet end that's 3mm thick. All surfaces are smooth and continuous with no sharp edges.",
+   "overall_envelope_mm": "90 x 60 x 80",
+   "features": [
+    {
+     "name": "inlet_diameter_60mm",
+     "purpose": "Primary air intake opening",
+     "approx_dims_mm": "60",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "outlet_diameter_30mm",
+     "purpose": "Reduced air exhaust opening",
+     "approx_dims_mm": "30",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "transition_length_80mm",
+     "purpose": "Conical taper for smooth airflow transition",
+     "approx_dims_mm": "80",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "wall_thickness_2mm",
+     "purpose": "Structural wall thickness for duct integrity",
+     "approx_dims_mm": "2",
+     "method": "shell",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "inlet_collar_length_10mm",
+     "purpose": "Straight mounting section at inlet end",
+     "approx_dims_mm": "10",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "outlet_collar_length_10mm",
+     "purpose": "Straight mounting section at outlet end",
+     "approx_dims_mm": "10",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "mounting_flange_outer_diameter_70mm",
+     "purpose": "Mounting surface for securing to duct system",
+     "approx_dims_mm": "70",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "mounting_flange_thickness_3mm",
+     "purpose": "Flange thickness for mounting stability",
+     "approx_dims_mm": "3",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the inlet flange facing down to minimize support structures needed for the conical transition section.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "duct_rectangular_nozzle_slot",
+  "prompt": "Model a single-piece rectangular slot nozzle: inlet 40 x 40 mm square, outlet slot 80 x 4 mm, transition length 60 mm, 1.5 mm wall, smooth internal transition from square to slot.",
+  "class": "duct",
+  "brief": {
+   "object_name": "Rectangular Slot Nozzle",
+   "summary": "A single-piece rectangular slot nozzle with a square inlet transitioning smoothly to an elongated slot outlet.",
+   "visual_description": "A narrow, elongated rectangular nozzle with a 40mm x 40mm square inlet that tapers smoothly into an 80mm x 4mm slot outlet. The body is 60mm long with a uniform wall thickness of 1.5mm. The internal transition is perfectly smooth with no sharp edges or corners, creating a streamlined flow path from square to rectangular cross-section.",
+   "overall_envelope_mm": "80 x 40 x 60",
+   "features": [
+    {
+     "name": "inlet_square",
+     "purpose": "Provides the entry point for fluid or material flow with a square cross-section",
+     "approx_dims_mm": "40 x 40 x 1.5",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "outlet_slot",
+     "purpose": "Creates the exit point with an elongated rectangular slot shape for controlled flow distribution",
+     "approx_dims_mm": "80 x 4 x 1.5",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "transition_region",
+     "purpose": "Provides smooth internal transition from square to slot cross-section without abrupt changes",
+     "approx_dims_mm": "60 x 40 x 4",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 1.5,
+   "material": "PLA",
+   "print_orientation_note": "Print with the square inlet face down to minimize supports and ensure proper wall thickness throughout the transition region.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "handle_t_bar_grip",
+  "prompt": "Design a single-piece T-bar handle: horizontal grip 120 mm long x 20 mm diameter round, vertical stem 60 mm long x 14 mm diameter round, M8 threaded bore 8 mm diameter x 25 mm deep in the stem bottom, 3 mm fillet at the T-junction.",
+  "class": "handle",
+  "brief": {
+   "object_name": "T-bar Handle",
+   "summary": "A single-piece T-bar handle with a horizontal grip and vertical stem, featuring an M8 threaded bore.",
+   "visual_description": "The part is a T-shaped handle with a horizontal round grip 120 mm long and 20 mm diameter, and a vertical stem 60 mm long and 14 mm diameter. The stem has an M8 threaded bore 8 mm in diameter extending 25 mm deep into the bottom. A 3 mm fillet smoothly transitions between the grip and stem at the T-junction. The overall shape is clean and ergonomic with a simple, functional form.",
+   "overall_envelope_mm": "120 x 14 x 60",
+   "features": [
+    {
+     "name": "horizontal grip",
+     "purpose": "Provides a comfortable, graspable surface for the user",
+     "approx_dims_mm": "120 x 20",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard hand tool grip length of ~100-150 mm"
+    },
+    {
+     "name": "vertical stem",
+     "purpose": "Provides structural support and attachment point for mounting",
+     "approx_dims_mm": "60 x 14",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "typical handle stem diameter is 1/3 to 1/2 of grip diameter"
+    },
+    {
+     "name": "M8 threaded bore",
+     "purpose": "Allows for secure mounting with an M8 screw or bolt",
+     "approx_dims_mm": "8 x 25",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M8",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "mounting requirement for standard hardware"
+    },
+    {
+     "name": "T-junction fillet",
+     "purpose": "Provides smooth transition and stress relief between grip and stem",
+     "approx_dims_mm": "3",
+     "method": "fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "typical fillet radius for ergonomic handles"
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "The vertical stem should be oriented downward to minimize supports and ensure good print quality of the threaded bore.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "handle_fold_lever_100mm",
+  "prompt": "Model a single-piece fold-down lever handle: main arm 100 mm long x 10 mm wide x 8 mm thick, pivot boss at one end 20 mm outer diameter x 10 mm wide with 6 mm through-bore, ergonomic palm swell in the middle of the arm 16 mm wide x 6 mm raised.",
+  "class": "handle",
+  "brief": {
+   "object_name": "Fold-down Lever Handle",
+   "summary": "A single-piece lever handle with a pivot boss at one end and ergonomic palm swell in the middle, designed for door hardware applications.",
+   "visual_description": "A curved lever arm approximately 100mm long with a 10mm width and 8mm thickness, featuring a 20mm diameter pivot boss at one end with a 6mm through-hole, and an ergonomic palm swell that is 16mm wide and 6mm raised in the middle of the arm. The lever has a smooth, curved profile transitioning from flat to rounded sections, with the palm swell creating a comfortable grip contour.",
+   "overall_envelope_mm": "100 x 20 x 12",
+   "features": [
+    {
+     "name": "main_arm",
+     "purpose": "Primary lever structure for grasping and operating door hardware",
+     "approx_dims_mm": "100 x 10 x 8",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard door handle length reference"
+    },
+    {
+     "name": "pivot_boss",
+     "purpose": "Mounting point for pivot pin attachment to door hardware",
+     "approx_dims_mm": "20 x 10",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "standard mounting boss size"
+    },
+    {
+     "name": "pivot_bore",
+     "purpose": "Through-hole for pivot pin installation",
+     "approx_dims_mm": "6",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "standard pivot pin diameter"
+    },
+    {
+     "name": "palm_swell",
+     "purpose": "Ergonomic grip contour for comfortable hand placement",
+     "approx_dims_mm": "16 x 6",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "proportion_rule",
+     "estimate_anchor": "ergonomic grip sizing convention"
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the pivot boss face down to minimize supports and ensure proper structural integrity of the pivot mounting point.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "pulley_v_groove_60mm",
+  "prompt": "Design a single-piece V-groove pulley: outer diameter 60 mm, V-groove angle 40 degrees, groove depth 6 mm, rim width 20 mm, hub diameter 22 mm x 20 mm tall, hub bore 10 mm diameter, two radial M4 set-screw holes 6 mm deep at 90 degrees in the hub, 1 mm chamfer on both rim edges.",
+  "class": "pulley",
+  "brief": {
+   "object_name": "V-groove pulley",
+   "summary": "A single-piece pulley with a V-shaped groove for belt transmission, mounted on a hub with set-screw fasteners.",
+   "visual_description": "A cylindrical pulley body with a 60 mm outer diameter and 20 mm rim width. The rim features a deep V-groove cut at a 40-degree angle, forming a narrow bottom at 6 mm depth. The hub extends 20 mm tall from the rim base, with a 22 mm diameter and 10 mm bore in the center. Two M4 set-screw holes are drilled radially through the hub wall at 90 degrees, each 6 mm deep. Both edges of the rim have 1 mm chamfers for smoothness.",
+   "overall_envelope_mm": "60 x 60 x 20",
+   "features": [
+    {
+     "name": "outer rim",
+     "purpose": "Provides the main pulley surface for belt contact",
+     "approx_dims_mm": "60 mm diameter, 20 mm width",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "V-groove",
+     "purpose": "Guides the belt with proper angle and depth for secure transmission",
+     "approx_dims_mm": "40 degree angle, 6 mm depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "rim width",
+     "purpose": "Determines the contact area of the belt with the pulley",
+     "approx_dims_mm": "20 mm width",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "hub",
+     "purpose": "Mounts the pulley onto a shaft and provides structural support",
+     "approx_dims_mm": "22 mm diameter, 20 mm height",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "hub bore",
+     "purpose": "Allows the pulley to be mounted on a shaft",
+     "approx_dims_mm": "10 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "set-screw holes",
+     "purpose": "Secure the pulley to a shaft using set screws",
+     "approx_dims_mm": "M4 threaded hole, 6 mm deep, count 2",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "rim chamfers",
+     "purpose": "Smooth edges for safety and aesthetics",
+     "approx_dims_mm": "1 mm chamfer on both rim edges",
+     "method": "box+fillet",
+     "count": 2,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the hub face down to minimize supports and ensure structural integrity of the set-screw holes.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "pulley_idler_roller_40mm",
+  "prompt": "Model a single-piece idler roller: outer diameter 40 mm, barrel length 30 mm, central bore 8 mm diameter with 1 mm chamfer both ends, two 3 mm wide x 1.5 mm deep circumferential grooves at 8 mm from each end for retaining clips.",
+  "class": "pulley",
+  "brief": {
+   "object_name": "idler roller",
+   "summary": "A cylindrical roller with central bore and retention grooves for mounting on a shaft.",
+   "visual_description": "A smooth cylinder 40 mm in diameter and 30 mm long, with a central through-hole 8 mm in diameter. The cylinder has two shallow rectangular grooves cut circumferentially at 8 mm from each end, creating a barrel shape with a central section that's thinner than the ends. The bore edges are chamfered at 1 mm on both ends, giving the part a clean, functional profile with clear retention points.",
+   "overall_envelope_mm": "40 x 40 x 30",
+   "features": [
+    {
+     "name": "central_bore",
+     "purpose": "Provides shaft mounting for the roller",
+     "approx_dims_mm": "8 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "bore_chamfer",
+     "purpose": "Facilitates shaft insertion and removes sharp edges",
+     "approx_dims_mm": "1 mm chamfer on both ends",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "retaining_groove_1",
+     "purpose": "Holds retention clip in place at one end",
+     "approx_dims_mm": "3 mm width x 1.5 mm depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "retention_clip_spec"
+    },
+    {
+     "name": "retaining_groove_2",
+     "purpose": "Holds retention clip in place at other end",
+     "approx_dims_mm": "3 mm width x 1.5 mm depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "retention_clip_spec"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the cylindrical surface facing down to minimize supports and ensure even wall thickness.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "cam_heart_shaped_plate",
+  "prompt": "Design a single-piece heart-shaped cam plate: bounding circle 80 mm diameter, plate thickness 10 mm, the cam profile is a symmetric cardioid-approximation with minimum radius 20 mm and maximum radius 40 mm from the center. Central drive bore 12 mm diameter.",
+  "class": "cam",
+  "brief": {
+   "object_name": "Heart-shaped Cam Plate",
+   "summary": "A single-piece cam plate with a heart-shaped profile, central drive bore, and symmetric cardioid approximation.",
+   "visual_description": "A flat, heart-shaped plate with smooth, curved contours that taper from a minimum radius of 20 mm to maximum radius of 40 mm at the widest points. The profile is symmetric about both vertical and horizontal axes, creating a classic heart silhouette. The central bore is a clean 12 mm diameter hole through the center. The entire plate is 10 mm thick with smooth transitions between the cam profile and the central bore.",
+   "overall_envelope_mm": "80 x 80 x 10",
+   "features": [
+    {
+     "name": "Central Drive Bore",
+     "purpose": "Provides rotational drive connection to a shaft or motor",
+     "approx_dims_mm": "12",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Cam Profile",
+     "purpose": "Creates the reciprocating motion when rotated",
+     "approx_dims_mm": "80 x 80 x 10",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat face with the cam profile should be printed facing down to minimize supports and ensure smooth surface finish.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "cam_indexing_template_plate",
+  "prompt": "Model a single-piece indexing template plate 120 x 80 x 6 mm: eight evenly-spaced 5 mm diameter detent holes on a 90 mm diameter bolt circle centered on the plate, one 20 mm diameter central bore, four M4 clearance holes at the plate corners 8 mm from each edge.",
+  "class": "cam",
+  "brief": {
+   "object_name": "Indexing Template Plate",
+   "summary": "A flat rectangular plate with a central bore, peripheral detent holes on a bolt circle, and corner clearance holes for mounting.",
+   "visual_description": "A flat rectangular plate measuring 120 mm long by 80 mm wide by 6 mm thick. The plate has a large central circular hole (20 mm diameter) in the center, surrounded by eight small circular detent holes (5 mm diameter) arranged evenly around a circle with 90 mm diameter. Four smaller clearance holes (M4 size) are located at each corner, 8 mm from the respective edges. The plate has a flat, smooth surface with no curves or tapers except for the circular features.",
+   "overall_envelope_mm": "120 x 80 x 6",
+   "features": [
+    {
+     "name": "central bore",
+     "purpose": "Provides a mounting point for a pivot or indexing pin",
+     "approx_dims_mm": "20",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "detent holes",
+     "purpose": "Provide indexed positioning points for alignment or locking",
+     "approx_dims_mm": "5",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "bolt circle diameter of 90 mm"
+    },
+    {
+     "name": "corner clearance holes",
+     "purpose": "Allow for mounting screws or fasteners at the plate corners",
+     "approx_dims_mm": "4",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "mounting requirement"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat face (120 x 80 mm) should be printed downward to minimize supports and ensure good surface finish.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "housing_bearing_pillow_block",
+  "prompt": "Design a single-piece pillow block bearing housing: base 80 x 40 x 10 mm with four M5 clearance holes 10 mm from each corner, bearing bore 22 mm diameter centered 35 mm above the base, housing body 50 mm wide x 45 mm tall x 30 mm deep, 2 mm chamfer on the top outer edges, bore depth 30 mm.",
+  "class": "housing",
+  "brief": {
+   "object_name": "Pillow Block Bearing Housing",
+   "summary": "A single-piece bearing housing with mounting holes and a centered bearing bore.",
+   "visual_description": "A rectangular block with a flat base measuring 80mm long x 40mm wide x 10mm high. The housing body extends vertically from the base to form a 50mm wide x 45mm tall x 30mm deep box structure. A circular bearing bore 22mm in diameter is centered 35mm above the base, extending through the full depth of the housing. Four M5 clearance holes are positioned 10mm from each corner of the base. The top edges have 2mm chamfers for smooth transitions. The overall shape is a robust rectangular housing with a central bearing cavity.",
+   "overall_envelope_mm": "80 x 40 x 45",
+   "features": [
+    {
+     "name": "base",
+     "purpose": "Provides mounting surface and structural foundation",
+     "approx_dims_mm": "80 x 40 x 10",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "mounting_holes",
+     "purpose": "Mounts the housing to a support structure",
+     "approx_dims_mm": "M5 clearance hole, 10mm from each corner",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M5 standard clearance hole"
+    },
+    {
+     "name": "bearing_bore",
+     "purpose": "Houses the bearing with proper alignment",
+     "approx_dims_mm": "22mm diameter, 30mm deep, centered 35mm above base",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M5",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "bearing bore diameter"
+    },
+    {
+     "name": "housing_body",
+     "purpose": "Encloses and protects the bearing",
+     "approx_dims_mm": "50mm wide x 45mm tall x 30mm deep",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "top_chamfers",
+     "purpose": "Provides smooth edge transitions and removes sharp edges",
+     "approx_dims_mm": "2mm chamfer on all outer top edges",
+     "method": "fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "standard edge finishing"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Base face down to minimize supports and ensure flat mounting surface",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "housing_push_cap_snap",
+  "prompt": "Model a single-piece push-in snap cap for a 30 mm diameter hole: cap outer flange 38 mm diameter x 2 mm thick, cylindrical plug 28.5 mm outer diameter x 10 mm long with four 1 mm x 8 mm snap barbs at 90 degree spacing, plug wall 1.5 mm, closed top face.",
+  "class": "housing",
+  "brief": {
+   "object_name": "Push-in Snap Cap",
+   "summary": "A single-piece snap cap for a 30 mm diameter hole with an outer flange and internal cylindrical plug with snap barbs.",
+   "visual_description": "A flat, circular cap with a 38 mm outer diameter flange that sits flush against a surface. The center features a 28.5 mm diameter cylindrical plug extending 10 mm into the hole, with four evenly spaced 1 mm wide x 8 mm long rectangular snap barbs around its circumference. The plug has a 1.5 mm wall thickness and a flat top face. The overall shape is a thin, disk-like form with a central protrusion that tapers inward to form the barbs.",
+   "overall_envelope_mm": "38 x 38 x 12",
+   "features": [
+    {
+     "name": "outer_flange",
+     "purpose": "Provides a flat seating surface and prevents the cap from being pushed completely through the hole",
+     "approx_dims_mm": "38 x 2",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "30 mm hole diameter"
+    },
+    {
+     "name": "cylindrical_plug",
+     "purpose": "Inserts into the 30 mm hole and provides structural support with snap barbs",
+     "approx_dims_mm": "28.5 x 10",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "30 mm hole diameter minus 1.5 mm wall thickness"
+    },
+    {
+     "name": "snap_barb",
+     "purpose": "Creates mechanical interference to hold the cap in place once inserted",
+     "approx_dims_mm": "1 x 8",
+     "method": "pocket",
+     "count": 4,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "barb dimensions based on typical snap fit design"
+    },
+    {
+     "name": "plug_wall_thickness",
+     "purpose": "Maintains structural integrity while allowing for insertion",
+     "approx_dims_mm": "1.5",
+     "method": "shell",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "28.5 mm outer diameter minus 30 mm hole diameter"
+    },
+    {
+     "name": "closed_top_face",
+     "purpose": "Provides a flat surface for seating against the hole's surface",
+     "approx_dims_mm": "28.5 x 10",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "top face dimensions match plug diameter"
+    }
+   ],
+   "min_wall_mm": 1.5,
+   "material": "PLA",
+   "print_orientation_note": "The flat flange surface should be oriented downward to minimize supports and ensure good adhesion during printing.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "guide_linear_rail_foot",
+  "prompt": "Design a single-piece linear guide rail foot: base plate 60 x 20 x 5 mm, upright rail tab 10 x 50 x 4 mm perpendicular to the base, 2 mm fillet at base-to-upright junction.",
+  "class": "guide",
+  "brief": {
+   "object_name": "Linear Guide Rail Foot",
+   "summary": "A single-piece base plate with perpendicular upright rail tab and filleted junction for mounting linear guide rails.",
+   "visual_description": "A rectangular base plate measuring 60mm long by 20mm wide by 5mm thick, with a perpendicular upright tab extending 50mm high from the center of the base's longer edge. The tab is 10mm wide and 4mm thick, with a smooth 2mm fillet radius at the junction where it meets the base plate. The overall shape is clean and angular with a flat bottom surface for mounting.",
+   "overall_envelope_mm": "60 x 20 x 50",
+   "features": [
+    {
+     "name": "base_plate",
+     "purpose": "Main mounting surface and structural foundation",
+     "approx_dims_mm": "60 x 20 x 5",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "upright_rail_tab",
+     "purpose": "Mounting point for linear guide rail with perpendicular orientation",
+     "approx_dims_mm": "10 x 50 x 4",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "base_to_upright_fillets",
+     "purpose": "Stress relief and clean transition between base and tab",
+     "approx_dims_mm": "2mm radius",
+     "method": "fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the base plate bottom face down to minimize supports and ensure flat mounting surface.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "guide_rubber_bumper_foot",
+  "prompt": "Model a single-piece equipment bumper foot: dome outer diameter 25 mm, dome height 12 mm, flat base flange 30 mm diameter x 3 mm thick, central M4 through-bore 4 mm diameter with 1 mm countersink 8 mm diameter on the base face.",
+  "class": "guide",
+  "brief": {
+   "object_name": "Equipment Bumper Foot",
+   "summary": "A single-piece rubber or plastic bumper foot with a domed top and flat base flange, featuring a central through-bore with countersink.",
+   "visual_description": "The part is a rounded dome shape sitting atop a flat circular base. The dome has a smooth, curved silhouette with a 25 mm outer diameter and 12 mm height, tapering from the base to a point. The base flange is a flat disk 30 mm in diameter and 3 mm thick, with a central hole that goes through the entire part. The hole has a 4 mm diameter through-bore with an 8 mm diameter countersink on the base face, creating a small recessed area for a screw head or fastener to sit flush.",
+   "overall_envelope_mm": "25 x 25 x 15",
+   "features": [
+    {
+     "name": "Dome Top",
+     "purpose": "Provides cushioning and impact absorption while maintaining a compact profile",
+     "approx_dims_mm": "25 mm diameter, 12 mm height",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard equipment bumper foot dimensions"
+    },
+    {
+     "name": "Base Flange",
+     "purpose": "Provides a flat mounting surface and structural support for the bumper",
+     "approx_dims_mm": "30 mm diameter, 3 mm thickness",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard equipment bumper foot dimensions"
+    },
+    {
+     "name": "Through-Bore",
+     "purpose": "Allows mounting hardware to pass through the part for secure attachment",
+     "approx_dims_mm": "4 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "M4 threaded fastener requirement"
+    },
+    {
+     "name": "Countersink",
+     "purpose": "Provides clearance for a screw head to sit flush with the base face",
+     "approx_dims_mm": "8 mm diameter, 1 mm depth",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "standard countersink size for M4 screw"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Base flange face down to minimize supports and ensure flat mounting surface",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "organizer_pen_cup_hex",
+  "prompt": "Design a single-piece hexagonal pen cup organizer: regular hexagon outer across-flats 70 mm, height 100 mm, wall thickness 3 mm, open top, flat bottom 3 mm thick, six equally-spaced 10 mm diameter circular drain holes on the bottom face.",
+  "class": "organizer",
+  "brief": {
+   "object_name": "Hexagonal Pen Cup Organizer",
+   "summary": "A six-sided plastic organizer with a flat bottom and drain holes for holding pens and small office supplies.",
+   "visual_description": "A regular hexagon standing 100 mm tall, with sharp edges and flat faces. The outer dimensions are across-flats 70 mm. The walls are thin at 3 mm, creating a hollow interior. The bottom is flat and 3 mm thick, with six evenly spaced circular drain holes (10 mm diameter) arranged in a symmetrical pattern around the center.",
+   "overall_envelope_mm": "70 x 70 x 100",
+   "features": [
+    {
+     "name": "outer_hexagon",
+     "purpose": "defines the external shape and size of the organizer",
+     "approx_dims_mm": "70 mm across-flats",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "anchor_scaled",
+     "estimate_anchor": "standard hexagonal office organizer reference"
+    },
+    {
+     "name": "wall_thickness",
+     "purpose": "creates the hollow interior space for pens",
+     "approx_dims_mm": "3 mm",
+     "method": "shell",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "typical thin wall for office organizer"
+    },
+    {
+     "name": "bottom_thickness",
+     "purpose": "provides structural support and defines the drain hole plane",
+     "approx_dims_mm": "3 mm",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "default_guess",
+     "estimate_anchor": "structural requirement for stability"
+    },
+    {
+     "name": "drain_holes",
+     "purpose": "allows liquid to drain from the organizer",
+     "approx_dims_mm": "10 mm diameter",
+     "method": "pocket",
+     "count": 6,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "drainage necessity for pen cup"
+    }
+   ],
+   "min_wall_mm": 3.0,
+   "material": "PLA",
+   "print_orientation_note": "The flat bottom face should be oriented downward to print with minimal supports and ensure good adhesion.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "organizer_sd_card_holder",
+  "prompt": "Model a single-piece SD card holder for four cards: body 60 x 36 x 12 mm, four SD card slots each 24 x 2.5 x 32 mm deep, slot-to-slot pitch 14 mm, 2 mm walls between slots, open front face. Back face is solid.",
+  "class": "organizer",
+  "brief": {
+   "object_name": "Four-Card SD Card Holder",
+   "summary": "A compact, single-piece plastic holder for four standard SD cards with precise card slot dimensions and thin walls.",
+   "visual_description": "A rectangular prism body measuring 60mm long x 36mm wide x 12mm high, with a flat front face containing four evenly spaced rectangular card slots. Each slot is 24mm wide x 2.5mm thick x 32mm deep, arranged in a line with 14mm center-to-center spacing between slots. The body has 2mm thick walls separating the slots and a solid back face. The front face is completely open with no obstruction, and the overall profile is rectangular with sharp edges and flat surfaces.",
+   "overall_envelope_mm": "60 x 36 x 12",
+   "features": [
+    {
+     "name": "card_slot_1",
+     "purpose": "First SD card insertion slot",
+     "approx_dims_mm": "24 x 2.5 x 32",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "card_slot_2",
+     "purpose": "Second SD card insertion slot",
+     "approx_dims_mm": "24 x 2.5 x 32",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "card_slot_3",
+     "purpose": "Third SD card insertion slot",
+     "approx_dims_mm": "24 x 2.5 x 32",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "card_slot_4",
+     "purpose": "Fourth SD card insertion slot",
+     "approx_dims_mm": "24 x 2.5 x 32",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "The 60mm x 36mm base face should be oriented downward to minimize supports needed for the vertical card slots.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "mech_detent_wheel_12pos",
+  "prompt": "Design a single-piece detent wheel for 12 positions: outer diameter 50 mm, 12 equally-spaced detent notches 3 mm wide x 2 mm deep with a 1.5 mm fillet at the base of each notch, plate thickness 8 mm, central bore 6 mm diameter, hub 12 mm outer diameter x 8 mm tall, two M3 set-screw radial holes 5 mm deep at 180 degrees in the hub.",
+  "class": "mechanical",
+  "brief": {
+   "object_name": "12-position detent wheel",
+   "summary": "A precision-machined wheel with 12 equally-spaced notches for indexing, mounted on a central hub with set-screw fasteners.",
+   "visual_description": "A flat circular plate with 12 evenly spaced radial notches cut into the outer rim. The wheel has a smooth outer edge with a 50 mm diameter, a central bore hole, and a raised hub section that extends 8 mm vertically from the plate surface. Each detent notch is V-shaped with a 3 mm wide base and 2 mm depth, featuring a 1.5 mm fillet at the bottom. The hub has two radial set-screw holes positioned opposite each other (180 degrees) and extends 12 mm in diameter. The entire part appears as a thin circular disc with a central hole and 12 evenly spaced notches around its perimeter.",
+   "overall_envelope_mm": "50 x 50 x 8",
+   "features": [
+    {
+     "name": "outer rim",
+     "purpose": "defines the wheel's outer boundary and provides mounting surface for detents",
+     "approx_dims_mm": "50 mm diameter",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "detent notches",
+     "purpose": "provides indexing positions for mechanical engagement",
+     "approx_dims_mm": "3 mm wide x 2 mm deep with 1.5 mm fillet at base",
+     "method": "pocket",
+     "count": 12,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "central bore",
+     "purpose": "mounts the wheel onto a shaft or pivot",
+     "approx_dims_mm": "6 mm diameter",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "hub section",
+     "purpose": "provides structural support and mounting surface for set-screws",
+     "approx_dims_mm": "12 mm outer diameter x 8 mm tall",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "set-screw holes",
+     "purpose": "secures the wheel to a shaft or mounting fixture",
+     "approx_dims_mm": "M3 threaded hole, 5 mm deep",
+     "method": "pocket",
+     "count": 2,
+     "standard": "M3",
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "print with the flat plate surface facing down to minimize supports and ensure good layer adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "mech_star_coupling_6lobe",
+  "prompt": "Model a single-piece star coupling spider: 6 lobes equally spaced, outer diameter 60 mm across the lobe tips, each lobe 12 mm wide x 10 mm tall x 15 mm radial depth, central hub 24 mm outer diameter x 20 mm long, hub bore 10 mm diameter, two M4 radial set-screw holes 6 mm deep at 180 degrees.",
+  "class": "mechanical",
+  "brief": {
+   "object_name": "Star Coupling Spider",
+   "summary": "A 6-lobed coupling spider with central hub and radial set-screw holes for connecting to shafts.",
+   "visual_description": "A star-shaped coupling component with 6 evenly spaced pointed lobes extending radially from a central cylindrical hub. The lobes are tapered, with flat tops and curved inner edges that blend into the hub. Each lobe is 12 mm wide at the tip, 10 mm tall, and extends 15 mm radially from the hub center. The central hub is a cylinder 24 mm in diameter and 20 mm long, with a 10 mm diameter central bore. Two M4 set-screw holes are drilled radially through the hub wall at 180-degree intervals, 6 mm deep.",
+   "overall_envelope_mm": "60 x 60 x 20",
+   "features": [
+    {
+     "name": "lobe_1",
+     "purpose": "Primary coupling lobe extending from central hub to connect to mating part",
+     "approx_dims_mm": "12 x 10 x 15",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "lobe_2",
+     "purpose": "Secondary coupling lobe extending from central hub to connect to mating part",
+     "approx_dims_mm": "12 x 10 x 15",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "lobe_3",
+     "purpose": "Secondary coupling lobe extending from central hub to connect to mating part",
+     "approx_dims_mm": "12 x 10 x 15",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "lobe_4",
+     "purpose": "Secondary coupling lobe extending from central hub to connect to mating part",
+     "approx_dims_mm": "12 x 10 x 15",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "lobe_5",
+     "purpose": "Secondary coupling lobe extending from central hub to connect to mating part",
+     "approx_dims_mm": "12 x 10 x 15",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "lobe_6",
+     "purpose": "Secondary coupling lobe extending from central hub to connect to mating part",
+     "approx_dims_mm": "12 x 10 x 15",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "hub_outer_cylinder",
+     "purpose": "Central structural support and mounting surface for the coupling",
+     "approx_dims_mm": "24 x 20",
+     "method": "box",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "hub_bore",
+     "purpose": "Central mounting bore for shaft or coupling",
+     "approx_dims_mm": "10",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "set_screw_hole_1",
+     "purpose": "Radial set-screw hole for securing coupling to shaft",
+     "approx_dims_mm": "4 x 6",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    },
+    {
+     "name": "set_screw_hole_2",
+     "purpose": "Radial set-screw hole for securing coupling to shaft",
+     "approx_dims_mm": "4 x 6",
+     "method": "pocket",
+     "count": 1,
+     "standard": "M4",
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "proportion_rule"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Print with the hub face down to minimize supports and ensure good layer adhesion.",
+   "target": "functional"
+  }
+ },
+ {
+  "label": "mech_ratchet_pawl_plate",
+  "prompt": "Design a single-piece ratchet pawl plate 80 x 30 x 5 mm: pivot bore 6 mm diameter centered 10 mm from one end, engagement nose 8 mm long x 5 mm wide angled 30 degrees at the opposing end, return spring tab 3 mm wide x 20 mm long x 2 mm thick integral at the pivot end.",
+  "class": "mechanical",
+  "brief": {
+   "object_name": "Ratchet Pawl Plate",
+   "summary": "A thin, curved metal plate with a pivot hole, angled engagement nose, and return spring tab for ratchet mechanism operation.",
+   "visual_description": "A flat rectangular plate measuring 80mm long x 30mm wide x 5mm thick, with a 6mm diameter pivot hole centered 10mm from one end. The opposite end features an 8mm long x 5mm wide angled nose at 30 degrees to the plate surface, and a 3mm wide x 20mm long x 2mm thick spring tab extending perpendicularly from the pivot side.",
+   "overall_envelope_mm": "80 x 30 x 5",
+   "features": [
+    {
+     "name": "pivot bore",
+     "purpose": "Provides rotational pivot point for pawl operation",
+     "approx_dims_mm": "6",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "engagement nose",
+     "purpose": "Contacts ratchet teeth to prevent reverse motion",
+     "approx_dims_mm": "8 x 5",
+     "method": "loft",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "pivot bore location"
+    },
+    {
+     "name": "return spring tab",
+     "purpose": "Provides spring force to return pawl to neutral position",
+     "approx_dims_mm": "3 x 20 x 2",
+     "method": "box+fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": "functional_requirement",
+     "estimate_anchor": "pivot bore location"
+    }
+   ],
+   "min_wall_mm": 2.0,
+   "material": "PLA",
+   "print_orientation_note": "Plate should be printed flat with the pivot hole side down to minimize supports and ensure proper spring tab orientation.",
+   "target": "cosmetic"
+  }
+ },
+ {
+  "label": "impeller_axial_5blade",
+  "prompt": "Design a single-piece axial-flow impeller: hub diameter 25 mm, hub height 20 mm, outer swept diameter 90 mm, 5 blades each with 15 degree pitch angle, blade chord 25 mm, blade thickness 2.5 mm, blade root fillet 1.5 mm, top shroud disk 3 mm thick x 90 mm diameter, central bore 10 mm diameter through the hub.",
+  "class": "impeller",
+  "brief": {
+   "object_name": "Axial-Flow Impeller",
+   "summary": "A single-piece axial-flow impeller with 5 blades mounted on a central hub, featuring a swept outer diameter of 90 mm and a central bore for shaft mounting.",
+   "visual_description": "A flat disk-shaped impeller with a central hub (25 mm diameter) extending 20 mm vertically. Five curved blades extend radially from the hub root, each with a 15-degree pitch angle, 25 mm chord length, and 2.5 mm thickness at the tip. The blades have a 1.5 mm root fillet for smooth transition. A thin shroud disk (3 mm thick) sits at the outer swept edge (90 mm diameter), forming a complete impeller assembly with a central 10 mm bore.",
+   "overall_envelope_mm": "90 x 90 x 23",
+   "features": [
+    {
+     "name": "Central Bore",
+     "purpose": "Mounts the impeller onto a shaft",
+     "approx_dims_mm": "10",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Hub",
+     "purpose": "Provides structural base for blade attachment and central mounting",
+     "approx_dims_mm": "25 x 20",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Blade Root Fillet",
+     "purpose": "Smooth transition from hub to blade root to reduce stress concentration",
+     "approx_dims_mm": "1.5",
+     "method": "fillet",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Blade Tip Thickness",
+     "purpose": "Maintains structural integrity at blade tip while minimizing weight",
+     "approx_dims_mm": "2.5",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Top Shroud Disk",
+     "purpose": "Encloses the outer swept edge and provides structural support",
+     "approx_dims_mm": "90 x 3",
+     "method": "revolve",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Blade Chord",
+     "purpose": "Defines blade width at the tip for optimal flow characteristics",
+     "approx_dims_mm": "25",
+     "method": "pocket",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    },
+    {
+     "name": "Blade Pitch Angle",
+     "purpose": "Controls fluid flow direction and impeller performance",
+     "approx_dims_mm": "15 degrees",
+     "method": "sweep",
+     "count": 1,
+     "standard": null,
+     "estimate_basis": null,
+     "estimate_anchor": null
+    }
+   ],
+   "min_wall_mm": 2.5,
+   "material": "PLA",
+   "print_orientation_note": "The hub should be oriented vertically (standing up) to minimize supports and ensure proper blade geometry.",
+   "target": "functional"
+  }
+ }
+]

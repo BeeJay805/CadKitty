@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "file": "references/plain-washer.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Plain_washer1.jpg",
+      "source_revision": "https://commons.wikimedia.org/w/index.php?title=File:Plain_washer1.jpg&oldid=1200924950",
+      "download": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Plain_washer1.jpg",
+      "author": "Tiesse",
+      "crop_author": "Illustratedjc",
+      "license": "Public domain dedication by the author, PD-self",
+      "retrieved": "2026-10-19",
+      "scope": "Photographic shape reference. No physical dimensions or scale are inferred from it."
+    }
+  ]
+}

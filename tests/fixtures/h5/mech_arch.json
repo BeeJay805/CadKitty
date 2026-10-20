@@ -1,0 +1,204 @@
+{
+  "object_name": "desktop_humanoid_350",
+  "joints": [
+    {
+      "name": "shoulder_L",
+      "kind": "actuated",
+      "axis_dir": "+Y",
+      "station_mm": [
+        0.0,
+        71.0,
+        290.0
+      ],
+      "bearing": "Shoulder pod Ø20.0 printed register journal riding torso Ø20.4 bore land concentric with servo output (running fit 0.40, 0.5 lead-in chamfer both entries); drive torque only through MG996R 25T spline horn",
+      "retention": "M3x10 machine screw through pod hub into MG996R output-shaft M3 tap; horn fastened to pod hub by 4x M2.5 self-tappers on Ø16 horn screw circle"
+    },
+    {
+      "name": "shoulder_R",
+      "kind": "actuated",
+      "axis_dir": "+Y",
+      "station_mm": [
+        0.0,
+        -71.0,
+        290.0
+      ],
+      "bearing": "Shoulder pod Ø20.0 printed register journal riding torso Ø20.4 bore land concentric with servo output (running fit 0.40, 0.5 lead-in chamfer both entries); drive torque only through MG996R 25T spline horn",
+      "retention": "M3x10 machine screw through pod hub into MG996R output-shaft M3 tap; horn fastened to pod hub by 4x M2.5 self-tappers on Ø16 horn screw circle"
+    },
+    {
+      "name": "elbow_L",
+      "kind": "passive",
+      "axis_dir": "+Y",
+      "station_mm": [
+        0.0,
+        71.0,
+        235.0
+      ],
+      "bearing": "Ø5.0 printed pin journal in Ø5.35 forearm clevis bore land, 8 mm land length, running fit 0.35, 0.5 lead-in chamfer at both bore entries and pin tip",
+      "retention": "Printed shoulder on pin root + push-on domed cap (Ø28 dome) pressed on Ø5.0 spigot at press fit 0.05, 0.5 lead-in"
+    },
+    {
+      "name": "elbow_R",
+      "kind": "passive",
+      "axis_dir": "+Y",
+      "station_mm": [
+        0.0,
+        -71.0,
+        235.0
+      ],
+      "bearing": "Ø5.0 printed pin journal in Ø5.35 forearm clevis bore land, 8 mm land length, running fit 0.35, 0.5 lead-in chamfer at both bore entries and pin tip",
+      "retention": "Printed shoulder on pin root + push-on domed cap (Ø28 dome) pressed on Ø5.0 spigot at press fit 0.05, 0.5 lead-in"
+    },
+    {
+      "name": "hip_L",
+      "kind": "actuated",
+      "axis_dir": "+Y",
+      "station_mm": [
+        0.0,
+        40.0,
+        180.0
+      ],
+      "bearing": "Hip pod Ø20.0 printed register journal riding pelvis Ø20.4 bore land concentric with servo output (running fit 0.40, 0.5 lead-in chamfer both entries); drive torque only through MG996R 25T spline horn",
+      "retention": "M3x10 machine screw through pod hub into MG996R output-shaft M3 tap; horn fastened to pod hub by 4x M2.5 self-tappers on Ø16 horn screw circle"
+    },
+    {
+      "name": "hip_R",
+      "kind": "actuated",
+      "axis_dir": "+Y",
+      "station_mm": [
+        0.0,
+        -40.0,
+        180.0
+      ],
+      "bearing": "Hip pod Ø20.0 printed register journal riding pelvis Ø20.4 bore land concentric with servo output (running fit 0.40, 0.5 lead-in chamfer both entries); drive torque only through MG996R 25T spline horn",
+      "retention": "M3x10 machine screw through pod hub into MG996R output-shaft M3 tap; horn fastened to pod hub by 4x M2.5 self-tappers on Ø16 horn screw circle"
+    },
+    {
+      "name": "knee_L",
+      "kind": "passive",
+      "axis_dir": "+Y",
+      "station_mm": [
+        0.0,
+        34.0,
+        105.0
+      ],
+      "bearing": "Ø6.0 printed pin journal in Ø6.35 shin clevis bore land, 10 mm land length, running fit 0.35, 0.5 lead-in chamfer at both bore entries and pin tip",
+      "retention": "Printed shoulder on pin root + push-on domed cap (Ø30 dome) pressed on Ø6.0 spigot at press fit 0.05, 0.5 lead-in"
+    },
+    {
+      "name": "knee_R",
+      "kind": "passive",
+      "axis_dir": "+Y",
+      "station_mm": [
+        0.0,
+        -34.0,
+        105.0
+      ],
+      "bearing": "Ø6.0 printed pin journal in Ø6.35 shin clevis bore land, 10 mm land length, running fit 0.35, 0.5 lead-in chamfer at both bore entries and pin tip",
+      "retention": "Printed shoulder on pin root + push-on domed cap (Ø30 dome) pressed on Ø6.0 spigot at press fit 0.05, 0.5 lead-in"
+    },
+    {
+      "name": "neck_yaw",
+      "kind": "passive",
+      "axis_dir": "+Z",
+      "station_mm": [
+        0.0,
+        0.0,
+        302.0
+      ],
+      "bearing": "Ø8.0 torso-top neck stub journal in Ø8.35 head-base bore land, 6 mm land length, running fit 0.35, 0.5 lead-in chamfer both entries",
+      "retention": "E-clip groove 0.9 wide x 0.6 deep at stub top, retained by printed C-clip seated inside the helmet shell"
+    }
+  ],
+  "actuators": [
+    {
+      "joint": "shoulder_L",
+      "hw_id": "servo_shoulder_L",
+      "kind": "mg996r_servo",
+      "position_mm": [
+        0.0,
+        48.0,
+        290.0
+      ],
+      "shaft_dir": "+Y",
+      "horn_link": "upper_arm_L"
+    },
+    {
+      "joint": "shoulder_R",
+      "hw_id": "servo_shoulder_R",
+      "kind": "mg996r_servo",
+      "position_mm": [
+        0.0,
+        -48.0,
+        290.0
+      ],
+      "shaft_dir": "-Y",
+      "horn_link": "upper_arm_R"
+    },
+    {
+      "joint": "hip_L",
+      "hw_id": "servo_hip_L",
+      "kind": "mg996r_servo",
+      "position_mm": [
+        0.0,
+        39.0,
+        180.0
+      ],
+      "shaft_dir": "+Y",
+      "horn_link": "thigh_L"
+    },
+    {
+      "joint": "hip_R",
+      "hw_id": "servo_hip_R",
+      "kind": "mg996r_servo",
+      "position_mm": [
+        0.0,
+        -39.0,
+        180.0
+      ],
+      "shaft_dir": "-Y",
+      "horn_link": "thigh_R"
+    }
+  ],
+  "fastening_system": "M3x10 self-tapping screws into Ø4.5 printed bosses with Ø2.5 pilot holes for every shell seam, cap, and bay plate; M4x12 self-tappers at MG996R lug holes only (4 per servo on the 49.5 x 10.0 datasheet pattern into Ø5.5 bosses beside each pocket); no heat-set inserts anywhere; every screw boss and inserted spigot carries a 0.5 mm lead-in chamfer. Servo bodies sit in pockets with 0.5 mm air per side, pockets opening upward (hips) or aft (shoulders) so the frame drops onto the hardware. Servo layout: shoulder servos on the joint axis line {x=0, z=290} with case bodies spanning y 10 to 48 (L) / -48 to -10 (R), 40.7 mm length along X, 19.7 mm along Z (z 280.2-299.8, under the 300 torso top); hip servos on {x=0, z=180} with bodies y 1 to 39 (L) / -39 to -1 (R), same orientation (z 170.2-189.8), leaving 2 mm between the paired bodies at the midline. Home-pose clearance ledger: arm centerline y=71 clears the torso flank (half-width 52.1 at z=285) by >=5 mm; forearm tip (Ø18 at z 175-185, inner edge y=61.5) clears the thigh shell (centerline y=34, root Ø31, outer edge 49.5) by 12 mm and the hip pod (outboard face y=46) by 15 mm across the full fore-aft swing; thigh centerline sits inboard at y=34 via a Ø36 hip pod that bridges outboard (y 28 to 46) to the horn at y=44.",
+  "seam_strategy": "Torso = inner structural frame (carries all four servo pockets, lug bosses, and the Ø20.4 shoulder/hip bearing lands) + crowned chest plate + crowned back plate; both plates register on a 1.2 mm wide x 1.5 mm deep perimeter tongue-and-groove lip and fasten with 4x M3 bosses each; the back plate is the service door for the electronics bay and unscrews without disturbing any joint. Limb shells (upper arm, forearm, thigh, shin) are 2.5 mm wall lofted halves split on the sagittal-parallel plane through the limb centerline, registered by a 1.0 mm lip running the full seam (reads as the panel line) and 2x M3 bosses per limb hidden at the joint-module ends; each half-shell screws to the limb's clevis/pod core. Head = helmet shell + visor face plate: face plate seats in the visor recess on a 1.0 mm lip and takes 2x M3 from below inside the neck bore. Foot pads screw to shin tips with 2x M3 each from underneath.",
+  "wiring_route": "Shoulder servo leads exit each pocket through an 8 x 4 mm wire slot on the pocket's inboard-low corner, run down 6 mm half-round channels molded into the torso frame's inner side walls, and land in the electronics bay behind the chest plate (bay volume z 200-260, opened via the back plate). Hip servo leads exit their pockets upward through Ø8 grommet holes in the pelvis top deck (one per side at x=-15, y=+/-20, z=192, 0.5 chamfer both entries) and rise inside the same frame channels to the bay. All four leads terminate at the bus board on the bay's rear wall; strain-relief zip-tie bosses (Ø4) sit beside each grommet.",
+  "mirrored_pairs": [
+    [
+      "upper_arm_L",
+      "upper_arm_R"
+    ],
+    [
+      "forearm_L",
+      "forearm_R"
+    ],
+    [
+      "thigh_L",
+      "thigh_R"
+    ],
+    [
+      "shin_L",
+      "shin_R"
+    ],
+    [
+      "foot_L",
+      "foot_R"
+    ],
+    [
+      "shoulder_pod_cap_L",
+      "shoulder_pod_cap_R"
+    ],
+    [
+      "hip_pod_cap_L",
+      "hip_pod_cap_R"
+    ],
+    [
+      "elbow_cap_L",
+      "elbow_cap_R"
+    ],
+    [
+      "knee_cap_L",
+      "knee_cap_R"
+    ]
+  ]
+}

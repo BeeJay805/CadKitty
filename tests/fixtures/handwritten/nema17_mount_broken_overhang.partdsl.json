@@ -1,0 +1,209 @@
+{
+  "version": "0.1",
+  "metadata": {
+    "name": "nema17_mount_broken_overhang",
+    "units": "mm",
+    "print_orientation": {
+      "x": 0.0,
+      "y": 1.0,
+      "z": 0.0
+    },
+    "description": "BROKEN: printed +Y up, ext flange becomes a ceiling. Should fail tier 3."
+  },
+  "operations": [
+    {
+      "op_id": "motor_flange",
+      "op": "box",
+      "mode": "add",
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "width": 43.0,
+      "depth": 50.0,
+      "height": 4.0
+    },
+    {
+      "op_id": "ext_flange",
+      "op": "box",
+      "mode": "add",
+      "position": {
+        "x": 0.0,
+        "y": 23.0,
+        "z": 15.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "width": 43.0,
+      "depth": 4.0,
+      "height": 30.0
+    },
+    {
+      "op_id": "motor_bolt_nw",
+      "op": "cylinder",
+      "mode": "subtract",
+      "position": {
+        "x": -15.5,
+        "y": 15.5,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "motor_bolt_ne",
+      "op": "cylinder",
+      "mode": "subtract",
+      "position": {
+        "x": 15.5,
+        "y": 15.5,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "motor_bolt_sw",
+      "op": "cylinder",
+      "mode": "subtract",
+      "position": {
+        "x": -15.5,
+        "y": -15.5,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "motor_bolt_se",
+      "op": "cylinder",
+      "mode": "subtract",
+      "position": {
+        "x": 15.5,
+        "y": -15.5,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "radius": 1.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "shaft_clearance",
+      "op": "cylinder",
+      "mode": "subtract",
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 2.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "radius": 11.0,
+      "height": 4.0
+    },
+    {
+      "op_id": "ext_bolt_left",
+      "op": "cylinder",
+      "mode": "subtract",
+      "position": {
+        "x": -10.0,
+        "y": 23.0,
+        "z": 15.0
+      },
+      "rotation": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "radius": 2.6,
+      "height": 4.0
+    },
+    {
+      "op_id": "ext_bolt_right",
+      "op": "cylinder",
+      "mode": "subtract",
+      "position": {
+        "x": 10.0,
+        "y": 23.0,
+        "z": 15.0
+      },
+      "rotation": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "radius": 2.6,
+      "height": 4.0
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "motor_face",
+      "interface_type": "nema17_face",
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 2.0
+      },
+      "normal": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      }
+    },
+    {
+      "name": "extrusion_face",
+      "interface_type": "extrusion_2020_slot",
+      "location": {
+        "x": 0.0,
+        "y": 23.0,
+        "z": 15.0
+      },
+      "normal": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 0.0
+      }
+    }
+  ],
+  "constraints": {
+    "min_wall_thickness": 4.0,
+    "max_overhang_deg": 45.0,
+    "max_bbox": {
+      "x": 60.0,
+      "y": 60.0,
+      "z": 40.0
+    }
+  }
+}
